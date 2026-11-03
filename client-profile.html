@@ -1,0 +1,691 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Client Dashboard | Stackly Corporate Consultancy</title>
+
+    <meta name="description"
+        content="Stackly Corporate Consultancy Client Dashboard - Track your projects, monitor progress, manage meetings and access your business services.">
+
+    <link rel="icon" href="Stackly-logo-Blue.webp" type="image/webp">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- AOS ANIMATION -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="client.css">
+
+</head>
+
+<body>
+
+
+    <!-- ==========================================
+         STACKLY CLIENT DASHBOARD
+    =========================================== -->
+
+    <div class="stackly-consult-client-dashboard">
+
+
+        <!-- ==========================================
+             MOBILE OVERLAY
+        =========================================== -->
+
+        <div class="stackly-consult-client-overlay"
+            id="stacklyConsultClientOverlay"></div>
+
+
+        <!-- ==========================================
+             SIDEBAR
+        =========================================== -->
+
+        <aside class="stackly-consult-client-sidebar"
+            id="stacklyConsultClientSidebar">
+
+
+            <!-- SIDEBAR LOGO -->
+
+            <div class="stackly-consult-client-sidebar-logo">
+
+                <a href="client.html"
+                    aria-label="Stackly Home">
+
+                    <img src="Stackly-logo-Blue.webp"
+                        alt="Stackly Corporate Consultancy Logo">
+
+                </a>
+
+                <!-- MOBILE CLOSE BUTTON -->
+
+                <button type="button"
+                    class="stackly-consult-client-close"
+                    id="stacklyConsultClientClose"
+                    aria-label="Close navigation menu">
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </button>
+
+            </div>
+
+
+            <!-- CLIENT PROFILE -->
+
+            <div class="stackly-consult-client-sidebar-profile">
+
+                <div class="stackly-consult-client-profile-avatar">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+                <div class="stackly-consult-client-profile-info">
+
+                    <h3 id="stacklyConsultClientSidebarName">
+                        Client
+                    </h3>
+
+                    <span>Client Account</span>
+
+                </div>
+
+                <span class="stackly-consult-client-online-dot"></span>
+
+            </div>
+
+
+            <!-- SIDEBAR NAVIGATION -->
+
+            <nav class="stackly-consult-client-navigation">
+
+                <p class="stackly-consult-client-nav-heading">
+                    MAIN MENU
+                </p>
+
+
+                <a href="client.html"
+                    class="stackly-consult-client-nav-link active">
+
+                    <i class="fa-solid fa-table-columns"></i>
+
+                    <span>Dashboard</span>
+
+                </a>
+
+
+                <a href="client-projects.html"
+                    class="stackly-consult-client-nav-link">
+
+                    <i class="fa-solid fa-briefcase"></i>
+
+                    <span>My Projects</span>
+
+                    <span class="stackly-consult-client-nav-count">
+                        04
+                    </span>
+
+                </a>
+
+
+                <a href="client-services.html"
+                    class="stackly-consult-client-nav-link">
+
+                    <i class="fa-solid fa-layer-group"></i>
+
+                    <span>Services</span>
+
+                </a>
+
+
+                <a href="client-meetings.html"
+                    class="stackly-consult-client-nav-link">
+
+                    <i class="fa-regular fa-calendar-check"></i>
+
+                    <span>Meetings</span>
+
+                </a>
+
+
+                <a href="client-invoices.html"
+                    class="stackly-consult-client-nav-link">
+
+                    <i class="fa-solid fa-file-invoice-dollar"></i>
+
+                    <span>Invoices</span>
+
+                </a>
+
+
+                <p class="stackly-consult-client-nav-heading stackly-consult-client-nav-secondary-heading">
+                    ACCOUNT
+                </p>
+
+
+                <a href="client-profile.html"
+                    class="stackly-consult-client-nav-link">
+
+                    <i class="fa-regular fa-user"></i>
+
+                    <span>My Profile</span>
+
+                </a>
+
+
+            </nav>
+
+
+            <!-- SIDEBAR BOTTOM -->
+
+            <div class="stackly-consult-client-sidebar-bottom">
+
+                <div class="stackly-consult-client-help-card">
+
+                    <div class="stackly-consult-client-help-icon">
+
+                        <i class="fa-solid fa-headset"></i>
+
+                    </div>
+
+                    <h4>Need Assistance?</h4>
+
+                    <p>
+                        Our team is ready to help you with your projects.
+                    </p>
+
+                    <a href="404-client.html">
+                        Contact Support
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+
+                <a href="index.html"
+                    class="stackly-consult-client-logout">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    <span>Logout</span>
+
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ==========================================
+             MAIN CONTENT
+        =========================================== -->
+
+        <main class="stackly-consult-client-main">
+
+
+            <!-- ==========================================
+                 TOP HEADER
+            =========================================== -->
+
+            <header class="stackly-consult-client-header">
+
+
+                <!-- LEFT HEADER -->
+
+                <div class="stackly-consult-client-header-left">
+
+                    <!-- MOBILE HAMBURGER -->
+
+                    <button type="button"
+                        class="stackly-consult-client-menu-toggle"
+                        id="stacklyConsultClientMenuToggle"
+                        aria-label="Open navigation menu"
+                        aria-expanded="false">
+
+                        <i class="fa-solid fa-bars"></i>
+
+                    </button>
+
+
+                    <div class="stackly-consult-client-header-title">
+
+                        <h2>Client Dashboard</h2>
+
+                        <p>
+                            Welcome back! Here's your business overview.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RIGHT HEADER -->
+
+                <div class="stackly-consult-client-header-right">
+
+
+                    <!-- NOTIFICATIONS -->
+
+                    <a href="404-client.html"
+                        class="stackly-consult-client-header-icon"
+                        aria-label="Messages">
+
+                        <i class="fa-regular fa-bell"></i>
+
+                        <span class="stackly-consult-client-notification-dot"></span>
+
+                    </a>
+
+
+                    <!-- USER EMAIL -->
+
+                    <div class="stackly-consult-client-header-user">
+
+                        <div class="stackly-consult-client-header-avatar">
+
+                            <i class="fa-solid fa-user"></i>
+
+                        </div>
+
+                        <div class="stackly-consult-client-header-user-info">
+
+                            <span>Logged in as</span>
+
+                            <strong id="stacklyConsultClientEmail">
+                                client@example.com
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+            
+<!-- ==========================================
+     STACKLY CLIENT PROFILE PAGE
+========================================== -->
+
+<div class="stackly-consult-client-content stackly-consult-profile-content">
+
+
+    <!-- 01. PROFILE PAGE INTRO -->
+
+    <section class="stackly-consult-profile-intro" data-aos="fade-up">
+
+        <div>
+            <span class="stackly-consult-profile-eyebrow">
+                <i class="fa-solid fa-user-gear"></i>
+                ACCOUNT SETTINGS
+            </span>
+
+            <h1>My Profile</h1>
+
+            <p>
+                Manage your personal details and account information
+                from one convenient place.
+            </p>
+        </div>
+
+        <div class="stackly-consult-profile-intro-icon">
+            <i class="fa-regular fa-id-card"></i>
+        </div>
+
+    </section>
+
+
+    <!-- 02. PROFILE OVERVIEW -->
+
+    <section class="stackly-consult-profile-overview" data-aos="fade-up">
+
+        <div class="stackly-consult-profile-overview-left">
+
+            <div class="stackly-consult-profile-large-avatar">
+                <i class="fa-solid fa-user"></i>
+            </div>
+
+            <div class="stackly-consult-profile-overview-info">
+
+                <span>CLIENT ACCOUNT</span>
+
+                <h2 id="stacklyConsultProfileName">John Anderson</h2>
+
+                <p>
+                    <i class="fa-regular fa-envelope"></i>
+                    <span id="stacklyConsultProfileOverviewEmail">john@example.com</span>
+                </p>
+
+                <small>
+                    <i class="fa-regular fa-calendar"></i>
+                    Member since January 2025
+                </small>
+
+            </div>
+
+        </div>
+
+        <div class="stackly-consult-profile-status">
+            <span></span>
+            Active Account
+        </div>
+
+    </section>
+
+
+    <!-- 03. PERSONAL INFORMATION -->
+
+    <section class="stackly-consult-profile-section" data-aos="fade-up">
+
+        <div class="stackly-consult-profile-section-heading">
+
+            <div class="stackly-consult-profile-section-icon">
+                <i class="fa-regular fa-user"></i>
+            </div>
+
+            <div>
+                <h3>Personal Information</h3>
+                <p>Your basic personal details.</p>
+            </div>
+
+        </div>
+
+        <div class="stackly-consult-profile-details-grid">
+
+            <div>
+                <span>First Name</span>
+                <h4 id="stacklyConsultProfileFirstName">John</h4>
+            </div>
+
+            <div>
+                <span>Last Name</span>
+                <h4 id="stacklyConsultProfileLastName"></h4>
+            </div>
+
+            <div>
+                <span>Email Address</span>
+                <h4 id="stacklyConsultProfileEmail">john@example.com</h4>
+            </div>
+
+            <div>
+                <span>Phone Number</span>
+                <h4>+91 98765 43210</h4>
+            </div>
+
+            <div>
+                <span>Job Title</span>
+                <h4>Managing Director</h4>
+            </div>
+
+            <div>
+                <span>Country</span>
+                <h4>India</h4>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- 04. COMPANY INFORMATION -->
+
+    <section class="stackly-consult-profile-section" data-aos="fade-up">
+
+        <div class="stackly-consult-profile-section-heading">
+
+            <div class="stackly-consult-profile-section-icon company">
+                <i class="fa-solid fa-building"></i>
+            </div>
+
+            <div>
+                <h3>Company Information</h3>
+                <p>Your registered business details.</p>
+            </div>
+
+        </div>
+
+        <div class="stackly-consult-profile-details-grid">
+
+            <div>
+                <span>Company Name</span>
+                <h4>Anderson Technologies</h4>
+            </div>
+
+            <div>
+                <span>Industry</span>
+                <h4>Technology</h4>
+            </div>
+
+            <div>
+                <span>Company Size</span>
+                <h4>11–50 Employees</h4>
+            </div>
+
+            <div>
+                <span>Website</span>
+                <h4>www.example.com</h4>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- 05. ADDRESS INFORMATION -->
+
+    <section class="stackly-consult-profile-section" data-aos="fade-up">
+
+        <div class="stackly-consult-profile-section-heading">
+
+            <div class="stackly-consult-profile-section-icon address">
+                <i class="fa-solid fa-location-dot"></i>
+            </div>
+
+            <div>
+                <h3>Address Information</h3>
+                <p>Your registered business address.</p>
+            </div>
+
+        </div>
+
+        <div class="stackly-consult-profile-details-grid">
+
+            <div class="full">
+                <span>Street Address</span>
+                <h4>123 Business Avenue</h4>
+            </div>
+
+            <div>
+                <span>City</span>
+                <h4>Chennai</h4>
+            </div>
+
+            <div>
+                <span>State</span>
+                <h4>Tamil Nadu</h4>
+            </div>
+
+            <div>
+                <span>Postal Code</span>
+                <h4>600001</h4>
+            </div>
+
+            <div>
+                <span>Country</span>
+                <h4>India</h4>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- 06. ACCOUNT SECURITY -->
+
+    <section class="stackly-consult-profile-section" data-aos="fade-up">
+
+        <div class="stackly-consult-profile-section-heading">
+
+            <div class="stackly-consult-profile-section-icon security">
+                <i class="fa-solid fa-shield-halved"></i>
+            </div>
+
+            <div>
+                <h3>Account Security</h3>
+                <p>Manage your account protection.</p>
+            </div>
+
+        </div>
+
+        <div class="stackly-consult-profile-security-list">
+
+            <div class="stackly-consult-profile-security-item">
+
+                <div class="stackly-consult-profile-security-symbol">
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+
+                <div>
+                    <h4>Password</h4>
+                    <p>Keep your password updated.</p>
+                </div>
+
+                <a href="404-client.html">Change Password</a>
+
+            </div>
+
+            <div class="stackly-consult-profile-security-item">
+
+                <div class="stackly-consult-profile-security-symbol">
+                    <i class="fa-solid fa-shield"></i>
+                </div>
+
+                <div>
+                    <h4>Account Protection</h4>
+                    <p>Your account is currently active.</p>
+                </div>
+
+                <span class="stackly-consult-profile-security-active">
+                    Protected
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- 07. NOTIFICATION PREFERENCES -->
+
+    <section class="stackly-consult-profile-section" data-aos="fade-up">
+
+        <div class="stackly-consult-profile-section-heading">
+
+            <div class="stackly-consult-profile-section-icon notification">
+                <i class="fa-regular fa-bell"></i>
+            </div>
+
+            <div>
+                <h3>Notification Preferences</h3>
+                <p>Stay updated with your business activities.</p>
+            </div>
+
+        </div>
+
+        <div class="stackly-consult-profile-notification-list">
+
+            <div>
+                <span>
+                    <strong>Project Updates</strong>
+                    <small>Receive updates about your projects.</small>
+                </span>
+                <i class="fa-solid fa-toggle-on"></i>
+            </div>
+
+            <div>
+                <span>
+                    <strong>Meeting Reminders</strong>
+                    <small>Get notified about upcoming meetings.</small>
+                </span>
+                <i class="fa-solid fa-toggle-on"></i>
+            </div>
+
+            <div>
+                <span>
+                    <strong>Invoice Notifications</strong>
+                    <small>Stay informed about your payments.</small>
+                </span>
+                <i class="fa-solid fa-toggle-on"></i>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- 08. PROFILE ACTIONS -->
+
+    <section class="stackly-consult-profile-actions" data-aos="fade-up">
+
+        <div>
+            <h3>Profile Settings</h3>
+            <p>Need to update your information?</p>
+        </div>
+
+        <a href="404-client.html"
+            class="stackly-consult-profile-edit-button">
+
+            <i class="fa-solid fa-pen-to-square"></i>
+            Edit Profile
+
+        </a>
+
+    </section>
+
+
+</div>
+
+
+
+</main>
+
+    </div>
+
+
+    <!-- ==========================================
+         AOS SCRIPT
+    =========================================== -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+
+    <!-- ==========================================
+         CLIENT DASHBOARD JAVASCRIPT
+    =========================================== -->
+
+    <script src="client.js"></script>
+
+
+</body>
+
+</html>

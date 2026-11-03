@@ -1,0 +1,1672 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard | Stackly Corporate Consultancy</title>
+
+    <meta name="description"
+        content="Stackly Corporate Consultancy Admin Dashboard - Manage clients, projects, services, appointments and business activities.">
+
+    <link rel="icon" href="Stackly-logo-Blue.webp" type="image/webp">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- AOS Animation -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    
+
+    <!-- Admin CSS -->
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+    <!-- ==========================================
+         ADMIN DASHBOARD WRAPPER
+    =========================================== -->
+
+    <div class="stackly-consult-admin-wrapper">
+
+        <!-- ==========================================
+             MOBILE OVERLAY
+        =========================================== -->
+
+        <div class="stackly-consult-admin-overlay"
+            id="stacklyConsultAdminOverlay"></div>
+
+
+        <!-- ==========================================
+             SIDEBAR
+        =========================================== -->
+
+        <aside class="stackly-consult-admin-sidebar"
+            id="stacklyConsultAdminSidebar">
+
+            <!-- SIDEBAR BRAND -->
+
+            <div class="stackly-consult-admin-brand">
+
+                <a href="admin.html"
+                    class="stackly-consult-admin-logo"
+                    aria-label="Stackly Home">
+
+                    <img src="Stackly-logo-Blue.webp"
+                        alt="Stackly Corporate Consultancy Logo">
+                </a>
+
+                <button type="button"
+                    class="stackly-consult-admin-close"
+                    id="stacklyConsultAdminClose"
+                    aria-label="Close sidebar">
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </button>
+
+            </div>
+
+
+            <!-- SIDEBAR PROFILE -->
+
+            <div class="stackly-consult-admin-profile">
+
+                <div class="stackly-consult-admin-avatar">
+                    <i class="fa-solid fa-user-shield"></i>
+                </div>
+
+                <div class="stackly-consult-admin-profile-info">
+
+                    <h3>Administrator</h3>
+
+                    <span>
+                        <span class="stackly-consult-admin-status-dot"></span>
+                        Online
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- SIDEBAR NAVIGATION -->
+
+            <nav class="stackly-consult-admin-navigation"
+                aria-label="Admin navigation">
+
+                <p class="stackly-consult-admin-nav-heading">
+                    MAIN MENU
+                </p>
+
+                <a href="admin.html"
+                    class="stackly-consult-admin-nav-link active">
+
+                    <i class="fa-solid fa-chart-pie"></i>
+                    <span>Dashboard</span>
+
+                </a>
+
+                <a href="admin-clients.html"
+                    class="stackly-consult-admin-nav-link">
+
+                    <i class="fa-solid fa-users"></i>
+                    <span>Clients</span>
+
+                    <span class="stackly-consult-admin-nav-count">24</span>
+
+                </a>
+
+                <a href="admin-projects.html"
+                    class="stackly-consult-admin-nav-link">
+
+                    <i class="fa-solid fa-briefcase"></i>
+                    <span>Projects</span>
+
+                </a>
+
+                <a href="admin-services.html"
+                    class="stackly-consult-admin-nav-link">
+
+                    <i class="fa-solid fa-layer-group"></i>
+                    <span>Services</span>
+
+                </a>
+
+                <a href="admin-appointments.html"
+                    class="stackly-consult-admin-nav-link">
+
+                    <i class="fa-solid fa-calendar-check"></i>
+                    <span>Appointments</span>
+
+                    <span class="stackly-consult-admin-nav-count">05</span>
+
+                </a>
+
+
+                <p class="stackly-consult-admin-nav-heading">
+                    MANAGEMENT
+                </p>
+
+                <a href="admin-team.html"
+                    class="stackly-consult-admin-nav-link">
+
+                    <i class="fa-solid fa-user-group"></i>
+                    <span>Team Members</span>
+
+                </a>
+
+                <a href="admin-reports.html"
+                    class="stackly-consult-admin-nav-link">
+
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>Reports & Analytics</span>
+
+                </a>
+
+                <a href="admin-payments.html"
+                    class="stackly-consult-admin-nav-link">
+
+                    <i class="fa-solid fa-wallet"></i>
+                    <span>Payments</span>
+
+                </a>
+
+
+                <p class="stackly-consult-admin-nav-heading">
+                    PREFERENCES
+                </p>
+
+                <a href="admin-settings.html"
+                    class="stackly-consult-admin-nav-link">
+
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Settings</span>
+
+                </a>
+
+
+            </nav>
+
+
+            <!-- SIDEBAR BOTTOM -->
+
+            <div class="stackly-consult-admin-sidebar-bottom">
+
+                <div class="stackly-consult-admin-sidebar-help">
+
+                    <div class="stackly-consult-admin-help-icon">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+
+                    <div>
+                        <h4>Need Help?</h4>
+                        <p>Contact our support team.</p>
+                    </div>
+
+                    <a href="404-admin.html"
+                        aria-label="Get support">
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+                <a href="login.html"
+                    class="stackly-consult-admin-logout"
+                    id="stacklyConsultAdminLogout">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Logout</span>
+
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ==========================================
+             MAIN CONTENT AREA
+        =========================================== -->
+
+        <main class="stackly-consult-admin-main">
+
+
+            <!-- ==========================================
+                 TOP HEADER
+            =========================================== -->
+
+            <header class="stackly-consult-admin-header">
+
+                <div class="stackly-consult-admin-header-left">
+
+                    <button type="button"
+                        class="stackly-consult-admin-menu-toggle"
+                        id="stacklyConsultAdminMenuButton"
+                        aria-label="Open navigation"
+                        aria-expanded="false">
+
+                        <i class="fa-solid fa-bars"></i>
+
+                    </button>
+
+                    <div class="stackly-consult-admin-page-heading">
+
+                        <span class="stackly-consult-admin-breadcrumb">
+                            Admin / Overview
+                        </span>
+
+                        <h1>Admin Dashboard</h1>
+
+                    </div>
+
+                </div>
+
+
+                <!-- HEADER RIGHT -->
+
+                <div class="stackly-consult-admin-header-right">
+
+                    <a href="404-admin.html"><button type="button"
+                        class="stackly-consult-admin-icon-button"
+                        aria-label="Notifications">
+
+                        <i class="fa-regular fa-bell"></i>
+
+                        <span class="stackly-consult-admin-notification-dot"></span>
+
+                    </button></a>
+
+
+                    <div class="stackly-consult-admin-header-divider"></div>
+
+
+                    <!-- ADMIN EMAIL -->
+
+                    <div class="stackly-consult-admin-header-user">
+
+                        <div class="stackly-consult-admin-header-user-info">
+
+                            <span>Welcome back</span>
+
+                            <strong id="stacklyConsultAdminEmail">
+                                admin@stacklyconsult.com
+                            </strong>
+
+                        </div>
+
+                        <div class="stackly-consult-admin-header-avatar">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+<!-- ==========================================
+     STACKLY CORPORATE CONSULTANCY
+     TEAM MEMBERS PAGE CONTENT
+========================================== -->
+
+<div class="stackly-consult-team-page">
+
+    <!-- ==========================================
+         01. TEAM PAGE HERO
+    =========================================== -->
+
+    <section class="stackly-consult-team-hero" data-aos="fade-up">
+
+        <div class="stackly-consult-team-hero-content">
+
+            <div class="stackly-consult-team-hero-text">
+
+                <span class="stackly-consult-team-eyebrow">
+                    <i class="fa-solid fa-users"></i>
+                    OUR PEOPLE, OUR STRENGTH
+                </span>
+
+                <h2>
+                    Meet the People Behind
+                    <span>Our Success.</span>
+                </h2>
+
+                <p>
+                    Manage your talented professionals, monitor team
+                    performance, and build stronger collaboration across
+                    every department.
+                </p>
+
+                <div class="stackly-consult-team-hero-actions">
+
+                    <a href="404-admin.html"
+                        class="stackly-consult-team-primary-btn">
+                        <i class="fa-solid fa-user-plus"></i>
+                        Add Team Member
+                    </a>
+
+                    <a href="404-admin.html"
+                        class="stackly-consult-team-secondary-btn">
+                        Explore Team
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="stackly-consult-team-hero-visual">
+
+                <div class="stackly-consult-team-hero-circle"></div>
+
+                <div class="stackly-consult-team-hero-icon">
+                    <i class="fa-solid fa-people-group"></i>
+                </div>
+
+                <div class="stackly-consult-team-floating-card team-floating-top">
+
+                    <div class="stackly-consult-team-floating-icon">
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+                    </div>
+
+                    <div>
+                        <strong>94.8%</strong>
+                        <span>Team Efficiency</span>
+                    </div>
+
+                </div>
+
+                <div class="stackly-consult-team-floating-card team-floating-bottom">
+
+                    <div class="stackly-consult-team-mini-avatars">
+                        <span>DW</span>
+                        <span>SM</span>
+                        <span>RM</span>
+                        <span>+8</span>
+                    </div>
+
+                    <div>
+                        <strong>12 Members</strong>
+                        <span>Working Together</span>
+                    </div>
+
+                </div>
+
+                <div class="stackly-consult-team-decoration team-decoration-one"></div>
+                <div class="stackly-consult-team-decoration team-decoration-two"></div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         02. TEAM STATISTICS
+    =========================================== -->
+
+    <section class="stackly-consult-team-stats" data-aos="fade-up">
+
+        <div class="stackly-consult-team-stat-card">
+
+            <div class="stackly-consult-team-stat-top">
+                <div class="stackly-consult-team-stat-icon orange">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+
+                <span class="stackly-consult-team-stat-trend positive">
+                    <i class="fa-solid fa-arrow-up"></i> 12.5%
+                </span>
+            </div>
+
+            <h3>24</h3>
+            <p>Total Team Members</p>
+            <span class="stackly-consult-team-stat-note">
+                Compared to last month
+            </span>
+
+        </div>
+
+        <div class="stackly-consult-team-stat-card">
+
+            <div class="stackly-consult-team-stat-top">
+                <div class="stackly-consult-team-stat-icon green">
+                    <i class="fa-solid fa-user-check"></i>
+                </div>
+
+                <span class="stackly-consult-team-stat-trend positive">
+                    <i class="fa-solid fa-arrow-up"></i> 8.2%
+                </span>
+            </div>
+
+            <h3>21</h3>
+            <p>Active Members</p>
+            <span class="stackly-consult-team-stat-note">
+                Currently working
+            </span>
+
+        </div>
+
+        <div class="stackly-consult-team-stat-card">
+
+            <div class="stackly-consult-team-stat-top">
+                <div class="stackly-consult-team-stat-icon blue">
+                    <i class="fa-solid fa-building"></i>
+                </div>
+
+                <span class="stackly-consult-team-stat-trend neutral">
+                    <i class="fa-solid fa-minus"></i> 0%
+                </span>
+            </div>
+
+            <h3>06</h3>
+            <p>Departments</p>
+            <span class="stackly-consult-team-stat-note">
+                Across the organization
+            </span>
+
+        </div>
+
+        <div class="stackly-consult-team-stat-card">
+
+            <div class="stackly-consult-team-stat-top">
+                <div class="stackly-consult-team-stat-icon purple">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+
+                <span class="stackly-consult-team-stat-trend positive">
+                    <i class="fa-solid fa-arrow-up"></i> 5.4%
+                </span>
+            </div>
+
+            <h3>94.8%</h3>
+            <p>Team Productivity</p>
+            <span class="stackly-consult-team-stat-note">
+                Overall performance score
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         03. LEADERSHIP TEAM
+    =========================================== -->
+
+    <section class="stackly-consult-team-leadership" data-aos="fade-up">
+
+        <div class="stackly-consult-team-section-header">
+
+            <div>
+                <span class="stackly-consult-team-section-label">
+                    THE PEOPLE WHO LEAD
+                </span>
+
+                <h2>Meet Our Leadership</h2>
+
+                <p>
+                    Experienced professionals guiding our vision
+                    and driving business growth.
+                </p>
+            </div>
+
+            <a href="404-admin.html"
+                class="stackly-consult-team-text-link">
+                View Leadership
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+
+        <div class="stackly-consult-team-leadership-grid">
+
+            <!-- LEADER 01 -->
+
+            <article class="stackly-consult-team-leader-card">
+
+                <div class="stackly-consult-team-leader-top">
+
+                    <div class="stackly-consult-team-leader-avatar leader-orange">
+                        DW
+                    </div>
+
+                    <span class="stackly-consult-team-leader-badge">
+                        <i class="fa-solid fa-crown"></i>
+                        CEO
+                    </span>
+
+                </div>
+
+                <h3>David Wilson</h3>
+
+                <p class="stackly-consult-team-leader-role">
+                    Chief Executive Officer
+                </p>
+
+                <span class="stackly-consult-team-leader-description">
+                    Business strategy and organizational leadership.
+                </span>
+
+                <div class="stackly-consult-team-leader-footer">
+
+                    <span>
+                        <i class="fa-solid fa-briefcase"></i>
+                        12 Years Experience
+                    </span>
+
+                    <a href="404-admin.html" aria-label="View David Wilson">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- LEADER 02 -->
+
+            <article class="stackly-consult-team-leader-card">
+
+                <div class="stackly-consult-team-leader-top">
+
+                    <div class="stackly-consult-team-leader-avatar leader-blue">
+                        SM
+                    </div>
+
+                    <span class="stackly-consult-team-leader-badge">
+                        <i class="fa-solid fa-star"></i>
+                        COO
+                    </span>
+
+                </div>
+
+                <h3>Sarah Miller</h3>
+
+                <p class="stackly-consult-team-leader-role">
+                    Chief Operating Officer
+                </p>
+
+                <span class="stackly-consult-team-leader-description">
+                    Operations management and business development.
+                </span>
+
+                <div class="stackly-consult-team-leader-footer">
+
+                    <span>
+                        <i class="fa-solid fa-briefcase"></i>
+                        10 Years Experience
+                    </span>
+
+                    <a href="404-admin.html" aria-label="View Sarah Miller">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- LEADER 03 -->
+
+            <article class="stackly-consult-team-leader-card">
+
+                <div class="stackly-consult-team-leader-top">
+
+                    <div class="stackly-consult-team-leader-avatar leader-purple">
+                        RM
+                    </div>
+
+                    <span class="stackly-consult-team-leader-badge">
+                        <i class="fa-solid fa-chart-pie"></i>
+                        CFO
+                    </span>
+
+                </div>
+
+                <h3>Robert Martin</h3>
+
+                <p class="stackly-consult-team-leader-role">
+                    Chief Financial Officer
+                </p>
+
+                <span class="stackly-consult-team-leader-description">
+                    Financial planning and strategic investments.
+                </span>
+
+                <div class="stackly-consult-team-leader-footer">
+
+                    <span>
+                        <i class="fa-solid fa-briefcase"></i>
+                        9 Years Experience
+                    </span>
+
+                    <a href="404-admin.html" aria-label="View Robert Martin">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         04. DEPARTMENT OVERVIEW
+    =========================================== -->
+
+    <section class="stackly-consult-team-departments" data-aos="fade-up">
+
+        <div class="stackly-consult-team-section-header">
+
+            <div>
+                <span class="stackly-consult-team-section-label">
+                    ORGANIZATION STRUCTURE
+                </span>
+
+                <h2>Explore Departments</h2>
+
+                <p>
+                    Discover the teams working together to deliver
+                    exceptional consulting services.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="stackly-consult-team-department-grid">
+
+            <article class="stackly-consult-team-department-card">
+
+                <div class="stackly-consult-team-department-icon orange">
+                    <i class="fa-solid fa-lightbulb"></i>
+                </div>
+
+                <div class="stackly-consult-team-department-info">
+                    <h3>Strategy & Consulting</h3>
+                    <p>Business planning and strategic solutions.</p>
+                </div>
+
+                <div class="stackly-consult-team-department-bottom">
+                    <span>06 Members</span>
+                    <a href="404-admin.html" aria-label="View strategy team">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+            </article>
+
+
+            <article class="stackly-consult-team-department-card">
+
+                <div class="stackly-consult-team-department-icon blue">
+                    <i class="fa-solid fa-chart-column"></i>
+                </div>
+
+                <div class="stackly-consult-team-department-info">
+                    <h3>Finance & Accounts</h3>
+                    <p>Financial analysis and business budgeting.</p>
+                </div>
+
+                <div class="stackly-consult-team-department-bottom">
+                    <span>04 Members</span>
+                    <a href="404-admin.html" aria-label="View finance team">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+            </article>
+
+
+            <article class="stackly-consult-team-department-card">
+
+                <div class="stackly-consult-team-department-icon green">
+                    <i class="fa-solid fa-bullhorn"></i>
+                </div>
+
+                <div class="stackly-consult-team-department-info">
+                    <h3>Marketing</h3>
+                    <p>Brand development and market research.</p>
+                </div>
+
+                <div class="stackly-consult-team-department-bottom">
+                    <span>05 Members</span>
+                    <a href="404-admin.html" aria-label="View marketing team">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+            </article>
+
+
+            <article class="stackly-consult-team-department-card">
+
+                <div class="stackly-consult-team-department-icon purple">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+
+                <div class="stackly-consult-team-department-info">
+                    <h3>Technology</h3>
+                    <p>Digital solutions and technical support.</p>
+                </div>
+
+                <div class="stackly-consult-team-department-bottom">
+                    <span>04 Members</span>
+                    <a href="404-admin.html" aria-label="View technology team">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+            </article>
+
+
+            <article class="stackly-consult-team-department-card">
+
+                <div class="stackly-consult-team-department-icon pink">
+                    <i class="fa-solid fa-handshake"></i>
+                </div>
+
+                <div class="stackly-consult-team-department-info">
+                    <h3>Client Relations</h3>
+                    <p>Client communication and relationship management.</p>
+                </div>
+
+                <div class="stackly-consult-team-department-bottom">
+                    <span>03 Members</span>
+                    <a href="404-admin.html" aria-label="View client relations team">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+            </article>
+
+
+            <article class="stackly-consult-team-department-card">
+
+                <div class="stackly-consult-team-department-icon yellow">
+                    <i class="fa-solid fa-user-tie"></i>
+                </div>
+
+                <div class="stackly-consult-team-department-info">
+                    <h3>Human Resources</h3>
+                    <p>People management and employee development.</p>
+                </div>
+
+                <div class="stackly-consult-team-department-bottom">
+                    <span>02 Members</span>
+                    <a href="404-admin.html" aria-label="View HR team">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         05. TEAM DIRECTORY
+    =========================================== -->
+
+    <section class="stackly-consult-team-directory"
+        id="team-directory"
+        data-aos="fade-up">
+
+        <div class="stackly-consult-team-section-header">
+
+            <div>
+                <span class="stackly-consult-team-section-label">
+                    PEOPLE DIRECTORY
+                </span>
+
+                <h2>All Team Members</h2>
+
+                <p>
+                    Search, explore and manage your organization members.
+                </p>
+            </div>
+
+            <a href="404-admin.html"
+                class="stackly-consult-team-add-link">
+                <i class="fa-solid fa-plus"></i>
+                Add New Member
+            </a>
+
+        </div>
+
+
+        <!-- DIRECTORY TOOLBAR -->
+
+        <div class="stackly-consult-team-directory-toolbar">
+
+            <div class="stackly-consult-team-search">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input type="search"
+                    id="stacklyConsultTeamSearch"
+                    placeholder="Search by name, role or email..."
+                    aria-label="Search team members">
+
+            </div>
+
+
+            <!-- CUSTOM TEAM FILTER DROPDOWNS -->
+<div class="stackly-consult-team-filter">
+
+    <!-- DEPARTMENT DROPDOWN -->
+    <div class="stackly-consult-team-custom-dropdown"
+        data-dropdown="department">
+
+        <button type="button"
+            class="stackly-consult-team-dropdown-trigger"
+            aria-expanded="false">
+
+            <span class="stackly-consult-team-dropdown-value">
+                All Departments
+            </span>
+
+            <i class="fa-solid fa-chevron-down"></i>
+
+        </button>
+
+        <div class="stackly-consult-team-dropdown-menu">
+
+            <button type="button" class="stackly-consult-team-dropdown-option active"
+                data-value="">
+                All Departments
+            </button>
+
+            <button type="button" class="stackly-consult-team-dropdown-option"
+                data-value="Strategy & Consulting">
+                Strategy & Consulting
+            </button>
+
+            <button type="button" class="stackly-consult-team-dropdown-option"
+                data-value="Finance & Accounts">
+                Finance & Accounts
+            </button>
+
+            <button type="button" class="stackly-consult-team-dropdown-option"
+                data-value="Marketing">
+                Marketing
+            </button>
+
+            <button type="button" class="stackly-consult-team-dropdown-option"
+                data-value="Technology">
+                Technology
+            </button>
+
+            <button type="button" class="stackly-consult-team-dropdown-option"
+                data-value="Client Relations">
+                Client Relations
+            </button>
+
+            <button type="button" class="stackly-consult-team-dropdown-option"
+                data-value="Human Resources">
+                Human Resources
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- STATUS DROPDOWN -->
+    <div class="stackly-consult-team-custom-dropdown"
+        data-dropdown="status">
+
+        <button type="button"
+            class="stackly-consult-team-dropdown-trigger"
+            aria-expanded="false">
+
+            <span class="stackly-consult-team-dropdown-value">
+                All Status
+            </span>
+
+            <i class="fa-solid fa-chevron-down"></i>
+
+        </button>
+
+        <div class="stackly-consult-team-dropdown-menu">
+
+            <button type="button" class="stackly-consult-team-dropdown-option active"
+                data-value="">
+                All Status
+            </button>
+
+            <button type="button" class="stackly-consult-team-dropdown-option"
+                data-value="Active">
+                Active
+            </button>
+
+            <button type="button" class="stackly-consult-team-dropdown-option"
+                data-value="On Leave">
+                On Leave
+            </button>
+
+            <button type="button" class="stackly-consult-team-dropdown-option"
+                data-value="Inactive">
+                Inactive
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+        </div>
+
+
+        <!-- TEAM MEMBER CARDS -->
+
+        <div class="stackly-consult-team-member-grid"
+            id="stacklyConsultTeamMemberGrid">
+
+
+            <!-- MEMBER 01 -->
+
+            <article class="stackly-consult-team-member-card"
+                data-name="David Wilson"
+                data-role="CEO"
+                data-email="david@stackly.com"
+                data-department="Strategy & Consulting"
+                data-status="Active">
+
+                <div class="stackly-consult-team-member-card-top">
+
+                    <span class="stackly-consult-team-member-status active">
+                        <span></span> Active
+                    </span>
+
+                    <a href="404-admin.html"
+                        class="stackly-consult-team-member-more"
+                        aria-label="View David profile">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+
+                </div>
+
+                <div class="stackly-consult-team-member-avatar orange">
+                    DW
+                </div>
+
+                <h3>David Wilson</h3>
+                <p class="stackly-consult-team-member-role">
+                    Chief Executive Officer
+                </p>
+
+                <span class="stackly-consult-team-member-department">
+                    Strategy & Consulting
+                </span>
+
+                <div class="stackly-consult-team-member-contact">
+                    <span><i class="fa-regular fa-envelope"></i> david@stackly.com</span>
+                    <span><i class="fa-solid fa-phone"></i> +91 98765 43210</span>
+                </div>
+
+                <div class="stackly-consult-team-member-footer">
+                    <span>Experience</span>
+                    <strong>12 Years</strong>
+                </div>
+
+            </article>
+
+
+            <!-- MEMBER 02 -->
+
+            <article class="stackly-consult-team-member-card"
+                data-name="Sarah Miller"
+                data-role="COO"
+                data-email="sarah@stackly.com"
+                data-department="Strategy & Consulting"
+                data-status="Active">
+
+                <div class="stackly-consult-team-member-card-top">
+
+                    <span class="stackly-consult-team-member-status active">
+                        <span></span> Active
+                    </span>
+
+                    <a href="404-admin.html"
+                        class="stackly-consult-team-member-more"
+                        aria-label="View Sarah profile">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+
+                </div>
+
+                <div class="stackly-consult-team-member-avatar blue">
+                    SM
+                </div>
+
+                <h3>Sarah Miller</h3>
+                <p class="stackly-consult-team-member-role">
+                    Chief Operating Officer
+                </p>
+
+                <span class="stackly-consult-team-member-department">
+                    Strategy & Consulting
+                </span>
+
+                <div class="stackly-consult-team-member-contact">
+                    <span><i class="fa-regular fa-envelope"></i> sarah@stackly.com</span>
+                    <span><i class="fa-solid fa-phone"></i> +91 98765 43211</span>
+                </div>
+
+                <div class="stackly-consult-team-member-footer">
+                    <span>Experience</span>
+                    <strong>10 Years</strong>
+                </div>
+
+            </article>
+
+
+            <!-- MEMBER 03 -->
+
+            <article class="stackly-consult-team-member-card"
+                data-name="Robert Martin"
+                data-role="Finance Manager"
+                data-email="robert@stackly.com"
+                data-department="Finance & Accounts"
+                data-status="Active">
+
+                <div class="stackly-consult-team-member-card-top">
+
+                    <span class="stackly-consult-team-member-status active">
+                        <span></span> Active
+                    </span>
+
+                    <a href="404-admin.html"
+                        class="stackly-consult-team-member-more"
+                        aria-label="View Robert profile">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+
+                </div>
+
+                <div class="stackly-consult-team-member-avatar purple">
+                    RM
+                </div>
+
+                <h3>Robert Martin</h3>
+                <p class="stackly-consult-team-member-role">
+                    Finance Manager
+                </p>
+
+                <span class="stackly-consult-team-member-department">
+                    Finance & Accounts
+                </span>
+
+                <div class="stackly-consult-team-member-contact">
+                    <span><i class="fa-regular fa-envelope"></i> robert@stackly.com</span>
+                    <span><i class="fa-solid fa-phone"></i> +91 98765 43212</span>
+                </div>
+
+                <div class="stackly-consult-team-member-footer">
+                    <span>Experience</span>
+                    <strong>09 Years</strong>
+                </div>
+
+            </article>
+
+
+            <!-- MEMBER 04 -->
+
+            <article class="stackly-consult-team-member-card"
+                data-name="Emily Thompson"
+                data-role="Marketing Manager"
+                data-email="emily@stackly.com"
+                data-department="Marketing"
+                data-status="Active">
+
+                <div class="stackly-consult-team-member-card-top">
+
+                    <span class="stackly-consult-team-member-status active">
+                        <span></span> Active
+                    </span>
+
+                    <a href="404-admin.html"
+                        class="stackly-consult-team-member-more"
+                        aria-label="View Emily profile">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+
+                </div>
+
+                <div class="stackly-consult-team-member-avatar green">
+                    ET
+                </div>
+
+                <h3>Emily Thompson</h3>
+                <p class="stackly-consult-team-member-role">
+                    Marketing Manager
+                </p>
+
+                <span class="stackly-consult-team-member-department">
+                    Marketing
+                </span>
+
+                <div class="stackly-consult-team-member-contact">
+                    <span><i class="fa-regular fa-envelope"></i> emily@stackly.com</span>
+                    <span><i class="fa-solid fa-phone"></i> +91 98765 43213</span>
+                </div>
+
+                <div class="stackly-consult-team-member-footer">
+                    <span>Experience</span>
+                    <strong>07 Years</strong>
+                </div>
+
+            </article>
+
+
+            <!-- MEMBER 05 -->
+
+            <article class="stackly-consult-team-member-card"
+                data-name="James Richardson"
+                data-role="Technology Lead"
+                data-email="james@stackly.com"
+                data-department="Technology"
+                data-status="On Leave">
+
+                <div class="stackly-consult-team-member-card-top">
+
+                    <span class="stackly-consult-team-member-status on-leave">
+                        <span></span> On Leave
+                    </span>
+
+                    <a href="404-admin.html"
+                        class="stackly-consult-team-member-more"
+                        aria-label="View James profile">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+
+                </div>
+
+                <div class="stackly-consult-team-member-avatar pink">
+                    JR
+                </div>
+
+                <h3>James Richardson</h3>
+                <p class="stackly-consult-team-member-role">
+                    Technology Lead
+                </p>
+
+                <span class="stackly-consult-team-member-department">
+                    Technology
+                </span>
+
+                <div class="stackly-consult-team-member-contact">
+                    <span><i class="fa-regular fa-envelope"></i> james@stackly.com</span>
+                    <span><i class="fa-solid fa-phone"></i> +91 98765 43214</span>
+                </div>
+
+                <div class="stackly-consult-team-member-footer">
+                    <span>Experience</span>
+                    <strong>08 Years</strong>
+                </div>
+
+            </article>
+
+
+            <!-- MEMBER 06 -->
+
+            <article class="stackly-consult-team-member-card"
+                data-name="Olivia Lewis"
+                data-role="Client Relations Executive"
+                data-email="olivia@stackly.com"
+                data-department="Client Relations"
+                data-status="Active">
+
+                <div class="stackly-consult-team-member-card-top">
+
+                    <span class="stackly-consult-team-member-status active">
+                        <span></span> Active
+                    </span>
+
+                    <a href="404-admin.html"
+                        class="stackly-consult-team-member-more"
+                        aria-label="View Olivia profile">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+
+                </div>
+
+                <div class="stackly-consult-team-member-avatar yellow">
+                    OL
+                </div>
+
+                <h3>Olivia Lewis</h3>
+                <p class="stackly-consult-team-member-role">
+                    Client Relations Executive
+                </p>
+
+                <span class="stackly-consult-team-member-department">
+                    Client Relations
+                </span>
+
+                <div class="stackly-consult-team-member-contact">
+                    <span><i class="fa-regular fa-envelope"></i> olivia@stackly.com</span>
+                    <span><i class="fa-solid fa-phone"></i> +91 98765 43215</span>
+                </div>
+
+                <div class="stackly-consult-team-member-footer">
+                    <span>Experience</span>
+                    <strong>05 Years</strong>
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <!-- EMPTY SEARCH STATE -->
+
+        <div class="stackly-consult-team-empty"
+            id="stacklyConsultTeamEmpty"
+            hidden>
+
+            <i class="fa-solid fa-user-group"></i>
+
+            <h3>No Team Members Found</h3>
+
+            <p>
+                Try another name, role or department.
+            </p>
+
+        </div>
+
+
+        <!-- DIRECTORY FOOTER -->
+
+        <div class="stackly-consult-team-directory-footer">
+
+            <span id="stacklyConsultTeamCount">
+                Showing 6 team members
+            </span>
+
+            <a href="404-admin.html">
+                View All Members
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         06. TEAM PERFORMANCE
+    =========================================== -->
+
+    <section class="stackly-consult-team-performance" data-aos="fade-up">
+
+        <div class="stackly-consult-team-section-header">
+
+            <div>
+                <span class="stackly-consult-team-section-label">
+                    PERFORMANCE INSIGHTS
+                </span>
+
+                <h2>Team Performance Overview</h2>
+
+                <p>
+                    Monitor department productivity and team contribution.
+                </p>
+            </div>
+
+            <span class="stackly-consult-team-performance-period">
+                <i class="fa-regular fa-calendar"></i>
+                November 2026
+            </span>
+
+        </div>
+
+
+        <div class="stackly-consult-team-performance-grid">
+
+            <!-- DEPARTMENT PERFORMANCE -->
+
+            <div class="stackly-consult-team-performance-card">
+
+                <h3>Department Productivity</h3>
+
+                <p>Performance across all departments.</p>
+
+
+                <div class="stackly-consult-team-progress-item">
+
+                    <div class="stackly-consult-team-progress-heading">
+                        <span>Strategy & Consulting</span>
+                        <strong>96%</strong>
+                    </div>
+
+                    <div class="stackly-consult-team-progress-track">
+                        <span style="width: 96%"></span>
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-consult-team-progress-item">
+
+                    <div class="stackly-consult-team-progress-heading">
+                        <span>Finance & Accounts</span>
+                        <strong>89%</strong>
+                    </div>
+
+                    <div class="stackly-consult-team-progress-track">
+                        <span style="width: 89%"></span>
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-consult-team-progress-item">
+
+                    <div class="stackly-consult-team-progress-heading">
+                        <span>Marketing</span>
+                        <strong>92%</strong>
+                    </div>
+
+                    <div class="stackly-consult-team-progress-track">
+                        <span style="width: 92%"></span>
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-consult-team-progress-item">
+
+                    <div class="stackly-consult-team-progress-heading">
+                        <span>Technology</span>
+                        <strong>85%</strong>
+                    </div>
+
+                    <div class="stackly-consult-team-progress-track">
+                        <span style="width: 85%"></span>
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-consult-team-progress-item">
+
+                    <div class="stackly-consult-team-progress-heading">
+                        <span>Client Relations</span>
+                        <strong>94%</strong>
+                    </div>
+
+                    <div class="stackly-consult-team-progress-track">
+                        <span style="width: 94%"></span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- TEAM ATTENDANCE -->
+
+            <div class="stackly-consult-team-attendance-card">
+
+                <div class="stackly-consult-team-attendance-header">
+                    <div>
+                        <h3>Team Availability</h3>
+                        <p>Current member availability.</p>
+                    </div>
+
+                    <i class="fa-solid fa-users-viewfinder"></i>
+                </div>
+
+
+                <div class="stackly-consult-team-attendance-circle">
+
+                    <div class="stackly-consult-team-attendance-inner">
+                        <strong>21</strong>
+                        <span>Available</span>
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-consult-team-attendance-legend">
+
+                    <div>
+                        <span class="attendance-green"></span>
+                        <span>Active</span>
+                        <strong>21</strong>
+                    </div>
+
+                    <div>
+                        <span class="attendance-orange"></span>
+                        <span>On Leave</span>
+                        <strong>02</strong>
+                    </div>
+
+                    <div>
+                        <span class="attendance-grey"></span>
+                        <span>Inactive</span>
+                        <strong>01</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         07. RECENT TEAM ACTIVITY
+    =========================================== -->
+
+    <section class="stackly-consult-team-activity" data-aos="fade-up">
+
+        <div class="stackly-consult-team-section-header">
+
+            <div>
+                <span class="stackly-consult-team-section-label">
+                    LATEST UPDATES
+                </span>
+
+                <h2>Recent Team Activity</h2>
+
+                <p>
+                    Stay updated with the latest team movements.
+                </p>
+            </div>
+
+            <a href="404-admin.html"
+                class="stackly-consult-team-text-link">
+                View Activity
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+
+        <div class="stackly-consult-team-activity-list">
+
+
+            <div class="stackly-consult-team-activity-item">
+
+                <div class="stackly-consult-team-activity-icon orange">
+                    <i class="fa-solid fa-user-plus"></i>
+                </div>
+
+                <div class="stackly-consult-team-activity-content">
+
+                    <h3>New team member added</h3>
+
+                    <p>
+                        Emily Thompson joined the Marketing department.
+                    </p>
+
+                    <span>Today, 10:30 AM</span>
+
+                </div>
+
+                <span class="stackly-consult-team-activity-tag">
+                    New Member
+                </span>
+
+            </div>
+
+
+            <div class="stackly-consult-team-activity-item">
+
+                <div class="stackly-consult-team-activity-icon blue">
+                    <i class="fa-solid fa-briefcase"></i>
+                </div>
+
+                <div class="stackly-consult-team-activity-content">
+
+                    <h3>Department project completed</h3>
+
+                    <p>
+                        Strategy team completed the client growth project.
+                    </p>
+
+                    <span>Yesterday, 03:45 PM</span>
+
+                </div>
+
+                <span class="stackly-consult-team-activity-tag">
+                    Project Update
+                </span>
+
+            </div>
+
+
+            <div class="stackly-consult-team-activity-item">
+
+                <div class="stackly-consult-team-activity-icon green">
+                    <i class="fa-solid fa-calendar-check"></i>
+                </div>
+
+                <div class="stackly-consult-team-activity-content">
+
+                    <h3>Team meeting scheduled</h3>
+
+                    <p>
+                        Monthly performance review scheduled for the
+                        management team.
+                    </p>
+
+                    <span>Nov 02, 2026</span>
+
+                </div>
+
+                <span class="stackly-consult-team-activity-tag">
+                    Meeting
+                </span>
+
+            </div>
+
+
+            <div class="stackly-consult-team-activity-item">
+
+                <div class="stackly-consult-team-activity-icon purple">
+                    <i class="fa-solid fa-award"></i>
+                </div>
+
+                <div class="stackly-consult-team-activity-content">
+
+                    <h3>Employee performance recognition</h3>
+
+                    <p>
+                        Robert Martin received the monthly excellence award.
+                    </p>
+
+                    <span>Oct 30, 2026</span>
+
+                </div>
+
+                <span class="stackly-consult-team-activity-tag">
+                    Recognition
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         08. TEAM REMINDER BANNER
+    =========================================== -->
+
+    <section class="stackly-consult-team-reminder" data-aos="fade-up">
+
+        <div class="stackly-consult-team-reminder-icon">
+            <i class="fa-solid fa-people-arrows-left-right"></i>
+        </div>
+
+        <div class="stackly-consult-team-reminder-content">
+
+            <span>BUILD A STRONGER TEAM</span>
+
+            <h2>Great Teams Create Great Results.</h2>
+
+            <p>
+                Keep your team connected, motivated and moving
+                toward shared business goals.
+            </p>
+
+        </div>
+
+        <a href="404-admin.html">
+            Manage Team
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+    </section>
+
+</div>
+
+
+        </main>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <!-- Admin JS -->
+    <script src="admin.js"></script>
+
+</body>
+</html>

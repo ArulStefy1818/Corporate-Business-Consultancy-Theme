@@ -1,0 +1,652 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login / Sign Up | Stackly Corporate Consultancy</title>
+
+    <meta name="description"
+        content="Access your Stackly Corporate Consultancy account or create a new account to get started.">
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/webp" href="Stackly-logo-Blue.webp">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="login.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         MAIN AUTH PAGE
+    ========================================== -->
+
+    <main class="stackly-consult-auth-page">
+
+        <div class="stackly-consult-auth-container">
+
+
+            <!-- ==========================================
+                 LEFT BRAND PANEL
+            ========================================== -->
+
+            <section class="stackly-consult-auth-brand">
+
+                <!-- LOGO -->
+                <a href="index.html"
+                   class="stackly-consult-auth-logo"
+                   aria-label="Stackly Home">
+
+                    <img src="Stackly-logo-Blue.webp"
+                         alt="Stackly Corporate Consultancy Logo">
+
+                </a>
+
+
+                <!-- BRAND CONTENT -->
+                <div class="stackly-consult-auth-brand-content">
+
+                    <span class="stackly-consult-auth-brand-label">
+                        <span></span>
+                        STACKLY CORPORATE CONSULTANCY
+                    </span>
+
+                    <h1>
+                        Empower Your Business.
+                        <span>Achieve More.</span>
+                    </h1>
+
+                    <p>
+                        Welcome to Stackly. Access your account and
+                        discover smarter business strategies, expert
+                        consulting, and opportunities for sustainable growth.
+                    </p>
+
+                </div>
+
+
+                <!-- FEATURES -->
+                <div class="stackly-consult-auth-features">
+
+                    <div class="stackly-consult-auth-feature">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <span>Secure Account Access</span>
+                    </div>
+
+                    <div class="stackly-consult-auth-feature">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <span>Business Growth Solutions</span>
+                    </div>
+
+                    <div class="stackly-consult-auth-feature">
+                        <i class="fa-solid fa-users"></i>
+                        <span>Expert Consulting Support</span>
+                    </div>
+
+                    <div class="stackly-consult-auth-feature">
+                        <i class="fa-solid fa-lightbulb"></i>
+                        <span>Smarter Business Decisions</span>
+                    </div>
+
+                </div>
+
+
+                <!-- FOOTER -->
+                <div class="stackly-consult-auth-brand-footer">
+                    © <span id="stacklyConsultAuthYear"></span>
+                    Stackly Corporate Consultancy. All Rights Reserved.
+                </div>
+
+            </section>
+
+
+
+            <!-- ==========================================
+                 RIGHT AUTH PANEL
+            ========================================== -->
+
+            <section class="stackly-consult-auth-content">
+
+                <div class="stackly-consult-auth-form-wrapper">
+
+
+                    <!-- BACK TO HOME -->
+                    <div class="stackly-consult-auth-top">
+
+                        <a href="index.html"
+                           class="stackly-consult-auth-home">
+
+                            <i class="fa-solid fa-arrow-left"></i>
+                            Back to Home
+
+                        </a>
+
+                    </div>
+
+
+                    <!-- FORM HEADING -->
+                    <div class="stackly-consult-auth-heading">
+
+                        <small>WELCOME TO STACKLY</small>
+
+                        <h2 id="stacklyConsultAuthTitle">
+                            Welcome Back!
+                        </h2>
+
+                        <p id="stacklyConsultAuthSubtitle">
+                            Sign in to continue to your account.
+                        </p>
+
+                    </div>
+
+
+                    <!-- LOGIN / SIGNUP TABS -->
+                    <div class="stackly-consult-auth-tabs">
+
+                        <button type="button"
+                                class="stackly-consult-auth-tab active"
+                                id="stacklyConsultLoginTab"
+                                aria-selected="true">
+
+                            Login
+
+                        </button>
+
+                        <button type="button"
+                                class="stackly-consult-auth-tab"
+                                id="stacklyConsultSignupTab"
+                                aria-selected="false">
+
+                            Sign Up
+
+                        </button>
+
+                    </div>
+
+
+
+                    <!-- ==========================================
+                         LOGIN FORM
+                    ========================================== -->
+
+                    <form class="stackly-consult-auth-form active"
+                          id="stacklyConsultLoginForm"
+                          novalidate>
+
+                        <!-- EMAIL -->
+                        <div class="stackly-consult-auth-field">
+
+                            <label for="stacklyConsultLoginEmail">
+                                Email Address
+                            </label>
+
+                            <div class="stackly-consult-auth-input-wrap">
+
+                                <i class="fa-regular fa-envelope"></i>
+
+                                <input type="email"
+                                       class="stackly-consult-auth-input"
+                                       id="stacklyConsultLoginEmail"
+                                       name="email"
+                                       placeholder="Enter your email address"
+                                       autocomplete="email"
+                                       required>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- PASSWORD -->
+                        <div class="stackly-consult-auth-field">
+
+                            <label for="stacklyConsultLoginPassword">
+                                Password
+                            </label>
+
+                            <div class="stackly-consult-auth-input-wrap">
+
+                                <i class="fa-solid fa-lock"></i>
+
+                                <input type="password"
+                                       class="stackly-consult-auth-input"
+                                       id="stacklyConsultLoginPassword"
+                                       name="password"
+                                       placeholder="Enter your password"
+                                       autocomplete="current-password"
+                                       required>
+
+                                <button type="button"
+                                        class="stackly-consult-auth-eye"
+                                        data-password-toggle="stacklyConsultLoginPassword"
+                                        aria-label="Show password"
+                                        aria-pressed="false">
+
+                                    <i class="fa-regular fa-eye"></i>
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- ROLE DROPDOWN -->
+                        <div class="stackly-consult-auth-field">
+
+                            <label>Login As</label>
+
+                            <div class="stackly-consult-auth-dropdown"
+                                 data-auth-dropdown>
+
+                                <input type="hidden"
+                                       name="role"
+                                       value="">
+
+                                <button type="button"
+                                        class="stackly-consult-auth-dropdown-trigger"
+                                        aria-haspopup="listbox"
+                                        aria-expanded="false">
+
+                                    <span class="consult-role-left">
+                                        <i class="fa-solid fa-user-shield"></i>
+                                        <span data-role-label>
+                                            Select Your Role
+                                        </span>
+                                    </span>
+
+                                    <i class="fa-solid fa-chevron-down consult-role-arrow"></i>
+
+                                </button>
+
+
+                                <div class="stackly-consult-auth-dropdown-menu"
+                                     role="listbox"
+                                     aria-label="Choose login role">
+
+                                    <button type="button"
+                                            class="stackly-consult-auth-role-option"
+                                            role="option"
+                                            aria-selected="false"
+                                            data-role-value="admin">
+
+                                        <i class="fa-solid fa-user-shield"></i>
+                                        Admin
+
+                                    </button>
+
+                                    <button type="button"
+                                            class="stackly-consult-auth-role-option"
+                                            role="option"
+                                            aria-selected="false"
+                                            data-role-value="client">
+
+                                        <i class="fa-solid fa-user"></i>
+                                        Client
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- REMEMBER / FORGOT -->
+                        <div class="stackly-consult-auth-options">
+
+                            <label class="stackly-consult-auth-remember">
+
+                                <input type="checkbox"
+                                       name="remember"
+                                       id="stacklyConsultRemember">
+
+                                Remember Me
+
+                            </label>
+
+
+                            <a href="forgot-password.html"
+                               class="stackly-consult-auth-forgot">
+
+                                Forgot Password?
+
+                            </a>
+
+                        </div>
+
+
+                        <!-- LOGIN BUTTON -->
+                        <button type="submit"
+                                class="stackly-consult-auth-submit">
+
+                            Login to Account
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </button>
+
+
+                        <!-- LOGIN STATUS -->
+                        <div class="stackly-consult-auth-status"
+                             id="stacklyConsultLoginStatus"
+                             aria-live="polite"></div>
+
+
+                        <!-- SWITCH TO SIGNUP -->
+                        <div class="stackly-consult-auth-switch">
+
+                            Don't have an account?
+
+                            <button type="button"
+                                    data-switch-auth="signup">
+
+                                Sign Up
+
+                            </button>
+
+                        </div>
+
+                    </form>
+
+
+
+                    <!-- ==========================================
+                         SIGNUP FORM
+                    ========================================== -->
+
+                    <form class="stackly-consult-auth-form"
+                          id="stacklyConsultSignupForm"
+                          novalidate>
+
+                        <!-- FULL NAME -->
+                        <div class="stackly-consult-auth-field">
+
+                            <label for="stacklyConsultSignupName">
+                                Full Name
+                            </label>
+
+                            <div class="stackly-consult-auth-input-wrap">
+
+                                <i class="fa-regular fa-user"></i>
+
+                                <input type="text"
+                                       class="stackly-consult-auth-input"
+                                       id="stacklyConsultSignupName"
+                                       name="name"
+                                       placeholder="Enter your full name"
+                                       autocomplete="name"
+                                       required>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- EMAIL -->
+                        <div class="stackly-consult-auth-field">
+
+                            <label for="stacklyConsultSignupEmail">
+                                Email Address
+                            </label>
+
+                            <div class="stackly-consult-auth-input-wrap">
+
+                                <i class="fa-regular fa-envelope"></i>
+
+                                <input type="email"
+                                       class="stackly-consult-auth-input"
+                                       id="stacklyConsultSignupEmail"
+                                       name="email"
+                                       placeholder="Enter your email address"
+                                       autocomplete="email"
+                                       required>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- PHONE -->
+                        <div class="stackly-consult-auth-field">
+
+                            <label for="stacklyConsultSignupPhone">
+                                Phone Number
+                            </label>
+
+                            <div class="stackly-consult-auth-input-wrap">
+
+                                <i class="fa-solid fa-phone"></i>
+
+                                <input type="tel"
+                                       class="stackly-consult-auth-input"
+                                       id="stacklyConsultSignupPhone"
+                                       name="phone"
+                                       placeholder="Enter your phone number"
+                                       autocomplete="tel"
+                                       required>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- ROLE DROPDOWN -->
+                        <div class="stackly-consult-auth-field">
+
+                            <label>Register As</label>
+
+                            <div class="stackly-consult-auth-dropdown"
+                                 data-auth-dropdown>
+
+                                <input type="hidden"
+                                       name="role"
+                                       value="">
+
+                                <button type="button"
+                                        class="stackly-consult-auth-dropdown-trigger"
+                                        aria-haspopup="listbox"
+                                        aria-expanded="false">
+
+                                    <span class="consult-role-left">
+                                        <i class="fa-solid fa-user-shield"></i>
+                                        <span data-role-label>
+                                            Select Your Role
+                                        </span>
+                                    </span>
+
+                                    <i class="fa-solid fa-chevron-down consult-role-arrow"></i>
+
+                                </button>
+
+
+                                <div class="stackly-consult-auth-dropdown-menu"
+                                     role="listbox"
+                                     aria-label="Choose registration role">
+
+                                    <button type="button"
+                                            class="stackly-consult-auth-role-option"
+                                            role="option"
+                                            aria-selected="false"
+                                            data-role-value="admin">
+
+                                        <i class="fa-solid fa-user-shield"></i>
+                                        Admin
+
+                                    </button>
+
+                                    <button type="button"
+                                            class="stackly-consult-auth-role-option"
+                                            role="option"
+                                            aria-selected="false"
+                                            data-role-value="client">
+
+                                        <i class="fa-solid fa-user"></i>
+                                        Client
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- PASSWORD -->
+                        <div class="stackly-consult-auth-field">
+
+                            <label for="stacklyConsultSignupPassword">
+                                Create Password
+                            </label>
+
+                            <div class="stackly-consult-auth-input-wrap">
+
+                                <i class="fa-solid fa-lock"></i>
+
+                                <input type="password"
+                                       class="stackly-consult-auth-input"
+                                       id="stacklyConsultSignupPassword"
+                                       name="password"
+                                       placeholder="Create a password"
+                                       autocomplete="new-password"
+                                       minlength="8"
+                                       required>
+
+                                <button type="button"
+                                        class="stackly-consult-auth-eye"
+                                        data-password-toggle="stacklyConsultSignupPassword"
+                                        aria-label="Show password"
+                                        aria-pressed="false">
+
+                                    <i class="fa-regular fa-eye"></i>
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- CONFIRM PASSWORD -->
+                        <div class="stackly-consult-auth-field">
+
+                            <label for="stacklyConsultConfirmPassword">
+                                Confirm Password
+                            </label>
+
+                            <div class="stackly-consult-auth-input-wrap">
+
+                                <i class="fa-solid fa-lock"></i>
+
+                                <input type="password"
+                                       class="stackly-consult-auth-input"
+                                       id="stacklyConsultConfirmPassword"
+                                       name="confirmPassword"
+                                       placeholder="Confirm your password"
+                                       autocomplete="new-password"
+                                       required>
+
+                                <button type="button"
+                                        class="stackly-consult-auth-eye"
+                                        data-password-toggle="stacklyConsultConfirmPassword"
+                                        aria-label="Show password"
+                                        aria-pressed="false">
+
+                                    <i class="fa-regular fa-eye"></i>
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- TERMS -->
+                        <label class="stackly-consult-auth-terms">
+
+                            <input type="checkbox"
+                                   id="stacklyConsultTerms"
+                                   required>
+
+                            <span>
+                                I agree to the
+                                <a href="terms.html">Terms & Conditions</a>
+                                and
+                                <a href="privacy.html">Privacy Policy</a>.
+                            </span>
+
+                        </label>
+
+
+                        <!-- SIGNUP BUTTON -->
+                        <button type="submit"
+                                class="stackly-consult-auth-submit">
+
+                            Create Account
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </button>
+
+
+                        <!-- SIGNUP STATUS -->
+                        <div class="stackly-consult-auth-status"
+                             id="stacklyConsultSignupStatus"
+                             aria-live="polite"></div>
+
+
+                        <!-- SWITCH TO LOGIN -->
+                        <div class="stackly-consult-auth-switch">
+
+                            Already have an account?
+
+                            <button type="button"
+                                    data-switch-auth="login">
+
+                                Login
+
+                            </button>
+
+                        </div>
+
+                    </form>
+
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- ==========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script src="login.js"></script>
+</body>
+
+</html>

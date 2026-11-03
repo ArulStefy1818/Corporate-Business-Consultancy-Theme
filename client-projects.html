@@ -1,0 +1,1245 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Client Dashboard | Stackly Corporate Consultancy</title>
+
+    <meta name="description"
+        content="Stackly Corporate Consultancy Client Dashboard - Track your projects, monitor progress, manage meetings and access your business services.">
+
+    <link rel="icon" href="Stackly-logo-Blue.webp" type="image/webp">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- AOS ANIMATION -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="client.css">
+
+</head>
+
+<body>
+
+
+    <!-- ==========================================
+         STACKLY CLIENT DASHBOARD
+    =========================================== -->
+
+    <div class="stackly-consult-client-dashboard">
+
+
+        <!-- ==========================================
+             MOBILE OVERLAY
+        =========================================== -->
+
+        <div class="stackly-consult-client-overlay"
+            id="stacklyConsultClientOverlay"></div>
+
+
+        <!-- ==========================================
+             SIDEBAR
+        =========================================== -->
+
+        <aside class="stackly-consult-client-sidebar"
+            id="stacklyConsultClientSidebar">
+
+
+            <!-- SIDEBAR LOGO -->
+
+            <div class="stackly-consult-client-sidebar-logo">
+
+                <a href="client.html"
+                    aria-label="Stackly Home">
+
+                    <img src="Stackly-logo-Blue.webp"
+                        alt="Stackly Corporate Consultancy Logo">
+
+                </a>
+
+                <!-- MOBILE CLOSE BUTTON -->
+
+                <button type="button"
+                    class="stackly-consult-client-close"
+                    id="stacklyConsultClientClose"
+                    aria-label="Close navigation menu">
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </button>
+
+            </div>
+
+
+            <!-- CLIENT PROFILE -->
+
+            <div class="stackly-consult-client-sidebar-profile">
+
+                <div class="stackly-consult-client-profile-avatar">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+                <div class="stackly-consult-client-profile-info">
+
+                    <h3 id="stacklyConsultClientSidebarName">
+                        Client
+                    </h3>
+
+                    <span>Client Account</span>
+
+                </div>
+
+                <span class="stackly-consult-client-online-dot"></span>
+
+            </div>
+
+
+            <!-- SIDEBAR NAVIGATION -->
+
+            <nav class="stackly-consult-client-navigation">
+
+                <p class="stackly-consult-client-nav-heading">
+                    MAIN MENU
+                </p>
+
+
+                <a href="client.html"
+                    class="stackly-consult-client-nav-link active">
+
+                    <i class="fa-solid fa-table-columns"></i>
+
+                    <span>Dashboard</span>
+
+                </a>
+
+
+                <a href="client-projects.html"
+                    class="stackly-consult-client-nav-link">
+
+                    <i class="fa-solid fa-briefcase"></i>
+
+                    <span>My Projects</span>
+
+                    <span class="stackly-consult-client-nav-count">
+                        04
+                    </span>
+
+                </a>
+
+
+                <a href="client-services.html"
+                    class="stackly-consult-client-nav-link">
+
+                    <i class="fa-solid fa-layer-group"></i>
+
+                    <span>Services</span>
+
+                </a>
+
+
+                <a href="client-meetings.html"
+                    class="stackly-consult-client-nav-link">
+
+                    <i class="fa-regular fa-calendar-check"></i>
+
+                    <span>Meetings</span>
+
+                </a>
+
+
+                <a href="client-invoices.html"
+                    class="stackly-consult-client-nav-link">
+
+                    <i class="fa-solid fa-file-invoice-dollar"></i>
+
+                    <span>Invoices</span>
+
+                </a>
+
+
+                <p class="stackly-consult-client-nav-heading stackly-consult-client-nav-secondary-heading">
+                    ACCOUNT
+                </p>
+
+
+                <a href="client-profile.html"
+                    class="stackly-consult-client-nav-link">
+
+                    <i class="fa-regular fa-user"></i>
+
+                    <span>My Profile</span>
+
+                </a>
+
+
+            </nav>
+
+
+            <!-- SIDEBAR BOTTOM -->
+
+            <div class="stackly-consult-client-sidebar-bottom">
+
+                <div class="stackly-consult-client-help-card">
+
+                    <div class="stackly-consult-client-help-icon">
+
+                        <i class="fa-solid fa-headset"></i>
+
+                    </div>
+
+                    <h4>Need Assistance?</h4>
+
+                    <p>
+                        Our team is ready to help you with your projects.
+                    </p>
+
+                    <a href="404-client.html">
+                        Contact Support
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+
+                <a href="index.html"
+                    class="stackly-consult-client-logout">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    <span>Logout</span>
+
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ==========================================
+             MAIN CONTENT
+        =========================================== -->
+
+        <main class="stackly-consult-client-main">
+
+
+            <!-- ==========================================
+                 TOP HEADER
+            =========================================== -->
+
+            <header class="stackly-consult-client-header">
+
+
+                <!-- LEFT HEADER -->
+
+                <div class="stackly-consult-client-header-left">
+
+                    <!-- MOBILE HAMBURGER -->
+
+                    <button type="button"
+                        class="stackly-consult-client-menu-toggle"
+                        id="stacklyConsultClientMenuToggle"
+                        aria-label="Open navigation menu"
+                        aria-expanded="false">
+
+                        <i class="fa-solid fa-bars"></i>
+
+                    </button>
+
+
+                    <div class="stackly-consult-client-header-title">
+
+                        <h2>Client Dashboard</h2>
+
+                        <p>
+                            Welcome back! Here's your business overview.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RIGHT HEADER -->
+
+                <div class="stackly-consult-client-header-right">
+
+
+                    <!-- NOTIFICATIONS -->
+
+                    <a href="404-client.html"
+                        class="stackly-consult-client-header-icon"
+                        aria-label="Messages">
+
+                        <i class="fa-regular fa-bell"></i>
+
+                        <span class="stackly-consult-client-notification-dot"></span>
+
+                    </a>
+
+
+                    <!-- USER EMAIL -->
+
+                    <div class="stackly-consult-client-header-user">
+
+                        <div class="stackly-consult-client-header-avatar">
+
+                            <i class="fa-solid fa-user"></i>
+
+                        </div>
+
+                        <div class="stackly-consult-client-header-user-info">
+
+                            <span>Logged in as</span>
+
+                            <strong id="stacklyConsultClientEmail">
+                                client@example.com
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+            <div class="stackly-consult-client-content">
+
+                <!-- ==========================================
+     STACKLY CLIENT - MY PROJECTS PAGE
+     ADDITIONAL PROJECT SECTIONS
+========================================== -->
+
+
+<!-- ==========================================
+     1. PROJECT PAGE HERO
+========================================== -->
+
+<section class="stackly-consult-client-project-hero"
+    data-aos="fade-up">
+
+    <div class="stackly-consult-client-project-hero-content">
+
+        <span class="stackly-consult-client-project-eyebrow">
+            <i class="fa-solid fa-folder-open"></i>
+            PROJECT WORKSPACE
+        </span>
+
+        <h1>
+            Your Projects,
+            <span>Our Commitment.</span>
+        </h1>
+
+        <p>
+            Explore your ongoing consultancy projects, monitor
+            milestones, track achievements and stay connected
+            with our expert team.
+        </p>
+
+        <div class="stackly-consult-client-project-hero-actions">
+
+            <a href="404-client.html"
+                class="stackly-consult-client-project-primary-btn">
+                <i class="fa-solid fa-plus"></i>
+                Request New Project
+            </a>
+
+            <a href="404-client.html"
+                class="stackly-consult-client-project-outline-btn">
+                <i class="fa-regular fa-calendar"></i>
+                View Timeline
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="stackly-consult-client-project-hero-visual">
+
+        <div class="stackly-consult-client-project-hero-circle">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+        </div>
+
+        <div class="stackly-consult-client-project-hero-floating">
+
+            <span>Overall Completion</span>
+
+            <strong>85%</strong>
+
+            <div class="stackly-consult-client-project-hero-progress">
+                <span style="width: 85%;"></span>
+            </div>
+
+            <small>
+                <i class="fa-solid fa-arrow-trend-up"></i>
+                Great progress this month
+            </small>
+
+        </div>
+
+        <div class="stackly-consult-client-project-decoration decoration-one"></div>
+        <div class="stackly-consult-client-project-decoration decoration-two"></div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     2. PROJECT OVERVIEW STATISTICS
+========================================== -->
+
+<section class="stackly-consult-client-project-overview"
+    data-aos="fade-up">
+
+    <div class="stackly-consult-client-project-overview-card">
+
+        <div class="stackly-consult-client-project-overview-icon orange">
+            <i class="fa-solid fa-folder-open"></i>
+        </div>
+
+        <div>
+            <span>Total Projects</span>
+            <h3>08</h3>
+            <small>All assigned projects</small>
+        </div>
+
+    </div>
+
+
+    <div class="stackly-consult-client-project-overview-card">
+
+        <div class="stackly-consult-client-project-overview-icon blue">
+            <i class="fa-solid fa-spinner"></i>
+        </div>
+
+        <div>
+            <span>In Progress</span>
+            <h3>04</h3>
+            <small>Currently active projects</small>
+        </div>
+
+    </div>
+
+
+    <div class="stackly-consult-client-project-overview-card">
+
+        <div class="stackly-consult-client-project-overview-icon green">
+            <i class="fa-solid fa-circle-check"></i>
+        </div>
+
+        <div>
+            <span>Completed</span>
+            <h3>03</h3>
+            <small>Successfully delivered</small>
+        </div>
+
+    </div>
+
+
+    <div class="stackly-consult-client-project-overview-card">
+
+        <div class="stackly-consult-client-project-overview-icon purple">
+            <i class="fa-solid fa-clock"></i>
+        </div>
+
+        <div>
+            <span>Pending Review</span>
+            <h3>01</h3>
+            <small>Awaiting approval</small>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     3. PROJECT FILTER AND SEARCH
+========================================== -->
+
+<section class="stackly-consult-client-project-management"
+    data-aos="fade-up">
+
+    <div class="stackly-consult-client-project-management-heading">
+
+        <div>
+            <span>PROJECT MANAGEMENT</span>
+            <h2>Explore Your Projects</h2>
+            <p>
+                Keep track of every project and its latest progress.
+            </p>
+        </div>
+
+        <a href="404-client.html"
+            class="stackly-consult-client-project-management-btn">
+            <i class="fa-solid fa-plus"></i>
+            New Project Request
+        </a>
+
+    </div>
+
+
+    <div class="stackly-consult-client-project-toolbar">
+
+        <div class="stackly-consult-client-project-filters">
+
+            <button class="stackly-consult-client-project-filter active"
+                type="button" data-filter="all">
+                All Projects <span>08</span>
+            </button>
+
+            <button class="stackly-consult-client-project-filter"
+                type="button" data-filter="progress">
+                In Progress <span>04</span>
+            </button>
+
+            <button class="stackly-consult-client-project-filter"
+                type="button" data-filter="completed">
+                Completed <span>03</span>
+            </button>
+
+            <button class="stackly-consult-client-project-filter"
+                type="button" data-filter="review">
+                In Review <span>01</span>
+            </button>
+
+        </div>
+
+
+        <div class="stackly-consult-client-project-search">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input type="search"
+                id="stacklyConsultClientProjectSearch"
+                placeholder="Search projects..."
+                aria-label="Search projects">
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ==========================================
+         4. PROJECT CARDS
+    =========================================== -->
+
+    <div class="stackly-consult-client-project-card-grid"
+        id="stacklyConsultClientProjectGrid">
+
+
+        <!-- PROJECT CARD 1 -->
+
+        <article class="stackly-consult-client-project-card"
+            data-category="progress">
+
+            <div class="stackly-consult-client-project-card-top">
+
+                <div class="stackly-consult-client-project-card-icon orange">
+                    <i class="fa-solid fa-lightbulb"></i>
+                </div>
+
+                <span class="stackly-consult-client-project-card-status progress">
+                    <span></span>
+                    In Progress
+                </span>
+
+            </div>
+
+            <span class="stackly-consult-client-project-card-id">
+                PROJECT #STK-001
+            </span>
+
+            <h3>Business Strategy Development</h3>
+
+            <p>
+                Developing a comprehensive business strategy
+                to strengthen market positioning and accelerate growth.
+            </p>
+
+
+            <div class="stackly-consult-client-project-card-meta">
+
+                <div>
+                    <i class="fa-regular fa-calendar"></i>
+                    <span>Started: Oct 10, 2026</span>
+                </div>
+
+                <div>
+                    <i class="fa-regular fa-clock"></i>
+                    <span>Due: Nov 20, 2026</span>
+                </div>
+
+            </div>
+
+
+            <div class="stackly-consult-client-project-card-progress">
+
+                <div>
+                    <span>Project Completion</span>
+                    <strong>85%</strong>
+                </div>
+
+                <div class="stackly-consult-client-project-card-track">
+                    <span style="width: 85%;"></span>
+                </div>
+
+            </div>
+
+
+            <div class="stackly-consult-client-project-card-footer">
+
+                <div class="stackly-consult-client-project-team">
+
+                    <div class="stackly-consult-client-team-avatar avatar-orange">
+                        MA
+                    </div>
+
+                    <div class="stackly-consult-client-team-info">
+                        <strong>Michael Anderson</strong>
+                        <span>Project Manager</span>
+                    </div>
+
+                </div>
+
+                <a href="404-client.html"
+                    aria-label="View Business Strategy Development project">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- PROJECT CARD 2 -->
+
+        <article class="stackly-consult-client-project-card"
+            data-category="progress">
+
+            <div class="stackly-consult-client-project-card-top">
+
+                <div class="stackly-consult-client-project-card-icon blue">
+                    <i class="fa-solid fa-chart-column"></i>
+                </div>
+
+                <span class="stackly-consult-client-project-card-status progress">
+                    <span></span>
+                    In Progress
+                </span>
+
+            </div>
+
+            <span class="stackly-consult-client-project-card-id">
+                PROJECT #STK-002
+            </span>
+
+            <h3>Market Research Analysis Report</h3>
+
+            <p>
+                Analyzing market trends, customer behavior
+                and competitor insights for better decisions.
+            </p>
+
+
+            <div class="stackly-consult-client-project-card-meta">
+
+                <div>
+                    <i class="fa-regular fa-calendar"></i>
+                    <span>Started: Oct 15, 2026</span>
+                </div>
+
+                <div>
+                    <i class="fa-regular fa-clock"></i>
+                    <span>Due: Nov 25, 2026</span>
+                </div>
+
+            </div>
+
+
+            <div class="stackly-consult-client-project-card-progress">
+
+                <div>
+                    <span>Project Completion</span>
+                    <strong>65%</strong>
+                </div>
+
+                <div class="stackly-consult-client-project-card-track">
+                    <span style="width: 65%;"></span>
+                </div>
+
+            </div>
+
+
+            <div class="stackly-consult-client-project-card-footer">
+
+                <div class="stackly-consult-client-project-team">
+
+                    <div class="stackly-consult-client-team-avatar avatar-blue">
+                        SW
+                    </div>
+
+                    <div class="stackly-consult-client-team-info">
+                        <strong>Sarah Williams</strong>
+                        <span>Research Consultant</span>
+                    </div>
+
+                </div>
+
+                <a href="404-client.html"
+                    aria-label="View Market Research Analysis project">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- PROJECT CARD 3 -->
+
+        <article class="stackly-consult-client-project-card"
+            data-category="review">
+
+            <div class="stackly-consult-client-project-card-top">
+
+                <div class="stackly-consult-client-project-card-icon purple">
+                    <i class="fa-solid fa-building"></i>
+                </div>
+
+                <span class="stackly-consult-client-project-card-status review">
+                    <span></span>
+                    Under Review
+                </span>
+
+            </div>
+
+            <span class="stackly-consult-client-project-card-id">
+                PROJECT #STK-003
+            </span>
+
+            <h3>Business Transformation Strategy</h3>
+
+            <p>
+                Improving business operations through process
+                optimization and digital transformation.
+            </p>
+
+
+            <div class="stackly-consult-client-project-card-meta">
+
+                <div>
+                    <i class="fa-regular fa-calendar"></i>
+                    <span>Started: Sep 20, 2026</span>
+                </div>
+
+                <div>
+                    <i class="fa-regular fa-clock"></i>
+                    <span>Due: Nov 12, 2026</span>
+                </div>
+
+            </div>
+
+
+            <div class="stackly-consult-client-project-card-progress">
+
+                <div>
+                    <span>Project Completion</span>
+                    <strong>95%</strong>
+                </div>
+
+                <div class="stackly-consult-client-project-card-track">
+                    <span style="width: 95%;"></span>
+                </div>
+
+            </div>
+
+
+            <div class="stackly-consult-client-project-card-footer">
+
+                <div class="stackly-consult-client-project-team">
+
+                    <div class="stackly-consult-client-team-avatar avatar-purple">
+                        DL
+                    </div>
+
+                    <div class="stackly-consult-client-team-info">
+                        <strong>Daniel Lee</strong>
+                        <span>Business Consultant</span>
+                    </div>
+
+                </div>
+
+                <a href="404-client.html"
+                    aria-label="View Business Transformation project">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- PROJECT CARD 4 -->
+
+        <article class="stackly-consult-client-project-card"
+            data-category="completed">
+
+            <div class="stackly-consult-client-project-card-top">
+
+                <div class="stackly-consult-client-project-card-icon green">
+                    <i class="fa-solid fa-arrow-trend-up"></i>
+                </div>
+
+                <span class="stackly-consult-client-project-card-status completed">
+                    <span></span>
+                    Completed
+                </span>
+
+            </div>
+
+            <span class="stackly-consult-client-project-card-id">
+                PROJECT #STK-004
+            </span>
+
+            <h3>Growth Planning Strategy Development</h3>
+
+            <p>
+                Creating a sustainable growth roadmap with
+                measurable business development objectives.
+            </p>
+
+
+            <div class="stackly-consult-client-project-card-meta">
+
+                <div>
+                    <i class="fa-regular fa-calendar"></i>
+                    <span>Started: Aug 10, 2026</span>
+                </div>
+
+                <div>
+                    <i class="fa-regular fa-circle-check"></i>
+                    <span>Completed: Oct 28, 2026</span>
+                </div>
+
+            </div>
+
+
+            <div class="stackly-consult-client-project-card-progress">
+
+                <div>
+                    <span>Project Completion</span>
+                    <strong>100%</strong>
+                </div>
+
+                <div class="stackly-consult-client-project-card-track">
+                    <span style="width: 100%;"></span>
+                </div>
+
+            </div>
+
+
+            <div class="stackly-consult-client-project-card-footer">
+
+                <div class="stackly-consult-client-project-team">
+
+                    <div class="stackly-consult-client-team-avatar avatar-green">
+                        JR
+                    </div>
+
+                    <div class="stackly-consult-client-team-info">
+                        <strong>James Robert</strong>
+                        <span>Strategy Consultant</span>
+                    </div>
+
+                </div>
+
+                <a href="404-client.html"
+                    aria-label="View Growth Planning Strategy project">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- PROJECT CARD 5 -->
+
+        <article class="stackly-consult-client-project-card"
+            data-category="progress">
+
+            <div class="stackly-consult-client-project-card-top">
+
+                <div class="stackly-consult-client-project-card-icon orange">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+
+                <span class="stackly-consult-client-project-card-status progress">
+                    <span></span>
+                    In Progress
+                </span>
+
+            </div>
+
+            <span class="stackly-consult-client-project-card-id">
+                PROJECT #STK-005
+            </span>
+
+            <h3>Organizational Development Strategy</h3>
+
+            <p>
+                Strengthening team structures, leadership
+                capabilities and organizational performance.
+            </p>
+
+
+            <div class="stackly-consult-client-project-card-meta">
+
+                <div>
+                    <i class="fa-regular fa-calendar"></i>
+                    <span>Started: Oct 22, 2026</span>
+                </div>
+
+                <div>
+                    <i class="fa-regular fa-clock"></i>
+                    <span>Due: Dec 10, 2026</span>
+                </div>
+
+            </div>
+
+
+            <div class="stackly-consult-client-project-card-progress">
+
+                <div>
+                    <span>Project Completion</span>
+                    <strong>45%</strong>
+                </div>
+
+                <div class="stackly-consult-client-project-card-track">
+                    <span style="width: 45%;"></span>
+                </div>
+
+            </div>
+
+
+            <div class="stackly-consult-client-project-card-footer">
+
+                <div class="stackly-consult-client-project-team">
+
+                    <div class="stackly-consult-client-team-avatar avatar-orange">
+                        EM
+                    </div>
+
+                    <div class="stackly-consult-client-team-info">
+                        <strong>Emily Martin</strong>
+                        <span>HR Consultant</span>
+                    </div>
+
+                </div>
+
+                <a href="404-client.html"
+                    aria-label="View Organizational Development project">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- PROJECT CARD 6 -->
+
+        <article class="stackly-consult-client-project-card"
+            data-category="completed">
+
+            <div class="stackly-consult-client-project-card-top">
+
+                <div class="stackly-consult-client-project-card-icon blue">
+                    <i class="fa-solid fa-coins"></i>
+                </div>
+
+                <span class="stackly-consult-client-project-card-status completed">
+                    <span></span>
+                    Completed
+                </span>
+
+            </div>
+
+            <span class="stackly-consult-client-project-card-id">
+                PROJECT #STK-006
+            </span>
+
+            <h3>Financial Performance Review</h3>
+
+            <p>
+                Evaluating financial performance and identifying
+                opportunities for improved financial efficiency.
+            </p>
+
+
+            <div class="stackly-consult-client-project-card-meta">
+
+                <div>
+                    <i class="fa-regular fa-calendar"></i>
+                    <span>Started: Jul 15, 2026</span>
+                </div>
+
+                <div>
+                    <i class="fa-regular fa-circle-check"></i>
+                    <span>Completed: Sep 30, 2026</span>
+                </div>
+
+            </div>
+
+
+            <div class="stackly-consult-client-project-card-progress">
+
+                <div>
+                    <span>Project Completion</span>
+                    <strong>100%</strong>
+                </div>
+
+                <div class="stackly-consult-client-project-card-track">
+                    <span style="width: 100%;"></span>
+                </div>
+
+            </div>
+
+
+            <div class="stackly-consult-client-project-card-footer">
+
+                <div class="stackly-consult-client-project-team">
+
+                    <div class="stackly-consult-client-team-avatar avatar-blue">
+                        RK
+                    </div>
+
+                    <div class="stackly-consult-client-team-info">
+                        <strong>Robert King</strong>
+                        <span>Financial Consultant</span>
+                    </div>
+
+                </div>
+
+                <a href="404-client.html"
+                    aria-label="View Financial Performance Review project">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     5. PROJECT MILESTONES
+========================================== -->
+
+<section class="stackly-consult-client-milestone-section"
+    data-aos="fade-up">
+
+    <div class="stackly-consult-client-section-title">
+
+        <div>
+            <span>YOUR ACHIEVEMENTS</span>
+            <h2>Project Milestones</h2>
+            <p>
+                Important achievements and upcoming project targets.
+            </p>
+        </div>
+
+        <a href="404-client.html">
+            View Milestone Details
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+    </div>
+
+
+    <div class="stackly-consult-client-milestone-grid">
+
+
+        <div class="stackly-consult-client-milestone-card completed">
+
+            <div class="stackly-consult-client-milestone-icon">
+                <i class="fa-solid fa-flag-checkered"></i>
+            </div>
+
+            <div class="stackly-consult-client-milestone-content">
+
+                <span>OCT 15, 2026</span>
+
+                <h3>Research Completed</h3>
+
+                <p>
+                    Initial market research and business analysis
+                    successfully completed.
+                </p>
+
+                <strong>
+                    <i class="fa-solid fa-circle-check"></i>
+                    Completed
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="stackly-consult-client-milestone-card completed">
+
+            <div class="stackly-consult-client-milestone-icon">
+                <i class="fa-solid fa-chart-line"></i>
+            </div>
+
+            <div class="stackly-consult-client-milestone-content">
+
+                <span>OCT 28, 2026</span>
+
+                <h3>Strategy Approved</h3>
+
+                <p>
+                    Business growth strategy reviewed and
+                    approved by the consultancy team.
+                </p>
+
+                <strong>
+                    <i class="fa-solid fa-circle-check"></i>
+                    Completed
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="stackly-consult-client-milestone-card upcoming">
+
+            <div class="stackly-consult-client-milestone-icon">
+                <i class="fa-solid fa-rocket"></i>
+            </div>
+
+            <div class="stackly-consult-client-milestone-content">
+
+                <span>NOV 15, 2026</span>
+
+                <h3>Implementation Phase</h3>
+
+                <p>
+                    Begin executing the approved business 
+                    transformation roadmap successfully.
+                </p>
+
+                <strong>
+                    <i class="fa-regular fa-clock"></i>
+                    Upcoming
+                </strong>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     6. PROJECT SUPPORT CTA
+========================================== -->
+
+<section class="stackly-consult-client-project-cta"
+    data-aos="fade-up">
+
+    <div class="stackly-consult-client-project-cta-icon">
+        <i class="fa-solid fa-handshake-angle"></i>
+    </div>
+
+    <div class="stackly-consult-client-project-cta-content">
+
+        <span>WE ARE HERE FOR YOU</span>
+
+        <h2>Need Help With Your Project?</h2>
+
+        <p>
+            Connect with your dedicated consultancy team
+            for updates, guidance and project assistance.
+        </p>
+
+    </div>
+
+    <a href="404-client.html"
+        class="stackly-consult-client-project-cta-btn">
+
+        Contact Our Team
+
+        <i class="fa-solid fa-arrow-right"></i>
+
+    </a>
+
+</section>
+
+            </div>
+
+
+</main>
+
+    </div>
+
+
+    <!-- ==========================================
+         AOS SCRIPT
+    =========================================== -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+
+    <!-- ==========================================
+         CLIENT DASHBOARD JAVASCRIPT
+    =========================================== -->
+
+    <script src="client.js"></script>
+
+
+</body>
+
+</html>

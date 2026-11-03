@@ -1,0 +1,966 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard | Stackly Corporate Consultancy</title>
+
+    <meta name="description"
+        content="Stackly Corporate Consultancy Admin Dashboard - Manage clients, projects, services, appointments and business activities.">
+
+    <link rel="icon" href="Stackly-logo-Blue.webp" type="image/webp">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- AOS Animation -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    
+
+    <!-- Admin CSS -->
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+    <!-- ==========================================
+         ADMIN DASHBOARD WRAPPER
+    =========================================== -->
+
+    <div class="stackly-consult-admin-wrapper">
+
+        <!-- ==========================================
+             MOBILE OVERLAY
+        =========================================== -->
+
+        <div class="stackly-consult-admin-overlay"
+            id="stacklyConsultAdminOverlay"></div>
+
+
+        <!-- ==========================================
+             SIDEBAR
+        =========================================== -->
+
+        <aside class="stackly-consult-admin-sidebar"
+            id="stacklyConsultAdminSidebar">
+
+            <!-- SIDEBAR BRAND -->
+
+            <div class="stackly-consult-admin-brand">
+
+                <a href="admin.html"
+                    class="stackly-consult-admin-logo"
+                    aria-label="Stackly Home">
+
+                    <img src="Stackly-logo-Blue.webp"
+                        alt="Stackly Corporate Consultancy Logo">
+                </a>
+
+                <button type="button"
+                    class="stackly-consult-admin-close"
+                    id="stacklyConsultAdminClose"
+                    aria-label="Close sidebar">
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </button>
+
+            </div>
+
+
+            <!-- SIDEBAR PROFILE -->
+
+            <div class="stackly-consult-admin-profile">
+
+                <div class="stackly-consult-admin-avatar">
+                    <i class="fa-solid fa-user-shield"></i>
+                </div>
+
+                <div class="stackly-consult-admin-profile-info">
+
+                    <h3>Administrator</h3>
+
+                    <span>
+                        <span class="stackly-consult-admin-status-dot"></span>
+                        Online
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- SIDEBAR NAVIGATION -->
+
+            <nav class="stackly-consult-admin-navigation"
+                aria-label="Admin navigation">
+
+                <p class="stackly-consult-admin-nav-heading">
+                    MAIN MENU
+                </p>
+
+                <a href="admin.html"
+                    class="stackly-consult-admin-nav-link active">
+
+                    <i class="fa-solid fa-chart-pie"></i>
+                    <span>Dashboard</span>
+
+                </a>
+
+                <a href="admin-clients.html"
+                    class="stackly-consult-admin-nav-link">
+
+                    <i class="fa-solid fa-users"></i>
+                    <span>Clients</span>
+
+                    <span class="stackly-consult-admin-nav-count">24</span>
+
+                </a>
+
+                <a href="admin-projects.html"
+                    class="stackly-consult-admin-nav-link">
+
+                    <i class="fa-solid fa-briefcase"></i>
+                    <span>Projects</span>
+
+                </a>
+
+                <a href="admin-services.html"
+                    class="stackly-consult-admin-nav-link">
+
+                    <i class="fa-solid fa-layer-group"></i>
+                    <span>Services</span>
+
+                </a>
+
+                <a href="admin-appointments.html"
+                    class="stackly-consult-admin-nav-link">
+
+                    <i class="fa-solid fa-calendar-check"></i>
+                    <span>Appointments</span>
+
+                    <span class="stackly-consult-admin-nav-count">05</span>
+
+                </a>
+
+
+                <p class="stackly-consult-admin-nav-heading">
+                    MANAGEMENT
+                </p>
+
+                <a href="admin-team.html"
+                    class="stackly-consult-admin-nav-link">
+
+                    <i class="fa-solid fa-user-group"></i>
+                    <span>Team Members</span>
+
+                </a>
+
+                <a href="admin-reports.html"
+                    class="stackly-consult-admin-nav-link">
+
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>Reports & Analytics</span>
+
+                </a>
+
+                <a href="admin-payments.html"
+                    class="stackly-consult-admin-nav-link">
+
+                    <i class="fa-solid fa-wallet"></i>
+                    <span>Payments</span>
+
+                </a>
+
+
+                <p class="stackly-consult-admin-nav-heading">
+                    PREFERENCES
+                </p>
+
+                <a href="admin-settings.html"
+                    class="stackly-consult-admin-nav-link">
+
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Settings</span>
+
+                </a>
+
+
+            </nav>
+
+
+            <!-- SIDEBAR BOTTOM -->
+
+            <div class="stackly-consult-admin-sidebar-bottom">
+
+                <div class="stackly-consult-admin-sidebar-help">
+
+                    <div class="stackly-consult-admin-help-icon">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+
+                    <div>
+                        <h4>Need Help?</h4>
+                        <p>Contact our support team.</p>
+                    </div>
+
+                    <a href="404-admin.html"
+                        aria-label="Get support">
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+                <a href="login.html"
+                    class="stackly-consult-admin-logout"
+                    id="stacklyConsultAdminLogout">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Logout</span>
+
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ==========================================
+             MAIN CONTENT AREA
+        =========================================== -->
+
+        <main class="stackly-consult-admin-main">
+
+
+            <!-- ==========================================
+                 TOP HEADER
+            =========================================== -->
+
+            <header class="stackly-consult-admin-header">
+
+                <div class="stackly-consult-admin-header-left">
+
+                    <button type="button"
+                        class="stackly-consult-admin-menu-toggle"
+                        id="stacklyConsultAdminMenuButton"
+                        aria-label="Open navigation"
+                        aria-expanded="false">
+
+                        <i class="fa-solid fa-bars"></i>
+
+                    </button>
+
+                    <div class="stackly-consult-admin-page-heading">
+
+                        <span class="stackly-consult-admin-breadcrumb">
+                            Admin / Overview
+                        </span>
+
+                        <h1>Admin Dashboard</h1>
+
+                    </div>
+
+                </div>
+
+
+                <!-- HEADER RIGHT -->
+
+                <div class="stackly-consult-admin-header-right">
+
+                    <a href="404-admin.html"><button type="button"
+                        class="stackly-consult-admin-icon-button"
+                        aria-label="Notifications">
+
+                        <i class="fa-regular fa-bell"></i>
+
+                        <span class="stackly-consult-admin-notification-dot"></span>
+
+                    </button></a>
+
+
+                    <div class="stackly-consult-admin-header-divider"></div>
+
+
+                    <!-- ADMIN EMAIL -->
+
+                    <div class="stackly-consult-admin-header-user">
+
+                        <div class="stackly-consult-admin-header-user-info">
+
+                            <span>Welcome back</span>
+
+                            <strong id="stacklyConsultAdminEmail">
+                                admin@stacklyconsult.com
+                            </strong>
+
+                        </div>
+
+                        <div class="stackly-consult-admin-header-avatar">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+<div class="stackly-consult-admin-content">
+
+<!-- ==========================================
+     STACKLY CORPORATE CONSULTANCY
+     ADMIN SETTINGS PAGE
+========================================== -->
+
+<section class="stackly-consult-settings-page">
+
+    <!-- PAGE INTRODUCTION -->
+    <div class="stackly-consult-settings-intro" data-aos="fade-up">
+
+        <div>
+            <span class="stackly-consult-settings-eyebrow">
+                <i class="fa-solid fa-sliders"></i>
+                ACCOUNT CONTROL
+            </span>
+
+            <h2>Settings & Preferences</h2>
+
+            <p>
+                Manage your account, customize your workspace,
+                and control your dashboard preferences.
+            </p>
+        </div>
+
+        <a href="404-admin.html"><button type="button"
+            class="stackly-consult-settings-save-btn"
+            id="stacklyConsultSettingsSave">
+
+            <i class="fa-solid fa-check"></i>
+            Save Changes
+
+        </button></a>
+
+    </div>
+
+
+    <!-- SETTINGS OVERVIEW CARDS -->
+    <div class="stackly-consult-settings-overview">
+
+        <div class="stackly-consult-settings-overview-card"
+            data-aos="fade-up">
+
+            <div class="stackly-consult-settings-overview-icon profile">
+                <i class="fa-solid fa-user"></i>
+            </div>
+
+            <div>
+                <h3>Administrator</h3>
+                <p>Profile Information</p>
+            </div>
+
+            <span class="stackly-consult-settings-check">
+                <i class="fa-solid fa-circle-check"></i>
+            </span>
+
+        </div>
+
+
+        <div class="stackly-consult-settings-overview-card"
+            data-aos="fade-up" data-aos-delay="100">
+
+            <div class="stackly-consult-settings-overview-icon security">
+                <i class="fa-solid fa-shield-halved"></i>
+            </div>
+
+            <div>
+                <h3>Protected</h3>
+                <p>Account Security</p>
+            </div>
+
+            <span class="stackly-consult-settings-check">
+                <i class="fa-solid fa-circle-check"></i>
+            </span>
+
+        </div>
+
+
+        <div class="stackly-consult-settings-overview-card"
+            data-aos="fade-up" data-aos-delay="200">
+
+            <div class="stackly-consult-settings-overview-icon notification">
+                <i class="fa-solid fa-bell"></i>
+            </div>
+
+            <div>
+                <h3>Notifications</h3>
+                <p>Manage Alerts</p>
+            </div>
+
+            <span class="stackly-consult-settings-check">
+                <i class="fa-solid fa-circle-check"></i>
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- SETTINGS MAIN GRID -->
+    <div class="stackly-consult-settings-layout">
+
+
+        <!-- LEFT SETTINGS NAVIGATION -->
+        <aside class="stackly-consult-settings-nav"
+            data-aos="fade-right">
+
+            <h3>Settings Menu</h3>
+
+            <a href="#stacklyConsultProfileSettings"
+                class="stackly-consult-settings-nav-link active">
+
+                <i class="fa-regular fa-user"></i>
+                <span>Profile Settings</span>
+                <i class="fa-solid fa-chevron-right"></i>
+
+            </a>
+
+            <a href="#stacklyConsultAccountSettings"
+                class="stackly-consult-settings-nav-link">
+
+                <i class="fa-solid fa-user-gear"></i>
+                <span>Account Settings</span>
+                <i class="fa-solid fa-chevron-right"></i>
+
+            </a>
+
+            <a href="#stacklyConsultSecuritySettings"
+                class="stackly-consult-settings-nav-link">
+
+                <i class="fa-solid fa-lock"></i>
+                <span>Security</span>
+                <i class="fa-solid fa-chevron-right"></i>
+
+            </a>
+
+            <a href="#stacklyConsultNotificationSettings"
+                class="stackly-consult-settings-nav-link">
+
+                <i class="fa-regular fa-bell"></i>
+                <span>Notifications</span>
+                <i class="fa-solid fa-chevron-right"></i>
+
+            </a>
+
+            <a href="#stacklyConsultAppearanceSettings"
+                class="stackly-consult-settings-nav-link">
+
+                <i class="fa-solid fa-palette"></i>
+                <span>Appearance</span>
+                <i class="fa-solid fa-chevron-right"></i>
+
+            </a>
+
+            <a href="#stacklyConsultPrivacySettings"
+                class="stackly-consult-settings-nav-link">
+
+                <i class="fa-solid fa-user-shield"></i>
+                <span>Privacy</span>
+                <i class="fa-solid fa-chevron-right"></i>
+
+            </a>
+
+        </aside>
+
+
+        <!-- RIGHT SETTINGS CONTENT -->
+        <div class="stackly-consult-settings-content">
+
+
+            <!-- PROFILE SETTINGS -->
+            <section class="stackly-consult-settings-card"
+                id="stacklyConsultProfileSettings"
+                data-aos="fade-up">
+
+                <div class="stackly-consult-settings-card-heading">
+
+                    <div class="stackly-consult-settings-card-icon">
+                        <i class="fa-regular fa-user"></i>
+                    </div>
+
+                    <div>
+                        <h3>Profile Information</h3>
+                        <p>Update your personal and administrator details.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-consult-settings-profile">
+
+                    <div class="stackly-consult-settings-profile-avatar">
+                        <i class="fa-solid fa-user-shield"></i>
+
+                        <button type="button"
+                            aria-label="Change profile picture">
+
+                            <i class="fa-solid fa-camera"></i>
+
+                        </button>
+                    </div>
+
+                    <div>
+                        <h4>Administrator</h4>
+                        <p>Admin Account</p>
+                        <span>JPG or PNG. Recommended size 400 × 400.</span>
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-consult-settings-form-grid">
+
+                    <div class="stackly-consult-settings-field">
+                        <label for="stacklyConsultFullName">Full Name</label>
+
+                        <input type="text"
+                            id="stacklyConsultFullName"
+                             
+                            placeholder="Enter your full name">
+                    </div>
+
+
+                    <div class="stackly-consult-settings-field">
+                        <label for="stacklyConsultUsername">Username</label>
+
+                        <input type="text"
+                            id="stacklyConsultUsername"
+                             
+                            placeholder="Enter username">
+                    </div>
+
+
+                    <div class="stackly-consult-settings-field">
+                        <label for="stacklyConsultEmail">Email Address</label>
+
+                        <input type="email"
+                            id="stacklyConsultEmail"
+                            value="admin@stacklyconsult.com"
+                            placeholder="Enter email address">
+                    </div>
+
+
+                    <div class="stackly-consult-settings-field">
+                        <label for="stacklyConsultPhone">Phone Number</label>
+
+                        <input type="tel"
+                            id="stacklyConsultPhone"
+                            placeholder="Enter phone number">
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ACCOUNT SETTINGS -->
+            <section class="stackly-consult-settings-card"
+                id="stacklyConsultAccountSettings"
+                data-aos="fade-up">
+
+                <div class="stackly-consult-settings-card-heading">
+
+                    <div class="stackly-consult-settings-card-icon">
+                        <i class="fa-solid fa-user-gear"></i>
+                    </div>
+
+                    <div>
+                        <h3>Account Preferences</h3>
+                        <p>Manage your regional and workspace preferences.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-consult-settings-form-grid">
+
+                    <div class="stackly-consult-settings-field">
+                        <label for="stacklyConsultLanguage">Language</label>
+
+                        <select id="stacklyConsultLanguage">
+                            <option value="en">English</option>
+                            <option value="ta">Tamil</option>
+                            <option value="hi">Hindi</option>
+                        </select>
+                    </div>
+
+
+                    <div class="stackly-consult-settings-field">
+                        <label for="stacklyConsultTimezone">Time Zone</label>
+
+                        <select id="stacklyConsultTimezone">
+                            <option value="Asia/Kolkata">
+                                India Standard Time (IST)
+                            </option>
+
+                            <option value="UTC">
+                                Coordinated Universal Time (UTC)
+                            </option>
+                        </select>
+                    </div>
+
+
+                    <div class="stackly-consult-settings-field">
+                        <label for="stacklyConsultDateFormat">Date Format</label>
+
+                        <select id="stacklyConsultDateFormat">
+                            <option>DD/MM/YYYY</option>
+                            <option>MM/DD/YYYY</option>
+                            <option>YYYY-MM-DD</option>
+                        </select>
+                    </div>
+
+
+                    <div class="stackly-consult-settings-field">
+                        <label for="stacklyConsultCurrency">Currency</label>
+
+                        <select id="stacklyConsultCurrency">
+                            <option value="INR">Indian Rupee (₹)</option>
+                            <option value="USD">US Dollar ($)</option>
+                            <option value="EUR">Euro (€)</option>
+                        </select>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- SECURITY SETTINGS -->
+            <section class="stackly-consult-settings-card"
+                id="stacklyConsultSecuritySettings"
+                data-aos="fade-up">
+
+                <div class="stackly-consult-settings-card-heading">
+
+                    <div class="stackly-consult-settings-card-icon">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+
+                    <div>
+                        <h3>Security Settings</h3>
+                        <p>Keep your administrator account secure.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-consult-settings-security-item">
+
+                    <div class="stackly-consult-settings-security-icon">
+                        <i class="fa-solid fa-key"></i>
+                    </div>
+
+                    <div class="stackly-consult-settings-security-info">
+                        <h4>Change Password</h4>
+                        <p>Update your password regularly for better security.</p>
+                    </div>
+
+                    <a href="404-admin.html"
+                        class="stackly-consult-settings-small-btn">
+
+                        Change
+
+                    </a>
+
+                </div>
+
+
+                <div class="stackly-consult-settings-security-item">
+
+                    <div class="stackly-consult-settings-security-icon">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                    </div>
+
+                    <div class="stackly-consult-settings-security-info">
+                        <h4>Two-Factor Authentication</h4>
+                        <p>Add an additional layer of account protection.</p>
+                    </div>
+
+                    <label class="stackly-consult-settings-switch">
+                        <input type="checkbox"
+                            id="stacklyConsultTwoFactor">
+
+                        <span></span>
+                    </label>
+
+                </div>
+
+
+                <div class="stackly-consult-settings-security-item">
+
+                    <div class="stackly-consult-settings-security-icon">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                    </div>
+
+                    <div class="stackly-consult-settings-security-info">
+                        <h4>Login Activity</h4>
+                        <p>Review recent account access and login sessions.</p>
+                    </div>
+
+                    <a href="404-admin.html"
+                        class="stackly-consult-settings-small-btn">
+
+                        View Activity
+
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <!-- NOTIFICATION SETTINGS -->
+            <section class="stackly-consult-settings-card"
+                id="stacklyConsultNotificationSettings"
+                data-aos="fade-up">
+
+                <div class="stackly-consult-settings-card-heading">
+
+                    <div class="stackly-consult-settings-card-icon">
+                        <i class="fa-regular fa-bell"></i>
+                    </div>
+
+                    <div>
+                        <h3>Notification Preferences</h3>
+                        <p>Choose which updates you want to receive.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-consult-settings-toggle-item">
+                    <div>
+                        <h4>Email Notifications</h4>
+                        <p>Receive important updates through email.</p>
+                    </div>
+
+                    <label class="stackly-consult-settings-switch">
+                        <input type="checkbox" checked>
+                        <span></span>
+                    </label>
+                </div>
+
+
+                <div class="stackly-consult-settings-toggle-item">
+                    <div>
+                        <h4>New Client Alerts</h4>
+                        <p>Get notified whenever a new client registers.</p>
+                    </div>
+
+                    <label class="stackly-consult-settings-switch">
+                        <input type="checkbox" checked>
+                        <span></span>
+                    </label>
+                </div>
+
+
+                <div class="stackly-consult-settings-toggle-item">
+                    <div>
+                        <h4>Project Updates</h4>
+                        <p>Receive notifications about project progress.</p>
+                    </div>
+
+                    <label class="stackly-consult-settings-switch">
+                        <input type="checkbox" checked>
+                        <span></span>
+                    </label>
+                </div>
+
+
+                <div class="stackly-consult-settings-toggle-item">
+                    <div>
+                        <h4>Payment Notifications</h4>
+                        <p>Get alerts for successful and pending payments.</p>
+                    </div>
+
+                    <label class="stackly-consult-settings-switch">
+                        <input type="checkbox">
+                        <span></span>
+                    </label>
+                </div>
+
+            </section>
+
+
+            <!-- APPEARANCE SETTINGS -->
+            <section class="stackly-consult-settings-card"
+                id="stacklyConsultAppearanceSettings"
+                data-aos="fade-up">
+
+                <div class="stackly-consult-settings-card-heading">
+
+                    <div class="stackly-consult-settings-card-icon">
+                        <i class="fa-solid fa-palette"></i>
+                    </div>
+
+                    <div>
+                        <h3>Appearance</h3>
+                        <p>Customize the look and feel of your dashboard.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-consult-settings-appearance">
+
+                    <div>
+                        <h4>Dashboard Theme</h4>
+                        <p>Select your preferred display mode.</p>
+                    </div>
+
+                    <div class="stackly-consult-settings-theme-options">
+
+                        <label class="stackly-consult-settings-theme-option">
+                            <input type="radio"
+                                name="stacklyConsultTheme"
+                                value="light"
+                                checked>
+
+                            <span class="stackly-consult-settings-theme-preview light">
+                                <i class="fa-solid fa-sun"></i>
+                            </span>
+
+                            <strong>Light</strong>
+                        </label>
+
+
+                        <label class="stackly-consult-settings-theme-option">
+                            <input type="radio"
+                                name="stacklyConsultTheme"
+                                value="dark">
+
+                            <span class="stackly-consult-settings-theme-preview dark">
+                                <i class="fa-solid fa-moon"></i>
+                            </span>
+
+                            <strong>Dark</strong>
+                        </label>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- PRIVACY SETTINGS -->
+            <section class="stackly-consult-settings-card"
+                id="stacklyConsultPrivacySettings"
+                data-aos="fade-up">
+
+                <div class="stackly-consult-settings-card-heading">
+
+                    <div class="stackly-consult-settings-card-icon">
+                        <i class="fa-solid fa-user-shield"></i>
+                    </div>
+
+                    <div>
+                        <h3>Privacy & Data</h3>
+                        <p>Manage your personal information and data preferences.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="stackly-consult-settings-toggle-item">
+                    <div>
+                        <h4>Activity Tracking</h4>
+                        <p>Allow dashboard activity to be recorded for reports.</p>
+                    </div>
+
+                    <label class="stackly-consult-settings-switch">
+                        <input type="checkbox" checked>
+                        <span></span>
+                    </label>
+                </div>
+
+
+                <div class="stackly-consult-settings-toggle-item">
+                    <div>
+                        <h4>Session Timeout</h4>
+                        <p>Automatically sign out after inactivity.</p>
+                    </div>
+
+                    <label class="stackly-consult-settings-switch">
+                        <input type="checkbox" checked>
+                        <span></span>
+                    </label>
+                </div>
+
+            </section>
+
+
+            <!-- DANGER ZONE -->
+            <section class="stackly-consult-settings-danger"
+                data-aos="fade-up">
+
+                <div class="stackly-consult-settings-danger-icon">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                </div>
+
+                <div class="stackly-consult-settings-danger-content">
+                    <h3>Danger Zone</h3>
+                    <p>
+                        Sign out of your administrator account when
+                        you have finished managing your workspace.
+                    </p>
+                </div>
+
+                <a href="login.html"
+                    class="stackly-consult-settings-logout-btn">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Logout
+
+                </a>
+
+            </section>
+
+        </div>
+
+    </div>
+
+</section>
+
+</div>
+
+        </main>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <!-- Admin JS -->
+    <script src="admin.js"></script>
+
+</body>
+</html>

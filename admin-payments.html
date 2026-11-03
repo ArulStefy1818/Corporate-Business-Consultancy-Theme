@@ -1,0 +1,1082 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard | Stackly Corporate Consultancy</title>
+
+    <meta name="description"
+        content="Stackly Corporate Consultancy Admin Dashboard - Manage clients, projects, services, appointments and business activities.">
+
+    <link rel="icon" href="Stackly-logo-Blue.webp" type="image/webp">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- AOS Animation -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    
+
+    <!-- Admin CSS -->
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+    <!-- ==========================================
+         ADMIN DASHBOARD WRAPPER
+    =========================================== -->
+
+    <div class="stackly-consult-admin-wrapper">
+
+        <!-- ==========================================
+             MOBILE OVERLAY
+        =========================================== -->
+
+        <div class="stackly-consult-admin-overlay"
+            id="stacklyConsultAdminOverlay"></div>
+
+
+        <!-- ==========================================
+             SIDEBAR
+        =========================================== -->
+
+        <aside class="stackly-consult-admin-sidebar"
+            id="stacklyConsultAdminSidebar">
+
+            <!-- SIDEBAR BRAND -->
+
+            <div class="stackly-consult-admin-brand">
+
+                <a href="admin.html"
+                    class="stackly-consult-admin-logo"
+                    aria-label="Stackly Home">
+
+                    <img src="Stackly-logo-Blue.webp"
+                        alt="Stackly Corporate Consultancy Logo">
+                </a>
+
+                <button type="button"
+                    class="stackly-consult-admin-close"
+                    id="stacklyConsultAdminClose"
+                    aria-label="Close sidebar">
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </button>
+
+            </div>
+
+
+            <!-- SIDEBAR PROFILE -->
+
+            <div class="stackly-consult-admin-profile">
+
+                <div class="stackly-consult-admin-avatar">
+                    <i class="fa-solid fa-user-shield"></i>
+                </div>
+
+                <div class="stackly-consult-admin-profile-info">
+
+                    <h3>Administrator</h3>
+
+                    <span>
+                        <span class="stackly-consult-admin-status-dot"></span>
+                        Online
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- SIDEBAR NAVIGATION -->
+
+            <nav class="stackly-consult-admin-navigation"
+                aria-label="Admin navigation">
+
+                <p class="stackly-consult-admin-nav-heading">
+                    MAIN MENU
+                </p>
+
+                <a href="admin.html"
+                    class="stackly-consult-admin-nav-link active">
+
+                    <i class="fa-solid fa-chart-pie"></i>
+                    <span>Dashboard</span>
+
+                </a>
+
+                <a href="admin-clients.html"
+                    class="stackly-consult-admin-nav-link">
+
+                    <i class="fa-solid fa-users"></i>
+                    <span>Clients</span>
+
+                    <span class="stackly-consult-admin-nav-count">24</span>
+
+                </a>
+
+                <a href="admin-projects.html"
+                    class="stackly-consult-admin-nav-link">
+
+                    <i class="fa-solid fa-briefcase"></i>
+                    <span>Projects</span>
+
+                </a>
+
+                <a href="admin-services.html"
+                    class="stackly-consult-admin-nav-link">
+
+                    <i class="fa-solid fa-layer-group"></i>
+                    <span>Services</span>
+
+                </a>
+
+                <a href="admin-appointments.html"
+                    class="stackly-consult-admin-nav-link">
+
+                    <i class="fa-solid fa-calendar-check"></i>
+                    <span>Appointments</span>
+
+                    <span class="stackly-consult-admin-nav-count">05</span>
+
+                </a>
+
+
+                <p class="stackly-consult-admin-nav-heading">
+                    MANAGEMENT
+                </p>
+
+                <a href="admin-team.html"
+                    class="stackly-consult-admin-nav-link">
+
+                    <i class="fa-solid fa-user-group"></i>
+                    <span>Team Members</span>
+
+                </a>
+
+                <a href="admin-reports.html"
+                    class="stackly-consult-admin-nav-link">
+
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>Reports & Analytics</span>
+
+                </a>
+
+                <a href="admin-payments.html"
+                    class="stackly-consult-admin-nav-link">
+
+                    <i class="fa-solid fa-wallet"></i>
+                    <span>Payments</span>
+
+                </a>
+
+
+                <p class="stackly-consult-admin-nav-heading">
+                    PREFERENCES
+                </p>
+
+                <a href="admin-settings.html"
+                    class="stackly-consult-admin-nav-link">
+
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Settings</span>
+
+                </a>
+
+
+            </nav>
+
+
+            <!-- SIDEBAR BOTTOM -->
+
+            <div class="stackly-consult-admin-sidebar-bottom">
+
+                <div class="stackly-consult-admin-sidebar-help">
+
+                    <div class="stackly-consult-admin-help-icon">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+
+                    <div>
+                        <h4>Need Help?</h4>
+                        <p>Contact our support team.</p>
+                    </div>
+
+                    <a href="404-admin.html"
+                        aria-label="Get support">
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+                <a href="login.html"
+                    class="stackly-consult-admin-logout"
+                    id="stacklyConsultAdminLogout">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Logout</span>
+
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ==========================================
+             MAIN CONTENT AREA
+        =========================================== -->
+
+        <main class="stackly-consult-admin-main">
+
+
+            <!-- ==========================================
+                 TOP HEADER
+            =========================================== -->
+
+            <header class="stackly-consult-admin-header">
+
+                <div class="stackly-consult-admin-header-left">
+
+                    <button type="button"
+                        class="stackly-consult-admin-menu-toggle"
+                        id="stacklyConsultAdminMenuButton"
+                        aria-label="Open navigation"
+                        aria-expanded="false">
+
+                        <i class="fa-solid fa-bars"></i>
+
+                    </button>
+
+                    <div class="stackly-consult-admin-page-heading">
+
+                        <span class="stackly-consult-admin-breadcrumb">
+                            Admin / Overview
+                        </span>
+
+                        <h1>Admin Dashboard</h1>
+
+                    </div>
+
+                </div>
+
+
+                <!-- HEADER RIGHT -->
+
+                <div class="stackly-consult-admin-header-right">
+
+                    <a href="404-admin.html"><button type="button"
+                        class="stackly-consult-admin-icon-button"
+                        aria-label="Notifications">
+
+                        <i class="fa-regular fa-bell"></i>
+
+                        <span class="stackly-consult-admin-notification-dot"></span>
+
+                    </button></a>
+
+
+                    <div class="stackly-consult-admin-header-divider"></div>
+
+
+                    <!-- ADMIN EMAIL -->
+
+                    <div class="stackly-consult-admin-header-user">
+
+                        <div class="stackly-consult-admin-header-user-info">
+
+                            <span>Welcome back</span>
+
+                            <strong id="stacklyConsultAdminEmail">
+                                admin@stacklyconsult.com
+                            </strong>
+
+                        </div>
+
+                        <div class="stackly-consult-admin-header-avatar">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+<!-- ==========================================
+     STACKLY CONSULTANCY - PAYMENTS PAGE
+========================================== -->
+
+<div class="stackly-consult-payments-page">
+
+    <!-- PAGE INTRODUCTION -->
+
+    <section class="stackly-consult-payments-hero" data-aos="fade-up">
+
+        <div class="stackly-consult-payments-hero-content">
+            <span class="stackly-consult-payments-eyebrow">
+                <i class="fa-solid fa-wallet"></i>
+                FINANCIAL MANAGEMENT
+            </span>
+
+            <h2>Payments & Revenue</h2>
+
+            <p>
+                Track transactions, manage invoices, and monitor
+                your consultancy's financial performance.
+            </p>
+
+            <div class="stackly-consult-payments-hero-actions">
+                <a href="404-admin.html"
+                   class="stackly-consult-payments-primary-btn">
+                    <i class="fa-solid fa-list-check"></i>
+                    View Transactions
+                </a>
+
+                <a href="404-admin.html"
+                   class="stackly-consult-payments-outline-btn">
+                    <i class="fa-solid fa-file-invoice"></i>
+                    Manage Invoices
+                </a>
+            </div>
+        </div>
+
+        <div class="stackly-consult-payments-hero-visual">
+            <div class="stackly-consult-payments-visual-circle"></div>
+
+            <div class="stackly-consult-payments-visual-card">
+                <div class="stackly-consult-payments-visual-top">
+                    <span>AVAILABLE BALANCE</span>
+                    <i class="fa-solid fa-ellipsis"></i>
+                </div>
+
+                <h3>₹8,45,620</h3>
+
+                <div class="stackly-consult-payments-visual-bottom">
+                    <span>
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+                        +18.6%
+                    </span>
+                    <small>Compared to last month</small>
+                </div>
+
+                <div class="stackly-consult-payments-visual-decoration">
+                    <i class="fa-solid fa-wallet"></i>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- PAYMENT STATISTICS -->
+
+    <section class="stackly-consult-payments-stats"
+             data-aos="fade-up">
+
+        <div class="stackly-consult-payments-stat-card">
+            <div class="stackly-consult-payments-stat-top">
+                <div class="stackly-consult-payments-stat-icon revenue">
+                    <i class="fa-solid fa-indian-rupee-sign"></i>
+                </div>
+                <span class="stackly-consult-payments-stat-growth">
+                    <i class="fa-solid fa-arrow-up"></i> 12.8%
+                </span>
+            </div>
+
+            <span class="stackly-consult-payments-stat-label">
+                TOTAL REVENUE
+            </span>
+
+            <h3>₹12,84,500</h3>
+
+            <p>Compared to previous month</p>
+        </div>
+
+
+        <div class="stackly-consult-payments-stat-card">
+            <div class="stackly-consult-payments-stat-top">
+                <div class="stackly-consult-payments-stat-icon received">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+                <span class="stackly-consult-payments-stat-growth">
+                    <i class="fa-solid fa-arrow-up"></i> 8.4%
+                </span>
+            </div>
+
+            <span class="stackly-consult-payments-stat-label">
+                PAYMENTS RECEIVED
+            </span>
+
+            <h3>₹9,68,200</h3>
+
+            <p>Successfully collected payments</p>
+        </div>
+
+
+        <div class="stackly-consult-payments-stat-card">
+            <div class="stackly-consult-payments-stat-top">
+                <div class="stackly-consult-payments-stat-icon pending">
+                    <i class="fa-solid fa-clock"></i>
+                </div>
+                <span class="stackly-consult-payments-stat-warning">
+                    12 Pending
+                </span>
+            </div>
+
+            <span class="stackly-consult-payments-stat-label">
+                PENDING PAYMENTS
+            </span>
+
+            <h3>₹2,16,300</h3>
+
+            <p>Awaiting client confirmation</p>
+        </div>
+
+
+        <div class="stackly-consult-payments-stat-card">
+            <div class="stackly-consult-payments-stat-top">
+                <div class="stackly-consult-payments-stat-icon refunded">
+                    <i class="fa-solid fa-rotate-left"></i>
+                </div>
+                <span class="stackly-consult-payments-stat-neutral">
+                    This month
+                </span>
+            </div>
+
+            <span class="stackly-consult-payments-stat-label">
+                TOTAL REFUNDS
+            </span>
+
+            <h3>₹32,400</h3>
+
+            <p>Refunds processed successfully</p>
+        </div>
+
+    </section>
+
+
+    <!-- REVENUE OVERVIEW + PAYMENT SUMMARY -->
+
+    <section class="stackly-consult-payments-overview"
+             data-aos="fade-up">
+
+        <!-- REVENUE CHART -->
+
+        <div class="stackly-consult-payments-panel
+                    stackly-consult-payments-revenue-panel">
+
+            <div class="stackly-consult-payments-panel-heading">
+
+                <div>
+                    <span>FINANCIAL PERFORMANCE</span>
+                    <h3>Revenue Overview</h3>
+                    <p>Monitor your monthly revenue growth.</p>
+                </div>
+
+                <select id="stacklyConsultRevenueFilter"
+                        class="stackly-consult-payments-filter"
+                        aria-label="Revenue chart period">
+                    <option value="year">This Year</option>
+                    <option value="month">Last 6 Months</option>
+                </select>
+
+            </div>
+
+            <div class="stackly-consult-payments-revenue-total">
+                <h2>₹12,84,500</h2>
+                <span>
+                    <i class="fa-solid fa-arrow-trend-up"></i>
+                    12.8% growth
+                </span>
+            </div>
+
+            <div class="stackly-consult-payments-revenue-chart">
+                <canvas id="stacklyConsultPaymentsRevenueChart"></canvas>
+            </div>
+
+        </div>
+
+
+        <!-- PAYMENT STATUS -->
+
+        <div class="stackly-consult-payments-panel
+                    stackly-consult-payments-status-panel">
+
+            <div class="stackly-consult-payments-panel-heading">
+                <div>
+                    <span>PAYMENT BREAKDOWN</span>
+                    <h3>Payment Status</h3>
+                    <p>Current transaction distribution.</p>
+                </div>
+            </div>
+
+            <div class="stackly-consult-payments-status-chart">
+                <canvas id="stacklyConsultPaymentsStatusChart"></canvas>
+
+                <div class="stackly-consult-payments-status-center">
+                    <strong>486</strong>
+                    <span>Transactions</span>
+                </div>
+            </div>
+
+            <div class="stackly-consult-payments-status-legend">
+
+                <div>
+                    <span class="paid-dot"></span>
+                    <p>Completed</p>
+                    <strong>72%</strong>
+                </div>
+
+                <div>
+                    <span class="pending-dot"></span>
+                    <p>Pending</p>
+                    <strong>20%</strong>
+                </div>
+
+                <div>
+                    <span class="failed-dot"></span>
+                    <p>Failed</p>
+                    <strong>8%</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PAYMENT METHODS -->
+
+    <section class="stackly-consult-payments-methods-section"
+             data-aos="fade-up">
+
+        <div class="stackly-consult-payments-section-heading">
+            <div>
+                <span>PAYMENT CHANNELS</span>
+                <h2>Payment Methods</h2>
+                <p>Explore the payment channels used by your clients.</p>
+            </div>
+        </div>
+
+        <div class="stackly-consult-payments-methods-grid">
+
+            <div class="stackly-consult-payments-method-card">
+                <div class="stackly-consult-payments-method-icon bank">
+                    <i class="fa-solid fa-building-columns"></i>
+                </div>
+
+                <div>
+                    <h3>Bank Transfer</h3>
+                    <p>Direct account payments</p>
+                </div>
+
+                <strong>42%</strong>
+
+                <div class="stackly-consult-payments-method-progress">
+                    <span style="width:42%"></span>
+                </div>
+            </div>
+
+
+            <div class="stackly-consult-payments-method-card">
+                <div class="stackly-consult-payments-method-icon card">
+                    <i class="fa-regular fa-credit-card"></i>
+                </div>
+
+                <div>
+                    <h3>Credit / Debit Card</h3>
+                    <p>Card-based transactions</p>
+                </div>
+
+                <strong>28%</strong>
+
+                <div class="stackly-consult-payments-method-progress">
+                    <span style="width:28%"></span>
+                </div>
+            </div>
+
+
+            <div class="stackly-consult-payments-method-card">
+                <div class="stackly-consult-payments-method-icon upi">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                </div>
+
+                <div>
+                    <h3>UPI Payments</h3>
+                    <p>Instant digital payments</p>
+                </div>
+
+                <strong>20%</strong>
+
+                <div class="stackly-consult-payments-method-progress">
+                    <span style="width:20%"></span>
+                </div>
+            </div>
+
+
+            <div class="stackly-consult-payments-method-card">
+                <div class="stackly-consult-payments-method-icon cash">
+                    <i class="fa-solid fa-money-bill-wave"></i>
+                </div>
+
+                <div>
+                    <h3>Other Methods</h3>
+                    <p>Additional payment channels</p>
+                </div>
+
+                <strong>10%</strong>
+
+                <div class="stackly-consult-payments-method-progress">
+                    <span style="width:10%"></span>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- RECENT TRANSACTIONS -->
+
+    <section class="stackly-consult-payments-transactions"
+             id="stacklyConsultPaymentTransactions"
+             data-aos="fade-up">
+
+        <div class="stackly-consult-payments-section-heading">
+
+            <div>
+                <span>TRANSACTION MANAGEMENT</span>
+                <h2>Recent Transactions</h2>
+                <p>Review and track your latest client payments.</p>
+            </div>
+
+            <a href="404-admin.html"
+               class="stackly-consult-payments-view-all">
+                View All
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+
+        <div class="stackly-consult-payments-table-wrapper">
+
+            <table class="stackly-consult-payments-table">
+
+                <thead>
+                    <tr>
+                        <th>TRANSACTION ID</th>
+                        <th>CLIENT</th>
+                        <th>DATE</th>
+                        <th>PAYMENT METHOD</th>
+                        <th>AMOUNT</th>
+                        <th>STATUS</th>
+                        <th>ACTION</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>
+                            <strong>#STK-2026-001</strong>
+                        </td>
+
+                        <td>
+                            <div class="stackly-consult-payments-client">
+                                <span class="client-avatar avatar-one">RK</span>
+                                <div>
+                                    <strong>Rahul Kumar</strong>
+                                    <small>Business Strategy</small>
+                                </div>
+                            </div>
+                        </td>
+
+                        <td>03 Nov 2026</td>
+
+                        <td>
+                            <i class="fa-solid fa-building-columns"></i>
+                            Bank Transfer
+                        </td>
+
+                        <td class="payment-amount">₹45,000</td>
+
+                        <td>
+                            <span class="stackly-consult-payments-status-badge completed">
+                                Completed
+                            </span>
+                        </td>
+
+                        <td>
+                            <a href="404-admin.html"
+                               class="stackly-consult-payments-action">
+                                <i class="fa-solid fa-eye"></i>
+                            </a>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>
+                            <strong>#STK-2026-002</strong>
+                        </td>
+
+                        <td>
+                            <div class="stackly-consult-payments-client">
+                                <span class="client-avatar avatar-two">PS</span>
+                                <div>
+                                    <strong>Priya Sharma</strong>
+                                    <small>Financial Consulting</small>
+                                </div>
+                            </div>
+                        </td>
+
+                        <td>02 Nov 2026</td>
+
+                        <td>
+                            <i class="fa-regular fa-credit-card"></i>
+                            Card Payment
+                        </td>
+
+                        <td class="payment-amount">₹28,500</td>
+
+                        <td>
+                            <span class="stackly-consult-payments-status-badge pending">
+                                Pending
+                            </span>
+                        </td>
+
+                        <td>
+                            <a href="404-admin.html"
+                               class="stackly-consult-payments-action">
+                                <i class="fa-solid fa-eye"></i>
+                            </a>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>
+                            <strong>#STK-2026-003</strong>
+                        </td>
+
+                        <td>
+                            <div class="stackly-consult-payments-client">
+                                <span class="client-avatar avatar-three">AM</span>
+                                <div>
+                                    <strong>Arun Mehta</strong>
+                                    <small>Digital Transformation</small>
+                                </div>
+                            </div>
+                        </td>
+
+                        <td>01 Nov 2026</td>
+
+                        <td>
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                            UPI Payment
+                        </td>
+
+                        <td class="payment-amount">₹62,000</td>
+
+                        <td>
+                            <span class="stackly-consult-payments-status-badge completed">
+                                Completed
+                            </span>
+                        </td>
+
+                        <td>
+                            <a href="404-admin.html"
+                               class="stackly-consult-payments-action">
+                                <i class="fa-solid fa-eye"></i>
+                            </a>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>
+                            <strong>#STK-2026-004</strong>
+                        </td>
+
+                        <td>
+                            <div class="stackly-consult-payments-client">
+                                <span class="client-avatar avatar-four">SK</span>
+                                <div>
+                                    <strong>Sarah Khan</strong>
+                                    <small>Market Research</small>
+                                </div>
+                            </div>
+                        </td>
+
+                        <td>30 Oct 2026</td>
+
+                        <td>
+                            <i class="fa-solid fa-building-columns"></i>
+                            Bank Transfer
+                        </td>
+
+                        <td class="payment-amount">₹35,000</td>
+
+                        <td>
+                            <span class="stackly-consult-payments-status-badge failed">
+                                Failed
+                            </span>
+                        </td>
+
+                        <td>
+                            <a href="404-admin.html"
+                               class="stackly-consult-payments-action">
+                                <i class="fa-solid fa-eye"></i>
+                            </a>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>
+                            <strong>#STK-2026-005</strong>
+                        </td>
+
+                        <td>
+                            <div class="stackly-consult-payments-client">
+                                <span class="client-avatar avatar-five">DV</span>
+                                <div>
+                                    <strong>David Wilson</strong>
+                                    <small>Business Development</small>
+                                </div>
+                            </div>
+                        </td>
+
+                        <td>29 Oct 2026</td>
+
+                        <td>
+                            <i class="fa-regular fa-credit-card"></i>
+                            Card Payment
+                        </td>
+
+                        <td class="payment-amount">₹54,000</td>
+
+                        <td>
+                            <span class="stackly-consult-payments-status-badge completed">
+                                Completed
+                            </span>
+                        </td>
+
+                        <td>
+                            <a href="404-admin.html"
+                               class="stackly-consult-payments-action">
+                                <i class="fa-solid fa-eye"></i>
+                            </a>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- INVOICES + COLLECTION PROGRESS -->
+
+    <section class="stackly-consult-payments-bottom-grid"
+             id="stacklyConsultPaymentInvoices"
+             data-aos="fade-up">
+
+        <!-- PENDING INVOICES -->
+
+        <div class="stackly-consult-payments-bottom-card">
+
+            <div class="stackly-consult-payments-section-heading">
+                <div>
+                    <span>CLIENT BILLING</span>
+                    <h2>Pending Invoices</h2>
+                    <p>Invoices awaiting payment.</p>
+                </div>
+            </div>
+
+            <div class="stackly-consult-payments-invoice-list">
+
+                <div class="stackly-consult-payments-invoice-item">
+                    <div class="stackly-consult-payments-invoice-icon">
+                        <i class="fa-solid fa-file-invoice"></i>
+                    </div>
+
+                    <div class="stackly-consult-payments-invoice-info">
+                        <strong>INV-2026-104</strong>
+                        <span>Rahul Kumar · Due Nov 06</span>
+                    </div>
+
+                    <div class="stackly-consult-payments-invoice-amount">
+                        <strong>₹25,000</strong>
+                        <span>Pending</span>
+                    </div>
+                </div>
+
+
+                <div class="stackly-consult-payments-invoice-item">
+                    <div class="stackly-consult-payments-invoice-icon">
+                        <i class="fa-solid fa-file-invoice"></i>
+                    </div>
+
+                    <div class="stackly-consult-payments-invoice-info">
+                        <strong>INV-2026-105</strong>
+                        <span>Priya Sharma · Due Nov 08</span>
+                    </div>
+
+                    <div class="stackly-consult-payments-invoice-amount">
+                        <strong>₹42,500</strong>
+                        <span>Pending</span>
+                    </div>
+                </div>
+
+
+                <div class="stackly-consult-payments-invoice-item">
+                    <div class="stackly-consult-payments-invoice-icon">
+                        <i class="fa-solid fa-file-invoice"></i>
+                    </div>
+
+                    <div class="stackly-consult-payments-invoice-info">
+                        <strong>INV-2026-106</strong>
+                        <span>David Wilson · Due Nov 10</span>
+                    </div>
+
+                    <div class="stackly-consult-payments-invoice-amount">
+                        <strong>₹18,000</strong>
+                        <span>Pending</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <a href="404-admin.html"
+               class="stackly-consult-payments-invoice-link">
+                Manage All Invoices
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+
+        <!-- COLLECTION PROGRESS -->
+
+        <div class="stackly-consult-payments-bottom-card
+                    stackly-consult-payments-collection-card">
+
+            <div class="stackly-consult-payments-section-heading">
+                <div>
+                    <span>COLLECTION PERFORMANCE</span>
+                    <h2>Collection Progress</h2>
+                    <p>Your monthly payment collection target.</p>
+                </div>
+            </div>
+
+            <div class="stackly-consult-payments-collection-visual">
+
+                <div class="stackly-consult-payments-collection-circle">
+                    <div>
+                        <strong>78%</strong>
+                        <span>Collected</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="stackly-consult-payments-collection-details">
+
+                <div>
+                    <span>
+                        <i class="collection-received"></i>
+                        Received Amount
+                    </span>
+                    <strong>₹9,68,200</strong>
+                </div>
+
+                <div>
+                    <span>
+                        <i class="collection-pending"></i>
+                        Remaining Amount
+                    </span>
+                    <strong>₹2,72,800</strong>
+                </div>
+
+                <div>
+                    <span>
+                        <i class="collection-target"></i>
+                        Monthly Target
+                    </span>
+                    <strong>₹12,41,000</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PAYMENT SECURITY BANNER -->
+
+    <section class="stackly-consult-payments-security"
+             data-aos="fade-up">
+
+        <div class="stackly-consult-payments-security-icon">
+            <i class="fa-solid fa-shield-halved"></i>
+        </div>
+
+        <div class="stackly-consult-payments-security-content">
+            <h3>Secure Financial Management</h3>
+            <p>
+                Keep track of your transactions, monitor payment activity,
+                and maintain clear financial records.
+            </p>
+        </div>
+
+        <a href="404-admin.html">
+            Payment Settings
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+    </section>
+
+</div>
+
+
+        </main>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <!-- Admin JS -->
+    <script src="admin.js"></script>
+
+</body>
+</html>

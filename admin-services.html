@@ -1,0 +1,1039 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard | Stackly Corporate Consultancy</title>
+
+    <meta name="description"
+        content="Stackly Corporate Consultancy Admin Dashboard - Manage clients, projects, services, appointments and business activities.">
+
+    <link rel="icon" href="Stackly-logo-Blue.webp" type="image/webp">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- AOS Animation -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    
+
+    <!-- Admin CSS -->
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+    <!-- ==========================================
+         ADMIN DASHBOARD WRAPPER
+    =========================================== -->
+
+    <div class="stackly-consult-admin-wrapper">
+
+        <!-- ==========================================
+             MOBILE OVERLAY
+        =========================================== -->
+
+        <div class="stackly-consult-admin-overlay"
+            id="stacklyConsultAdminOverlay"></div>
+
+
+        <!-- ==========================================
+             SIDEBAR
+        =========================================== -->
+
+        <aside class="stackly-consult-admin-sidebar"
+            id="stacklyConsultAdminSidebar">
+
+            <!-- SIDEBAR BRAND -->
+
+            <div class="stackly-consult-admin-brand">
+
+                <a href="admin.html"
+                    class="stackly-consult-admin-logo"
+                    aria-label="Stackly Home">
+
+                    <img src="Stackly-logo-Blue.webp"
+                        alt="Stackly Corporate Consultancy Logo">
+                </a>
+
+                <button type="button"
+                    class="stackly-consult-admin-close"
+                    id="stacklyConsultAdminClose"
+                    aria-label="Close sidebar">
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </button>
+
+            </div>
+
+
+            <!-- SIDEBAR PROFILE -->
+
+            <div class="stackly-consult-admin-profile">
+
+                <div class="stackly-consult-admin-avatar">
+                    <i class="fa-solid fa-user-shield"></i>
+                </div>
+
+                <div class="stackly-consult-admin-profile-info">
+
+                    <h3>Administrator</h3>
+
+                    <span>
+                        <span class="stackly-consult-admin-status-dot"></span>
+                        Online
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- SIDEBAR NAVIGATION -->
+
+            <nav class="stackly-consult-admin-navigation"
+                aria-label="Admin navigation">
+
+                <p class="stackly-consult-admin-nav-heading">
+                    MAIN MENU
+                </p>
+
+                <a href="admin.html"
+                    class="stackly-consult-admin-nav-link active">
+
+                    <i class="fa-solid fa-chart-pie"></i>
+                    <span>Dashboard</span>
+
+                </a>
+
+                <a href="admin-clients.html"
+                    class="stackly-consult-admin-nav-link">
+
+                    <i class="fa-solid fa-users"></i>
+                    <span>Clients</span>
+
+                    <span class="stackly-consult-admin-nav-count">24</span>
+
+                </a>
+
+                <a href="admin-projects.html"
+                    class="stackly-consult-admin-nav-link">
+
+                    <i class="fa-solid fa-briefcase"></i>
+                    <span>Projects</span>
+
+                </a>
+
+                <a href="admin-services.html"
+                    class="stackly-consult-admin-nav-link">
+
+                    <i class="fa-solid fa-layer-group"></i>
+                    <span>Services</span>
+
+                </a>
+
+                <a href="admin-appointments.html"
+                    class="stackly-consult-admin-nav-link">
+
+                    <i class="fa-solid fa-calendar-check"></i>
+                    <span>Appointments</span>
+
+                    <span class="stackly-consult-admin-nav-count">05</span>
+
+                </a>
+
+
+                <p class="stackly-consult-admin-nav-heading">
+                    MANAGEMENT
+                </p>
+
+                <a href="admin-team.html"
+                    class="stackly-consult-admin-nav-link">
+
+                    <i class="fa-solid fa-user-group"></i>
+                    <span>Team Members</span>
+
+                </a>
+
+                <a href="admin-reports.html"
+                    class="stackly-consult-admin-nav-link">
+
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>Reports & Analytics</span>
+
+                </a>
+
+                <a href="admin-payments.html"
+                    class="stackly-consult-admin-nav-link">
+
+                    <i class="fa-solid fa-wallet"></i>
+                    <span>Payments</span>
+
+                </a>
+
+
+                <p class="stackly-consult-admin-nav-heading">
+                    PREFERENCES
+                </p>
+
+                <a href="admin-settings.html"
+                    class="stackly-consult-admin-nav-link">
+
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Settings</span>
+
+                </a>
+
+
+            </nav>
+
+
+            <!-- SIDEBAR BOTTOM -->
+
+            <div class="stackly-consult-admin-sidebar-bottom">
+
+                <div class="stackly-consult-admin-sidebar-help">
+
+                    <div class="stackly-consult-admin-help-icon">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+
+                    <div>
+                        <h4>Need Help?</h4>
+                        <p>Contact our support team.</p>
+                    </div>
+
+                    <a href="404-admin.html"
+                        aria-label="Get support">
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+                <a href="login.html"
+                    class="stackly-consult-admin-logout"
+                    id="stacklyConsultAdminLogout">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Logout</span>
+
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ==========================================
+             MAIN CONTENT AREA
+        =========================================== -->
+
+        <main class="stackly-consult-admin-main">
+
+
+            <!-- ==========================================
+                 TOP HEADER
+            =========================================== -->
+
+            <header class="stackly-consult-admin-header">
+
+                <div class="stackly-consult-admin-header-left">
+
+                    <button type="button"
+                        class="stackly-consult-admin-menu-toggle"
+                        id="stacklyConsultAdminMenuButton"
+                        aria-label="Open navigation"
+                        aria-expanded="false">
+
+                        <i class="fa-solid fa-bars"></i>
+
+                    </button>
+
+                    <div class="stackly-consult-admin-page-heading">
+
+                        <span class="stackly-consult-admin-breadcrumb">
+                            Admin / Overview
+                        </span>
+
+                        <h1>Admin Dashboard</h1>
+
+                    </div>
+
+                </div>
+
+
+                <!-- HEADER RIGHT -->
+
+                <div class="stackly-consult-admin-header-right">
+
+                    <a href="404-admin.html"><button type="button"
+                        class="stackly-consult-admin-icon-button"
+                        aria-label="Notifications">
+
+                        <i class="fa-regular fa-bell"></i>
+
+                        <span class="stackly-consult-admin-notification-dot"></span>
+
+                    </button></a>
+
+
+                    <div class="stackly-consult-admin-header-divider"></div>
+
+
+                    <!-- ADMIN EMAIL -->
+
+                    <div class="stackly-consult-admin-header-user">
+
+                        <div class="stackly-consult-admin-header-user-info">
+
+                            <span>Welcome back</span>
+
+                            <strong id="stacklyConsultAdminEmail">
+                                admin@stacklyconsult.com
+                            </strong>
+
+                        </div>
+
+                        <div class="stackly-consult-admin-header-avatar">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+<!-- ==========================================
+     STACKLY CORPORATE CONSULTANCY
+     SERVICES PAGE SECTIONS
+========================================== -->
+
+<div class="stackly-consult-admin-content">
+<!-- ==========================================
+     1. SERVICES HERO SECTION
+========================================== -->
+
+<section class="stackly-consult-services-hero" id="services">
+
+    <div class="stackly-consult-services-hero-bg"></div>
+
+    <div class="stackly-consult-services-hero-content">
+
+        <span class="stackly-consult-services-eyebrow">
+            <i class="fa-solid fa-chart-line"></i>
+            WHAT WE DO
+        </span>
+
+        <h1>
+            Strategic Services That
+            <span>Move Business Forward.</span>
+        </h1>
+
+        <p>
+            Discover tailored consultancy solutions designed to
+            simplify challenges, strengthen operations, and create
+            meaningful business growth.
+        </p>
+
+        <div class="stackly-consult-services-hero-actions">
+
+            <a href="404-admin.html" class="stackly-consult-services-primary-btn">
+                Explore Our Services
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <a href="404-admin.html" class="stackly-consult-services-outline-btn">
+                Talk to Our Experts
+            </a>
+
+        </div>
+
+        <div class="stackly-consult-services-hero-stats">
+
+            <div>
+                <strong>12+</strong>
+                <span>Years Experience</span>
+            </div>
+
+            <div>
+                <strong>250+</strong>
+                <span>Projects Delivered</span>
+            </div>
+
+            <div>
+                <strong>98%</strong>
+                <span>Client Satisfaction</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="stackly-consult-services-hero-decoration">
+        <span>01</span>
+        <div></div>
+        <span>EXPERTISE / SOLUTIONS</span>
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     2. SERVICES INTRODUCTION
+========================================== -->
+
+<section class="stackly-consult-services-intro">
+
+    <div class="stackly-consult-services-intro-left">
+
+        <span class="stackly-consult-services-label">
+            OUR EXPERTISE
+        </span>
+
+        <h2>
+            Everything Your Business Needs
+            <span>To Grow With Confidence.</span>
+        </h2>
+
+    </div>
+
+    <div class="stackly-consult-services-intro-right">
+
+        <p>
+            Every business has different goals and challenges.
+            Our consultancy team combines industry knowledge,
+            strategic thinking, and practical solutions to help
+            organizations move in the right direction.
+        </p>
+
+        <a href="404-admin.html">
+            Discuss Your Business Goals
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     3. MAIN SERVICES GRID
+========================================== -->
+
+<section class="stackly-consult-services-main" id="service-list">
+
+    <div class="stackly-consult-services-section-heading">
+
+        <span class="stackly-consult-services-label">
+            OUR SERVICES
+        </span>
+
+        <h2>
+            Solutions Built Around
+            <span>Your Ambitions.</span>
+        </h2>
+
+        <p>
+            Explore our specialized consulting services and find
+            the right solutions for your business.
+        </p>
+
+    </div>
+
+
+    <div class="stackly-consult-services-grid">
+
+        <!-- SERVICE 01 -->
+
+        <article class="stackly-consult-services-card">
+
+            <div class="stackly-consult-services-card-top">
+
+                <span class="stackly-consult-services-number">01</span>
+
+                <div class="stackly-consult-services-icon">
+                    <i class="fa-solid fa-chess-knight"></i>
+                </div>
+
+            </div>
+
+            <h3>Business Strategy</h3>
+
+            <p>
+                Build a clear business direction with strategic
+                planning, market insights, and growth-focused
+                recommendations.
+            </p>
+
+            <ul>
+                <li>Business Planning</li>
+                <li>Market Research</li>
+                <li>Growth Strategies</li>
+            </ul>
+
+            <a href="404-admin.html">
+                Explore Service
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </article>
+
+
+        <!-- SERVICE 02 -->
+
+        <article class="stackly-consult-services-card featured">
+
+            <div class="stackly-consult-services-card-top">
+
+                <span class="stackly-consult-services-number">02</span>
+
+                <div class="stackly-consult-services-icon">
+                    <i class="fa-solid fa-coins"></i>
+                </div>
+
+            </div>
+
+            <span class="stackly-consult-services-featured-tag">
+                POPULAR SERVICE
+            </span>
+
+            <h3>Financial Consulting</h3>
+
+            <p>
+                Improve financial performance through effective
+                budgeting, financial planning, and investment
+                guidance.
+            </p>
+
+            <ul>
+                <li>Financial Planning</li>
+                <li>Budget Optimization</li>
+                <li>Risk Assessment</li>
+            </ul>
+
+            <a href="404-admin.html">
+                Explore Service
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </article>
+
+
+        <!-- SERVICE 03 -->
+
+        <article class="stackly-consult-services-card">
+
+            <div class="stackly-consult-services-card-top">
+
+                <span class="stackly-consult-services-number">03</span>
+
+                <div class="stackly-consult-services-icon">
+                    <i class="fa-solid fa-people-group"></i>
+                </div>
+
+            </div>
+
+            <h3>Human Resources</h3>
+
+            <p>
+                Strengthen your workforce with people-focused
+                strategies, talent development, and organizational
+                improvement.
+            </p>
+
+            <ul>
+                <li>Talent Management</li>
+                <li>Team Development</li>
+                <li>HR Strategies</li>
+            </ul>
+
+            <a href="404-admin.html">
+                Explore Service
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </article>
+
+
+        <!-- SERVICE 04 -->
+
+        <article class="stackly-consult-services-card">
+
+            <div class="stackly-consult-services-card-top">
+
+                <span class="stackly-consult-services-number">04</span>
+
+                <div class="stackly-consult-services-icon">
+                    <i class="fa-solid fa-laptop-code"></i>
+                </div>
+
+            </div>
+
+            <h3>Digital Transformation</h3>
+
+            <p>
+                Modernize business operations with digital tools,
+                technology strategies, and smarter workflows.
+            </p>
+
+            <ul>
+                <li>Technology Consulting</li>
+                <li>Process Automation</li>
+                <li>Digital Strategy</li>
+            </ul>
+
+            <a href="404-admin.html">
+                Explore Service
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </article>
+
+
+        <!-- SERVICE 05 -->
+
+        <article class="stackly-consult-services-card">
+
+            <div class="stackly-consult-services-card-top">
+
+                <span class="stackly-consult-services-number">05</span>
+
+                <div class="stackly-consult-services-icon">
+                    <i class="fa-solid fa-bullseye"></i>
+                </div>
+
+            </div>
+
+            <h3>Marketing Consulting</h3>
+
+            <p>
+                Reach the right audience with data-driven marketing
+                strategies, brand positioning, and customer insights.
+            </p>
+
+            <ul>
+                <li>Brand Development</li>
+                <li>Marketing Strategy</li>
+                <li>Customer Research</li>
+            </ul>
+
+            <a href="404-admin.html">
+                Explore Service
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </article>
+
+
+        <!-- SERVICE 06 -->
+
+        <article class="stackly-consult-services-card">
+
+            <div class="stackly-consult-services-card-top">
+
+                <span class="stackly-consult-services-number">06</span>
+
+                <div class="stackly-consult-services-icon">
+                    <i class="fa-solid fa-chart-pie"></i>
+                </div>
+
+            </div>
+
+            <h3>Business Analytics</h3>
+
+            <p>
+                Turn business information into valuable insights
+                through performance tracking, reporting, and
+                data analysis.
+            </p>
+
+            <ul>
+                <li>Performance Analysis</li>
+                <li>Business Reporting</li>
+                <li>Data Insights</li>
+            </ul>
+
+            <a href="404-admin.html">
+                Explore Service
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     4. WHY CHOOSE OUR SERVICES
+========================================== -->
+
+<section class="stackly-consult-services-why">
+
+    <div class="stackly-consult-services-why-image">
+
+        <img src="services-consulting.webp"
+            alt="Business consultants discussing strategic plans">
+
+        <div class="stackly-consult-services-image-badge">
+
+            <i class="fa-solid fa-award"></i>
+
+            <div>
+                <strong>Trusted Expertise</strong>
+                <span>Focused on your success</span>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="stackly-consult-services-why-content">
+
+        <span class="stackly-consult-services-label">
+            THE STACKLY ADVANTAGE
+        </span>
+
+        <h2>
+            More Than Advice.
+            <span>We Create Real Impact.</span>
+        </h2>
+
+        <p>
+            We work alongside your team to understand your
+            business challenges and develop practical solutions
+            that deliver measurable value.
+        </p>
+
+
+        <div class="stackly-consult-services-benefit">
+
+            <div class="stackly-consult-services-benefit-icon">
+                <i class="fa-solid fa-bullseye"></i>
+            </div>
+
+            <div>
+                <h3>Tailored Strategies</h3>
+                <p>
+                    Solutions designed around your unique business
+                    needs and objectives.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="stackly-consult-services-benefit">
+
+            <div class="stackly-consult-services-benefit-icon">
+                <i class="fa-solid fa-user-tie"></i>
+            </div>
+
+            <div>
+                <h3>Experienced Professionals</h3>
+                <p>
+                    Work with specialists who understand business
+                    challenges and opportunities.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="stackly-consult-services-benefit">
+
+            <div class="stackly-consult-services-benefit-icon">
+                <i class="fa-solid fa-chart-line"></i>
+            </div>
+
+            <div>
+                <h3>Measurable Results</h3>
+                <p>
+                    Track progress through clear objectives,
+                    performance indicators, and reporting.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="stackly-consult-services-benefit">
+
+            <div class="stackly-consult-services-benefit-icon">
+                <i class="fa-solid fa-handshake"></i>
+            </div>
+
+            <div>
+                <h3>Long-Term Partnership</h3>
+                <p>
+                    Ongoing guidance to support sustainable
+                    business development.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     5. OUR CONSULTING PROCESS
+========================================== -->
+
+<section class="stackly-consult-services-process">
+
+    <div class="stackly-consult-services-section-heading">
+
+        <span class="stackly-consult-services-label">
+            HOW WE WORK
+        </span>
+
+        <h2>
+            From Business Challenges
+            <span>To Better Outcomes.</span>
+        </h2>
+
+        <p>
+            A structured approach that keeps every project
+            focused, transparent, and results-driven.
+        </p>
+
+    </div>
+
+
+    <div class="stackly-consult-services-process-grid">
+
+        <article class="stackly-consult-services-process-card">
+
+            <span class="stackly-consult-services-process-number">01</span>
+
+            <div class="stackly-consult-services-process-icon">
+                <i class="fa-solid fa-comments"></i>
+            </div>
+
+            <h3>Discovery</h3>
+
+            <p>
+                We understand your business, identify challenges,
+                and discuss your expectations.
+            </p>
+
+        </article>
+
+
+        <article class="stackly-consult-services-process-card">
+
+            <span class="stackly-consult-services-process-number">02</span>
+
+            <div class="stackly-consult-services-process-icon">
+                <i class="fa-solid fa-magnifying-glass-chart"></i>
+            </div>
+
+            <h3>Analysis</h3>
+
+            <p>
+                Our experts evaluate your current position,
+                opportunities, and areas for improvement.
+            </p>
+
+        </article>
+
+
+        <article class="stackly-consult-services-process-card">
+
+            <span class="stackly-consult-services-process-number">03</span>
+
+            <div class="stackly-consult-services-process-icon">
+                <i class="fa-solid fa-lightbulb"></i>
+            </div>
+
+            <h3>Strategy</h3>
+
+            <p>
+                We develop a practical action plan aligned
+                with your business goals.
+            </p>
+
+        </article>
+
+
+        <article class="stackly-consult-services-process-card">
+
+            <span class="stackly-consult-services-process-number">04</span>
+
+            <div class="stackly-consult-services-process-icon">
+                <i class="fa-solid fa-rocket"></i>
+            </div>
+
+            <h3>Execution</h3>
+
+            <p>
+                We support implementation, monitor progress,
+                and refine strategies for better results.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     6. INDUSTRIES WE SUPPORT
+========================================== -->
+
+<section class="stackly-consult-services-industries">
+
+    <div class="stackly-consult-services-industries-heading">
+
+        <div>
+            <span class="stackly-consult-services-label">
+                INDUSTRIES WE SERVE
+            </span>
+
+            <h2>
+                Expertise Across
+                <span>Every Industry.</span>
+            </h2>
+        </div>
+
+        <p>
+            We bring business knowledge and strategic thinking
+            to organizations across different industries.
+        </p>
+
+    </div>
+
+
+    <div class="stackly-consult-services-industries-grid">
+
+        <div class="stackly-consult-services-industry">
+            <i class="fa-solid fa-building"></i>
+            <h3>Corporate</h3>
+            <span>01</span>
+        </div>
+
+        <div class="stackly-consult-services-industry">
+            <i class="fa-solid fa-hospital"></i>
+            <h3>Healthcare</h3>
+            <span>02</span>
+        </div>
+
+        <div class="stackly-consult-services-industry">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <h3>Education</h3>
+            <span>03</span>
+        </div>
+
+        <div class="stackly-consult-services-industry">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <h3>Retail & Commerce</h3>
+            <span>04</span>
+        </div>
+
+        <div class="stackly-consult-services-industry">
+            <i class="fa-solid fa-industry"></i>
+            <h3>Manufacturing</h3>
+            <span>05</span>
+        </div>
+
+        <div class="stackly-consult-services-industry">
+            <i class="fa-solid fa-microchip"></i>
+            <h3>Technology</h3>
+            <span>06</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     7. CONSULTATION CTA SECTION
+========================================== -->
+
+<section class="stackly-consult-services-cta" id="consultation">
+
+    <div class="stackly-consult-services-cta-decoration"></div>
+
+    <div class="stackly-consult-services-cta-content">
+
+        <span class="stackly-consult-services-label">
+            LET'S BUILD SOMETHING BETTER
+        </span>
+
+        <h2>
+            Ready to Take Your
+            Business to the Next Level?
+        </h2>
+
+        <p>
+            Connect with our consultancy team and discover
+            the right strategies to move your business forward.
+        </p>
+
+        <div class="stackly-consult-services-cta-actions">
+
+            <a href="404-admin.html"
+                class="stackly-consult-services-cta-primary">
+
+                Schedule a Consultation
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+            <a href="404-admin.html"
+                class="stackly-consult-services-cta-secondary">
+
+                Discover Stackly
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="stackly-consult-services-cta-icon">
+        <i class="fa-solid fa-arrow-trend-up"></i>
+    </div>
+
+</section>
+
+</div>
+
+        </main>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <!-- Admin JS -->
+    <script src="admin.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1536 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard | Stackly Corporate Consultancy</title>
+
+    <meta name="description"
+        content="Stackly Corporate Consultancy Admin Dashboard - Manage clients, projects, services, appointments and business activities.">
+
+    <link rel="icon" href="Stackly-logo-Blue.webp" type="image/webp">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- AOS Animation -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    
+
+    <!-- Admin CSS -->
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+    <!-- ==========================================
+         ADMIN DASHBOARD WRAPPER
+    =========================================== -->
+
+    <div class="stackly-consult-admin-wrapper">
+
+        <!-- ==========================================
+             MOBILE OVERLAY
+        =========================================== -->
+
+        <div class="stackly-consult-admin-overlay"
+            id="stacklyConsultAdminOverlay"></div>
+
+
+        <!-- ==========================================
+             SIDEBAR
+        =========================================== -->
+
+        <aside class="stackly-consult-admin-sidebar"
+            id="stacklyConsultAdminSidebar">
+
+            <!-- SIDEBAR BRAND -->
+
+            <div class="stackly-consult-admin-brand">
+
+                <a href="admin.html"
+                    class="stackly-consult-admin-logo"
+                    aria-label="Stackly Home">
+
+                    <img src="Stackly-logo-Blue.webp"
+                        alt="Stackly Corporate Consultancy Logo">
+                </a>
+
+                <button type="button"
+                    class="stackly-consult-admin-close"
+                    id="stacklyConsultAdminClose"
+                    aria-label="Close sidebar">
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </button>
+
+            </div>
+
+
+            <!-- SIDEBAR PROFILE -->
+
+            <div class="stackly-consult-admin-profile">
+
+                <div class="stackly-consult-admin-avatar">
+                    <i class="fa-solid fa-user-shield"></i>
+                </div>
+
+                <div class="stackly-consult-admin-profile-info">
+
+                    <h3>Administrator</h3>
+
+                    <span>
+                        <span class="stackly-consult-admin-status-dot"></span>
+                        Online
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- SIDEBAR NAVIGATION -->
+
+            <nav class="stackly-consult-admin-navigation"
+                aria-label="Admin navigation">
+
+                <p class="stackly-consult-admin-nav-heading">
+                    MAIN MENU
+                </p>
+
+                <a href="admin.html"
+                    class="stackly-consult-admin-nav-link active">
+
+                    <i class="fa-solid fa-chart-pie"></i>
+                    <span>Dashboard</span>
+
+                </a>
+
+                <a href="admin-clients.html"
+                    class="stackly-consult-admin-nav-link">
+
+                    <i class="fa-solid fa-users"></i>
+                    <span>Clients</span>
+
+                    <span class="stackly-consult-admin-nav-count">24</span>
+
+                </a>
+
+                <a href="admin-projects.html"
+                    class="stackly-consult-admin-nav-link">
+
+                    <i class="fa-solid fa-briefcase"></i>
+                    <span>Projects</span>
+
+                </a>
+
+                <a href="admin-services.html"
+                    class="stackly-consult-admin-nav-link">
+
+                    <i class="fa-solid fa-layer-group"></i>
+                    <span>Services</span>
+
+                </a>
+
+                <a href="admin-appointments.html"
+                    class="stackly-consult-admin-nav-link">
+
+                    <i class="fa-solid fa-calendar-check"></i>
+                    <span>Appointments</span>
+
+                    <span class="stackly-consult-admin-nav-count">05</span>
+
+                </a>
+
+
+                <p class="stackly-consult-admin-nav-heading">
+                    MANAGEMENT
+                </p>
+
+                <a href="admin-team.html"
+                    class="stackly-consult-admin-nav-link">
+
+                    <i class="fa-solid fa-user-group"></i>
+                    <span>Team Members</span>
+
+                </a>
+
+                <a href="admin-reports.html"
+                    class="stackly-consult-admin-nav-link">
+
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>Reports & Analytics</span>
+
+                </a>
+
+                <a href="admin-payments.html"
+                    class="stackly-consult-admin-nav-link">
+
+                    <i class="fa-solid fa-wallet"></i>
+                    <span>Payments</span>
+
+                </a>
+
+
+                <p class="stackly-consult-admin-nav-heading">
+                    PREFERENCES
+                </p>
+
+                <a href="admin-settings.html"
+                    class="stackly-consult-admin-nav-link">
+
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Settings</span>
+
+                </a>
+
+
+            </nav>
+
+
+            <!-- SIDEBAR BOTTOM -->
+
+            <div class="stackly-consult-admin-sidebar-bottom">
+
+                <div class="stackly-consult-admin-sidebar-help">
+
+                    <div class="stackly-consult-admin-help-icon">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+
+                    <div>
+                        <h4>Need Help?</h4>
+                        <p>Contact our support team.</p>
+                    </div>
+
+                    <a href="404-admin.html"
+                        aria-label="Get support">
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+                <a href="login.html"
+                    class="stackly-consult-admin-logout"
+                    id="stacklyConsultAdminLogout">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Logout</span>
+
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ==========================================
+             MAIN CONTENT AREA
+        =========================================== -->
+
+        <main class="stackly-consult-admin-main">
+
+
+            <!-- ==========================================
+                 TOP HEADER
+            =========================================== -->
+
+            <header class="stackly-consult-admin-header">
+
+                <div class="stackly-consult-admin-header-left">
+
+                    <button type="button"
+                        class="stackly-consult-admin-menu-toggle"
+                        id="stacklyConsultAdminMenuButton"
+                        aria-label="Open navigation"
+                        aria-expanded="false">
+
+                        <i class="fa-solid fa-bars"></i>
+
+                    </button>
+
+                    <div class="stackly-consult-admin-page-heading">
+
+                        <span class="stackly-consult-admin-breadcrumb">
+                            Admin / Overview
+                        </span>
+
+                        <h1>Admin Dashboard</h1>
+
+                    </div>
+
+                </div>
+
+
+                <!-- HEADER RIGHT -->
+
+                <div class="stackly-consult-admin-header-right">
+
+                    <a href="404-admin.html"><button type="button"
+                        class="stackly-consult-admin-icon-button"
+                        aria-label="Notifications">
+
+                        <i class="fa-regular fa-bell"></i>
+
+                        <span class="stackly-consult-admin-notification-dot"></span>
+
+                    </button></a>
+
+
+                    <div class="stackly-consult-admin-header-divider"></div>
+
+
+                    <!-- ADMIN EMAIL -->
+
+                    <div class="stackly-consult-admin-header-user">
+
+                        <div class="stackly-consult-admin-header-user-info">
+
+                            <span>Welcome back</span>
+
+                            <strong id="stacklyConsultAdminEmail">
+                                admin@stacklyconsult.com
+                            </strong>
+
+                        </div>
+
+                        <div class="stackly-consult-admin-header-avatar">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+<!-- ==========================================
+     STACKLY CORPORATE CONSULTANCY
+     APPOINTMENT MANAGEMENT PAGE
+========================================== -->
+
+<!-- APPOINTMENT PAGE CONTENT -->
+<div class="stackly-consult-admin-content">
+
+    <!-- ==========================================
+         01. APPOINTMENT PAGE INTRO
+    =========================================== -->
+
+    <section class="stackly-consult-appointments-intro"
+        data-aos="fade-up">
+
+        <div class="stackly-consult-appointments-intro-content">
+
+            <span class="stackly-consult-appointments-eyebrow">
+                <i class="fa-solid fa-calendar-check"></i>
+                APPOINTMENT MANAGEMENT
+            </span>
+
+            <h2>
+                Manage Your
+                <span>Appointments</span>
+            </h2>
+
+            <p>
+                Keep track of client meetings, consultations,
+                schedules and upcoming business appointments
+                from one organized workspace.
+            </p>
+
+            <div class="stackly-consult-appointments-intro-actions">
+
+                <a href="404-admin.html"
+                    class="stackly-consult-appointments-primary-btn">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    View All Appointments
+                </a>
+
+                <a href="404-admin.html"
+                    class="stackly-consult-appointments-secondary-btn">
+                    <i class="fa-solid fa-calendar-week"></i>
+                    View Calendar
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="stackly-consult-appointments-intro-visual">
+
+            <div class="stackly-consult-appointments-visual-circle">
+                <i class="fa-solid fa-calendar-check"></i>
+            </div>
+
+            <div class="stackly-consult-appointments-floating-card">
+
+                <span class="stackly-consult-appointments-floating-icon">
+                    <i class="fa-solid fa-clock"></i>
+                </span>
+
+                <div>
+                    <strong>Next Meeting</strong>
+                    <span>10:30 AM · Today</span>
+                </div>
+
+                <span class="stackly-consult-appointments-live-dot"></span>
+
+            </div>
+
+            <div class="stackly-consult-appointments-visual-decoration">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         02. APPOINTMENT STATISTICS
+    =========================================== -->
+
+    <section class="stackly-consult-appointments-stats"
+        data-aos="fade-up">
+
+        <article class="stackly-consult-appointment-stat-card">
+
+            <div class="stackly-consult-appointment-stat-top">
+
+                <div class="stackly-consult-appointment-stat-icon orange">
+                    <i class="fa-solid fa-calendar-check"></i>
+                </div>
+
+                <span class="stackly-consult-appointment-stat-trend">
+                    <i class="fa-solid fa-arrow-up"></i>
+                    12.5%
+                </span>
+
+            </div>
+
+            <span class="stackly-consult-appointment-stat-label">
+                Total Appointments
+            </span>
+
+            <h3>248</h3>
+
+            <p>Compared to last month</p>
+
+        </article>
+
+
+        <article class="stackly-consult-appointment-stat-card">
+
+            <div class="stackly-consult-appointment-stat-top">
+
+                <div class="stackly-consult-appointment-stat-icon blue">
+                    <i class="fa-solid fa-clock"></i>
+                </div>
+
+                <span class="stackly-consult-appointment-stat-trend">
+                    <i class="fa-solid fa-arrow-up"></i>
+                    8.2%
+                </span>
+
+            </div>
+
+            <span class="stackly-consult-appointment-stat-label">
+                Today's Meetings
+            </span>
+
+            <h3>12</h3>
+
+            <p>Appointments scheduled today</p>
+
+        </article>
+
+
+        <article class="stackly-consult-appointment-stat-card">
+
+            <div class="stackly-consult-appointment-stat-top">
+
+                <div class="stackly-consult-appointment-stat-icon green">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+
+                <span class="stackly-consult-appointment-stat-trend">
+                    <i class="fa-solid fa-arrow-up"></i>
+                    6.4%
+                </span>
+
+            </div>
+
+            <span class="stackly-consult-appointment-stat-label">
+                Completed Meetings
+            </span>
+
+            <h3>186</h3>
+
+            <p>Successfully completed</p>
+
+        </article>
+
+
+        <article class="stackly-consult-appointment-stat-card">
+
+            <div class="stackly-consult-appointment-stat-top">
+
+                <div class="stackly-consult-appointment-stat-icon purple">
+                    <i class="fa-solid fa-hourglass-half"></i>
+                </div>
+
+                <span class="stackly-consult-appointment-stat-trend neutral">
+                    This week
+                </span>
+
+            </div>
+
+            <span class="stackly-consult-appointment-stat-label">
+                Pending Requests
+            </span>
+
+            <h3>05</h3>
+
+            <p>Waiting for confirmation</p>
+
+        </article>
+
+    </section>
+
+
+    <!-- ==========================================
+         03. APPOINTMENT CALENDAR
+    =========================================== -->
+
+    <section class="stackly-consult-appointments-calendar"
+        id="appointment-calendar"
+        data-aos="fade-up">
+
+        <div class="stackly-consult-appointments-section-header">
+
+            <div>
+                <span class="stackly-consult-appointments-section-label">
+                    YOUR SCHEDULE
+                </span>
+
+                <h2>Appointment Calendar</h2>
+
+                <p>
+                    Check your weekly meeting schedule at a glance.
+                </p>
+            </div>
+
+            <a href="404-admin.html"
+                class="stackly-consult-appointments-text-link">
+                Full Schedule
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+
+        <!-- CALENDAR MONTH HEADER -->
+
+        <div class="stackly-consult-appointments-calendar-header">
+
+            <div>
+                <h3>November 2026</h3>
+                <span>Weekly appointment overview</span>
+            </div>
+
+            <div class="stackly-consult-appointments-calendar-navigation">
+
+                <button type="button" aria-label="Previous week">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+                <button type="button" aria-label="Next week">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- WEEKLY DATE CARDS -->
+
+        <div class="stackly-consult-appointments-week">
+
+            <div class="stackly-consult-appointments-day">
+                <span>MON</span>
+                <strong>02</strong>
+                <small></small>
+            </div>
+
+            <div class="stackly-consult-appointments-day">
+                <span>TUE</span>
+                <strong>03</strong>
+                <small></small>
+            </div>
+
+            <div class="stackly-consult-appointments-day active">
+                <span>WED</span>
+                <strong>04</strong>
+                <small></small>
+            </div>
+
+            <div class="stackly-consult-appointments-day has-events">
+                <span>THU</span>
+                <strong>05</strong>
+                <small></small>
+            </div>
+
+            <div class="stackly-consult-appointments-day">
+                <span>FRI</span>
+                <strong>06</strong>
+                <small></small>
+            </div>
+
+            <div class="stackly-consult-appointments-day">
+                <span>SAT</span>
+                <strong>07</strong>
+                <small></small>
+            </div>
+
+            <div class="stackly-consult-appointments-day muted">
+                <span>SUN</span>
+                <strong>08</strong>
+                <small></small>
+            </div>
+
+        </div>
+
+
+        <!-- CALENDAR SUMMARY -->
+
+        <div class="stackly-consult-appointments-calendar-summary">
+
+            <div>
+                <span class="stackly-consult-appointments-calendar-dot orange-dot"></span>
+                <span>Consultations</span>
+            </div>
+
+            <div>
+                <span class="stackly-consult-appointments-calendar-dot blue-dot"></span>
+                <span>Business Meetings</span>
+            </div>
+
+            <div>
+                <span class="stackly-consult-appointments-calendar-dot green-dot"></span>
+                <span>Completed</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         04. TODAY'S APPOINTMENT TIMELINE
+    =========================================== -->
+
+    <section class="stackly-consult-appointments-timeline-section"
+        data-aos="fade-up">
+
+        <div class="stackly-consult-appointments-section-header">
+
+            <div>
+                <span class="stackly-consult-appointments-section-label">
+                    DAILY OVERVIEW
+                </span>
+
+                <h2>Today's Schedule</h2>
+
+                <p>
+                    Your meetings and client consultations for today.
+                </p>
+            </div>
+
+            <span class="stackly-consult-appointments-date-badge">
+                <i class="fa-regular fa-calendar"></i>
+                Wednesday, November 04
+            </span>
+
+        </div>
+
+
+        <div class="stackly-consult-appointments-timeline">
+
+            <!-- APPOINTMENT 01 -->
+
+            <article class="stackly-consult-appointment-timeline-item">
+
+                <div class="stackly-consult-appointment-time">
+                    <strong>09:00</strong>
+                    <span>AM</span>
+                </div>
+
+                <div class="stackly-consult-appointment-timeline-line">
+                    <span></span>
+                </div>
+
+                <div class="stackly-consult-appointment-timeline-card">
+
+                    <div class="stackly-consult-appointment-timeline-main">
+
+                        <div class="stackly-consult-appointment-client-avatar orange-avatar">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+
+                        <div>
+                            <h3>Business Strategy Consultation</h3>
+                            <p>
+                                <i class="fa-solid fa-user"></i>
+                                Michael Anderson
+                            </p>
+                            <span>
+                                <i class="fa-solid fa-clock"></i>
+                                45 Minutes
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <div class="stackly-consult-appointment-timeline-meta">
+
+                        <span class="stackly-consult-appointment-status completed">
+                            Completed
+                        </span>
+
+                        <a href="404-admin.html">
+                            View Details
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- APPOINTMENT 02 -->
+
+            <article class="stackly-consult-appointment-timeline-item current">
+
+                <div class="stackly-consult-appointment-time">
+                    <strong>10:30</strong>
+                    <span>AM</span>
+                </div>
+
+                <div class="stackly-consult-appointment-timeline-line">
+                    <span></span>
+                </div>
+
+                <div class="stackly-consult-appointment-timeline-card">
+
+                    <div class="stackly-consult-appointment-timeline-main">
+
+                        <div class="stackly-consult-appointment-client-avatar blue-avatar">
+                            <i class="fa-solid fa-user-tie"></i>
+                        </div>
+
+                        <div>
+                            <h3>Financial Planning Meeting</h3>
+                            <p>
+                                <i class="fa-solid fa-user"></i>
+                                Sarah Williams
+                            </p>
+                            <span>
+                                <i class="fa-solid fa-clock"></i>
+                                60 Minutes
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <div class="stackly-consult-appointment-timeline-meta">
+
+                        <span class="stackly-consult-appointment-status ongoing">
+                            In Progress
+                        </span>
+
+                        <a href="404-admin.html">
+                            View Details
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- APPOINTMENT 03 -->
+
+            <article class="stackly-consult-appointment-timeline-item">
+
+                <div class="stackly-consult-appointment-time">
+                    <strong>01:00</strong>
+                    <span>PM</span>
+                </div>
+
+                <div class="stackly-consult-appointment-timeline-line">
+                    <span></span>
+                </div>
+
+                <div class="stackly-consult-appointment-timeline-card">
+
+                    <div class="stackly-consult-appointment-timeline-main">
+
+                        <div class="stackly-consult-appointment-client-avatar purple-avatar">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+
+                        <div>
+                            <h3>Corporate Growth Discussion</h3>
+                            <p>
+                                <i class="fa-solid fa-user"></i>
+                                James Richardson
+                            </p>
+                            <span>
+                                <i class="fa-solid fa-clock"></i>
+                                45 Minutes
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <div class="stackly-consult-appointment-timeline-meta">
+
+                        <span class="stackly-consult-appointment-status confirmed">
+                            Confirmed
+                        </span>
+
+                        <a href="404-admin.html">
+                            View Details
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- APPOINTMENT 04 -->
+
+            <article class="stackly-consult-appointment-timeline-item">
+
+                <div class="stackly-consult-appointment-time">
+                    <strong>03:30</strong>
+                    <span>PM</span>
+                </div>
+
+                <div class="stackly-consult-appointment-timeline-line">
+                    <span></span>
+                </div>
+
+                <div class="stackly-consult-appointment-timeline-card">
+
+                    <div class="stackly-consult-appointment-timeline-main">
+
+                        <div class="stackly-consult-appointment-client-avatar green-avatar">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+
+                        <div>
+                            <h3>Project Review Session</h3>
+                            <p>
+                                <i class="fa-solid fa-user"></i>
+                                Emily Thompson
+                            </p>
+                            <span>
+                                <i class="fa-solid fa-clock"></i>
+                                30 Minutes
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <div class="stackly-consult-appointment-timeline-meta">
+
+                        <span class="stackly-consult-appointment-status confirmed">
+                            Confirmed
+                        </span>
+
+                        <a href="404-admin.html">
+                            View Details
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         05. APPOINTMENT MANAGEMENT TABLE
+    =========================================== -->
+
+    <section class="stackly-consult-appointments-list"
+        id="appointment-list"
+        data-aos="fade-up">
+
+        <div class="stackly-consult-appointments-section-header">
+
+            <div>
+                <span class="stackly-consult-appointments-section-label">
+                    CLIENT MEETINGS
+                </span>
+
+                <h2>Recent Appointments</h2>
+
+                <p>
+                    Review appointment details and booking status.
+                </p>
+            </div>
+
+            <a href="404-admin.html"
+                class="stackly-consult-appointments-text-link">
+                View All
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+
+        <!-- TABLE FILTERS -->
+
+        <div class="stackly-consult-appointments-table-toolbar">
+
+            <div class="stackly-consult-appointments-search">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input type="search"
+                    placeholder="Search client or appointment..."
+                    aria-label="Search appointments">
+
+            </div>
+
+            <div class="stackly-consult-appointments-table-filters">
+
+    <!-- STATUS DROPDOWN -->
+    <div class="stackly-consult-appointment-dropdown"
+        data-dropdown>
+
+        <button type="button"
+            class="stackly-consult-appointment-dropdown-toggle"
+            aria-expanded="false">
+
+            <span class="stackly-consult-appointment-dropdown-value">
+                All Status
+            </span>
+
+            <i class="fa-solid fa-chevron-down"></i>
+
+        </button>
+
+        <div class="stackly-consult-appointment-dropdown-menu">
+
+            <button type="button" class="active" data-value="">
+                <span>All Status</span>
+                <i class="fa-solid fa-check"></i>
+            </button>
+
+            <button type="button" data-value="Confirmed">
+                <span>Confirmed</span>
+                <i class="fa-solid fa-check"></i>
+            </button>
+
+            <button type="button" data-value="Pending">
+                <span>Pending</span>
+                <i class="fa-solid fa-check"></i>
+            </button>
+
+            <button type="button" data-value="Completed">
+                <span>Completed</span>
+                <i class="fa-solid fa-check"></i>
+            </button>
+
+            <button type="button" data-value="Cancelled">
+                <span>Cancelled</span>
+                <i class="fa-solid fa-check"></i>
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- APPOINTMENT TYPE DROPDOWN -->
+    <div class="stackly-consult-appointment-dropdown"
+        data-dropdown>
+
+        <button type="button"
+            class="stackly-consult-appointment-dropdown-toggle"
+            aria-expanded="false">
+
+            <span class="stackly-consult-appointment-dropdown-value">
+                All Types
+            </span>
+
+            <i class="fa-solid fa-chevron-down"></i>
+
+        </button>
+
+        <div class="stackly-consult-appointment-dropdown-menu">
+
+            <button type="button" class="active" data-value="">
+                <span>All Types</span>
+                <i class="fa-solid fa-check"></i>
+            </button>
+
+            <button type="button" data-value="Consultation">
+                <span>Consultation</span>
+                <i class="fa-solid fa-check"></i>
+            </button>
+
+            <button type="button" data-value="Business Meeting">
+                <span>Business Meeting</span>
+                <i class="fa-solid fa-check"></i>
+            </button>
+
+            <button type="button" data-value="Project Review">
+                <span>Project Review</span>
+                <i class="fa-solid fa-check"></i>
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+        </div>
+
+
+        <!-- APPOINTMENT TABLE -->
+
+        <div class="stackly-consult-appointments-table-wrapper">
+
+            <table class="stackly-consult-appointments-table">
+
+                <thead>
+                    <tr>
+                        <th>CLIENT</th>
+                        <th>APPOINTMENT</th>
+                        <th>DATE & TIME</th>
+                        <th>CONSULTANT</th>
+                        <th>STATUS</th>
+                        <th>ACTION</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>
+                            <div class="stackly-consult-appointment-table-client">
+
+                                <div class="stackly-consult-appointment-table-avatar orange-avatar">
+                                    MA
+                                </div>
+
+                                <div>
+                                    <strong>Michael Anderson</strong>
+                                    <span>michael@example.com</span>
+                                </div>
+
+                            </div>
+                        </td>
+
+                        <td>
+                            <strong>Business Strategy</strong>
+                            <span class="stackly-consult-appointment-type">
+                                Consultation
+                            </span>
+                        </td>
+
+                        <td>
+                            <strong>Nov 04, 2026</strong>
+                            <span>09:00 AM</span>
+                        </td>
+
+                        <td>David Wilson</td>
+
+                        <td>
+                            <span class="stackly-consult-appointment-status completed">
+                                Completed
+                            </span>
+                        </td>
+
+                        <td>
+                            <a href="404-admin.html"
+                                class="stackly-consult-appointment-action"
+                                aria-label="View Michael appointment">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            <div class="stackly-consult-appointment-table-client">
+
+                                <div class="stackly-consult-appointment-table-avatar blue-avatar">
+                                    SW
+                                </div>
+
+                                <div>
+                                    <strong>Sarah Williams</strong>
+                                    <span>sarah@example.com</span>
+                                </div>
+
+                            </div>
+                        </td>
+
+                        <td>
+                            <strong>Financial Planning</strong>
+                            <span class="stackly-consult-appointment-type">
+                                Consultation
+                            </span>
+                        </td>
+
+                        <td>
+                            <strong>Nov 04, 2026</strong>
+                            <span>10:30 AM</span>
+                        </td>
+
+                        <td>Robert Martin</td>
+
+                        <td>
+                            <span class="stackly-consult-appointment-status ongoing">
+                                In Progress
+                            </span>
+                        </td>
+
+                        <td>
+                            <a href="404-admin.html"
+                                class="stackly-consult-appointment-action"
+                                aria-label="View Sarah appointment">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            <div class="stackly-consult-appointment-table-client">
+
+                                <div class="stackly-consult-appointment-table-avatar purple-avatar">
+                                    JR
+                                </div>
+
+                                <div>
+                                    <strong>James Richardson</strong>
+                                    <span>james@example.com</span>
+                                </div>
+
+                            </div>
+                        </td>
+
+                        <td>
+                            <strong>Corporate Growth</strong>
+                            <span class="stackly-consult-appointment-type">
+                                Business Meeting
+                            </span>
+                        </td>
+
+                        <td>
+                            <strong>Nov 04, 2026</strong>
+                            <span>01:00 PM</span>
+                        </td>
+
+                        <td>David Wilson</td>
+
+                        <td>
+                            <span class="stackly-consult-appointment-status confirmed">
+                                Confirmed
+                            </span>
+                        </td>
+
+                        <td>
+                            <a href="404-admin.html"
+                                class="stackly-consult-appointment-action"
+                                aria-label="View James appointment">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            <div class="stackly-consult-appointment-table-client">
+
+                                <div class="stackly-consult-appointment-table-avatar green-avatar">
+                                    ET
+                                </div>
+
+                                <div>
+                                    <strong>Emily Thompson</strong>
+                                    <span>emily@example.com</span>
+                                </div>
+
+                            </div>
+                        </td>
+
+                        <td>
+                            <strong>Project Review</strong>
+                            <span class="stackly-consult-appointment-type">
+                                Review Meeting
+                            </span>
+                        </td>
+
+                        <td>
+                            <strong>Nov 04, 2026</strong>
+                            <span>03:30 PM</span>
+                        </td>
+
+                        <td>Sarah Miller</td>
+
+                        <td>
+                            <span class="stackly-consult-appointment-status confirmed">
+                                Confirmed
+                            </span>
+                        </td>
+
+                        <td>
+                            <a href="404-admin.html"
+                                class="stackly-consult-appointment-action"
+                                aria-label="View Emily appointment">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            <div class="stackly-consult-appointment-table-client">
+
+                                <div class="stackly-consult-appointment-table-avatar pink-avatar">
+                                    OL
+                                </div>
+
+                                <div>
+                                    <strong>Olivia Lewis</strong>
+                                    <span>olivia@example.com</span>
+                                </div>
+
+                            </div>
+                        </td>
+
+                        <td>
+                            <strong>Business Consultation</strong>
+                            <span class="stackly-consult-appointment-type">
+                                Consultation
+                            </span>
+                        </td>
+
+                        <td>
+                            <strong>Nov 05, 2026</strong>
+                            <span>11:00 AM</span>
+                        </td>
+
+                        <td>Robert Martin</td>
+
+                        <td>
+                            <span class="stackly-consult-appointment-status pending">
+                                Pending
+                            </span>
+                        </td>
+
+                        <td>
+                            <a href="404-admin.html"
+                                class="stackly-consult-appointment-action"
+                                aria-label="View Olivia appointment">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <div class="stackly-consult-appointments-table-footer">
+
+            <span>Showing 5 of 248 appointments</span>
+
+             
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         06. APPOINTMENT INSIGHTS + AVAILABILITY
+    =========================================== -->
+
+    <section class="stackly-consult-appointments-bottom-grid"
+        data-aos="fade-up">
+
+
+        <!-- APPOINTMENT TYPE INSIGHTS -->
+
+        <div class="stackly-consult-appointments-insights">
+
+            <div class="stackly-consult-appointments-section-header">
+
+                <div>
+                    <span class="stackly-consult-appointments-section-label">
+                        PERFORMANCE
+                    </span>
+
+                    <h2>Appointment Insights</h2>
+                </div>
+
+                <span class="stackly-consult-appointments-insight-icon">
+                    <i class="fa-solid fa-chart-pie"></i>
+                </span>
+
+            </div>
+
+
+            <div class="stackly-consult-appointments-insight-item">
+
+                <div class="stackly-consult-appointments-insight-info">
+                    <span>Business Consultation</span>
+                    <strong>42%</strong>
+                </div>
+
+                <div class="stackly-consult-appointments-progress">
+                    <span style="width: 42%;"></span>
+                </div>
+
+            </div>
+
+
+            <div class="stackly-consult-appointments-insight-item">
+
+                <div class="stackly-consult-appointments-insight-info">
+                    <span>Financial Planning</span>
+                    <strong>28%</strong>
+                </div>
+
+                <div class="stackly-consult-appointments-progress blue-progress">
+                    <span style="width: 28%;"></span>
+                </div>
+
+            </div>
+
+
+            <div class="stackly-consult-appointments-insight-item">
+
+                <div class="stackly-consult-appointments-insight-info">
+                    <span>Project Review</span>
+                    <strong>18%</strong>
+                </div>
+
+                <div class="stackly-consult-appointments-progress green-progress">
+                    <span style="width: 18%;"></span>
+                </div>
+
+            </div>
+
+
+            <div class="stackly-consult-appointments-insight-item">
+
+                <div class="stackly-consult-appointments-insight-info">
+                    <span>Other Meetings</span>
+                    <strong>12%</strong>
+                </div>
+
+                <div class="stackly-consult-appointments-progress purple-progress">
+                    <span style="width: 12%;"></span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CONSULTANT AVAILABILITY -->
+
+        <div class="stackly-consult-appointments-availability"
+            id="availability">
+
+            <div class="stackly-consult-appointments-section-header">
+
+                <div>
+                    <span class="stackly-consult-appointments-section-label">
+                        TEAM SCHEDULE
+                    </span>
+
+                    <h2>Consultant Availability</h2>
+                </div>
+
+                <span class="stackly-consult-appointments-availability-icon">
+                    <i class="fa-solid fa-user-clock"></i>
+                </span>
+
+            </div>
+
+
+            <div class="stackly-consult-appointments-consultant">
+
+                <div class="stackly-consult-appointments-consultant-avatar">
+                    DW
+                </div>
+
+                <div class="stackly-consult-appointments-consultant-info">
+                    <strong>David Wilson</strong>
+                    <span>Business Consultant</span>
+                </div>
+
+                <span class="stackly-consult-appointments-available">
+                    Available
+                </span>
+
+            </div>
+
+
+            <div class="stackly-consult-appointments-consultant">
+
+                <div class="stackly-consult-appointments-consultant-avatar blue-avatar">
+                    RM
+                </div>
+
+                <div class="stackly-consult-appointments-consultant-info">
+                    <strong>Robert Martin</strong>
+                    <span>Financial Advisor</span>
+                </div>
+
+                <span class="stackly-consult-appointments-busy">
+                    Busy
+                </span>
+
+            </div>
+
+
+            <div class="stackly-consult-appointments-consultant">
+
+                <div class="stackly-consult-appointments-consultant-avatar purple-avatar">
+                    SM
+                </div>
+
+                <div class="stackly-consult-appointments-consultant-info">
+                    <strong>Sarah Miller</strong>
+                    <span>Project Consultant</span>
+                </div>
+
+                <span class="stackly-consult-appointments-available">
+                    Available
+                </span>
+
+            </div>
+
+
+            <a href="404-admin.html"
+                class="stackly-consult-appointments-team-link">
+
+                View Team Schedule
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         07. APPOINTMENT REMINDER BANNER
+    =========================================== -->
+
+    <section class="stackly-consult-appointments-reminder"
+        data-aos="fade-up">
+
+        <div class="stackly-consult-appointments-reminder-icon">
+            <i class="fa-solid fa-bell"></i>
+        </div>
+
+        <div class="stackly-consult-appointments-reminder-content">
+
+            <span>STAY ORGANIZED</span>
+
+            <h2>Never Miss an Important Meeting</h2>
+
+            <p>
+                Keep your client meetings organized and
+                stay updated with every upcoming consultation.
+            </p>
+
+        </div>
+
+        <a href="404-admin.html"
+            class="stackly-consult-appointments-reminder-btn">
+
+            Manage Preferences
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </a>
+
+    </section>
+
+</div>
+
+        </main>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <!-- Admin JS -->
+    <script src="admin.js"></script>
+
+</body>
+</html>

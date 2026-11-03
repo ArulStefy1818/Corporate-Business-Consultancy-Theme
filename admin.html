@@ -1,0 +1,1023 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard | Stackly Corporate Consultancy</title>
+
+    <meta name="description"
+        content="Stackly Corporate Consultancy Admin Dashboard - Manage clients, projects, services, appointments and business activities.">
+
+    <link rel="icon" href="Stackly-logo-Blue.webp" type="image/webp">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- AOS Animation -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    
+
+    <!-- Admin CSS -->
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+    <!-- ==========================================
+         ADMIN DASHBOARD WRAPPER
+    =========================================== -->
+
+    <div class="stackly-consult-admin-wrapper">
+
+        <!-- ==========================================
+             MOBILE OVERLAY
+        =========================================== -->
+
+        <div class="stackly-consult-admin-overlay"
+            id="stacklyConsultAdminOverlay"></div>
+
+
+        <!-- ==========================================
+             SIDEBAR
+        =========================================== -->
+
+        <aside class="stackly-consult-admin-sidebar"
+            id="stacklyConsultAdminSidebar">
+
+            <!-- SIDEBAR BRAND -->
+
+            <div class="stackly-consult-admin-brand">
+
+                <a href="admin.html"
+                    class="stackly-consult-admin-logo"
+                    aria-label="Stackly Home">
+
+                    <img src="Stackly-logo-Blue.webp"
+                        alt="Stackly Corporate Consultancy Logo">
+                </a>
+
+                <button type="button"
+                    class="stackly-consult-admin-close"
+                    id="stacklyConsultAdminClose"
+                    aria-label="Close sidebar">
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </button>
+
+            </div>
+
+
+            <!-- SIDEBAR PROFILE -->
+
+            <div class="stackly-consult-admin-profile">
+
+                <div class="stackly-consult-admin-avatar">
+                    <i class="fa-solid fa-user-shield"></i>
+                </div>
+
+                <div class="stackly-consult-admin-profile-info">
+
+                    <h3>Administrator</h3>
+
+                    <span>
+                        <span class="stackly-consult-admin-status-dot"></span>
+                        Online
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- SIDEBAR NAVIGATION -->
+
+            <nav class="stackly-consult-admin-navigation"
+                aria-label="Admin navigation">
+
+                <p class="stackly-consult-admin-nav-heading">
+                    MAIN MENU
+                </p>
+
+                <a href="admin.html"
+                    class="stackly-consult-admin-nav-link active">
+
+                    <i class="fa-solid fa-chart-pie"></i>
+                    <span>Dashboard</span>
+
+                </a>
+
+                <a href="admin-clients.html"
+                    class="stackly-consult-admin-nav-link">
+
+                    <i class="fa-solid fa-users"></i>
+                    <span>Clients</span>
+
+                    <span class="stackly-consult-admin-nav-count">24</span>
+
+                </a>
+
+                <a href="admin-projects.html"
+                    class="stackly-consult-admin-nav-link">
+
+                    <i class="fa-solid fa-briefcase"></i>
+                    <span>Projects</span>
+
+                </a>
+
+                <a href="admin-services.html"
+                    class="stackly-consult-admin-nav-link">
+
+                    <i class="fa-solid fa-layer-group"></i>
+                    <span>Services</span>
+
+                </a>
+
+                <a href="admin-appointments.html"
+                    class="stackly-consult-admin-nav-link">
+
+                    <i class="fa-solid fa-calendar-check"></i>
+                    <span>Appointments</span>
+
+                    <span class="stackly-consult-admin-nav-count">05</span>
+
+                </a>
+
+
+                <p class="stackly-consult-admin-nav-heading">
+                    MANAGEMENT
+                </p>
+
+                <a href="admin-team.html"
+                    class="stackly-consult-admin-nav-link">
+
+                    <i class="fa-solid fa-user-group"></i>
+                    <span>Team Members</span>
+
+                </a>
+
+                <a href="admin-reports.html"
+                    class="stackly-consult-admin-nav-link">
+
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>Reports & Analytics</span>
+
+                </a>
+
+                <a href="admin-payments.html"
+                    class="stackly-consult-admin-nav-link">
+
+                    <i class="fa-solid fa-wallet"></i>
+                    <span>Payments</span>
+
+                </a>
+
+
+                <p class="stackly-consult-admin-nav-heading">
+                    PREFERENCES
+                </p>
+
+                <a href="admin-settings.html"
+                    class="stackly-consult-admin-nav-link">
+
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Settings</span>
+
+                </a>
+
+
+            </nav>
+
+
+            <!-- SIDEBAR BOTTOM -->
+
+            <div class="stackly-consult-admin-sidebar-bottom">
+
+                <div class="stackly-consult-admin-sidebar-help">
+
+                    <div class="stackly-consult-admin-help-icon">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+
+                    <div>
+                        <h4>Need Help?</h4>
+                        <p>Contact our support team.</p>
+                    </div>
+
+                    <a href="404-admin.html"
+                        aria-label="Get support">
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+                <a href="login.html"
+                    class="stackly-consult-admin-logout"
+                    id="stacklyConsultAdminLogout">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Logout</span>
+
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ==========================================
+             MAIN CONTENT AREA
+        =========================================== -->
+
+        <main class="stackly-consult-admin-main">
+
+
+            <!-- ==========================================
+                 TOP HEADER
+            =========================================== -->
+
+            <header class="stackly-consult-admin-header">
+
+                <div class="stackly-consult-admin-header-left">
+
+                    <button type="button"
+                        class="stackly-consult-admin-menu-toggle"
+                        id="stacklyConsultAdminMenuButton"
+                        aria-label="Open navigation"
+                        aria-expanded="false">
+
+                        <i class="fa-solid fa-bars"></i>
+
+                    </button>
+
+                    <div class="stackly-consult-admin-page-heading">
+
+                        <span class="stackly-consult-admin-breadcrumb">
+                            Admin / Overview
+                        </span>
+
+                        <h1>Admin Dashboard</h1>
+
+                    </div>
+
+                </div>
+
+
+                <!-- HEADER RIGHT -->
+
+                <div class="stackly-consult-admin-header-right">
+
+                    <a href="404-admin.html"><button type="button"
+                        class="stackly-consult-admin-icon-button"
+                        aria-label="Notifications">
+
+                        <i class="fa-regular fa-bell"></i>
+
+                        <span class="stackly-consult-admin-notification-dot"></span>
+
+                    </button></a>
+
+
+                    <div class="stackly-consult-admin-header-divider"></div>
+
+
+                    <!-- ADMIN EMAIL -->
+
+                    <div class="stackly-consult-admin-header-user">
+
+                        <div class="stackly-consult-admin-header-user-info">
+
+                            <span>Welcome back</span>
+
+                            <strong id="stacklyConsultAdminEmail">
+                                admin@stacklyconsult.com
+                            </strong>
+
+                        </div>
+
+                        <div class="stackly-consult-admin-header-avatar">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- ==========================================
+                 DASHBOARD CONTENT
+            =========================================== -->
+
+            <div class="stackly-consult-admin-content">
+
+
+                <!-- WELCOME SECTION -->
+
+                <section class="stackly-consult-admin-welcome"
+                    data-aos="fade-up">
+
+                    <div class="stackly-consult-admin-welcome-content">
+
+                        <span class="stackly-consult-admin-eyebrow">
+                            <i class="fa-solid fa-sparkles"></i>
+                            ADMIN OVERVIEW
+                        </span>
+
+                        <h2>
+                            Welcome to Your
+                            <span>Dashboard!</span>
+                        </h2>
+
+                        <p>
+                            Monitor your consultancy business, manage clients,
+                            track ongoing projects and stay updated with your
+                            latest business activities.
+                        </p>
+
+                        <a href="404-admin.html"
+                            class="stackly-consult-admin-primary-button">
+
+                            View Reports
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                    <div class="stackly-consult-admin-welcome-decoration">
+
+                        <div class="stackly-consult-admin-welcome-icon">
+                            <i class="fa-solid fa-chart-column"></i>
+                        </div>
+
+                        <div class="stackly-consult-admin-decoration-circle"></div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- STATISTICS -->
+
+                <section class="stackly-consult-admin-stats"
+                    aria-label="Business statistics">
+
+                    <div class="stackly-consult-admin-stat-card"
+                        data-aos="fade-up"
+                        data-aos-delay="100">
+
+                        <div class="stackly-consult-admin-stat-top">
+
+                            <div class="stackly-consult-admin-stat-icon orange">
+                                <i class="fa-solid fa-users"></i>
+                            </div>
+
+                            <span class="stackly-consult-admin-stat-change positive">
+                                <i class="fa-solid fa-arrow-trend-up"></i>
+                                12.8%
+                            </span>
+
+                        </div>
+
+                        <p>Total Clients</p>
+
+                        <h3>248</h3>
+
+                        <span class="stackly-consult-admin-stat-note">
+                            Compared to last month
+                        </span>
+
+                    </div>
+
+
+                    <div class="stackly-consult-admin-stat-card"
+                        data-aos="fade-up"
+                        data-aos-delay="200">
+
+                        <div class="stackly-consult-admin-stat-top">
+
+                            <div class="stackly-consult-admin-stat-icon purple">
+                                <i class="fa-solid fa-briefcase"></i>
+                            </div>
+
+                            <span class="stackly-consult-admin-stat-change positive">
+                                <i class="fa-solid fa-arrow-trend-up"></i>
+                                8.4%
+                            </span>
+
+                        </div>
+
+                        <p>Active Projects</p>
+
+                        <h3>36</h3>
+
+                        <span class="stackly-consult-admin-stat-note">
+                            Currently in progress
+                        </span>
+
+                    </div>
+
+
+                    <div class="stackly-consult-admin-stat-card"
+                        data-aos="fade-up"
+                        data-aos-delay="300">
+
+                        <div class="stackly-consult-admin-stat-top">
+
+                            <div class="stackly-consult-admin-stat-icon green">
+                                <i class="fa-solid fa-calendar-check"></i>
+                            </div>
+
+                            <span class="stackly-consult-admin-stat-change positive">
+                                <i class="fa-solid fa-arrow-trend-up"></i>
+                                6.2%
+                            </span>
+
+                        </div>
+
+                        <p>Appointments</p>
+
+                        <h3>18</h3>
+
+                        <span class="stackly-consult-admin-stat-note">
+                            Scheduled this month
+                        </span>
+
+                    </div>
+
+
+                    <div class="stackly-consult-admin-stat-card"
+                        data-aos="fade-up"
+                        data-aos-delay="400">
+
+                        <div class="stackly-consult-admin-stat-top">
+
+                            <div class="stackly-consult-admin-stat-icon blue">
+                                <i class="fa-solid fa-indian-rupee-sign"></i>
+                            </div>
+
+                            <span class="stackly-consult-admin-stat-change positive">
+                                <i class="fa-solid fa-arrow-trend-up"></i>
+                                15.6%
+                            </span>
+
+                        </div>
+
+                        <p>Total Revenue</p>
+
+                        <h3>₹8.42L</h3>
+
+                        <span class="stackly-consult-admin-stat-note">
+                            Revenue generated this month
+                        </span>
+
+                    </div>
+
+                </section>
+
+
+                <!-- CHART AND ACTIVITY SECTION -->
+
+                <!-- ==========================================
+     STACKLY CONSULT ADMIN
+     REVENUE OVERVIEW + RECENT ACTIVITY
+========================================== -->
+
+<section class="stackly-consult-admin-overview-grid">
+
+    <!-- ======================================
+         REVENUE OVERVIEW
+    ======================================= -->
+
+    <div class="stackly-consult-admin-panel stackly-consult-admin-revenue-panel"
+         data-aos="fade-up">
+
+        <!-- PANEL HEADER -->
+
+        <div class="stackly-consult-admin-panel-header">
+
+            <div>
+                <span class="stackly-consult-admin-panel-label">
+                    BUSINESS PERFORMANCE
+                </span>
+
+                <h3>Revenue Overview</h3>
+            </div>
+
+            <!-- CUSTOM REVENUE DROPDOWN -->
+
+            <div class="stackly-consult-admin-dropdown"
+                 id="stacklyConsultRevenueDropdown">
+
+                <button type="button"
+                        class="stackly-consult-admin-dropdown-trigger"
+                        aria-label="Select revenue period"
+                        aria-expanded="false"
+                        aria-haspopup="true">
+
+                    <span class="stackly-consult-admin-dropdown-value">
+                        This Month
+                    </span>
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </button>
+
+                <div class="stackly-consult-admin-dropdown-menu">
+
+                    <button type="button"
+                            class="stackly-consult-admin-dropdown-option"
+                            data-value="week">
+
+                        This Week
+
+                    </button>
+
+                    <button type="button"
+                            class="stackly-consult-admin-dropdown-option active"
+                            data-value="month">
+
+                        This Month
+
+                        <i class="fa-solid fa-check"></i>
+
+                    </button>
+
+                    <button type="button"
+                            class="stackly-consult-admin-dropdown-option"
+                            data-value="year">
+
+                        This Year
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- REVENUE CHART -->
+
+        <div class="stackly-consult-admin-chart-placeholder">
+
+            <div class="stackly-consult-admin-chart-container">
+
+                <canvas id="stacklyConsultRevenueChart"
+                        aria-label="Revenue performance chart"
+                        role="img">
+                </canvas>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ======================================
+         RECENT ACTIVITY
+    ======================================= -->
+
+    <div class="stackly-consult-admin-panel stackly-consult-admin-activity-panel"
+         data-aos="fade-up"
+         data-aos-delay="150">
+
+        <!-- PANEL HEADER -->
+
+        <div class="stackly-consult-admin-panel-header">
+
+            <div>
+
+                <span class="stackly-consult-admin-panel-label">
+                    LATEST UPDATES
+                </span>
+
+                <h3>Recent Activity</h3>
+
+            </div>
+
+            <a href="404-admin.html"
+               class="stackly-consult-admin-text-link">
+
+                View All
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+
+        <!-- ACTIVITY LIST -->
+
+        <div class="stackly-consult-admin-activity-list">
+
+
+            <!-- ACTIVITY 1 -->
+
+            <div class="stackly-consult-admin-activity-item">
+
+                <div class="stackly-consult-admin-activity-icon orange">
+
+                    <i class="fa-solid fa-user-plus"></i>
+
+                </div>
+
+                <div class="stackly-consult-admin-activity-info">
+
+                    <h4>New client registered</h4>
+
+                    <p>Michael Anderson joined the platform.</p>
+
+                    <span>10 minutes ago</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- ACTIVITY 2 -->
+
+            <div class="stackly-consult-admin-activity-item">
+
+                <div class="stackly-consult-admin-activity-icon purple">
+
+                    <i class="fa-solid fa-file-circle-check"></i>
+
+                </div>
+
+                <div class="stackly-consult-admin-activity-info">
+
+                    <h4>Project completed</h4>
+
+                    <p>Business Strategy project completed.</p>
+
+                    <span>1 hour ago</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- ACTIVITY 3 -->
+
+            <div class="stackly-consult-admin-activity-item">
+
+                <div class="stackly-consult-admin-activity-icon green">
+
+                    <i class="fa-solid fa-wallet"></i>
+
+                </div>
+
+                <div class="stackly-consult-admin-activity-info">
+
+                    <h4>Payment received</h4>
+
+                    <p>₹25,000 payment received successfully.</p>
+
+                    <span>3 hours ago</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- ACTIVITY 4 -->
+
+            <div class="stackly-consult-admin-activity-item">
+
+                <div class="stackly-consult-admin-activity-icon blue">
+
+                    <i class="fa-solid fa-calendar-plus"></i>
+
+                </div>
+
+                <div class="stackly-consult-admin-activity-info">
+
+                    <h4>New appointment booked</h4>
+
+                    <p>Consultation scheduled with Sarah.</p>
+
+                    <span>Yesterday</span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+                <!-- PROJECTS AND CLIENTS -->
+
+                <section class="stackly-consult-admin-bottom-grid">
+
+
+                    <!-- RECENT PROJECTS -->
+
+                    <div class="stackly-consult-admin-panel"
+                        data-aos="fade-up">
+
+                        <div class="stackly-consult-admin-panel-header">
+
+                            <div>
+                                <span class="stackly-consult-admin-panel-label">
+                                    PROJECT MANAGEMENT
+                                </span>
+
+                                <h3>Recent Projects</h3>
+
+                            </div>
+
+                            <a href="404-admin.html"
+                                class="stackly-consult-admin-text-link">
+
+                                View All
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </a>
+
+                        </div>
+
+
+                        <div class="stackly-consult-admin-table-wrapper">
+
+                            <table class="stackly-consult-admin-table">
+
+                                <thead>
+                                    <tr>
+                                        <th>Project</th>
+                                        <th>Client</th>
+                                        <th>Status</th>
+                                        <th>Progress</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+
+                                    <tr>
+                                        <td>
+                                            <strong>Business Strategy</strong>
+                                            <span>PRJ-001</span>
+                                        </td>
+
+                                        <td>John Smith</td>
+
+                                        <td>
+                                            <span class="stackly-consult-admin-badge completed">
+                                                Completed
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            <div class="stackly-consult-admin-progress">
+                                                <div>
+                                                    <span style="width:100%"></span>
+                                                </div>
+                                                <small>100%</small>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <td>
+                                            <strong>Market Research</strong>
+                                            <span>PRJ-002</span>
+                                        </td>
+
+                                        <td>Sarah Wilson</td>
+
+                                        <td>
+                                            <span class="stackly-consult-admin-badge progress">
+                                                In Progress
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            <div class="stackly-consult-admin-progress">
+                                                <div>
+                                                    <span style="width:65%"></span>
+                                                </div>
+                                                <small>65%</small>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <td>
+                                            <strong>Financial Planning</strong>
+                                            <span>PRJ-003</span>
+                                        </td>
+
+                                        <td>David Brown</td>
+
+                                        <td>
+                                            <span class="stackly-consult-admin-badge pending">
+                                                Pending
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            <div class="stackly-consult-admin-progress">
+                                                <div>
+                                                    <span style="width:30%"></span>
+                                                </div>
+                                                <small>30%</small>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <td>
+                                            <strong>Growth Consulting</strong>
+                                            <span>PRJ-004</span>
+                                        </td>
+
+                                        <td>Emily Davis</td>
+
+                                        <td>
+                                            <span class="stackly-consult-admin-badge progress">
+                                                In Progress
+                                            </span>
+                                        </td>
+
+                                        <td>
+                                            <div class="stackly-consult-admin-progress">
+                                                <div>
+                                                    <span style="width:80%"></span>
+                                                </div>
+                                                <small>80%</small>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- UPCOMING APPOINTMENTS -->
+
+                    <div class="stackly-consult-admin-panel"
+                        data-aos="fade-up"
+                        data-aos-delay="150">
+
+                        <div class="stackly-consult-admin-panel-header">
+
+                            <div>
+                                <span class="stackly-consult-admin-panel-label">
+                                    YOUR SCHEDULE
+                                </span>
+
+                                <h3>Upcoming Appointments</h3>
+
+                            </div>
+
+                            <a href="404-admin.html"
+                                class="stackly-consult-admin-text-link">
+
+                                View All
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </a>
+
+                        </div>
+
+
+                        <div class="stackly-consult-admin-appointment-list">
+
+                            <div class="stackly-consult-admin-appointment-item">
+
+                                <div class="stackly-consult-admin-appointment-date">
+                                    <strong>04</strong>
+                                    <span>NOV</span>
+                                </div>
+
+                                <div class="stackly-consult-admin-appointment-info">
+
+                                    <h4>Business Consultation</h4>
+
+                                    <p>
+                                        <i class="fa-regular fa-user"></i>
+                                        Robert Johnson
+                                    </p>
+
+                                    <span>
+                                        <i class="fa-regular fa-clock"></i>
+                                        10:30 AM
+                                    </span>
+
+                                </div>
+
+                                <span class="stackly-consult-admin-appointment-dot"></span>
+
+                            </div>
+
+
+                            <div class="stackly-consult-admin-appointment-item">
+
+                                <div class="stackly-consult-admin-appointment-date">
+                                    <strong>05</strong>
+                                    <span>NOV</span>
+                                </div>
+
+                                <div class="stackly-consult-admin-appointment-info">
+
+                                    <h4>Financial Advisory</h4>
+
+                                    <p>
+                                        <i class="fa-regular fa-user"></i>
+                                        Olivia Martin
+                                    </p>
+
+                                    <span>
+                                        <i class="fa-regular fa-clock"></i>
+                                        02:00 PM
+                                    </span>
+
+                                </div>
+
+                                <span class="stackly-consult-admin-appointment-dot"></span>
+
+                            </div>
+
+
+                            <div class="stackly-consult-admin-appointment-item">
+
+                                <div class="stackly-consult-admin-appointment-date">
+                                    <strong>06</strong>
+                                    <span>NOV</span>
+                                </div>
+
+                                <div class="stackly-consult-admin-appointment-info">
+
+                                    <h4>Marketing Strategy</h4>
+
+                                    <p>
+                                        <i class="fa-regular fa-user"></i>
+                                        James Wilson
+                                    </p>
+
+                                    <span>
+                                        <i class="fa-regular fa-clock"></i>
+                                        11:00 AM
+                                    </span>
+
+                                </div>
+
+                                <span class="stackly-consult-admin-appointment-dot"></span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <!-- Admin JS -->
+    <script src="admin.js"></script>
+
+</body>
+</html>

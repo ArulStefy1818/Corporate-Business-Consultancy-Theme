@@ -1,0 +1,1226 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard | Stackly Corporate Consultancy</title>
+
+    <meta name="description"
+        content="Stackly Corporate Consultancy Admin Dashboard - Manage clients, projects, services, appointments and business activities.">
+
+    <link rel="icon" href="Stackly-logo-Blue.webp" type="image/webp">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- AOS Animation -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    
+
+    <!-- Admin CSS -->
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+    <!-- ==========================================
+         ADMIN DASHBOARD WRAPPER
+    =========================================== -->
+
+    <div class="stackly-consult-admin-wrapper">
+
+        <!-- ==========================================
+             MOBILE OVERLAY
+        =========================================== -->
+
+        <div class="stackly-consult-admin-overlay"
+            id="stacklyConsultAdminOverlay"></div>
+
+
+        <!-- ==========================================
+             SIDEBAR
+        =========================================== -->
+
+        <aside class="stackly-consult-admin-sidebar"
+            id="stacklyConsultAdminSidebar">
+
+            <!-- SIDEBAR BRAND -->
+
+            <div class="stackly-consult-admin-brand">
+
+                <a href="admin.html"
+                    class="stackly-consult-admin-logo"
+                    aria-label="Stackly Home">
+
+                    <img src="Stackly-logo-Blue.webp"
+                        alt="Stackly Corporate Consultancy Logo">
+                </a>
+
+                <button type="button"
+                    class="stackly-consult-admin-close"
+                    id="stacklyConsultAdminClose"
+                    aria-label="Close sidebar">
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </button>
+
+            </div>
+
+
+            <!-- SIDEBAR PROFILE -->
+
+            <div class="stackly-consult-admin-profile">
+
+                <div class="stackly-consult-admin-avatar">
+                    <i class="fa-solid fa-user-shield"></i>
+                </div>
+
+                <div class="stackly-consult-admin-profile-info">
+
+                    <h3>Administrator</h3>
+
+                    <span>
+                        <span class="stackly-consult-admin-status-dot"></span>
+                        Online
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- SIDEBAR NAVIGATION -->
+
+            <nav class="stackly-consult-admin-navigation"
+                aria-label="Admin navigation">
+
+                <p class="stackly-consult-admin-nav-heading">
+                    MAIN MENU
+                </p>
+
+                <a href="admin.html"
+                    class="stackly-consult-admin-nav-link active">
+
+                    <i class="fa-solid fa-chart-pie"></i>
+                    <span>Dashboard</span>
+
+                </a>
+
+                <a href="admin-clients.html"
+                    class="stackly-consult-admin-nav-link">
+
+                    <i class="fa-solid fa-users"></i>
+                    <span>Clients</span>
+
+                    <span class="stackly-consult-admin-nav-count">24</span>
+
+                </a>
+
+                <a href="admin-projects.html"
+                    class="stackly-consult-admin-nav-link">
+
+                    <i class="fa-solid fa-briefcase"></i>
+                    <span>Projects</span>
+
+                </a>
+
+                <a href="admin-services.html"
+                    class="stackly-consult-admin-nav-link">
+
+                    <i class="fa-solid fa-layer-group"></i>
+                    <span>Services</span>
+
+                </a>
+
+                <a href="admin-appointments.html"
+                    class="stackly-consult-admin-nav-link">
+
+                    <i class="fa-solid fa-calendar-check"></i>
+                    <span>Appointments</span>
+
+                    <span class="stackly-consult-admin-nav-count">05</span>
+
+                </a>
+
+
+                <p class="stackly-consult-admin-nav-heading">
+                    MANAGEMENT
+                </p>
+
+                <a href="admin-team.html"
+                    class="stackly-consult-admin-nav-link">
+
+                    <i class="fa-solid fa-user-group"></i>
+                    <span>Team Members</span>
+
+                </a>
+
+                <a href="admin-reports.html"
+                    class="stackly-consult-admin-nav-link">
+
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>Reports & Analytics</span>
+
+                </a>
+
+                <a href="admin-payments.html"
+                    class="stackly-consult-admin-nav-link">
+
+                    <i class="fa-solid fa-wallet"></i>
+                    <span>Payments</span>
+
+                </a>
+
+
+                <p class="stackly-consult-admin-nav-heading">
+                    PREFERENCES
+                </p>
+
+                <a href="admin-settings.html"
+                    class="stackly-consult-admin-nav-link">
+
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Settings</span>
+
+                </a>
+
+
+            </nav>
+
+
+            <!-- SIDEBAR BOTTOM -->
+
+            <div class="stackly-consult-admin-sidebar-bottom">
+
+                <div class="stackly-consult-admin-sidebar-help">
+
+                    <div class="stackly-consult-admin-help-icon">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+
+                    <div>
+                        <h4>Need Help?</h4>
+                        <p>Contact our support team.</p>
+                    </div>
+
+                    <a href="404-admin.html"
+                        aria-label="Get support">
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+                <a href="login.html"
+                    class="stackly-consult-admin-logout"
+                    id="stacklyConsultAdminLogout">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Logout</span>
+
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ==========================================
+             MAIN CONTENT AREA
+        =========================================== -->
+
+        <main class="stackly-consult-admin-main">
+
+
+            <!-- ==========================================
+                 TOP HEADER
+            =========================================== -->
+
+            <header class="stackly-consult-admin-header">
+
+                <div class="stackly-consult-admin-header-left">
+
+                    <button type="button"
+                        class="stackly-consult-admin-menu-toggle"
+                        id="stacklyConsultAdminMenuButton"
+                        aria-label="Open navigation"
+                        aria-expanded="false">
+
+                        <i class="fa-solid fa-bars"></i>
+
+                    </button>
+
+                    <div class="stackly-consult-admin-page-heading">
+
+                        <span class="stackly-consult-admin-breadcrumb">
+                            Admin / Overview
+                        </span>
+
+                        <h1>Admin Dashboard</h1>
+
+                    </div>
+
+                </div>
+
+
+                <!-- HEADER RIGHT -->
+
+                <div class="stackly-consult-admin-header-right">
+
+                    <a href="404-admin.html"><button type="button"
+                        class="stackly-consult-admin-icon-button"
+                        aria-label="Notifications">
+
+                        <i class="fa-regular fa-bell"></i>
+
+                        <span class="stackly-consult-admin-notification-dot"></span>
+
+                    </button></a>
+
+
+                    <div class="stackly-consult-admin-header-divider"></div>
+
+
+                    <!-- ADMIN EMAIL -->
+
+                    <div class="stackly-consult-admin-header-user">
+
+                        <div class="stackly-consult-admin-header-user-info">
+
+                            <span>Welcome back</span>
+
+                            <strong id="stacklyConsultAdminEmail">
+                                admin@stacklyconsult.com
+                            </strong>
+
+                        </div>
+
+                        <div class="stackly-consult-admin-header-avatar">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+<!-- ==========================================
+     STACKLY CORPORATE CONSULTANCY
+     ADMIN PROJECTS PAGE
+========================================== -->
+<!-- PROJECTS PAGE CONTENT -->
+<div class="stackly-consult-admin-projects-page">
+
+    <!-- PROJECT HERO -->
+    <section class="stackly-consult-admin-projects-hero"
+        data-aos="fade-up">
+
+        <div class="stackly-consult-admin-projects-hero-content">
+
+            <span class="stackly-consult-admin-projects-eyebrow">
+                <i class="fa-solid fa-briefcase"></i>
+                PROJECT MANAGEMENT
+            </span>
+
+            <h2>Turn Every Project Into a <span>Success Story.</span></h2>
+
+            <p>
+                Track progress, manage deadlines, monitor team performance
+                and keep every business project moving forward.
+            </p>
+
+            <div class="stackly-consult-admin-projects-hero-actions">
+
+                <a href="404-admin.html"
+                    class="stackly-consult-admin-projects-primary-btn">
+                    <i class="fa-solid fa-plus"></i>
+                    Create New Project
+                </a>
+
+                <a href="404-admin.html"
+                    class="stackly-consult-admin-projects-secondary-btn">
+                    <i class="fa-solid fa-chart-line"></i>
+                    View Reports
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="stackly-consult-admin-projects-hero-visual">
+
+            <div class="stackly-consult-admin-projects-visual-circle"></div>
+
+            <div class="stackly-consult-admin-projects-visual-card">
+
+                <div class="stackly-consult-admin-projects-visual-top">
+                    <span>Overall Completion</span>
+                    <i class="fa-solid fa-arrow-trend-up"></i>
+                </div>
+
+                <div class="stackly-consult-admin-projects-visual-number">
+                    78<span>%</span>
+                </div>
+
+                <div class="stackly-consult-admin-projects-visual-track">
+                    <span></span>
+                </div>
+
+                <div class="stackly-consult-admin-projects-visual-bottom">
+                    <span>Project performance</span>
+                    <strong>+12.5%</strong>
+                </div>
+
+            </div>
+
+            <div class="stackly-consult-admin-projects-floating-icon">
+                <i class="fa-solid fa-rocket"></i>
+            </div>
+
+            <div class="stackly-consult-admin-projects-floating-label">
+                <i class="fa-solid fa-circle-check"></i>
+                On Track
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROJECT PERFORMANCE STATS -->
+    <section class="stackly-consult-admin-projects-stats"
+        data-aos="fade-up">
+
+        <article class="stackly-consult-admin-projects-stat-card">
+
+            <div class="stackly-consult-admin-projects-stat-icon orange">
+                <i class="fa-solid fa-folder-open"></i>
+            </div>
+
+            <div class="stackly-consult-admin-projects-stat-details">
+                <span>Total Projects</span>
+                <h3>36</h3>
+                <p><i class="fa-solid fa-arrow-trend-up"></i> 8% from last month</p>
+            </div>
+
+            <span class="stackly-consult-admin-projects-stat-number">01</span>
+
+        </article>
+
+        <article class="stackly-consult-admin-projects-stat-card">
+
+            <div class="stackly-consult-admin-projects-stat-icon green">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+
+            <div class="stackly-consult-admin-projects-stat-details">
+                <span>Completed</span>
+                <h3>18</h3>
+                <p><i class="fa-solid fa-arrow-trend-up"></i> 5 completed this month</p>
+            </div>
+
+            <span class="stackly-consult-admin-projects-stat-number">02</span>
+
+        </article>
+
+        <article class="stackly-consult-admin-projects-stat-card">
+
+            <div class="stackly-consult-admin-projects-stat-icon blue">
+                <i class="fa-solid fa-spinner"></i>
+            </div>
+
+            <div class="stackly-consult-admin-projects-stat-details">
+                <span>In Progress</span>
+                <h3>12</h3>
+                <p><i class="fa-solid fa-clock"></i> 9 progressing on time</p>
+            </div>
+
+            <span class="stackly-consult-admin-projects-stat-number">03</span>
+
+        </article>
+
+        <article class="stackly-consult-admin-projects-stat-card">
+
+            <div class="stackly-consult-admin-projects-stat-icon purple">
+                <i class="fa-solid fa-calendar-xmark"></i>
+            </div>
+
+            <div class="stackly-consult-admin-projects-stat-details">
+                <span>Need Attention</span>
+                <h3>06</h3>
+                <p class="warning">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    Requires review
+                </p>
+            </div>
+
+            <span class="stackly-consult-admin-projects-stat-number">04</span>
+
+        </article>
+
+    </section>
+
+
+    <!-- PROJECT FILTER AND SEARCH -->
+    <section class="stackly-consult-admin-projects-toolbar"
+        data-aos="fade-up">
+
+        <div class="stackly-consult-admin-projects-toolbar-heading">
+            <span>WORKSPACE</span>
+            <h2>Explore Projects</h2>
+            <p>Monitor and organize all your consultancy projects.</p>
+        </div>
+
+        <div class="stackly-consult-admin-projects-toolbar-actions">
+
+            <div class="stackly-consult-admin-projects-search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="search"
+                    id="stacklyConsultProjectsSearch"
+                    placeholder="Search projects...">
+            </div>
+
+            <!-- CUSTOM PROJECT FILTER DROPDOWN -->
+<div class="stackly-consult-admin-projects-dropdown"
+     id="stacklyConsultProjectsDropdown">
+
+    <button type="button"
+            class="stackly-consult-admin-projects-dropdown-btn"
+            id="stacklyConsultProjectsDropdownBtn"
+            aria-expanded="false">
+
+        <span id="stacklyConsultProjectsSelected">
+            All Projects
+        </span>
+
+        <i class="fa-solid fa-chevron-down"></i>
+    </button>
+
+    <div class="stackly-consult-admin-projects-dropdown-menu"
+         id="stacklyConsultProjectsDropdownMenu">
+
+        <button type="button"
+                class="stackly-consult-admin-projects-dropdown-option active"
+                data-value="all">
+            <span>All Projects</span>
+            <i class="fa-solid fa-check"></i>
+        </button>
+
+        <button type="button"
+                class="stackly-consult-admin-projects-dropdown-option"
+                data-value="progress">
+            <span>In Progress</span>
+            <i class="fa-solid fa-check"></i>
+        </button>
+
+        <button type="button"
+                class="stackly-consult-admin-projects-dropdown-option"
+                data-value="completed">
+            <span>Completed</span>
+            <i class="fa-solid fa-check"></i>
+        </button>
+
+        <button type="button"
+                class="stackly-consult-admin-projects-dropdown-option"
+                data-value="review">
+            <span>Under Review</span>
+            <i class="fa-solid fa-check"></i>
+        </button>
+
+        <button type="button"
+                class="stackly-consult-admin-projects-dropdown-option"
+                data-value="attention">
+            <span>Needs Attention</span>
+            <i class="fa-solid fa-check"></i>
+        </button>
+
+    </div>
+
+    <!-- Hidden value for JavaScript filtering -->
+    <input type="hidden"
+           id="stacklyConsultProjectsFilter"
+           value="all">
+
+</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FEATURED PROJECTS -->
+    <section class="stackly-consult-admin-projects-featured"
+        data-aos="fade-up">
+
+        <div class="stackly-consult-admin-projects-section-heading">
+
+            <div>
+                <span>PROJECT PORTFOLIO</span>
+                <h2>Featured Projects</h2>
+            </div>
+
+            <a href="404-admin.html">
+                View All Projects
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+
+        <div class="stackly-consult-admin-projects-grid">
+
+            <!-- PROJECT 1 -->
+            <article class="stackly-consult-admin-project-card"
+                data-project-status="progress">
+
+                <div class="stackly-consult-admin-project-card-banner banner-orange">
+
+                    <div class="stackly-consult-admin-project-card-banner-icon">
+                        <i class="fa-solid fa-building"></i>
+                    </div>
+
+                    <span class="stackly-consult-admin-project-status status-progress">
+                        In Progress
+                    </span>
+
+                    <span class="stackly-consult-admin-project-card-index">
+                        01
+                    </span>
+
+                </div>
+
+                <div class="stackly-consult-admin-project-card-body">
+
+                    <div class="stackly-consult-admin-project-category">
+                        BUSINESS STRATEGY
+                    </div>
+
+                    <h3>Corporate Growth Strategy</h3>
+
+                    <p>
+                        Strategic planning and business development
+                        for long-term organizational growth.
+                    </p>
+
+                    <div class="stackly-consult-admin-project-client">
+                        <div class="stackly-consult-admin-project-client-avatar">
+                            MA
+                        </div>
+
+                        <div>
+                            <strong>Michael Anderson</strong>
+                            <span>Anderson Group</span>
+                        </div>
+                    </div>
+
+                    <div class="stackly-consult-admin-project-progress-heading">
+                        <span>Project Progress</span>
+                        <strong>85%</strong>
+                    </div>
+
+                    <div class="stackly-consult-admin-project-progress-track">
+                        <span style="width:85%"></span>
+                    </div>
+
+                    <div class="stackly-consult-admin-project-card-footer">
+                        <span>
+                            <i class="fa-regular fa-calendar"></i>
+                            Nov 12, 2026
+                        </span>
+
+                        <a href="404-admin.html" aria-label="View project">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROJECT 2 -->
+            <article class="stackly-consult-admin-project-card"
+                data-project-status="progress">
+
+                <div class="stackly-consult-admin-project-card-banner banner-purple">
+
+                    <div class="stackly-consult-admin-project-card-banner-icon">
+                        <i class="fa-solid fa-chart-pie"></i>
+                    </div>
+
+                    <span class="stackly-consult-admin-project-status status-progress">
+                        In Progress
+                    </span>
+
+                    <span class="stackly-consult-admin-project-card-index">
+                        02
+                    </span>
+
+                </div>
+
+                <div class="stackly-consult-admin-project-card-body">
+
+                    <div class="stackly-consult-admin-project-category">
+                        FINANCIAL CONSULTING
+                    </div>
+
+                    <h3>Financial Transformation</h3>
+
+                    <p>
+                        Financial planning, cost optimization and
+                        improved business performance.
+                    </p>
+
+                    <div class="stackly-consult-admin-project-client">
+                        <div class="stackly-consult-admin-project-client-avatar purple-avatar">
+                            SJ
+                        </div>
+
+                        <div>
+                            <strong>Sarah Johnson</strong>
+                            <span>Johnson Enterprises</span>
+                        </div>
+                    </div>
+
+                    <div class="stackly-consult-admin-project-progress-heading">
+                        <span>Project Progress</span>
+                        <strong>65%</strong>
+                    </div>
+
+                    <div class="stackly-consult-admin-project-progress-track purple-track">
+                        <span style="width:65%"></span>
+                    </div>
+
+                    <div class="stackly-consult-admin-project-card-footer">
+                        <span>
+                            <i class="fa-regular fa-calendar"></i>
+                            Nov 18, 2026
+                        </span>
+
+                        <a href="404-admin.html" aria-label="View project">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROJECT 3 -->
+            <article class="stackly-consult-admin-project-card"
+                data-project-status="review">
+
+                <div class="stackly-consult-admin-project-card-banner banner-blue">
+
+                    <div class="stackly-consult-admin-project-card-banner-icon">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+
+                    <span class="stackly-consult-admin-project-status status-review">
+                        Under Review
+                    </span>
+
+                    <span class="stackly-consult-admin-project-card-index">
+                        03
+                    </span>
+
+                </div>
+
+                <div class="stackly-consult-admin-project-card-body">
+
+                    <div class="stackly-consult-admin-project-category">
+                        TECHNOLOGY CONSULTING
+                    </div>
+
+                    <h3>Digital Business Upgrade</h3>
+
+                    <p>
+                        Modernizing business operations with digital
+                        tools and technology solutions.
+                    </p>
+
+                    <div class="stackly-consult-admin-project-client">
+                        <div class="stackly-consult-admin-project-client-avatar blue-avatar">
+                            DW
+                        </div>
+
+                        <div>
+                            <strong>David Wilson</strong>
+                            <span>Wilson Technologies</span>
+                        </div>
+                    </div>
+
+                    <div class="stackly-consult-admin-project-progress-heading">
+                        <span>Project Progress</span>
+                        <strong>92%</strong>
+                    </div>
+
+                    <div class="stackly-consult-admin-project-progress-track blue-track">
+                        <span style="width:92%"></span>
+                    </div>
+
+                    <div class="stackly-consult-admin-project-card-footer">
+                        <span>
+                            <i class="fa-regular fa-calendar"></i>
+                            Nov 08, 2026
+                        </span>
+
+                        <a href="404-admin.html" aria-label="View project">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROJECT 4 -->
+            <article class="stackly-consult-admin-project-card"
+                data-project-status="attention">
+
+                <div class="stackly-consult-admin-project-card-banner banner-green">
+
+                    <div class="stackly-consult-admin-project-card-banner-icon">
+                        <i class="fa-solid fa-bullhorn"></i>
+                    </div>
+
+                    <span class="stackly-consult-admin-project-status status-attention">
+                        Needs Attention
+                    </span>
+
+                    <span class="stackly-consult-admin-project-card-index">
+                        04
+                    </span>
+
+                </div>
+
+                <div class="stackly-consult-admin-project-card-body">
+
+                    <div class="stackly-consult-admin-project-category">
+                        MARKETING STRATEGY
+                    </div>
+
+                    <h3>Brand Expansion Plan</h3>
+
+                    <p>
+                        Market research, brand positioning and
+                        customer acquisition strategy.
+                    </p>
+
+                    <div class="stackly-consult-admin-project-client">
+                        <div class="stackly-consult-admin-project-client-avatar green-avatar">
+                            EM
+                        </div>
+
+                        <div>
+                            <strong>Emily Martinez</strong>
+                            <span>Martinez Solutions</span>
+                        </div>
+                    </div>
+
+                    <div class="stackly-consult-admin-project-progress-heading">
+                        <span>Project Progress</span>
+                        <strong>45%</strong>
+                    </div>
+
+                    <div class="stackly-consult-admin-project-progress-track green-track">
+                        <span style="width:45%"></span>
+                    </div>
+
+                    <div class="stackly-consult-admin-project-card-footer">
+                        <span>
+                            <i class="fa-regular fa-calendar"></i>
+                            Nov 20, 2026
+                        </span>
+
+                        <a href="404-admin.html" aria-label="View project">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+        <p class="stackly-consult-admin-projects-empty"
+            id="stacklyConsultProjectsEmpty"
+            hidden>
+            No projects match your search.
+        </p>
+
+    </section>
+
+
+    <!-- PROJECT INSIGHTS + PIPELINE -->
+    <section class="stackly-consult-admin-projects-insights"
+        data-aos="fade-up">
+
+        <!-- PROJECT PIPELINE -->
+        <div class="stackly-consult-admin-projects-panel">
+
+            <div class="stackly-consult-admin-projects-panel-heading">
+                <div>
+                    <span>WORKFLOW</span>
+                    <h2>Project Pipeline</h2>
+                </div>
+
+                <i class="fa-solid fa-diagram-project"></i>
+            </div>
+
+            <div class="stackly-consult-admin-projects-pipeline">
+
+                <div class="stackly-consult-admin-projects-pipeline-item">
+
+                    <div class="stackly-consult-admin-projects-pipeline-icon pipeline-one">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+
+                    <div class="stackly-consult-admin-projects-pipeline-info">
+                        <strong>New Requests</strong>
+                        <span>Initial project enquiries</span>
+                    </div>
+
+                    <b>08</b>
+
+                </div>
+
+                <div class="stackly-consult-admin-projects-pipeline-item">
+
+                    <div class="stackly-consult-admin-projects-pipeline-icon pipeline-two">
+                        <i class="fa-solid fa-file-signature"></i>
+                    </div>
+
+                    <div class="stackly-consult-admin-projects-pipeline-info">
+                        <strong>Planning</strong>
+                        <span>Proposal and documentation</span>
+                    </div>
+
+                    <b>06</b>
+
+                </div>
+
+                <div class="stackly-consult-admin-projects-pipeline-item">
+
+                    <div class="stackly-consult-admin-projects-pipeline-icon pipeline-three">
+                        <i class="fa-solid fa-gears"></i>
+                    </div>
+
+                    <div class="stackly-consult-admin-projects-pipeline-info">
+                        <strong>Execution</strong>
+                        <span>Projects in development</span>
+                    </div>
+
+                    <b>12</b>
+
+                </div>
+
+                <div class="stackly-consult-admin-projects-pipeline-item">
+
+                    <div class="stackly-consult-admin-projects-pipeline-icon pipeline-four">
+                        <i class="fa-solid fa-flag-checkered"></i>
+                    </div>
+
+                    <div class="stackly-consult-admin-projects-pipeline-info">
+                        <strong>Completed</strong>
+                        <span>Successfully delivered</span>
+                    </div>
+
+                    <b>18</b>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CATEGORY DISTRIBUTION -->
+        <div class="stackly-consult-admin-projects-panel">
+
+            <div class="stackly-consult-admin-projects-panel-heading">
+                <div>
+                    <span>PROJECT ANALYTICS</span>
+                    <h2>Project Categories</h2>
+                </div>
+
+                <i class="fa-solid fa-chart-pie"></i>
+            </div>
+
+            <div class="stackly-consult-admin-projects-category-list">
+
+                <div class="stackly-consult-admin-projects-category-item">
+                    <div>
+                        <span class="category-dot category-orange"></span>
+                        <strong>Business Strategy</strong>
+                    </div>
+                    <b>35%</b>
+                    <div class="stackly-consult-admin-projects-category-track">
+                        <span style="width:35%"></span>
+                    </div>
+                </div>
+
+                <div class="stackly-consult-admin-projects-category-item">
+                    <div>
+                        <span class="category-dot category-purple"></span>
+                        <strong>Financial Consulting</strong>
+                    </div>
+                    <b>25%</b>
+                    <div class="stackly-consult-admin-projects-category-track">
+                        <span style="width:25%"></span>
+                    </div>
+                </div>
+
+                <div class="stackly-consult-admin-projects-category-item">
+                    <div>
+                        <span class="category-dot category-blue"></span>
+                        <strong>Technology Consulting</strong>
+                    </div>
+                    <b>22%</b>
+                    <div class="stackly-consult-admin-projects-category-track">
+                        <span style="width:22%"></span>
+                    </div>
+                </div>
+
+                <div class="stackly-consult-admin-projects-category-item">
+                    <div>
+                        <span class="category-dot category-green"></span>
+                        <strong>Marketing Strategy</strong>
+                    </div>
+                    <b>18%</b>
+                    <div class="stackly-consult-admin-projects-category-track">
+                        <span style="width:18%"></span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- UPCOMING MILESTONES -->
+    <section class="stackly-consult-admin-projects-milestones"
+        data-aos="fade-up">
+
+        <div class="stackly-consult-admin-projects-section-heading">
+
+            <div>
+                <span>STAY ON TRACK</span>
+                <h2>Upcoming Milestones</h2>
+            </div>
+
+            <a href="404-admin.html">
+                View Schedule
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+
+        <div class="stackly-consult-admin-projects-milestone-list">
+
+            <article class="stackly-consult-admin-projects-milestone-item">
+
+                <div class="stackly-consult-admin-projects-milestone-date">
+                    <strong>08</strong>
+                    <span>NOV</span>
+                </div>
+
+                <div class="stackly-consult-admin-projects-milestone-info">
+                    <span>TECHNOLOGY CONSULTING</span>
+                    <h3>Digital Upgrade – Final Review</h3>
+                    <p>Wilson Technologies</p>
+                </div>
+
+                <span class="stackly-consult-admin-projects-milestone-tag urgent">
+                    <i class="fa-solid fa-clock"></i>
+                    Upcoming
+                </span>
+
+            </article>
+
+
+            <article class="stackly-consult-admin-projects-milestone-item">
+
+                <div class="stackly-consult-admin-projects-milestone-date">
+                    <strong>12</strong>
+                    <span>NOV</span>
+                </div>
+
+                <div class="stackly-consult-admin-projects-milestone-info">
+                    <span>BUSINESS STRATEGY</span>
+                    <h3>Growth Strategy – Client Presentation</h3>
+                    <p>Anderson Group</p>
+                </div>
+
+                <span class="stackly-consult-admin-projects-milestone-tag">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    Scheduled
+                </span>
+
+            </article>
+
+
+            <article class="stackly-consult-admin-projects-milestone-item">
+
+                <div class="stackly-consult-admin-projects-milestone-date">
+                    <strong>18</strong>
+                    <span>NOV</span>
+                </div>
+
+                <div class="stackly-consult-admin-projects-milestone-info">
+                    <span>FINANCIAL CONSULTING</span>
+                    <h3>Financial Transformation – Phase 2</h3>
+                    <p>Johnson Enterprises</p>
+                </div>
+
+                <span class="stackly-consult-admin-projects-milestone-tag">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    Scheduled
+                </span>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROJECT ACTIVITY -->
+    <section class="stackly-consult-admin-projects-activity"
+        data-aos="fade-up">
+
+        <div class="stackly-consult-admin-projects-panel-heading">
+
+            <div>
+                <span>RECENT UPDATES</span>
+                <h2>Project Activity</h2>
+            </div>
+
+            <a href="404-admin.html">
+                View Activity
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+
+        <div class="stackly-consult-admin-projects-activity-list">
+
+            <div class="stackly-consult-admin-projects-activity-item">
+
+                <div class="stackly-consult-admin-projects-activity-icon activity-orange">
+                    <i class="fa-solid fa-file-circle-check"></i>
+                </div>
+
+                <div class="stackly-consult-admin-projects-activity-content">
+                    <p><strong>Michael Anderson</strong> approved the growth strategy proposal.</p>
+                    <span>Corporate Growth Strategy · 2 hours ago</span>
+                </div>
+
+                <span class="stackly-consult-admin-projects-activity-indicator"></span>
+
+            </div>
+
+
+            <div class="stackly-consult-admin-projects-activity-item">
+
+                <div class="stackly-consult-admin-projects-activity-icon activity-purple">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+
+                <div class="stackly-consult-admin-projects-activity-content">
+                    <p><strong>Sarah Johnson</strong> reviewed the financial report.</p>
+                    <span>Financial Transformation · 5 hours ago</span>
+                </div>
+
+                <span class="stackly-consult-admin-projects-activity-indicator"></span>
+
+            </div>
+
+
+            <div class="stackly-consult-admin-projects-activity-item">
+
+                <div class="stackly-consult-admin-projects-activity-icon activity-blue">
+                    <i class="fa-solid fa-clipboard-check"></i>
+                </div>
+
+                <div class="stackly-consult-admin-projects-activity-content">
+                    <p><strong>David Wilson</strong> submitted the final review documents.</p>
+                    <span>Digital Business Upgrade · Yesterday</span>
+                </div>
+
+                <span class="stackly-consult-admin-projects-activity-indicator"></span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROJECT CTA -->
+    <section class="stackly-consult-admin-projects-cta"
+        data-aos="fade-up">
+
+        <div class="stackly-consult-admin-projects-cta-icon">
+            <i class="fa-solid fa-rocket"></i>
+        </div>
+
+        <div class="stackly-consult-admin-projects-cta-content">
+            <span>READY FOR THE NEXT STEP?</span>
+            <h2>Have a New Business Project in Mind?</h2>
+            <p>
+                Start a new project and bring your next business idea to life
+                with the Stackly consultancy team.
+            </p>
+        </div>
+
+        <a href="404-admin.html">
+            Start a Project
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+    </section>
+
+ 
+</div>
+
+
+        </main>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <!-- Admin JS -->
+    <script src="admin.js"></script>
+
+</body>
+</html>

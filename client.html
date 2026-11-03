@@ -1,0 +1,943 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Client Dashboard | Stackly Corporate Consultancy</title>
+
+    <meta name="description"
+        content="Stackly Corporate Consultancy Client Dashboard - Track your projects, monitor progress, manage meetings and access your business services.">
+
+    <link rel="icon" href="Stackly-logo-Blue.webp" type="image/webp">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- AOS ANIMATION -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="client.css">
+
+</head>
+
+<body>
+
+
+    <!-- ==========================================
+         STACKLY CLIENT DASHBOARD
+    =========================================== -->
+
+    <div class="stackly-consult-client-dashboard">
+
+
+        <!-- ==========================================
+             MOBILE OVERLAY
+        =========================================== -->
+
+        <div class="stackly-consult-client-overlay"
+            id="stacklyConsultClientOverlay"></div>
+
+
+        <!-- ==========================================
+             SIDEBAR
+        =========================================== -->
+
+        <aside class="stackly-consult-client-sidebar"
+            id="stacklyConsultClientSidebar">
+
+
+            <!-- SIDEBAR LOGO -->
+
+            <div class="stackly-consult-client-sidebar-logo">
+
+                <a href="client.html"
+                    aria-label="Stackly Home">
+
+                    <img src="Stackly-logo-Blue.webp"
+                        alt="Stackly Corporate Consultancy Logo">
+
+                </a>
+
+                <!-- MOBILE CLOSE BUTTON -->
+
+                <button type="button"
+                    class="stackly-consult-client-close"
+                    id="stacklyConsultClientClose"
+                    aria-label="Close navigation menu">
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </button>
+
+            </div>
+
+
+            <!-- CLIENT PROFILE -->
+
+            <div class="stackly-consult-client-sidebar-profile">
+
+                <div class="stackly-consult-client-profile-avatar">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+                <div class="stackly-consult-client-profile-info">
+
+                    <h3 id="stacklyConsultClientSidebarName">
+                        Client
+                    </h3>
+
+                    <span>Client Account</span>
+
+                </div>
+
+                <span class="stackly-consult-client-online-dot"></span>
+
+            </div>
+
+
+            <!-- SIDEBAR NAVIGATION -->
+
+            <nav class="stackly-consult-client-navigation">
+
+                <p class="stackly-consult-client-nav-heading">
+                    MAIN MENU
+                </p>
+
+
+                <a href="client.html"
+                    class="stackly-consult-client-nav-link active">
+
+                    <i class="fa-solid fa-table-columns"></i>
+
+                    <span>Dashboard</span>
+
+                </a>
+
+
+                <a href="client-projects.html"
+                    class="stackly-consult-client-nav-link">
+
+                    <i class="fa-solid fa-briefcase"></i>
+
+                    <span>My Projects</span>
+
+                    <span class="stackly-consult-client-nav-count">
+                        04
+                    </span>
+
+                </a>
+
+
+                <a href="client-services.html"
+                    class="stackly-consult-client-nav-link">
+
+                    <i class="fa-solid fa-layer-group"></i>
+
+                    <span>Services</span>
+
+                </a>
+
+
+                <a href="client-meetings.html"
+                    class="stackly-consult-client-nav-link">
+
+                    <i class="fa-regular fa-calendar-check"></i>
+
+                    <span>Meetings</span>
+
+                </a>
+
+
+                <a href="client-invoices.html"
+                    class="stackly-consult-client-nav-link">
+
+                    <i class="fa-solid fa-file-invoice-dollar"></i>
+
+                    <span>Invoices</span>
+
+                </a>
+
+
+                <p class="stackly-consult-client-nav-heading stackly-consult-client-nav-secondary-heading">
+                    ACCOUNT
+                </p>
+
+
+                <a href="client-profile.html"
+                    class="stackly-consult-client-nav-link">
+
+                    <i class="fa-regular fa-user"></i>
+
+                    <span>My Profile</span>
+
+                </a>
+
+
+            </nav>
+
+
+            <!-- SIDEBAR BOTTOM -->
+
+            <div class="stackly-consult-client-sidebar-bottom">
+
+                <div class="stackly-consult-client-help-card">
+
+                    <div class="stackly-consult-client-help-icon">
+
+                        <i class="fa-solid fa-headset"></i>
+
+                    </div>
+
+                    <h4>Need Assistance?</h4>
+
+                    <p>
+                        Our team is ready to help you with your projects.
+                    </p>
+
+                    <a href="404-client.html">
+                        Contact Support
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+
+                <a href="index.html"
+                    class="stackly-consult-client-logout">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    <span>Logout</span>
+
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ==========================================
+             MAIN CONTENT
+        =========================================== -->
+
+        <main class="stackly-consult-client-main">
+
+
+            <!-- ==========================================
+                 TOP HEADER
+            =========================================== -->
+
+            <header class="stackly-consult-client-header">
+
+
+                <!-- LEFT HEADER -->
+
+                <div class="stackly-consult-client-header-left">
+
+                    <!-- MOBILE HAMBURGER -->
+
+                    <button type="button"
+                        class="stackly-consult-client-menu-toggle"
+                        id="stacklyConsultClientMenuToggle"
+                        aria-label="Open navigation menu"
+                        aria-expanded="false">
+
+                        <i class="fa-solid fa-bars"></i>
+
+                    </button>
+
+
+                    <div class="stackly-consult-client-header-title">
+
+                        <h2>Client Dashboard</h2>
+
+                        <p>
+                            Welcome back! Here's your business overview.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RIGHT HEADER -->
+
+                <div class="stackly-consult-client-header-right">
+
+
+                    <!-- NOTIFICATIONS -->
+
+                    <a href="404-client.html"
+                        class="stackly-consult-client-header-icon"
+                        aria-label="Messages">
+
+                        <i class="fa-regular fa-bell"></i>
+
+                        <span class="stackly-consult-client-notification-dot"></span>
+
+                    </a>
+
+
+                    <!-- USER EMAIL -->
+
+                    <div class="stackly-consult-client-header-user">
+
+                        <div class="stackly-consult-client-header-avatar">
+
+                            <i class="fa-solid fa-user"></i>
+
+                        </div>
+
+                        <div class="stackly-consult-client-header-user-info">
+
+                            <span>Logged in as</span>
+
+                            <strong id="stacklyConsultClientEmail">
+                                client@example.com
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- ==========================================
+                 DASHBOARD CONTENT
+            =========================================== -->
+
+            <div class="stackly-consult-client-content">
+
+
+                <!-- WELCOME SECTION -->
+
+                <section class="stackly-consult-client-welcome"
+                    data-aos="fade-up">
+
+                    <div class="stackly-consult-client-welcome-content">
+
+                        <span class="stackly-consult-client-welcome-tag">
+
+                            <i class="fa-solid fa-sparkles"></i>
+
+                            CLIENT WORKSPACE
+
+                        </span>
+
+                        <h1>
+                            Welcome back,
+                            <span id="stacklyConsultClientWelcomeName">
+                                Client
+                            </span>!
+                        </h1>
+
+                        <p>
+                            Stay informed, track your projects and
+                            collaborate with our consultancy team
+                            from one convenient workspace.
+                        </p>
+
+                        <a href="404-client.html"
+                            class="stackly-consult-client-primary-btn">
+
+                            Explore My Projects
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="stackly-consult-client-welcome-visual">
+
+                        <div class="stackly-consult-client-welcome-circle">
+
+                            <i class="fa-solid fa-chart-line"></i>
+
+                        </div>
+
+                        <div class="stackly-consult-client-floating-card">
+
+                            <span>Project Performance</span>
+
+                            <strong>85%</strong>
+
+                            <small>
+                                <i class="fa-solid fa-arrow-trend-up"></i>
+                                On Track
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ==========================================
+                     OVERVIEW STATISTICS
+                =========================================== -->
+
+                <section class="stackly-consult-client-stats"
+                    data-aos="fade-up">
+
+                    <div class="stackly-consult-client-stat-card">
+
+                        <div class="stackly-consult-client-stat-top">
+
+                            <div class="stackly-consult-client-stat-icon projects">
+                                <i class="fa-solid fa-briefcase"></i>
+                            </div>
+
+                            <span class="stackly-consult-client-stat-label">
+                                Total Projects
+                            </span>
+
+                        </div>
+
+                        <h3>08</h3>
+
+                        <p>
+                            <span>
+                                <i class="fa-solid fa-arrow-up"></i>
+                                02
+                            </span>
+                            Projects added this month
+                        </p>
+
+                    </div>
+
+
+                    <div class="stackly-consult-client-stat-card">
+
+                        <div class="stackly-consult-client-stat-top">
+
+                            <div class="stackly-consult-client-stat-icon active">
+                                <i class="fa-solid fa-chart-pie"></i>
+                            </div>
+
+                            <span class="stackly-consult-client-stat-label">
+                                Active Projects
+                            </span>
+
+                        </div>
+
+                        <h3>04</h3>
+
+                        <p>
+                            Currently in progress
+                        </p>
+
+                    </div>
+
+
+                    <div class="stackly-consult-client-stat-card">
+
+                        <div class="stackly-consult-client-stat-top">
+
+                            <div class="stackly-consult-client-stat-icon completed">
+                                <i class="fa-solid fa-circle-check"></i>
+                            </div>
+
+                            <span class="stackly-consult-client-stat-label">
+                                Completed Projects
+                            </span>
+
+                        </div>
+
+                        <h3>03</h3>
+
+                        <p>
+                            Successfully delivered
+                        </p>
+
+                    </div>
+
+
+                    <div class="stackly-consult-client-stat-card">
+
+                        <div class="stackly-consult-client-stat-top">
+
+                            <div class="stackly-consult-client-stat-icon meetings">
+                                <i class="fa-regular fa-calendar"></i>
+                            </div>
+
+                            <span class="stackly-consult-client-stat-label">
+                                Upcoming Meetings
+                            </span>
+
+                        </div>
+
+                        <h3>02</h3>
+
+                        <p>
+                            Scheduled this week
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ==========================================
+                     PROJECTS + MEETINGS
+                =========================================== -->
+
+                <section class="stackly-consult-client-main-grid">
+
+
+                    <!-- RECENT PROJECTS -->
+
+                    <div class="stackly-consult-client-panel stackly-consult-client-project-panel"
+                        data-aos="fade-up">
+
+                        <div class="stackly-consult-client-panel-heading">
+
+                            <div>
+
+                                <h3>Recent Projects</h3>
+
+                                <p>
+                                    Monitor the progress of your projects.
+                                </p>
+
+                            </div>
+
+                            <a href="404-client.html">
+                                View All
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+
+                        <div class="stackly-consult-client-project-list">
+
+
+                            <!-- PROJECT 1 -->
+
+                            <div class="stackly-consult-client-project-item">
+
+                                <div class="stackly-consult-client-project-icon orange">
+                                    <i class="fa-solid fa-lightbulb"></i>
+                                </div>
+
+                                <div class="stackly-consult-client-project-details">
+
+                                    <h4>Business Strategy Development</h4>
+
+                                    <span>Project ID: STK-001</span>
+
+                                    <div class="stackly-consult-client-progress">
+
+                                        <div class="stackly-consult-client-progress-track">
+
+                                            <span style="width: 85%;"></span>
+
+                                        </div>
+
+                                        <strong>85%</strong>
+
+                                    </div>
+
+                                </div>
+
+                                <span class="stackly-consult-client-status in-progress">
+                                    In Progress
+                                </span>
+
+                            </div>
+
+
+                            <!-- PROJECT 2 -->
+
+                            <div class="stackly-consult-client-project-item">
+
+                                <div class="stackly-consult-client-project-icon blue">
+                                    <i class="fa-solid fa-chart-column"></i>
+                                </div>
+
+                                <div class="stackly-consult-client-project-details">
+
+                                    <h4>Market Research Analysis</h4>
+
+                                    <span>Project ID: STK-002</span>
+
+                                    <div class="stackly-consult-client-progress">
+
+                                        <div class="stackly-consult-client-progress-track">
+
+                                            <span style="width: 65%;"></span>
+
+                                        </div>
+
+                                        <strong>65%</strong>
+
+                                    </div>
+
+                                </div>
+
+                                <span class="stackly-consult-client-status in-progress">
+                                    In Progress
+                                </span>
+
+                            </div>
+
+
+                            <!-- PROJECT 3 -->
+
+                            <div class="stackly-consult-client-project-item">
+
+                                <div class="stackly-consult-client-project-icon purple">
+                                    <i class="fa-solid fa-building"></i>
+                                </div>
+
+                                <div class="stackly-consult-client-project-details">
+
+                                    <h4>Business Transformation</h4>
+
+                                    <span>Project ID: STK-003</span>
+
+                                    <div class="stackly-consult-client-progress">
+
+                                        <div class="stackly-consult-client-progress-track">
+
+                                            <span style="width: 40%;"></span>
+
+                                        </div>
+
+                                        <strong>40%</strong>
+
+                                    </div>
+
+                                </div>
+
+                                <span class="stackly-consult-client-status review">
+                                    Under Review
+                                </span>
+
+                            </div>
+
+
+                            <!-- PROJECT 4 -->
+
+                            <div class="stackly-consult-client-project-item">
+
+                                <div class="stackly-consult-client-project-icon green">
+                                    <i class="fa-solid fa-arrow-trend-up"></i>
+                                </div>
+
+                                <div class="stackly-consult-client-project-details">
+
+                                    <h4>Growth Planning Strategy</h4>
+
+                                    <span>Project ID: STK-004</span>
+
+                                    <div class="stackly-consult-client-progress">
+
+                                        <div class="stackly-consult-client-progress-track">
+
+                                            <span style="width: 100%;"></span>
+
+                                        </div>
+
+                                        <strong>100%</strong>
+
+                                    </div>
+
+                                </div>
+
+                                <span class="stackly-consult-client-status completed">
+                                    Completed
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- UPCOMING MEETINGS -->
+
+                    <div class="stackly-consult-client-panel stackly-consult-client-meeting-panel"
+                        data-aos="fade-up"
+                        data-aos-delay="100">
+
+                        <div class="stackly-consult-client-panel-heading">
+
+                            <div>
+
+                                <h3>Upcoming Meetings</h3>
+
+                                <p>
+                                    Your scheduled consultations.
+                                </p>
+
+                            </div>
+
+                            <a href="404-client.html">
+                                View All
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+
+                        <div class="stackly-consult-client-meeting-list">
+
+
+                            <!-- MEETING 1 -->
+
+                            <div class="stackly-consult-client-meeting-item">
+
+                                <div class="stackly-consult-client-meeting-date">
+
+                                    <strong>05</strong>
+
+                                    <span>NOV</span>
+
+                                </div>
+
+                                <div class="stackly-consult-client-meeting-details">
+
+                                    <h4>Business Strategy Review</h4>
+
+                                    <p>
+                                        <i class="fa-regular fa-clock"></i>
+                                        10:30 AM - 11:30 AM
+                                    </p>
+
+                                    <span>
+                                        <i class="fa-solid fa-user-tie"></i>
+                                        Michael Anderson
+                                    </span>
+
+                                </div>
+
+                                <span class="stackly-consult-client-meeting-arrow">
+
+                                    <i class="fa-solid fa-chevron-right"></i>
+
+                                </span>
+
+                            </div>
+
+
+                            <!-- MEETING 2 -->
+
+                            <div class="stackly-consult-client-meeting-item">
+
+                                <div class="stackly-consult-client-meeting-date second">
+
+                                    <strong>08</strong>
+
+                                    <span>NOV</span>
+
+                                </div>
+
+                                <div class="stackly-consult-client-meeting-details">
+
+                                    <h4>Project Progress Discussion</h4>
+
+                                    <p>
+                                        <i class="fa-regular fa-clock"></i>
+                                        02:00 PM - 03:00 PM
+                                    </p>
+
+                                    <span>
+                                        <i class="fa-solid fa-user-tie"></i>
+                                        Sarah Williams
+                                    </span>
+
+                                </div>
+
+                                <span class="stackly-consult-client-meeting-arrow">
+
+                                    <i class="fa-solid fa-chevron-right"></i>
+
+                                </span>
+
+                            </div>
+
+
+                        </div>
+
+
+                        <a href="404-client.html"
+                            class="stackly-consult-client-meeting-btn">
+
+                            <i class="fa-regular fa-calendar-plus"></i>
+
+                            Schedule a Meeting
+
+                        </a>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ==========================================
+                     QUICK ACTIONS
+                =========================================== -->
+
+                <section class="stackly-consult-client-quick-section"
+                    data-aos="fade-up">
+
+                    <div class="stackly-consult-client-section-heading">
+
+                        <div>
+
+                            <h3>Quick Actions</h3>
+
+                            <p>
+                                Easily access your important workspace activities.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stackly-consult-client-quick-grid">
+
+
+                        <a href="404-client.html"
+                            class="stackly-consult-client-quick-card">
+
+                            <div class="stackly-consult-client-quick-icon orange">
+                                <i class="fa-solid fa-folder-open"></i>
+                            </div>
+
+                            <div>
+
+                                <h4>View Projects</h4>
+
+                                <p>
+                                    Check your project progress and updates.
+                                </p>
+
+                            </div>
+
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                        </a>
+
+
+                        <a href="404-client.html"
+                            class="stackly-consult-client-quick-card">
+
+                            <div class="stackly-consult-client-quick-icon blue">
+                                <i class="fa-solid fa-file-invoice"></i>
+                            </div>
+
+                            <div>
+
+                                <h4>My Invoices</h4>
+
+                                <p>
+                                    Access your payments and invoices.
+                                </p>
+
+                            </div>
+
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                        </a>
+
+
+                        <a href="404-client.html"
+                            class="stackly-consult-client-quick-card">
+
+                            <div class="stackly-consult-client-quick-icon purple">
+                                <i class="fa-solid fa-message"></i>
+                            </div>
+
+                            <div>
+
+                                <h4>Messages</h4>
+
+                                <p>
+                                    Communicate with our consulting team.
+                                </p>
+
+                            </div>
+
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                        </a>
+
+
+                        <a href="404-client.html"
+                            class="stackly-consult-client-quick-card">
+
+                            <div class="stackly-consult-client-quick-icon green">
+                                <i class="fa-solid fa-headset"></i>
+                            </div>
+
+                            <div>
+
+                                <h4>Get Support</h4>
+
+                                <p>
+                                    Get assistance whenever you need it.
+                                </p>
+
+                            </div>
+
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                        </a>
+
+
+                    </div>
+
+                </section>
+
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <!-- ==========================================
+         AOS SCRIPT
+    =========================================== -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+
+    <!-- ==========================================
+         CLIENT DASHBOARD JAVASCRIPT
+    =========================================== -->
+
+    <script src="client.js"></script>
+
+
+</body>
+
+</html>

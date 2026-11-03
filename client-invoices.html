@@ -1,0 +1,1231 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Client Dashboard | Stackly Corporate Consultancy</title>
+
+    <meta name="description"
+        content="Stackly Corporate Consultancy Client Dashboard - Track your projects, monitor progress, manage meetings and access your business services.">
+
+    <link rel="icon" href="Stackly-logo-Blue.webp" type="image/webp">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- AOS ANIMATION -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="client.css">
+
+</head>
+
+<body>
+
+
+    <!-- ==========================================
+         STACKLY CLIENT DASHBOARD
+    =========================================== -->
+
+    <div class="stackly-consult-client-dashboard">
+
+
+        <!-- ==========================================
+             MOBILE OVERLAY
+        =========================================== -->
+
+        <div class="stackly-consult-client-overlay"
+            id="stacklyConsultClientOverlay"></div>
+
+
+        <!-- ==========================================
+             SIDEBAR
+        =========================================== -->
+
+        <aside class="stackly-consult-client-sidebar"
+            id="stacklyConsultClientSidebar">
+
+
+            <!-- SIDEBAR LOGO -->
+
+            <div class="stackly-consult-client-sidebar-logo">
+
+                <a href="client.html"
+                    aria-label="Stackly Home">
+
+                    <img src="Stackly-logo-Blue.webp"
+                        alt="Stackly Corporate Consultancy Logo">
+
+                </a>
+
+                <!-- MOBILE CLOSE BUTTON -->
+
+                <button type="button"
+                    class="stackly-consult-client-close"
+                    id="stacklyConsultClientClose"
+                    aria-label="Close navigation menu">
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </button>
+
+            </div>
+
+
+            <!-- CLIENT PROFILE -->
+
+            <div class="stackly-consult-client-sidebar-profile">
+
+                <div class="stackly-consult-client-profile-avatar">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+                <div class="stackly-consult-client-profile-info">
+
+                    <h3 id="stacklyConsultClientSidebarName">
+                        Client
+                    </h3>
+
+                    <span>Client Account</span>
+
+                </div>
+
+                <span class="stackly-consult-client-online-dot"></span>
+
+            </div>
+
+
+            <!-- SIDEBAR NAVIGATION -->
+
+            <nav class="stackly-consult-client-navigation">
+
+                <p class="stackly-consult-client-nav-heading">
+                    MAIN MENU
+                </p>
+
+
+                <a href="client.html"
+                    class="stackly-consult-client-nav-link active">
+
+                    <i class="fa-solid fa-table-columns"></i>
+
+                    <span>Dashboard</span>
+
+                </a>
+
+
+                <a href="client-projects.html"
+                    class="stackly-consult-client-nav-link">
+
+                    <i class="fa-solid fa-briefcase"></i>
+
+                    <span>My Projects</span>
+
+                    <span class="stackly-consult-client-nav-count">
+                        04
+                    </span>
+
+                </a>
+
+
+                <a href="client-services.html"
+                    class="stackly-consult-client-nav-link">
+
+                    <i class="fa-solid fa-layer-group"></i>
+
+                    <span>Services</span>
+
+                </a>
+
+
+                <a href="client-meetings.html"
+                    class="stackly-consult-client-nav-link">
+
+                    <i class="fa-regular fa-calendar-check"></i>
+
+                    <span>Meetings</span>
+
+                </a>
+
+
+                <a href="client-invoices.html"
+                    class="stackly-consult-client-nav-link">
+
+                    <i class="fa-solid fa-file-invoice-dollar"></i>
+
+                    <span>Invoices</span>
+
+                </a>
+
+
+                <p class="stackly-consult-client-nav-heading stackly-consult-client-nav-secondary-heading">
+                    ACCOUNT
+                </p>
+
+
+                <a href="client-profile.html"
+                    class="stackly-consult-client-nav-link">
+
+                    <i class="fa-regular fa-user"></i>
+
+                    <span>My Profile</span>
+
+                </a>
+
+
+            </nav>
+
+
+            <!-- SIDEBAR BOTTOM -->
+
+            <div class="stackly-consult-client-sidebar-bottom">
+
+                <div class="stackly-consult-client-help-card">
+
+                    <div class="stackly-consult-client-help-icon">
+
+                        <i class="fa-solid fa-headset"></i>
+
+                    </div>
+
+                    <h4>Need Assistance?</h4>
+
+                    <p>
+                        Our team is ready to help you with your projects.
+                    </p>
+
+                    <a href="404-client.html">
+                        Contact Support
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+
+                <a href="index.html"
+                    class="stackly-consult-client-logout">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    <span>Logout</span>
+
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ==========================================
+             MAIN CONTENT
+        =========================================== -->
+
+        <main class="stackly-consult-client-main">
+
+
+            <!-- ==========================================
+                 TOP HEADER
+            =========================================== -->
+
+            <header class="stackly-consult-client-header">
+
+
+                <!-- LEFT HEADER -->
+
+                <div class="stackly-consult-client-header-left">
+
+                    <!-- MOBILE HAMBURGER -->
+
+                    <button type="button"
+                        class="stackly-consult-client-menu-toggle"
+                        id="stacklyConsultClientMenuToggle"
+                        aria-label="Open navigation menu"
+                        aria-expanded="false">
+
+                        <i class="fa-solid fa-bars"></i>
+
+                    </button>
+
+
+                    <div class="stackly-consult-client-header-title">
+
+                        <h2>Client Dashboard</h2>
+
+                        <p>
+                            Welcome back! Here's your business overview.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RIGHT HEADER -->
+
+                <div class="stackly-consult-client-header-right">
+
+
+                    <!-- NOTIFICATIONS -->
+
+                    <a href="404-client.html"
+                        class="stackly-consult-client-header-icon"
+                        aria-label="Messages">
+
+                        <i class="fa-regular fa-bell"></i>
+
+                        <span class="stackly-consult-client-notification-dot"></span>
+
+                    </a>
+
+
+                    <!-- USER EMAIL -->
+
+                    <div class="stackly-consult-client-header-user">
+
+                        <div class="stackly-consult-client-header-avatar">
+
+                            <i class="fa-solid fa-user"></i>
+
+                        </div>
+
+                        <div class="stackly-consult-client-header-user-info">
+
+                            <span>Logged in as</span>
+
+                            <strong id="stacklyConsultClientEmail">
+                                client@example.com
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+            <div class="stackly-consult-client-content">
+
+                
+<!-- ==========================================
+     STACKLY CONSULTANCY
+     CLIENT INVOICES PAGE
+========================================== -->
+
+<!-- INVOICE PAGE HERO -->
+
+<section class="stackly-consult-invoice-hero" data-aos="fade-up">
+
+    <div class="stackly-consult-invoice-hero-content">
+
+        <div class="stackly-consult-invoice-breadcrumb">
+            <span>Dashboard</span>
+            <i class="fa-solid fa-chevron-right"></i>
+            <span>Invoices</span>
+        </div>
+
+        <span class="stackly-consult-invoice-eyebrow">
+            <i class="fa-solid fa-file-invoice-dollar"></i>
+            FINANCIAL OVERVIEW
+        </span>
+
+        <h1>Manage Your <span>Invoices.</span></h1>
+
+        <p>
+            Stay on top of your payments, track billing activity,
+            review transaction history and manage your consultancy expenses.
+        </p>
+
+        <div class="stackly-consult-invoice-hero-actions">
+
+            <a href="404-client.html" class="stackly-consult-invoice-primary-btn">
+                <i class="fa-solid fa-file-lines"></i>
+                View All Invoices
+            </a>
+
+            <a href="404-client.html" class="stackly-consult-invoice-secondary-btn">
+                <i class="fa-solid fa-clock-rotate-left"></i>
+                Payment History
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="stackly-consult-invoice-hero-visual">
+
+        <div class="stackly-consult-invoice-visual-circle"></div>
+
+        <div class="stackly-consult-invoice-floating-card">
+
+            <div class="stackly-consult-invoice-floating-icon">
+                <i class="fa-solid fa-file-invoice-dollar"></i>
+            </div>
+
+            <div>
+                <span>Total Payments</span>
+                <h3>₹2,45,000</h3>
+            </div>
+
+            <span class="stackly-consult-invoice-floating-check">
+                <i class="fa-solid fa-check"></i>
+            </span>
+
+        </div>
+
+        <div class="stackly-consult-invoice-visual-document">
+
+            <div class="stackly-consult-invoice-document-top">
+                <i class="fa-solid fa-file-invoice"></i>
+                <span>INVOICE</span>
+            </div>
+
+            <div class="stackly-consult-invoice-document-line"></div>
+            <div class="stackly-consult-invoice-document-line short"></div>
+
+            <div class="stackly-consult-invoice-document-total">
+                <span>Amount Due</span>
+                <strong>₹25,000</strong>
+            </div>
+
+            <span class="stackly-consult-invoice-document-status">
+                PAYMENT PENDING
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     FINANCIAL SUMMARY CARDS
+========================================== -->
+
+<section class="stackly-consult-invoice-summary"
+    data-aos="fade-up">
+
+    <div class="stackly-consult-invoice-summary-heading">
+
+        <div>
+            <span class="stackly-consult-invoice-section-label">
+                YOUR FINANCES
+            </span>
+
+            <h2>Billing Overview</h2>
+
+            <p>Track your financial activity at a glance.</p>
+        </div>
+
+        <span class="stackly-consult-invoice-updated">
+            <i class="fa-regular fa-calendar"></i>
+            Updated November 2026
+        </span>
+
+    </div>
+
+
+    <div class="stackly-consult-invoice-summary-grid">
+
+
+        <!-- TOTAL INVOICES -->
+
+        <div class="stackly-consult-invoice-stat-card">
+
+            <div class="stackly-consult-invoice-stat-top">
+                <span>Total Invoices</span>
+
+                <div class="stackly-consult-invoice-stat-icon orange">
+                    <i class="fa-solid fa-file-invoice"></i>
+                </div>
+            </div>
+
+            <h3>12</h3>
+
+            <div class="stackly-consult-invoice-stat-bottom">
+                <span class="stackly-consult-invoice-stat-positive">
+                    <i class="fa-solid fa-arrow-up"></i>
+                    3 New
+                </span>
+
+                <span>Invoices generated</span>
+            </div>
+
+        </div>
+
+
+        <!-- TOTAL PAID -->
+
+        <div class="stackly-consult-invoice-stat-card">
+
+            <div class="stackly-consult-invoice-stat-top">
+                <span>Total Paid</span>
+
+                <div class="stackly-consult-invoice-stat-icon green">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+            </div>
+
+            <h3>₹2,45,000</h3>
+
+            <div class="stackly-consult-invoice-stat-bottom">
+                <span class="stackly-consult-invoice-stat-positive">
+                    <i class="fa-solid fa-check"></i>
+                    Completed
+                </span>
+
+                <span>Successful payments</span>
+            </div>
+
+        </div>
+
+
+        <!-- PENDING AMOUNT -->
+
+        <div class="stackly-consult-invoice-stat-card">
+
+            <div class="stackly-consult-invoice-stat-top">
+                <span>Pending Amount</span>
+
+                <div class="stackly-consult-invoice-stat-icon yellow">
+                    <i class="fa-solid fa-hourglass-half"></i>
+                </div>
+            </div>
+
+            <h3>₹25,000</h3>
+
+            <div class="stackly-consult-invoice-stat-bottom">
+                <span class="stackly-consult-invoice-stat-warning">
+                    <i class="fa-solid fa-clock"></i>
+                    01 Pending
+                </span>
+
+                <span>Awaiting payment</span>
+            </div>
+
+        </div>
+
+
+        <!-- OVERDUE -->
+
+        <div class="stackly-consult-invoice-stat-card">
+
+            <div class="stackly-consult-invoice-stat-top">
+                <span>Overdue Amount</span>
+
+                <div class="stackly-consult-invoice-stat-icon red">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                </div>
+            </div>
+
+            <h3>₹0</h3>
+
+            <div class="stackly-consult-invoice-stat-bottom">
+                <span class="stackly-consult-invoice-stat-positive">
+                    <i class="fa-solid fa-check"></i>
+                    All Clear
+                </span>
+
+                <span>No overdue payments</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     NEXT PAYMENT FEATURE
+========================================== -->
+
+<section class="stackly-consult-invoice-next-payment"
+    data-aos="fade-up">
+
+    <div class="stackly-consult-invoice-next-left">
+
+        <div class="stackly-consult-invoice-next-icon">
+            <i class="fa-solid fa-calendar-check"></i>
+        </div>
+
+        <div>
+
+            <span class="stackly-consult-invoice-section-label">
+                UPCOMING PAYMENT
+            </span>
+
+            <h2>Your Next Payment</h2>
+
+            <p>
+                Complete your outstanding consultancy payment
+                before the due date.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="stackly-consult-invoice-next-details">
+
+        <div>
+            <span>Invoice Number</span>
+            <strong>#STK-2026-012</strong>
+        </div>
+
+        <div>
+            <span>Due Date</span>
+            <strong>November 15, 2026</strong>
+        </div>
+
+        <div>
+            <span>Amount Due</span>
+            <strong class="stackly-consult-invoice-due-amount">
+                ₹25,000
+            </strong>
+        </div>
+
+        <a href="404-client.html"
+            class="stackly-consult-invoice-pay-btn">
+            Pay Invoice
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     INVOICE LIST
+========================================== -->
+
+<section class="stackly-consult-invoice-list-section"
+    id="stacklyConsultInvoiceList"
+    data-aos="fade-up">
+
+    <div class="stackly-consult-invoice-list-heading">
+
+        <div>
+            <span class="stackly-consult-invoice-section-label">
+                BILLING RECORDS
+            </span>
+
+            <h2>Recent Invoices</h2>
+
+            <p>Review and manage your consultancy invoices.</p>
+        </div>
+
+        <a href="404-client.html"
+            class="stackly-consult-invoice-download-all">
+            <i class="fa-solid fa-download"></i>
+            Download Statement
+        </a>
+
+    </div>
+
+
+    <!-- SEARCH AND FILTER -->
+
+    <div class="stackly-consult-invoice-toolbar">
+
+        <div class="stackly-consult-invoice-search">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input type="search"
+                id="stacklyConsultInvoiceSearch"
+                placeholder="Search invoice number or service..."
+                aria-label="Search invoices">
+
+        </div>
+
+
+        <div class="stackly-consult-invoice-filters">
+
+            <!-- CUSTOM INVOICE FILTER DROPDOWN -->
+<div class="stackly-consult-invoice-dropdown" id="stacklyConsultInvoiceDropdown">
+
+    <button type="button"
+        class="stackly-consult-invoice-dropdown-toggle"
+        id="stacklyConsultInvoiceDropdownToggle"
+        aria-expanded="false"
+        aria-haspopup="true">
+
+        <span id="stacklyConsultInvoiceSelected">All Invoices</span>
+
+        <i class="fa-solid fa-chevron-down"></i>
+
+    </button>
+
+    <div class="stackly-consult-invoice-dropdown-menu"
+        id="stacklyConsultInvoiceDropdownMenu"
+        hidden>
+
+        <button type="button" data-value="all" class="active">
+            <i class="fa-solid fa-file-invoice"></i>
+            All Invoices
+        </button>
+
+        <button type="button" data-value="paid">
+            <i class="fa-solid fa-circle-check"></i>
+            Paid
+        </button>
+
+        <button type="button" data-value="pending">
+            <i class="fa-solid fa-clock"></i>
+            Pending
+        </button>
+
+        <button type="button" data-value="overdue">
+            <i class="fa-solid fa-circle-exclamation"></i>
+            Overdue
+        </button>
+
+    </div>
+
+</div>
+
+            <button type="button"
+                id="stacklyConsultInvoiceReset"
+                aria-label="Reset invoice filters">
+                <i class="fa-solid fa-rotate-left"></i>
+                Reset
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- INVOICE TABLE -->
+
+    <div class="stackly-consult-invoice-table-wrapper">
+
+        <table class="stackly-consult-invoice-table">
+
+            <thead>
+
+                <tr>
+                    <th>Invoice Details</th>
+                    <th>Issue Date</th>
+                    <th>Due Date</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+
+            </thead>
+
+            <tbody id="stacklyConsultInvoiceTableBody">
+
+
+                <!-- INVOICE 1 -->
+
+                <tr data-status="paid">
+
+                    <td>
+                        <div class="stackly-consult-invoice-table-info">
+
+                            <div class="stackly-consult-invoice-table-icon orange">
+                                <i class="fa-solid fa-file-invoice"></i>
+                            </div>
+
+                            <div>
+                                <strong>#STK-2026-009</strong>
+                                <span>Business Strategy Consulting</span>
+                            </div>
+
+                        </div>
+                    </td>
+
+                    <td>Oct 05, 2026</td>
+                    <td>Oct 15, 2026</td>
+
+                    <td class="stackly-consult-invoice-table-amount">
+                        ₹75,000
+                    </td>
+
+                    <td>
+                        <span class="stackly-consult-invoice-status paid">
+                            <i class="fa-solid fa-circle-check"></i>
+                            Paid
+                        </span>
+                    </td>
+
+                    <td>
+                        <a href="404-client.html"
+                            class="stackly-consult-invoice-action"
+                            aria-label="View invoice STK-2026-009">
+                            <i class="fa-solid fa-eye"></i>
+                        </a>
+                    </td>
+
+                </tr>
+
+
+                <!-- INVOICE 2 -->
+
+                <tr data-status="paid">
+
+                    <td>
+                        <div class="stackly-consult-invoice-table-info">
+
+                            <div class="stackly-consult-invoice-table-icon blue">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </div>
+
+                            <div>
+                                <strong>#STK-2026-010</strong>
+                                <span>Financial Planning Services</span>
+                            </div>
+
+                        </div>
+                    </td>
+
+                    <td>Oct 10, 2026</td>
+                    <td>Oct 20, 2026</td>
+
+                    <td class="stackly-consult-invoice-table-amount">
+                        ₹50,000
+                    </td>
+
+                    <td>
+                        <span class="stackly-consult-invoice-status paid">
+                            <i class="fa-solid fa-circle-check"></i>
+                            Paid
+                        </span>
+                    </td>
+
+                    <td>
+                        <a href="404-client.html"
+                            class="stackly-consult-invoice-action"
+                            aria-label="View invoice STK-2026-010">
+                            <i class="fa-solid fa-eye"></i>
+                        </a>
+                    </td>
+
+                </tr>
+
+
+                <!-- INVOICE 3 -->
+
+                <tr data-status="paid">
+
+                    <td>
+                        <div class="stackly-consult-invoice-table-info">
+
+                            <div class="stackly-consult-invoice-table-icon purple">
+                                <i class="fa-solid fa-lightbulb"></i>
+                            </div>
+
+                            <div>
+                                <strong>#STK-2026-011</strong>
+                                <span>Business Transformation</span>
+                            </div>
+
+                        </div>
+                    </td>
+
+                    <td>Oct 20, 2026</td>
+                    <td>Oct 30, 2026</td>
+
+                    <td class="stackly-consult-invoice-table-amount">
+                        ₹1,20,000
+                    </td>
+
+                    <td>
+                        <span class="stackly-consult-invoice-status paid">
+                            <i class="fa-solid fa-circle-check"></i>
+                            Paid
+                        </span>
+                    </td>
+
+                    <td>
+                        <a href="404-client.html"
+                            class="stackly-consult-invoice-action"
+                            aria-label="View invoice STK-2026-011">
+                            <i class="fa-solid fa-eye"></i>
+                        </a>
+                    </td>
+
+                </tr>
+
+
+                <!-- INVOICE 4 -->
+
+                <tr data-status="pending">
+
+                    <td>
+                        <div class="stackly-consult-invoice-table-info">
+
+                            <div class="stackly-consult-invoice-table-icon red">
+                                <i class="fa-solid fa-briefcase"></i>
+                            </div>
+
+                            <div>
+                                <strong>#STK-2026-012</strong>
+                                <span>Project Management Consulting</span>
+                            </div>
+
+                        </div>
+                    </td>
+
+                    <td>Nov 01, 2026</td>
+                    <td>Nov 15, 2026</td>
+
+                    <td class="stackly-consult-invoice-table-amount">
+                        ₹25,000
+                    </td>
+
+                    <td>
+                        <span class="stackly-consult-invoice-status pending">
+                            <i class="fa-solid fa-clock"></i>
+                            Pending
+                        </span>
+                    </td>
+
+                    <td>
+                        <a href="404-client.html"
+                            class="stackly-consult-invoice-action"
+                            aria-label="View invoice STK-2026-012">
+                            <i class="fa-solid fa-eye"></i>
+                        </a>
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+        <div class="stackly-consult-invoice-empty"
+            id="stacklyConsultInvoiceEmpty"
+            hidden>
+
+            <i class="fa-solid fa-file-circle-question"></i>
+
+            <h3>No Invoices Found</h3>
+
+            <p>Try changing your search or filter.</p>
+
+        </div>
+
+    </div>
+
+
+    <div class="stackly-consult-invoice-table-footer">
+
+        <span>Showing 4 of 12 invoices</span>
+
+        <a href="404-client.html">
+            View All Invoices
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     PAYMENT HISTORY
+========================================== -->
+
+<section class="stackly-consult-payment-history"
+    id="stacklyConsultPaymentHistory"
+    data-aos="fade-up">
+
+    <div class="stackly-consult-payment-history-heading">
+
+        <div>
+            <span class="stackly-consult-invoice-section-label">
+                TRANSACTION ACTIVITY
+            </span>
+
+            <h2>Payment History</h2>
+
+            <p>Keep track of your recent financial transactions.</p>
+        </div>
+
+        <a href="404-client.html"
+            class="stackly-consult-payment-history-link">
+            Full History
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+    </div>
+
+
+    <div class="stackly-consult-payment-history-list">
+
+
+        <!-- PAYMENT 1 -->
+
+        <div class="stackly-consult-payment-history-item">
+
+            <div class="stackly-consult-payment-history-icon green">
+                <i class="fa-solid fa-check"></i>
+            </div>
+
+            <div class="stackly-consult-payment-history-info">
+
+                <h3>Business Strategy Consulting</h3>
+
+                <p>
+                    Invoice #STK-2026-009 · Oct 15, 2026
+                </p>
+
+            </div>
+
+            <div class="stackly-consult-payment-history-amount">
+
+                <strong>+ ₹75,000</strong>
+
+                <span>Successful</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- PAYMENT 2 -->
+
+        <div class="stackly-consult-payment-history-item">
+
+            <div class="stackly-consult-payment-history-icon blue">
+                <i class="fa-solid fa-check"></i>
+            </div>
+
+            <div class="stackly-consult-payment-history-info">
+
+                <h3>Financial Planning Services</h3>
+
+                <p>
+                    Invoice #STK-2026-010 · Oct 20, 2026
+                </p>
+
+            </div>
+
+            <div class="stackly-consult-payment-history-amount">
+
+                <strong>+ ₹50,000</strong>
+
+                <span>Successful</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- PAYMENT 3 -->
+
+        <div class="stackly-consult-payment-history-item">
+
+            <div class="stackly-consult-payment-history-icon purple">
+                <i class="fa-solid fa-check"></i>
+            </div>
+
+            <div class="stackly-consult-payment-history-info">
+
+                <h3>Business Transformation</h3>
+
+                <p>
+                    Invoice #STK-2026-011 · Oct 30, 2026
+                </p>
+
+            </div>
+
+            <div class="stackly-consult-payment-history-amount">
+
+                <strong>+ ₹1,20,000</strong>
+
+                <span>Successful</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     BILLING INFORMATION
+========================================== -->
+
+<section class="stackly-consult-invoice-billing-section"
+    data-aos="fade-up">
+
+    <div class="stackly-consult-invoice-billing-heading">
+
+        <span class="stackly-consult-invoice-section-label">
+            ACCOUNT INFORMATION
+        </span>
+
+        <h2>Billing Details</h2>
+
+        <p>
+            Your account and billing information for consultancy services.
+        </p>
+
+    </div>
+
+
+    <div class="stackly-consult-invoice-billing-grid">
+
+
+        <!-- BILLING ADDRESS -->
+
+        <div class="stackly-consult-invoice-billing-card">
+
+            <div class="stackly-consult-invoice-billing-icon">
+                <i class="fa-solid fa-building"></i>
+            </div>
+
+            <h3>Billing Address</h3>
+
+            <p>
+                Client Business Name<br>
+                Chennai, Tamil Nadu<br>
+                India
+            </p>
+
+            <a href="404-client.html">
+                Edit Details
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+
+        <!-- PAYMENT METHOD -->
+
+        <div class="stackly-consult-invoice-billing-card">
+
+            <div class="stackly-consult-invoice-billing-icon">
+                <i class="fa-solid fa-credit-card"></i>
+            </div>
+
+            <h3>Payment Methods</h3>
+
+            <p>
+                Manage your preferred payment method and billing preferences securely.
+            </p>
+
+            <a href="404-client.html">
+                Manage Payment
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+
+        <!-- SUPPORT -->
+
+        <div class="stackly-consult-invoice-billing-card">
+
+            <div class="stackly-consult-invoice-billing-icon">
+                <i class="fa-solid fa-headset"></i>
+            </div>
+
+            <h3>Billing Support</h3>
+
+            <p>
+                Need help with an invoice, transaction
+                or payment-related question?
+            </p>
+
+            <a href="404-client.html">
+                Contact Support
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     INVOICE BOTTOM CTA
+========================================== -->
+
+<section class="stackly-consult-invoice-cta"
+    data-aos="fade-up">
+
+    <div class="stackly-consult-invoice-cta-icon">
+        <i class="fa-solid fa-comments-dollar"></i>
+    </div>
+
+    <div class="stackly-consult-invoice-cta-content">
+
+        <span>WE ARE HERE TO HELP</span>
+
+        <h2>Have a question about your invoice?</h2>
+
+        <p>
+            Our billing team is ready to assist you with payments,
+            invoices and financial queries.
+        </p>
+
+    </div>
+
+    <a href="404-client.html"
+        class="stackly-consult-invoice-cta-btn">
+
+        Get Billing Support
+
+        <i class="fa-solid fa-arrow-right"></i>
+
+    </a>
+
+</section>
+
+                
+            </div>
+
+
+</main>
+
+    </div>
+
+
+    <!-- ==========================================
+         AOS SCRIPT
+    =========================================== -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+
+    <!-- ==========================================
+         CLIENT DASHBOARD JAVASCRIPT
+    =========================================== -->
+
+    <script src="client.js"></script>
+
+
+</body>
+
+</html>

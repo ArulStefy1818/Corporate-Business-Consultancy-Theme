@@ -1,0 +1,8664 @@
+/* ==========================================
+   STACKLY CORPORATE BUSINESS CONSULTANCY
+   COMPLETE RESPONSIVE STYLESHEET
+========================================== */
+
+/* ==========================================
+   1. ROOT VARIABLES
+========================================== */
+
+:root {
+    --stackly-consult-primary: #ff4529;
+    --stackly-consult-primary-dark: #e9341a;
+    --stackly-consult-dark: #080a0b;
+    --stackly-consult-heading: #ffffff;
+    --stackly-consult-text: #c4c7cb;
+    --stackly-consult-muted: #777d84;
+    --stackly-consult-header-height: 76px;
+    --stackly-consult-container: 1240px;
+
+    --stackly-consult-font: "DM Sans", sans-serif;
+    --stackly-consult-display: "Space Grotesk", sans-serif;
+}
+
+/* ==========================================
+   2. GLOBAL RESET
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--stackly-consult-header-height);
+}
+
+body {
+    font-family: var(--stackly-consult-font);
+    background: #ffffff;
+    color: #222222;
+    overflow-x: clip;
+}
+
+body.stackly-consult-menu-active {
+    overflow: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+img,
+video {
+    display: block;
+    max-width: 100%;
+}
+
+/* ==========================================
+   3. HEADER
+========================================== */
+
+/* ==========================================
+   STACKLY CONSULTANCY - STICKY HEADER
+   Fixed on Desktop and Mobile
+========================================== */
+
+.stackly-consult-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1080;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+
+    width: 100%;
+    height: var(--stackly-consult-header-height);
+
+    padding: 0 max(5%, calc((100% - 1400px) / 2));
+
+    background: #ffffff;
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+
+    transition:
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+/* Add shadow when scrolling */
+
+.stackly-consult-header.scrolled {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+/* ==========================================
+   4. LOGO
+========================================== */
+
+.stackly-consult-logo {
+    position: relative;
+    z-index: 1;
+
+    align-self: stretch;
+
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    flex-shrink: 0;
+    min-width: 210px;
+
+    padding: 0 28px 0 0;
+
+    overflow: visible;
+}
+
+/* Orange-red logo background */
+
+.stackly-consult-logo::before {
+    content: "";
+
+    position: absolute;
+    z-index: -1;
+
+    top: 0;
+    bottom: 0;
+    left: -100vw;
+    right: 0;
+
+    background: var(--stackly-consult-primary);
+
+    transform: skewX(-27deg);
+    transform-origin: bottom;
+}
+
+/* White logo image */
+
+.stackly-consult-logo img {
+    width: 170px;
+    height: 43px;
+
+    max-width: 100%;
+    object-fit: contain;
+
+    filter: brightness(0) invert(1);
+
+    transform-origin: center;
+
+    transition:
+        transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+        filter 0.4s ease;
+}
+
+/* Logo hover animation */
+
+.stackly-consult-logo:hover img {
+    transform: scale(1.06) translateY(-2px);
+
+    filter:
+        brightness(0)
+        invert(1)
+        drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+}
+
+/* Logo click feedback */
+
+.stackly-consult-logo:active img {
+    transform: scale(0.97);
+}
+
+/* Logo keyboard focus */
+
+.stackly-consult-logo:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 4px;
+}
+
+/* Optional text beside the logo */
+
+.stackly-consult-logo-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+
+    color: #ffffff;
+    white-space: nowrap;
+}
+
+.stackly-consult-logo-text strong {
+    font-family: var(--stackly-consult-display);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.stackly-consult-logo-text small {
+    font-size: 9px;
+    font-weight: 500;
+}
+
+/* ==========================================
+   5. DESKTOP NAVIGATION
+========================================== */
+
+.stackly-consult-desktop-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(17px, 2.3vw, 34px);
+
+    height: 100%;
+}
+
+.stackly-consult-desktop-nav .stackly-consult-nav-link {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+
+    color: #141414;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    transition: color 0.25s ease;
+}
+
+/* Individual animated label wrapper */
+
+.stackly-consult-nav-link span {
+    display: inline-block;
+    transform-origin: center bottom;
+
+    transition: color 0.25s ease;
+}
+
+/* Letter-jump style label animation */
+
+.stackly-consult-desktop-nav .stackly-consult-nav-link:hover span {
+    color: var(--stackly-consult-primary);
+    animation: stacklyConsultLetterJump 0.45s ease;
+}
+
+/* Active navigation link */
+
+.stackly-consult-desktop-nav .stackly-consult-nav-link.active {
+    color: var(--stackly-consult-primary);
+}
+
+/* Remove the previous underline */
+
+.stackly-consult-desktop-nav .stackly-consult-nav-link::after {
+    display: none;
+}
+
+/* Navigation animation */
+
+@keyframes stacklyConsultLetterJump {
+    0% {
+        transform: translateY(0);
+    }
+
+    35% {
+        transform: translateY(-7px);
+    }
+
+    60% {
+        transform: translateY(2px);
+    }
+
+    80% {
+        transform: translateY(-3px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Keyboard accessibility */
+
+.stackly-consult-desktop-nav .stackly-consult-nav-link:focus-visible {
+    outline: 2px solid var(--stackly-consult-primary);
+    outline-offset: 5px;
+}
+
+/* ==========================================
+   6. HEADER CTA
+========================================== */
+
+.stackly-consult-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.stackly-consult-header-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    min-height: 43px;
+    padding: 0 20px;
+
+    background: var(--stackly-consult-primary);
+    color: #ffffff;
+
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.stackly-consult-header-cta:hover {
+    background: var(--stackly-consult-primary-dark);
+    transform: translateY(-2px);
+}
+
+.stackly-consult-header-cta i {
+    font-size: 15px;
+    font-style: normal;
+}
+
+/* ==========================================
+   7. HAMBURGER BUTTON
+========================================== */
+
+.stackly-consult-menu-toggle {
+    display: none;
+
+    width: 44px;
+    height: 44px;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    border: 1px solid #e9e9e9;
+    background: #ffffff;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.3s ease,
+        background 0.3s ease;
+}
+
+.stackly-consult-menu-toggle:hover {
+    border-color: var(--stackly-consult-primary);
+    background: #fff8f6;
+}
+
+.stackly-consult-menu-toggle span {
+    display: block;
+
+    width: 19px;
+    height: 2px;
+
+    background: #171717;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+/* Animate hamburger into X */
+
+body.stackly-consult-menu-active
+.stackly-consult-menu-toggle span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+body.stackly-consult-menu-active
+.stackly-consult-menu-toggle span:nth-child(2) {
+    opacity: 0;
+}
+
+body.stackly-consult-menu-active
+.stackly-consult-menu-toggle span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ==========================================
+   8. MOBILE OVERLAY
+========================================== */
+
+.stackly-consult-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1090;
+
+    background: rgba(0, 0, 0, 0.65);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+        opacity 0.35s ease,
+        visibility 0.35s ease;
+}
+
+body.stackly-consult-menu-active .stackly-consult-overlay {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+/* ==========================================
+   9. MOBILE MENU PANEL
+========================================== */
+
+.stackly-consult-mobile-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1100;
+
+    display: flex;
+    flex-direction: column;
+
+    width: min(390px, 90vw);
+    height: 100vh;
+    height: 100dvh;
+
+    padding: 26px;
+
+    background: #ffffff;
+
+    visibility: hidden;
+    pointer-events: none;
+
+    transform: translateX(105%);
+
+    transition:
+        transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+        visibility 0.4s ease;
+
+    overflow-y: auto;
+    overscroll-behavior: contain;
+}
+
+body.stackly-consult-menu-active .stackly-consult-mobile-menu {
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(0);
+}
+
+/* Mobile menu top bar */
+
+.stackly-consult-mobile-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid #ededed;
+}
+
+.stackly-consult-mobile-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: #151515;
+
+    font-family: var(--stackly-consult-display);
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.stackly-consult-mobile-brand img {
+    width: 135px;
+    height: 40px;
+    filter: brightness(0) saturate(100%)
+            invert(24%) sepia(94%)
+            saturate(3490%) hue-rotate(352deg)
+            brightness(94%) contrast(97%);
+
+    object-fit: contain;
+}
+
+/* Exit button */
+
+.stackly-consult-menu-close {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+
+    width: 42px;
+    height: 42px;
+
+    border: none;
+
+    background: var(--stackly-consult-primary);
+    color: #ffffff;
+
+    font-size: 31px;
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.stackly-consult-menu-close:hover {
+    background: var(--stackly-consult-dark);
+    transform: rotate(90deg);
+}
+
+/* Mobile navigation heading */
+
+.stackly-consult-mobile-label {
+    margin: 30px 0 13px;
+
+    color: var(--stackly-consult-primary);
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+/* Mobile navigation links */
+
+.stackly-consult-mobile-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.stackly-consult-mobile-nav a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+
+    padding: 17px 0;
+
+    border-bottom: 1px solid #eeeeee;
+
+    color: #202020;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    transition:
+        color 0.25s ease,
+        padding 0.25s ease;
+}
+
+.stackly-consult-mobile-nav a span {
+    color: var(--stackly-consult-primary);
+    font-size: 19px;
+
+    transition: transform 0.25s ease;
+}
+
+.stackly-consult-mobile-nav a:hover,
+.stackly-consult-mobile-nav a.active {
+    padding-left: 7px;
+    color: var(--stackly-consult-primary);
+}
+
+.stackly-consult-mobile-nav a:hover span {
+    transform: translate(3px, -3px);
+}
+
+/* Mobile menu bottom CTA */
+
+.stackly-consult-mobile-bottom {
+    margin-top: auto;
+    padding-top: 35px;
+}
+
+.stackly-consult-mobile-bottom > span {
+    display: block;
+    margin-bottom: 12px;
+
+    color: var(--stackly-consult-primary);
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.stackly-consult-mobile-bottom > a {
+    display: block;
+
+    padding: 15px 16px;
+
+    background: var(--stackly-consult-dark);
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    transition: background 0.3s ease;
+}
+
+.stackly-consult-mobile-bottom > a:hover {
+    background: var(--stackly-consult-primary);
+}
+
+.stackly-consult-mobile-bottom p {
+    margin-top: 16px;
+
+    color: #858585;
+    font-size: 12px;
+}
+
+/* ==========================================
+   10. HERO SECTION
+========================================== */
+
+.stackly-consult-hero {
+    position: relative;
+    isolation: isolate;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    min-height: 750px;
+
+    padding: 80px max(6%, calc((100% - 1240px) / 2)) 85px;
+
+    overflow: hidden;
+
+    background: #080a0b;
+    color: #ffffff;
+}
+
+/* Background videos */
+
+.stackly-consult-video-container {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+
+    overflow: hidden;
+    background: #080a0b;
+}
+
+.stackly-consult-video {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.9s ease,
+        visibility 0.9s ease;
+}
+
+.stackly-consult-video.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Hero overlay */
+
+.stackly-consult-hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background: linear-gradient(
+        90deg,
+        rgba(5, 7, 8, 0.97) 0%,
+        rgba(5, 7, 8, 0.91) 39%,
+        rgba(5, 7, 8, 0.70) 70%,
+        rgba(5, 7, 8, 0.55) 100%
+    );
+}
+
+/* Background grid */
+
+.stackly-consult-hero-grid {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    opacity: 0.12;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.07) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.07) 1px,
+            transparent 1px
+        );
+
+    background-size: 75px 75px;
+
+    pointer-events: none;
+}
+
+/* Hero content layout */
+
+.stackly-consult-hero-content {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: 65px;
+
+    width: 100%;
+    max-width: var(--stackly-consult-container);
+
+    margin: 0 auto;
+}
+
+/* ==========================================
+   11. HERO TEXT
+========================================== */
+
+.stackly-consult-hero-copy {
+    position: relative;
+    z-index: 2;
+
+    animation: stacklyConsultFadeUp 0.9s ease both;
+}
+
+.stackly-consult-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-bottom: 26px;
+
+    color: var(--stackly-consult-primary);
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.stackly-consult-eyebrow-line {
+    display: inline-block;
+
+    width: 33px;
+    height: 2px;
+
+    background: var(--stackly-consult-primary);
+}
+
+.stackly-consult-hero-copy h1 {
+    font-family: var(--stackly-consult-display);
+
+    font-size: clamp(43px, 5.1vw, 70px);
+    line-height: 1.08;
+    font-weight: 700;
+
+    letter-spacing: -2.5px;
+}
+
+.stackly-consult-hero-copy h1 span {
+    color: var(--stackly-consult-primary);
+}
+
+.stackly-consult-hero-description {
+    max-width: 480px;
+
+    margin-top: 25px;
+
+    color: #d0d2d5;
+
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+/* Hero buttons */
+
+.stackly-consult-hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+
+    margin-top: 32px;
+}
+
+.stackly-consult-btn-primary,
+.stackly-consult-btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+
+    min-height: 52px;
+    padding: 0 23px;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease,
+        color 0.3s ease;
+}
+
+.stackly-consult-btn-primary {
+    background: var(--stackly-consult-primary);
+    color: #ffffff;
+}
+
+.stackly-consult-btn-primary:hover {
+    background: #ffffff;
+    color: #111111;
+    transform: translateY(-3px);
+}
+
+.stackly-consult-btn-outline {
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    color: #ffffff;
+}
+
+.stackly-consult-btn-outline:hover {
+    border-color: var(--stackly-consult-primary);
+    background: var(--stackly-consult-primary);
+    transform: translateY(-3px);
+}
+
+.stackly-consult-btn-primary span,
+.stackly-consult-btn-outline span {
+    font-size: 17px;
+}
+
+/* Trust statement */
+
+.stackly-consult-hero-trust {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    margin-top: 39px;
+}
+
+.stackly-consult-trust-mark {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+
+    width: 38px;
+    height: 38px;
+
+    border: 1px solid rgba(255, 69, 41, 0.7);
+    border-radius: 50%;
+
+    color: var(--stackly-consult-primary);
+    font-size: 17px;
+}
+
+.stackly-consult-hero-trust p {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.stackly-consult-hero-trust strong {
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.stackly-consult-hero-trust small {
+    color: #aeb1b5;
+    font-size: 11px;
+}
+
+/* ==========================================
+   12. HERO IMAGE AND CIRCULAR ORBIT
+========================================== */
+
+.stackly-consult-hero-visual {
+    position: relative;
+
+    display: grid;
+    place-items: center;
+
+    width: 100%;
+    max-width: 510px;
+    aspect-ratio: 1 / 1;
+
+    margin-inline: auto;
+}
+
+.stackly-consult-visual-image {
+    position: relative;
+    z-index: 1;
+
+    width: 77%;
+    height: 77%;
+
+    overflow: hidden;
+
+    border: 7px solid rgba(255, 255, 255, 0.13);
+    border-radius: 50%;
+
+    background: #1a1a1a;
+
+    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.4);
+}
+
+.stackly-consult-visual-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.7s ease;
+}
+
+.stackly-consult-hero-visual:hover
+.stackly-consult-visual-image img {
+    transform: scale(1.06);
+}
+
+/* Circular orange orbit */
+
+.stackly-consult-visual-orbit {
+    position: absolute;
+    inset: 4%;
+
+    border: 3px solid transparent;
+    border-top-color: var(--stackly-consult-primary);
+    border-right-color: var(--stackly-consult-primary);
+
+    border-radius: 50%;
+
+    transform: rotate(-30deg);
+
+    animation: stacklyConsultOrbit 13s linear infinite;
+}
+
+.stackly-consult-visual-orbit.orbit-two {
+    inset: 11%;
+
+    border-width: 1px;
+
+    border-top-color: rgba(255, 255, 255, 0.3);
+    border-right-color: transparent;
+    border-bottom-color: rgba(255, 255, 255, 0.2);
+
+    animation-direction: reverse;
+    animation-duration: 22s;
+}
+
+/* Floating information card */
+
+.stackly-consult-floating-card {
+    position: absolute;
+    z-index: 3;
+
+    right: -1%;
+    bottom: 13%;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 17px 20px;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    background: rgba(15, 17, 19, 0.88);
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+
+    backdrop-filter: blur(12px);
+
+    animation: stacklyConsultFloat 4s ease-in-out infinite;
+}
+
+.stackly-consult-floating-icon {
+    display: grid;
+    place-items: center;
+
+    width: 39px;
+    height: 39px;
+
+    background: var(--stackly-consult-primary);
+    color: #ffffff;
+
+    font-size: 22px;
+}
+
+.stackly-consult-floating-card div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.stackly-consult-floating-card strong {
+    font-size: 13px;
+}
+
+.stackly-consult-floating-card small {
+    color: #b9bdc1;
+    font-size: 11px;
+}
+
+/* Decorative shapes */
+
+.stackly-consult-decoration {
+    position: absolute;
+    z-index: 2;
+
+    width: 13px;
+    height: 13px;
+
+    background: var(--stackly-consult-primary);
+
+    transform: rotate(45deg);
+}
+
+.stackly-consult-decoration.decoration-one {
+    top: 14%;
+    right: 12%;
+
+    border-radius: 2px;
+}
+
+.stackly-consult-decoration.decoration-two {
+    bottom: 19%;
+    left: 8%;
+
+    width: 18px;
+    height: 18px;
+
+    border-radius: 50%;
+}
+
+/* ==========================================
+   13. HERO BOTTOM BAR
+========================================== */
+
+.stackly-consult-hero-bottom {
+    position: absolute;
+
+    right: max(6%, calc((100% - 1240px) / 2));
+    bottom: 0;
+    left: max(6%, calc((100% - 1240px) / 2));
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    min-height: 55px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.stackly-consult-hero-bottom-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: #c4c6c9;
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.stackly-consult-live-dot {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: var(--stackly-consult-primary);
+
+    box-shadow: 0 0 0 4px rgba(255, 69, 41, 0.12);
+}
+
+.stackly-consult-video-controls {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    font-family: var(--stackly-consult-display);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.stackly-consult-slide-number {
+    color: var(--stackly-consult-primary);
+}
+
+.stackly-consult-slide-total {
+    color: #92969b;
+}
+
+.stackly-consult-slide-track {
+    width: 90px;
+    height: 2px;
+
+    overflow: hidden;
+
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.stackly-consult-slide-progress {
+    display: block;
+
+    width: 0;
+    height: 100%;
+
+    background: var(--stackly-consult-primary);
+}
+
+/* ==========================================
+   14. INTRODUCTION SECTION
+========================================== */
+
+.stackly-consult-intro {
+    padding: 50px 6%;
+    background: #ffffff;
+}
+
+.stackly-consult-intro-inner {
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.stackly-consult-section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    color: var(--stackly-consult-primary);
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.stackly-consult-section-label span {
+    width: 27px;
+    height: 2px;
+    background: var(--stackly-consult-primary);
+}
+
+.stackly-consult-intro h2 {
+    margin-top: 20px;
+
+    font-family: var(--stackly-consult-display);
+    font-size: clamp(30px, 4vw, 48px);
+    line-height: 1.2;
+    letter-spacing: -1.3px;
+
+    color: #16191c;
+}
+
+.stackly-consult-intro h2 span {
+    color: var(--stackly-consult-primary);
+}
+
+.stackly-consult-intro p {
+    max-width: 690px;
+
+    margin: 22px auto 0;
+
+    color: #6d7379;
+
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.stackly-consult-text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-top: 25px;
+
+    color: #16191c;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    transition: color 0.3s ease;
+}
+
+.stackly-consult-text-link span {
+    color: var(--stackly-consult-primary);
+    font-size: 18px;
+
+    transition: transform 0.3s ease;
+}
+
+.stackly-consult-text-link:hover {
+    color: var(--stackly-consult-primary);
+}
+
+.stackly-consult-text-link:hover span {
+    transform: translate(3px, -3px);
+}
+
+/* ==========================================
+   15. ANIMATIONS
+========================================== */
+
+@keyframes stacklyConsultFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes stacklyConsultFloat {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes stacklyConsultOrbit {
+    from {
+        transform: rotate(-30deg);
+    }
+
+    to {
+        transform: rotate(330deg);
+    }
+}
+
+/* ==========================================
+   16. TABLET RESPONSIVE
+========================================== */
+
+@media (max-width: 1100px) {
+    .stackly-consult-header {
+        gap: 16px;
+        padding-inline: 4%;
+    }
+
+    .stackly-consult-logo {
+        min-width: 175px;
+    }
+
+    .stackly-consult-logo img {
+        width: 140px;
+        height: 43px;
+    }
+
+    .stackly-consult-logo-text strong {
+        font-size: 16px;
+    }
+
+    .stackly-consult-logo-text small {
+        font-size: 8px;
+    }
+
+    .stackly-consult-desktop-nav {
+        gap: 17px;
+    }
+
+    .stackly-consult-nav-link {
+        font-size: 12px;
+    }
+
+    .stackly-consult-header-actions {
+        gap: 10px;
+    }
+
+    .stackly-consult-header-cta {
+        padding-inline: 14px;
+        font-size: 10px;
+    }
+
+    .stackly-consult-hero {
+        min-height: 620px;
+        padding-inline: 5%;
+    }
+
+    .stackly-consult-hero-content {
+        gap: 35px;
+    }
+
+    .stackly-consult-hero-copy h1 {
+        font-size: clamp(43px, 5.4vw, 61px);
+    }
+}
+
+/* ==========================================
+   17. MOBILE RESPONSIVE
+========================================== */
+
+@media (max-width: 850px) {
+    :root {
+        --stackly-consult-header-height: 72px;
+    }
+
+    .stackly-consult-header {
+        padding-inline: 5%;
+    }
+
+    .stackly-consult-logo {
+        min-width: 0;
+        padding-right: 12px;
+    }
+
+    .stackly-consult-logo::before {
+        right: -7px;
+    }
+
+    .stackly-consult-logo img {
+        width: 140px;
+        height: 43px;
+    }
+
+    .stackly-consult-logo-text strong {
+        font-size: 17px;
+    }
+
+    .stackly-consult-desktop-nav,
+    .stackly-consult-header-cta {
+        display: none;
+    }
+
+    .stackly-consult-header-actions {
+        margin-left: auto;
+    }
+
+    .stackly-consult-menu-toggle {
+        display: flex;
+    }
+
+    /* Hero */
+
+    .stackly-consult-hero {
+        min-height: auto;
+        padding: 90px 6% 100px;
+    }
+
+    .stackly-consult-hero-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .stackly-consult-hero-copy {
+        max-width: 650px;
+        margin-inline: auto;
+        text-align: center;
+    }
+
+    .stackly-consult-eyebrow {
+        justify-content: center;
+        margin-bottom: 22px;
+        font-size: 10px;
+    }
+
+    .stackly-consult-hero-copy h1 {
+        font-size: clamp(43px, 8vw, 66px);
+        letter-spacing: -1.5px;
+    }
+
+    .stackly-consult-hero-description {
+        max-width: 520px;
+        margin-inline: auto;
+        font-size: 14px;
+    }
+
+    .stackly-consult-hero-buttons {
+        justify-content: center;
+    }
+
+    .stackly-consult-hero-trust {
+        justify-content: center;
+        text-align: left;
+    }
+
+    .stackly-consult-hero-visual {
+        max-width: 400px;
+        margin-top: 5px;
+    }
+
+    .stackly-consult-floating-card {
+        right: 0;
+        bottom: 12%;
+    }
+
+    .stackly-consult-hero-bottom {
+        right: 6%;
+        left: 6%;
+    }
+}
+
+/* ==========================================
+   18. SMALL MOBILE
+========================================== */
+
+@media (max-width: 480px) {
+    .stackly-consult-header {
+        padding-inline: 4%;
+    }
+
+    .stackly-consult-logo {
+        gap: 6px;
+    }
+
+    .stackly-consult-logo img {
+        width: 125px;
+        height: 40px;
+    }
+
+    .stackly-consult-logo-text strong {
+        font-size: 15px;
+    }
+
+    .stackly-consult-logo-text small {
+        font-size: 7px;
+    }
+
+    .stackly-consult-menu-toggle {
+        width: 41px;
+        height: 41px;
+    }
+
+    .stackly-consult-mobile-menu {
+        padding: 23px;
+    }
+
+    .stackly-consult-hero {
+        padding: 75px 5% 85px;
+    }
+
+    .stackly-consult-hero-copy h1 {
+        font-size: clamp(38px, 10vw, 48px);
+        letter-spacing: -1.2px;
+    }
+
+    .stackly-consult-eyebrow {
+        gap: 7px;
+        font-size: 9px;
+        letter-spacing: 1.2px;
+    }
+
+    .stackly-consult-eyebrow-line {
+        width: 22px;
+    }
+
+    .stackly-consult-hero-description {
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+    .stackly-consult-hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .stackly-consult-btn-primary,
+    .stackly-consult-btn-outline {
+        width: 100%;
+        min-height: 49px;
+    }
+
+    .stackly-consult-hero-trust {
+        margin-top: 28px;
+    }
+
+    .stackly-consult-hero-visual {
+        width: 100%;
+        max-width: 340px;
+    }
+
+    .stackly-consult-visual-image {
+        border-width: 5px;
+    }
+
+    .stackly-consult-floating-card {
+        gap: 8px;
+        padding: 12px;
+    }
+
+    .stackly-consult-floating-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .stackly-consult-floating-card strong {
+        font-size: 11px;
+    }
+
+    .stackly-consult-floating-card small {
+        font-size: 9px;
+    }
+
+    .stackly-consult-hero-bottom-left {
+        max-width: 200px;
+        font-size: 8px;
+        letter-spacing: 0.5px;
+        line-height: 1.5;
+    }
+
+    .stackly-consult-slide-track {
+        width: 45px;
+    }
+
+    .stackly-consult-video-controls {
+        gap: 7px;
+    }
+
+    .stackly-consult-intro {
+        padding: 75px 6%;
+    }
+
+    .stackly-consult-intro h2 {
+        font-size: 32px;
+    }
+
+    .stackly-consult-intro p {
+        font-size: 13px;
+    }
+}
+
+/* ==========================================
+   19. REDUCED MOTION ACCESSIBILITY
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .stackly-consult-desktop-nav
+    .stackly-consult-nav-link:hover span {
+        animation: none;
+    }
+
+    .stackly-consult-logo:hover img,
+    .stackly-consult-logo:active img {
+        transform: none;
+    }
+}
+
+
+/* ==========================================
+   STACKLY CORPORATE CONSULTANCY
+   ABOUT US SECTION CSS
+   Modern Design + AOS + Hover + Responsive
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+
+/* ==========================================
+   1. SECTION BASE
+========================================== */
+
+.stackly-consult-about {
+    --consult-about-primary: #ff4529;
+    --consult-about-primary-dark: #e9341a;
+    --consult-about-heading: #111827;
+    --consult-about-text: #596579;
+    --consult-about-border: #e4e7ec;
+    --consult-about-surface: #ffffff;
+
+    position: relative;
+    isolation: isolate;
+    width: 100%;
+    padding: 50px 4%;
+    overflow: hidden;
+    background: #ffffff;
+    font-family: 'DM Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+.stackly-consult-about *,
+.stackly-consult-about *::before,
+.stackly-consult-about *::after {
+    box-sizing: border-box;
+}
+
+.stackly-consult-about img {
+    display: block;
+    max-width: 100%;
+}
+
+.stackly-consult-about-container {
+    display: grid;
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+    align-items: center;
+    gap: clamp(45px, 6vw, 90px);
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+
+/* ==========================================
+   2. LEFT IMAGE COLLAGE
+========================================== */
+
+.stackly-consult-about-visual {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1.08fr 0.92fr;
+    grid-template-rows: 250px 135px;
+    align-items: start;
+    gap: 18px 14px;
+    width: 100%;
+    max-width: 490px;
+    min-width: 0;
+    margin: 0 auto;
+    padding: 0 0 12px;
+}
+
+.stackly-consult-about-main-image {
+    position: relative;
+    grid-column: 1;
+    grid-row: 1 / 3;
+    width: 100%;
+    height: 100%;
+    min-height: 350px;
+    overflow: hidden;
+    border-radius: 2px;
+    background: #f0f2f5;
+    clip-path: polygon(
+        27% 0,
+        100% 0,
+        100% 100%,
+        0 100%,
+        0 19%
+    );
+}
+
+.stackly-consult-about-main-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 350px;
+    object-fit: cover;
+    object-position: center;
+    transition:
+        transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1),
+        filter 0.5s ease;
+}
+
+.stackly-consult-about-main-image:hover img {
+    transform: scale(1.06);
+    filter: saturate(1.08);
+}
+
+.stackly-consult-about-side-image {
+    position: relative;
+    grid-column: 2;
+    grid-row: 1;
+    width: 100%;
+    height: 190px;
+    overflow: hidden;
+    border-radius: 2px;
+    background: #f0f2f5;
+    clip-path: polygon(
+        0 0,
+        82% 0,
+        100% 17%,
+        100% 100%,
+        0 100%
+    );
+}
+
+.stackly-consult-about-side-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition:
+        transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1),
+        filter 0.5s ease;
+}
+
+.stackly-consult-about-side-image:hover img {
+    transform: scale(1.08);
+    filter: saturate(1.1);
+}
+
+
+/* ==========================================
+   3. EXPERIENCE COUNTER
+========================================== */
+
+.stackly-consult-about-experience {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 205px;
+    min-height: 108px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid rgba(228, 231, 236, 0.9);
+    box-shadow: 0 12px 35px rgba(17, 24, 39, 0.06);
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.stackly-consult-about-experience:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 38px rgba(17, 24, 39, 0.12);
+}
+
+.stackly-consult-about-map {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: #e9edf1;
+    opacity: 0.75;
+    pointer-events: none;
+}
+
+.stackly-consult-about-map i {
+    font-size: 95px;
+    transform: rotate(-8deg);
+}
+
+.stackly-consult-about-experience-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+}
+
+.stackly-consult-about-years {
+    display: block;
+    color: var(--consult-about-primary);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 58px;
+    font-weight: 700;
+    line-height: 0.95;
+    letter-spacing: -3px;
+}
+
+.stackly-consult-about-years-label {
+    display: block;
+    margin-top: 5px;
+    color: var(--consult-about-heading);
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1.35;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+}
+
+
+/* ==========================================
+   4. RIGHT CONTENT
+========================================== */
+
+.stackly-consult-about-content {
+    width: 100%;
+    max-width: 590px;
+    min-width: 0;
+    margin: 0 auto;
+}
+
+.stackly-consult-about-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 17px;
+    color: var(--consult-about-primary);
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 1.5;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.stackly-consult-about-eyebrow-line {
+    display: inline-block;
+    width: 17px;
+    height: 2px;
+    flex: 0 0 17px;
+    background: var(--consult-about-primary);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.stackly-consult-about-eyebrow:hover .stackly-consult-about-eyebrow-line {
+    width: 27px;
+}
+
+
+/* ==========================================
+   5. MAIN HEADING
+========================================== */
+
+.stackly-consult-about-heading {
+    margin: 0 0 22px;
+    color: var(--consult-about-heading);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(34px, 3.4vw, 47px);
+    font-weight: 700;
+    line-height: 1.17;
+    letter-spacing: -1.7px;
+    overflow-wrap: break-word;
+}
+
+.stackly-consult-about-heading span {
+    display: block;
+    color: var(--consult-about-heading);
+    transition: color 0.3s ease;
+}
+
+.stackly-consult-about-heading:hover span {
+    color: var(--consult-about-primary);
+}
+
+
+/* ==========================================
+   6. DESCRIPTION
+========================================== */
+
+.stackly-consult-about-description {
+    position: relative;
+    margin: 0 0 25px;
+    padding-left: 14px;
+    color: var(--consult-about-text);
+    border-left: 2px dashed var(--consult-about-primary);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.85;
+}
+
+
+/* ==========================================
+   7. FEATURE HIGHLIGHTS
+========================================== */
+
+.stackly-consult-about-features {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+    gap: 20px;
+    margin: 0 0 28px;
+}
+
+.stackly-consult-about-feature {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    min-width: 0;
+    padding: 0;
+    transition: transform 0.3s ease;
+}
+
+.stackly-consult-about-feature:hover {
+    transform: translateY(-4px);
+}
+
+.stackly-consult-about-feature-icon {
+    display: flex;
+    flex: 0 0 52px;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    color: #ffffff;
+    background: var(--consult-about-primary);
+    border: 1px solid transparent;
+    border-radius: 50%;
+    font-size: 21px;
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.stackly-consult-about-feature:hover .stackly-consult-about-feature-icon {
+    background: var(--consult-about-primary-dark);
+    transform: rotate(-8deg) scale(1.06);
+    box-shadow: 0 8px 22px rgba(255, 69, 41, 0.22);
+}
+
+.stackly-consult-about-feature-text {
+    min-width: 0;
+}
+
+.stackly-consult-about-feature-text h3 {
+    margin: 0 0 3px;
+    color: var(--consult-about-heading);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 1.4;
+}
+
+.stackly-consult-about-feature-text p {
+    margin: 0;
+    color: var(--consult-about-heading);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.45;
+}
+
+
+/* ==========================================
+   8. STRATEGY HIGHLIGHT
+========================================== */
+
+.stackly-consult-about-highlight {
+    width: 100%;
+    margin: 0 0 24px;
+    padding: 17px 19px;
+    background: var(--consult-about-surface);
+    border: 1px solid var(--consult-about-border);
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+}
+
+.stackly-consult-about-highlight:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255, 69, 41, 0.5);
+    box-shadow: 0 10px 26px rgba(17, 24, 39, 0.06);
+}
+
+.stackly-consult-about-highlight p {
+    margin: 0;
+    color: var(--consult-about-heading);
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.75;
+}
+
+
+/* ==========================================
+   9. READ MORE BUTTON
+========================================== */
+
+.stackly-consult-about-action {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.stackly-consult-about-button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 48px;
+    padding: 14px 23px;
+    overflow: hidden;
+    color: #ffffff;
+    background: var(--consult-about-primary);
+    border: 1px solid var(--consult-about-primary);
+    border-radius: 0;
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 1.3;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.stackly-consult-about-button i {
+    font-size: 13px;
+    transition: transform 0.3s ease;
+}
+
+.stackly-consult-about-button:hover {
+    color: #ffffff;
+    background: var(--consult-about-primary-dark);
+    border-color: var(--consult-about-primary-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(255, 69, 41, 0.24);
+}
+
+.stackly-consult-about-button:hover i {
+    transform: translateX(5px);
+}
+
+.stackly-consult-about-button:focus-visible {
+    outline: 3px solid rgba(255, 69, 41, 0.35);
+    outline-offset: 4px;
+}
+
+
+/* ==========================================
+   10. MEDIUM DESKTOP / LAPTOP
+========================================== */
+
+@media screen and (max-width: 1100px) {
+
+    .stackly-consult-about {
+        padding: 85px 4%;
+    }
+
+    .stackly-consult-about-container {
+        gap: 42px;
+    }
+
+    .stackly-consult-about-visual {
+        grid-template-rows: 225px 125px;
+        gap: 14px 12px;
+    }
+
+    .stackly-consult-about-main-image,
+    .stackly-consult-about-main-image img {
+        min-height: 325px;
+    }
+
+    .stackly-consult-about-side-image {
+        height: 175px;
+    }
+
+    .stackly-consult-about-experience {
+        width: 185px;
+        min-height: 100px;
+    }
+
+    .stackly-consult-about-years {
+        font-size: 52px;
+    }
+
+    .stackly-consult-about-heading {
+        font-size: clamp(32px, 3.7vw, 40px);
+    }
+
+    .stackly-consult-about-features {
+        gap: 14px;
+    }
+
+    .stackly-consult-about-feature {
+        gap: 10px;
+    }
+
+    .stackly-consult-about-feature-icon {
+        flex-basis: 46px;
+        width: 46px;
+        height: 46px;
+        font-size: 19px;
+    }
+
+    .stackly-consult-about-feature-text h3,
+    .stackly-consult-about-feature-text p {
+        font-size: 13px;
+    }
+}
+
+
+/* ==========================================
+   11. TABLET
+========================================== */
+
+@media screen and (max-width: 850px) {
+
+    .stackly-consult-about {
+        padding: 75px 6%;
+    }
+
+    .stackly-consult-about-container {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 55px;
+        max-width: 650px;
+    }
+
+    .stackly-consult-about-visual {
+        width: 100%;
+        max-width: 480px;
+        grid-template-rows: 260px 135px;
+        gap: 15px;
+    }
+
+    .stackly-consult-about-main-image,
+    .stackly-consult-about-main-image img {
+        min-height: 365px;
+    }
+
+    .stackly-consult-about-side-image {
+        height: 200px;
+    }
+
+    .stackly-consult-about-experience {
+        right: 4px;
+        width: 205px;
+        min-height: 105px;
+    }
+
+    .stackly-consult-about-years {
+        font-size: 58px;
+    }
+
+    .stackly-consult-about-content {
+        max-width: 620px;
+    }
+
+    .stackly-consult-about-heading {
+        font-size: clamp(34px, 5.5vw, 44px);
+    }
+
+    .stackly-consult-about-description {
+        font-size: 15px;
+    }
+
+    .stackly-consult-about-feature-text h3,
+    .stackly-consult-about-feature-text p {
+        font-size: 14px;
+    }
+
+    .stackly-consult-about-highlight p {
+        font-size: 14px;
+    }
+}
+
+
+/* ==========================================
+   12. MOBILE
+========================================== */
+
+@media screen and (max-width: 600px) {
+
+    .stackly-consult-about {
+        padding: 58px 20px;
+    }
+
+    .stackly-consult-about-container {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 43px;
+        width: 100%;
+    }
+
+    /* Image collage */
+
+    .stackly-consult-about-visual {
+        display: grid;
+        grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+        grid-template-rows: 210px 100px;
+        gap: 12px;
+        width: 100%;
+        max-width: 420px;
+        margin: 0 auto;
+        padding-bottom: 10px;
+    }
+
+    .stackly-consult-about-main-image {
+        min-height: 0;
+        height: 100%;
+    }
+
+    .stackly-consult-about-main-image img {
+        min-height: 0;
+        height: 100%;
+    }
+
+    .stackly-consult-about-side-image {
+        height: 155px;
+    }
+
+    .stackly-consult-about-experience {
+        right: 0;
+        bottom: 0;
+        width: 170px;
+        min-height: 90px;
+        gap: 7px;
+        padding: 9px;
+    }
+
+    .stackly-consult-about-map i {
+        font-size: 78px;
+    }
+
+    .stackly-consult-about-years {
+        font-size: 48px;
+    }
+
+    .stackly-consult-about-years-label {
+        font-size: 10px;
+    }
+
+    /* Main copy */
+
+    .stackly-consult-about-content {
+        width: 100%;
+        max-width: 480px;
+        margin: 0 auto;
+    }
+
+    .stackly-consult-about-eyebrow {
+        gap: 8px;
+        margin-bottom: 14px;
+        font-size: 11px;
+        letter-spacing: 1.3px;
+    }
+
+    .stackly-consult-about-eyebrow-line {
+        width: 14px;
+        flex-basis: 14px;
+    }
+
+    .stackly-consult-about-heading {
+        margin-bottom: 18px;
+        font-size: clamp(31px, 7.2vw, 39px);
+        line-height: 1.2;
+        letter-spacing: -1.2px;
+    }
+
+    .stackly-consult-about-description {
+        margin-bottom: 24px;
+        padding-left: 12px;
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    /* Features */
+
+    .stackly-consult-about-features {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 17px;
+        margin-bottom: 24px;
+    }
+
+    .stackly-consult-about-feature {
+        gap: 13px;
+    }
+
+    .stackly-consult-about-feature-icon {
+        flex-basis: 48px;
+        width: 48px;
+        height: 48px;
+        font-size: 20px;
+    }
+
+    .stackly-consult-about-feature-text h3,
+    .stackly-consult-about-feature-text p {
+        font-size: 14px;
+    }
+
+    /* Strategy panel */
+
+    .stackly-consult-about-highlight {
+        margin-bottom: 23px;
+        padding: 16px;
+    }
+
+    .stackly-consult-about-highlight p {
+        font-size: 13px;
+        line-height: 1.75;
+    }
+
+    /* Button */
+
+    .stackly-consult-about-button {
+        min-height: 47px;
+        padding: 13px 21px;
+        font-size: 12px;
+    }
+}
+
+
+/* ==========================================
+   13. SMALL MOBILE
+========================================== */
+
+@media screen and (max-width: 380px) {
+
+    .stackly-consult-about {
+        padding: 45px 16px;
+    }
+
+    .stackly-consult-about-container {
+        gap: 37px;
+    }
+
+    .stackly-consult-about-visual {
+        grid-template-rows: 180px 85px;
+        gap: 9px;
+    }
+
+    .stackly-consult-about-side-image {
+        height: 135px;
+    }
+
+    .stackly-consult-about-experience {
+        width: 148px;
+        min-height: 80px;
+        padding: 7px;
+    }
+
+    .stackly-consult-about-map i {
+        font-size: 65px;
+    }
+
+    .stackly-consult-about-years {
+        font-size: 42px;
+    }
+
+    .stackly-consult-about-years-label {
+        font-size: 9px;
+    }
+
+    .stackly-consult-about-eyebrow {
+        gap: 6px;
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+
+    .stackly-consult-about-eyebrow-line {
+        width: 11px;
+        flex-basis: 11px;
+    }
+
+    .stackly-consult-about-heading {
+        font-size: 30px;
+        letter-spacing: -0.8px;
+    }
+
+    .stackly-consult-about-description {
+        font-size: 13px;
+        line-height: 1.75;
+    }
+
+    .stackly-consult-about-features {
+        gap: 15px;
+    }
+
+    .stackly-consult-about-feature-icon {
+        flex-basis: 44px;
+        width: 44px;
+        height: 44px;
+        font-size: 18px;
+    }
+
+    .stackly-consult-about-feature-text h3,
+    .stackly-consult-about-feature-text p {
+        font-size: 13px;
+    }
+
+    .stackly-consult-about-highlight {
+        padding: 13px;
+    }
+
+    .stackly-consult-about-highlight p {
+        font-size: 12px;
+    }
+}
+
+
+/* ==========================================
+   14. AOS / REDUCED MOTION ACCESSIBILITY
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .stackly-consult-about *,
+    .stackly-consult-about *::before,
+    .stackly-consult-about *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+
+/* ==========================================
+   STACKLY CORPORATE CONSULTANCY
+   SERVICES SECTION
+   Responsive + Animations + Hover Effects
+========================================== */
+
+/* ==========================================
+   SECTION VARIABLES
+========================================== */
+
+:root {
+    --stackly-consult-services-primary: #ff4529;
+    --stackly-consult-services-primary-dark: #e9341a;
+    --stackly-consult-services-heading: #171b24;
+    --stackly-consult-services-text: #5c6472;
+    --stackly-consult-services-border: #e5e7eb;
+    --stackly-consult-services-light: #fff4f1;
+    --stackly-consult-services-white: #ffffff;
+    --stackly-consult-services-font: "DM Sans", sans-serif;
+    --stackly-consult-services-display: "Space Grotesk", sans-serif;
+}
+
+/* ==========================================
+   MAIN SECTION
+========================================== */
+
+.stackly-consult-services-section {
+    position: relative;
+    isolation: isolate;
+    width: 100%;
+    padding: 50px 24px 50px;
+    background: #ffffff;
+    overflow: hidden;
+    font-family: var(--stackly-consult-services-font);
+}
+
+.stackly-consult-services-container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/* ==========================================
+   SECTION HEADING
+========================================== */
+
+.stackly-consult-services-heading {
+    max-width: 760px;
+    margin: 0 auto 48px;
+    text-align: center;
+}
+
+.stackly-consult-services-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 16px;
+    color: var(--stackly-consult-services-primary);
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    line-height: 1.5;
+}
+
+.stackly-consult-services-eyebrow span {
+    display: inline-block;
+    width: 19px;
+    height: 2px;
+    background: var(--stackly-consult-services-primary);
+    border-radius: 10px;
+    transition: width 0.35s ease;
+}
+
+.stackly-consult-services-heading:hover
+.stackly-consult-services-eyebrow span {
+    width: 30px;
+}
+
+.stackly-consult-services-heading h2 {
+    margin: 0;
+    color: var(--stackly-consult-services-heading);
+    font-family: var(--stackly-consult-services-display);
+    font-size: clamp(34px, 4vw, 46px);
+    font-weight: 700;
+    line-height: 1.17;
+    letter-spacing: -1.5px;
+}
+
+.stackly-consult-services-heading h2 span {
+    display: block;
+    color: var(--stackly-consult-services-primary);
+}
+
+.stackly-consult-services-heading p {
+    max-width: 620px;
+    margin: 18px auto 0;
+    color: var(--stackly-consult-services-text);
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.8;
+}
+
+/* ==========================================
+   SERVICES GRID
+========================================== */
+
+.stackly-consult-services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    align-items: stretch;
+}
+
+/* ==========================================
+   SERVICE CARD
+========================================== */
+
+.stackly-consult-service-card {
+    position: relative;
+    isolation: isolate;
+    min-width: 0;
+    padding: 28px 26px 25px;
+    overflow: hidden;
+    border: 1px solid var(--stackly-consult-services-border);
+    border-radius: 3px;
+    background: var(--stackly-consult-services-white);
+    box-shadow: 0 3px 14px rgba(20, 28, 40, 0.025);
+    transition:
+        transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1),
+        border-color 0.35s ease,
+        box-shadow 0.4s ease,
+        background-color 0.35s ease;
+}
+
+/* Soft curved decorative background */
+
+.stackly-consult-service-card::before {
+    position: absolute;
+    z-index: -1;
+    top: -48px;
+    right: -35px;
+    width: 120%;
+    height: 125px;
+    content: "";
+    background:
+        linear-gradient(
+            150deg,
+            rgba(241, 243, 245, 0.96) 0%,
+            rgba(241, 243, 245, 0.96) 43%,
+            rgba(255, 69, 41, 0.10) 44%,
+            rgba(255, 69, 41, 0.035) 65%,
+            rgba(255, 255, 255, 0) 66%
+        );
+    border-radius: 0 0 0 65%;
+    transform: rotate(-3deg);
+    transition:
+        transform 0.55s ease,
+        opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.stackly-consult-service-card::after {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    content: "";
+    background: var(--stackly-consult-services-primary);
+    transition: width 0.45s ease;
+}
+
+/* Card hover */
+
+.stackly-consult-service-card:hover {
+    transform: translateY(-9px);
+    border-color: rgba(255, 69, 41, 0.45);
+    box-shadow:
+        0 18px 38px rgba(25, 32, 44, 0.09),
+        0 5px 14px rgba(255, 69, 41, 0.055);
+}
+
+.stackly-consult-service-card:hover::before {
+    transform: translate(-7px, 7px) rotate(-1deg) scale(1.04);
+}
+
+.stackly-consult-service-card:hover::after {
+    width: 100%;
+}
+
+/* ==========================================
+   CARD TOP AREA
+========================================== */
+
+.stackly-consult-service-card-top {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 14px;
+    min-height: 76px;
+    margin-bottom: 20px;
+}
+
+/* ==========================================
+   SERVICE ICON
+========================================== */
+
+.stackly-consult-service-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 66px;
+    width: 66px;
+    height: 66px;
+    color: var(--stackly-consult-services-primary);
+    background: #fff5f2;
+    border: 1px solid rgba(255, 69, 41, 0.045);
+    border-radius: 3px;
+    transition:
+        color 0.35s ease,
+        background-color 0.35s ease,
+        transform 0.45s ease,
+        box-shadow 0.35s ease;
+}
+
+.stackly-consult-service-icon i {
+    font-size: 29px;
+    line-height: 1;
+    transition: transform 0.45s ease;
+}
+
+.stackly-consult-service-card:hover
+.stackly-consult-service-icon {
+    color: #ffffff;
+    background: var(--stackly-consult-services-primary);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(255, 69, 41, 0.20);
+}
+
+.stackly-consult-service-card:hover
+.stackly-consult-service-icon i {
+    transform: rotate(-8deg) scale(1.08);
+}
+
+/* ==========================================
+   NUMBER DECORATION
+========================================== */
+
+.stackly-consult-service-number {
+    position: relative;
+    display: inline-block;
+    padding: 2px 0;
+    color: #ffffff;
+    -webkit-text-stroke: 1px #c9cdd3;
+    font-family: var(--stackly-consult-services-display);
+    font-size: 35px;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 1px;
+    transition:
+        color 0.35s ease,
+        -webkit-text-stroke-color 0.35s ease,
+        transform 0.35s ease;
+}
+
+.stackly-consult-service-card:hover
+.stackly-consult-service-number {
+    color: rgba(255, 69, 41, 0.10);
+    -webkit-text-stroke-color: var(--stackly-consult-services-primary);
+    transform: translateY(-3px);
+}
+
+/* ==========================================
+   CARD CONTENT
+========================================== */
+
+.stackly-consult-service-content {
+    position: relative;
+}
+
+.stackly-consult-service-content h3 {
+    margin: 0 0 12px;
+    color: var(--stackly-consult-services-heading);
+    font-family: var(--stackly-consult-services-display);
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: -0.35px;
+    overflow-wrap: anywhere;
+    transition: color 0.3s ease;
+}
+
+.stackly-consult-service-card:hover
+.stackly-consult-service-content h3 {
+    color: var(--stackly-consult-services-primary-dark);
+}
+
+.stackly-consult-service-content p {
+    margin: 0 0 19px;
+    color: var(--stackly-consult-services-text);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.8;
+}
+
+/* ==========================================
+   READ MORE LINK
+========================================== */
+
+.stackly-consult-service-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--stackly-consult-services-heading);
+    font-family: var(--stackly-consult-services-font);
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 1.6;
+    letter-spacing: 0.25px;
+    text-decoration: none;
+    transition:
+        color 0.3s ease,
+        gap 0.3s ease;
+}
+
+.stackly-consult-service-link i {
+    font-size: 11px;
+    transition: transform 0.3s ease;
+}
+
+.stackly-consult-service-link:hover {
+    gap: 13px;
+    color: var(--stackly-consult-services-primary);
+}
+
+.stackly-consult-service-link:hover i {
+    transform: translate(2px, -2px);
+}
+
+/* Keyboard accessibility */
+
+.stackly-consult-service-link:focus-visible {
+    outline: 2px solid var(--stackly-consult-services-primary);
+    outline-offset: 5px;
+    border-radius: 2px;
+}
+
+/* ==========================================
+   ENTRANCE ANIMATION FALLBACK
+   AOS handles data-aos animations when loaded.
+========================================== */
+
+@keyframes stacklyConsultServicesFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==========================================
+   LARGE TABLETS
+========================================== */
+
+@media (max-width: 1100px) {
+    .stackly-consult-services-section {
+        padding: 75px 22px 80px;
+    }
+
+    .stackly-consult-services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+    }
+
+    .stackly-consult-service-card {
+        padding: 26px 24px;
+    }
+
+    .stackly-consult-service-content h3 {
+        font-size: 22px;
+    }
+
+    .stackly-consult-service-content p {
+        font-size: 15px;
+    }
+}
+
+/* ==========================================
+   TABLETS AND SMALL LAPTOPS
+========================================== */
+
+@media (max-width: 768px) {
+    .stackly-consult-services-section {
+        padding: 65px 20px 70px;
+    }
+
+    .stackly-consult-services-heading {
+        margin-bottom: 36px;
+    }
+
+    .stackly-consult-services-heading h2 {
+        font-size: clamp(31px, 5.5vw, 39px);
+        letter-spacing: -0.8px;
+    }
+
+    .stackly-consult-services-heading p {
+        max-width: 550px;
+        font-size: 16px;
+        line-height: 1.75;
+    }
+
+    .stackly-consult-services-eyebrow {
+        font-size: 13px;
+    }
+
+    .stackly-consult-services-grid {
+        gap: 18px;
+    }
+
+    .stackly-consult-service-card {
+        padding: 24px 21px;
+    }
+
+    .stackly-consult-service-card-top {
+        min-height: 67px;
+        margin-bottom: 17px;
+    }
+
+    .stackly-consult-service-icon {
+        flex-basis: 60px;
+        width: 60px;
+        height: 60px;
+    }
+
+    .stackly-consult-service-icon i {
+        font-size: 26px;
+    }
+
+    .stackly-consult-service-number {
+        font-size: 31px;
+    }
+
+    .stackly-consult-service-content h3 {
+        font-size: 20px;
+    }
+
+    .stackly-consult-service-content p {
+        font-size: 15px;
+        line-height: 1.75;
+    }
+}
+
+/* ==========================================
+   MOBILE DEVICES
+========================================== */
+
+@media (max-width: 520px) {
+    .stackly-consult-services-section {
+        padding: 52px 17px 58px;
+    }
+
+    .stackly-consult-services-heading {
+        margin-bottom: 30px;
+    }
+
+    .stackly-consult-services-eyebrow {
+        gap: 8px;
+        margin-bottom: 13px;
+        font-size: 12px;
+        letter-spacing: 1.2px;
+    }
+
+    .stackly-consult-services-eyebrow span {
+        width: 15px;
+    }
+
+    .stackly-consult-services-heading h2 {
+        font-size: clamp(29px, 8vw, 36px);
+        line-height: 1.2;
+        letter-spacing: -0.7px;
+    }
+
+    .stackly-consult-services-heading p {
+        margin-top: 14px;
+        font-size: 15px;
+        line-height: 1.75;
+    }
+
+    .stackly-consult-services-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 17px;
+    }
+
+    .stackly-consult-service-card {
+        padding: 24px 22px 25px;
+    }
+
+    .stackly-consult-service-card-top {
+        min-height: 70px;
+        margin-bottom: 17px;
+    }
+
+    .stackly-consult-service-icon {
+        flex-basis: 62px;
+        width: 62px;
+        height: 62px;
+    }
+
+    .stackly-consult-service-icon i {
+        font-size: 27px;
+    }
+
+    .stackly-consult-service-number {
+        font-size: 34px;
+    }
+
+    .stackly-consult-service-content h3 {
+        margin-bottom: 10px;
+        font-size: 22px;
+        line-height: 1.4;
+    }
+
+    .stackly-consult-service-content p {
+        margin-bottom: 17px;
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .stackly-consult-service-link {
+        font-size: 12px;
+    }
+
+    /* Keep mobile touch interactions comfortable */
+    .stackly-consult-service-link {
+        min-height: 28px;
+        align-items: center;
+    }
+
+    /* Avoid hover movement on touch devices */
+    .stackly-consult-service-card:hover {
+        transform: translateY(-3px);
+    }
+}
+
+/* ==========================================
+   EXTRA SMALL MOBILE DEVICES
+========================================== */
+
+@media (max-width: 360px) {
+    .stackly-consult-services-section {
+        padding-right: 13px;
+        padding-left: 13px;
+    }
+
+    .stackly-consult-service-card {
+        padding: 21px 18px;
+    }
+
+    .stackly-consult-services-heading h2 {
+        font-size: 28px;
+    }
+
+    .stackly-consult-service-content h3 {
+        font-size: 20px;
+    }
+
+    .stackly-consult-service-number {
+        font-size: 30px;
+    }
+}
+
+/* ==========================================
+   REDUCED MOTION ACCESSIBILITY
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .stackly-consult-services-section *,
+    .stackly-consult-services-section *::before,
+    .stackly-consult-services-section *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+
+/* ==========================================
+   STACKLY CORPORATE CONSULTANCY
+   SOLUTIONS SECTION
+   Animations + Hover Effects + Responsive
+========================================== */
+
+/* ==========================================
+   SECTION VARIABLES
+========================================== */
+
+:root {
+    --stackly-consult-solutions-red: #ff4529;
+    --stackly-consult-solutions-red-dark: #e9341a;
+    --stackly-consult-solutions-white: #ffffff;
+    --stackly-consult-solutions-text: #d1d5db;
+    --stackly-consult-solutions-border: rgba(255, 255, 255, 0.8);
+    --stackly-consult-solutions-font: "DM Sans", sans-serif;
+    --stackly-consult-solutions-display: "Space Grotesk", sans-serif;
+}
+
+/* ==========================================
+   MAIN SECTION
+========================================== */
+
+.stackly-consult-solutions-section {
+    position: relative;
+    isolation: isolate;
+    width: 100%;
+    padding: 50px 24px;
+    overflow: hidden;
+    background:
+        radial-gradient(
+            circle at 80% 40%,
+            rgba(255, 69, 41, 0.07),
+            transparent 34%
+        ),
+        linear-gradient(120deg, #080909 0%, #111212 55%, #080909 100%);
+    font-family: var(--stackly-consult-solutions-font);
+}
+
+.stackly-consult-solutions-container {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.95fr);
+    align-items: center;
+    gap: clamp(45px, 7vw, 100px);
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/* ==========================================
+   LEFT CONTENT
+========================================== */
+
+.stackly-consult-solutions-content {
+    position: relative;
+    z-index: 2;
+    min-width: 0;
+}
+
+/* ==========================================
+   SECTION EYEBROW
+========================================== */
+
+.stackly-consult-solutions-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    color: var(--stackly-consult-solutions-red);
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    line-height: 1.5;
+}
+
+.stackly-consult-solutions-label-line {
+    display: inline-block;
+    width: 25px;
+    height: 2px;
+    background: var(--stackly-consult-solutions-red);
+    border-radius: 5px;
+    transition: width 0.35s ease;
+}
+
+.stackly-consult-solutions-content:hover
+.stackly-consult-solutions-label-line {
+    width: 42px;
+}
+
+/* ==========================================
+   SECTION HEADING
+========================================== */
+
+.stackly-consult-solutions-content h2 {
+    margin: 0 0 20px;
+    color: var(--stackly-consult-solutions-white);
+    font-family: var(--stackly-consult-solutions-display);
+    font-size: clamp(36px, 4vw, 52px);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+}
+
+.stackly-consult-solutions-content h2 span {
+    display: block;
+    color: var(--stackly-consult-solutions-red);
+    transition: color 0.35s ease;
+}
+
+.stackly-consult-solutions-content h2:hover span {
+    color: #ff765f;
+}
+
+/* ==========================================
+   DESCRIPTION
+========================================== */
+
+.stackly-consult-solutions-description {
+    max-width: 570px;
+    margin: 0 0 28px;
+    color: var(--stackly-consult-solutions-text);
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.85;
+}
+
+/* ==========================================
+   FAQ CONTAINER
+========================================== */
+
+.stackly-consult-solutions-faq {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+/* ==========================================
+   FAQ ITEM
+========================================== */
+
+.stackly-consult-solutions-faq-item {
+    position: relative;
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.015);
+    transition:
+        border-color 0.35s ease,
+        background-color 0.35s ease,
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.stackly-consult-solutions-faq-item:hover {
+    border-color: var(--stackly-consult-solutions-red);
+    background: rgba(255, 69, 41, 0.055);
+    transform: translateX(4px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+}
+
+.stackly-consult-solutions-faq-item[open] {
+    border-color: rgba(255, 69, 41, 0.75);
+    background: rgba(255, 255, 255, 0.025);
+}
+
+/* ==========================================
+   FAQ QUESTION
+========================================== */
+
+.stackly-consult-solutions-faq-item summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    min-height: 59px;
+    padding: 17px 20px;
+    color: var(--stackly-consult-solutions-white);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.55;
+    list-style: none;
+    cursor: pointer;
+    transition:
+        color 0.3s ease,
+        background-color 0.3s ease;
+}
+
+.stackly-consult-solutions-faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.stackly-consult-solutions-faq-item summary::marker {
+    content: "";
+}
+
+.stackly-consult-solutions-faq-item summary span {
+    flex: 1;
+    min-width: 0;
+}
+
+.stackly-consult-solutions-faq-item summary i {
+    flex: 0 0 auto;
+    color: var(--stackly-consult-solutions-red);
+    font-size: 16px;
+    transition:
+        color 0.3s ease,
+        transform 0.35s ease;
+}
+
+.stackly-consult-solutions-faq-item summary:hover {
+    color: #ffffff;
+}
+
+.stackly-consult-solutions-faq-item summary:hover i {
+    color: #ff8b78;
+    transform: scale(1.15);
+}
+
+.stackly-consult-solutions-faq-item[open] summary {
+    color: var(--stackly-consult-solutions-white);
+}
+
+.stackly-consult-solutions-faq-item[open] summary i {
+    transform: rotate(180deg);
+}
+
+/* ==========================================
+   FAQ ANSWER
+========================================== */
+
+.stackly-consult-solutions-faq-answer {
+    padding: 0 20px 20px;
+    animation: stacklyConsultSolutionsAnswerIn 0.35s ease both;
+}
+
+.stackly-consult-solutions-faq-answer p {
+    margin: 0;
+    color: #d0d0d0;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.85;
+}
+
+/* ==========================================
+   FAQ KEYBOARD ACCESSIBILITY
+========================================== */
+
+.stackly-consult-solutions-faq-item summary:focus-visible {
+    outline: 2px solid var(--stackly-consult-solutions-red);
+    outline-offset: -3px;
+}
+
+/* ==========================================
+   RIGHT VISUAL AREA
+========================================== */
+
+.stackly-consult-solutions-visual {
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 560px;
+    min-width: 0;
+    min-height: 450px;
+    margin: 0 auto;
+}
+
+/* ==========================================
+   RED BACKGROUND SHAPE
+========================================== */
+
+.stackly-consult-solutions-red-shape {
+    position: absolute;
+    z-index: -2;
+    top: 5%;
+    right: 2%;
+    width: 83%;
+    height: 78%;
+    background: linear-gradient(
+        145deg,
+        #ff684f 0%,
+        #ff4529 42%,
+        #d92710 100%
+    );
+    border-radius: 50% 46% 38% 45%;
+    transform: rotate(-12deg);
+    transition:
+        transform 0.6s ease,
+        border-radius 0.6s ease;
+}
+
+.stackly-consult-solutions-visual:hover
+.stackly-consult-solutions-red-shape {
+    transform: rotate(-6deg) scale(1.035);
+    border-radius: 44% 50% 45% 38%;
+}
+
+/* ==========================================
+   IMAGE FRAME
+========================================== */
+
+.stackly-consult-solutions-image-frame {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 91%;
+    aspect-ratio: 1 / 0.88;
+    padding: 8px;
+    overflow: hidden;
+    background: #ffffff;
+    border-radius: 36% 43% 34% 29% / 28% 35% 34% 42%;
+    box-shadow:
+        0 0 0 3px rgba(255, 255, 255, 0.18),
+        0 20px 55px rgba(0, 0, 0, 0.35);
+    transform: rotate(-2deg);
+    transition:
+        transform 0.55s ease,
+        box-shadow 0.55s ease;
+}
+
+.stackly-consult-solutions-visual:hover
+.stackly-consult-solutions-image-frame {
+    transform: rotate(0deg) scale(1.025);
+    box-shadow:
+        0 0 0 4px rgba(255, 255, 255, 0.25),
+        0 28px 65px rgba(0, 0, 0, 0.45);
+}
+
+.stackly-consult-solutions-image-inner {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: inherit;
+}
+
+.stackly-consult-solutions-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transform: scale(1.01);
+    transition:
+        transform 0.8s ease,
+        filter 0.6s ease;
+}
+
+.stackly-consult-solutions-visual:hover
+.stackly-consult-solutions-image {
+    transform: scale(1.09);
+    filter: saturate(1.08);
+}
+
+/* ==========================================
+   FLOATING CIRCLE
+========================================== */
+
+.stackly-consult-solutions-circle {
+    position: absolute;
+    z-index: 3;
+    top: 3%;
+    left: 35%;
+    width: 43px;
+    height: 43px;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    background: transparent;
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease;
+}
+
+.stackly-consult-solutions-visual:hover
+.stackly-consult-solutions-circle {
+    border-color: var(--stackly-consult-solutions-red);
+    transform: translateY(-6px) scale(1.08);
+}
+
+/* ==========================================
+   DECORATIVE WAVE
+========================================== */
+
+.stackly-consult-solutions-wave {
+    position: absolute;
+    z-index: 3;
+    top: 7%;
+    left: 0;
+    display: block;
+    width: 75px;
+    color: #ffffff;
+    animation: stacklyConsultSolutionsWave 3.5s ease-in-out infinite;
+}
+
+.stackly-consult-solutions-wave svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* ==========================================
+   FLOATING RED ORBS
+========================================== */
+
+.stackly-consult-solutions-orb {
+    position: absolute;
+    z-index: 3;
+    display: block;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 69, 41, 0.95),
+        rgba(201, 35, 15, 0.88)
+    );
+    box-shadow: 0 7px 20px rgba(255, 69, 41, 0.12);
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+    animation: stacklyConsultSolutionsOrbFloat 4s ease-in-out infinite;
+}
+
+.stackly-consult-solutions-orb-one {
+    top: 42%;
+    left: 1%;
+}
+
+.stackly-consult-solutions-orb-two {
+    right: 25%;
+    bottom: 12%;
+    animation-delay: 1.2s;
+}
+
+.stackly-consult-solutions-visual:hover
+.stackly-consult-solutions-orb {
+    box-shadow: 0 9px 27px rgba(255, 69, 41, 0.28);
+}
+
+.stackly-consult-solutions-visual:hover
+.stackly-consult-solutions-orb-one {
+    transform: translate(5px, -5px);
+}
+
+.stackly-consult-solutions-visual:hover
+.stackly-consult-solutions-orb-two {
+    transform: translate(-5px, -5px);
+}
+
+/* ==========================================
+   STRIPED DECORATION
+========================================== */
+
+.stackly-consult-solutions-stripes {
+    position: absolute;
+    z-index: 2;
+    bottom: 5%;
+    left: 14%;
+    width: 112px;
+    height: 48px;
+    background: repeating-linear-gradient(
+        135deg,
+        #ffffff 0,
+        #ffffff 5px,
+        transparent 5px,
+        transparent 10px
+    );
+    clip-path: polygon(15% 0, 100% 0, 80% 100%, 0 100%);
+    transform: rotate(-7deg);
+    transition:
+        transform 0.45s ease,
+        opacity 0.45s ease;
+}
+
+.stackly-consult-solutions-visual:hover
+.stackly-consult-solutions-stripes {
+    transform: rotate(-2deg) translateY(-5px);
+}
+
+/* ==========================================
+   DECORATIVE CROSS
+========================================== */
+
+.stackly-consult-solutions-cross {
+    position: absolute;
+    z-index: 3;
+    right: 5%;
+    bottom: 13%;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 1;
+    transition:
+        color 0.35s ease,
+        transform 0.35s ease;
+}
+
+.stackly-consult-solutions-visual:hover
+.stackly-consult-solutions-cross {
+    color: var(--stackly-consult-solutions-red);
+    transform: rotate(90deg);
+}
+
+/* ==========================================
+   KEYFRAME ANIMATIONS
+========================================== */
+
+@keyframes stacklyConsultSolutionsAnswerIn {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes stacklyConsultSolutionsOrbFloat {
+    0%,
+    100% {
+        translate: 0 0;
+    }
+
+    50% {
+        translate: 0 -10px;
+    }
+}
+
+@keyframes stacklyConsultSolutionsWave {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(8px);
+    }
+}
+
+/* ==========================================
+   TABLET RESPONSIVE
+========================================== */
+
+@media (max-width: 1024px) {
+    .stackly-consult-solutions-section {
+        padding: 75px 24px;
+    }
+
+    .stackly-consult-solutions-container {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 0.85fr);
+        gap: 38px;
+    }
+
+    .stackly-consult-solutions-content h2 {
+        font-size: clamp(34px, 4.1vw, 43px);
+    }
+
+    .stackly-consult-solutions-description {
+        font-size: 16px;
+    }
+
+    .stackly-consult-solutions-faq-item summary {
+        padding: 15px 16px;
+        font-size: 15px;
+    }
+
+    .stackly-consult-solutions-faq-answer {
+        padding: 0 16px 17px;
+    }
+
+    .stackly-consult-solutions-faq-answer p {
+        font-size: 14px;
+    }
+
+    .stackly-consult-solutions-visual {
+        min-height: 380px;
+    }
+
+    .stackly-consult-solutions-orb {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+/* ==========================================
+   MOBILE AND SMALL TABLETS
+========================================== */
+
+@media (max-width: 768px) {
+    .stackly-consult-solutions-section {
+        padding: 65px 22px 75px;
+    }
+
+    .stackly-consult-solutions-container {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 45px;
+        max-width: 650px;
+    }
+
+    .stackly-consult-solutions-content {
+        width: 100%;
+    }
+
+    .stackly-consult-solutions-eyebrow {
+        margin-bottom: 16px;
+        font-size: 13px;
+    }
+
+    .stackly-consult-solutions-content h2 {
+        margin-bottom: 18px;
+        font-size: clamp(35px, 6vw, 45px);
+        line-height: 1.18;
+        letter-spacing: -0.8px;
+    }
+
+    .stackly-consult-solutions-description {
+        max-width: 600px;
+        margin-bottom: 25px;
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    .stackly-consult-solutions-faq {
+        gap: 13px;
+    }
+
+    .stackly-consult-solutions-faq-item summary {
+        min-height: 60px;
+        padding: 17px 18px;
+        font-size: 16px;
+    }
+
+    .stackly-consult-solutions-faq-answer {
+        padding: 0 18px 19px;
+    }
+
+    .stackly-consult-solutions-faq-answer p {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .stackly-consult-solutions-visual {
+        width: 100%;
+        max-width: 520px;
+        min-height: auto;
+        aspect-ratio: 1 / 0.92;
+        margin: 0 auto;
+    }
+
+    .stackly-consult-solutions-image-frame {
+        width: 88%;
+    }
+
+    .stackly-consult-solutions-circle {
+        width: 40px;
+        height: 40px;
+    }
+
+    .stackly-consult-solutions-orb {
+        width: 48px;
+        height: 48px;
+    }
+
+    .stackly-consult-solutions-stripes {
+        width: 95px;
+        height: 42px;
+    }
+}
+
+/* ==========================================
+   MOBILE PHONES
+========================================== */
+
+@media (max-width: 480px) {
+    .stackly-consult-solutions-section {
+        padding: 52px 17px 60px;
+    }
+
+    .stackly-consult-solutions-container {
+        gap: 38px;
+    }
+
+    .stackly-consult-solutions-eyebrow {
+        gap: 8px;
+        margin-bottom: 14px;
+        font-size: 12px;
+        letter-spacing: 1.2px;
+    }
+
+    .stackly-consult-solutions-label-line {
+        width: 19px;
+    }
+
+    .stackly-consult-solutions-content h2 {
+        margin-bottom: 15px;
+        font-size: clamp(31px, 8.3vw, 38px);
+        line-height: 1.2;
+        letter-spacing: -0.7px;
+    }
+
+    .stackly-consult-solutions-description {
+        margin-bottom: 23px;
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .stackly-consult-solutions-faq {
+        gap: 12px;
+    }
+
+    .stackly-consult-solutions-faq-item summary {
+        gap: 12px;
+        min-height: 58px;
+        padding: 15px 14px;
+        font-size: 15px;
+        line-height: 1.55;
+    }
+
+    .stackly-consult-solutions-faq-item summary i {
+        font-size: 15px;
+    }
+
+    .stackly-consult-solutions-faq-answer {
+        padding: 0 14px 16px;
+    }
+
+    .stackly-consult-solutions-faq-answer p {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .stackly-consult-solutions-visual {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+    }
+
+    .stackly-consult-solutions-image-frame {
+        width: 90%;
+        padding: 6px;
+    }
+
+    .stackly-consult-solutions-red-shape {
+        top: 6%;
+        right: 1%;
+        width: 85%;
+        height: 76%;
+    }
+
+    .stackly-consult-solutions-circle {
+        top: 3%;
+        left: 34%;
+        width: 34px;
+        height: 34px;
+        border-width: 2px;
+    }
+
+    .stackly-consult-solutions-wave {
+        top: 8%;
+        left: 1%;
+        width: 55px;
+    }
+
+    .stackly-consult-solutions-orb {
+        width: 37px;
+        height: 37px;
+    }
+
+    .stackly-consult-solutions-orb-one {
+        top: 43%;
+        left: 0;
+    }
+
+    .stackly-consult-solutions-orb-two {
+        right: 23%;
+        bottom: 10%;
+    }
+
+    .stackly-consult-solutions-stripes {
+        bottom: 4%;
+        left: 12%;
+        width: 78px;
+        height: 33px;
+    }
+
+    .stackly-consult-solutions-cross {
+        right: 3%;
+        bottom: 13%;
+        font-size: 21px;
+    }
+
+    /* Prevent excessive horizontal movement on touch */
+    .stackly-consult-solutions-faq-item:hover {
+        transform: none;
+    }
+}
+
+/* ==========================================
+   EXTRA SMALL PHONES
+========================================== */
+
+@media (max-width: 360px) {
+    .stackly-consult-solutions-section {
+        padding-right: 13px;
+        padding-left: 13px;
+    }
+
+    .stackly-consult-solutions-content h2 {
+        font-size: 29px;
+    }
+
+    .stackly-consult-solutions-faq-item summary {
+        padding: 14px 11px;
+        font-size: 14px;
+    }
+
+    .stackly-consult-solutions-faq-answer {
+        padding-right: 11px;
+        padding-left: 11px;
+    }
+
+    .stackly-consult-solutions-faq-answer p {
+        font-size: 13px;
+    }
+
+    .stackly-consult-solutions-visual {
+        aspect-ratio: 1 / 1.02;
+    }
+
+    .stackly-consult-solutions-orb {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+/* ==========================================
+   REDUCED MOTION ACCESSIBILITY
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .stackly-consult-solutions-section *,
+    .stackly-consult-solutions-section *::before,
+    .stackly-consult-solutions-section *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+
+/* ==========================================
+   STACKLY CORPORATE CONSULTANCY
+   WHY CHOOSE US SECTION
+   Animations + Hover Effects + Responsive
+========================================== */
+
+/* ==========================================
+   SECTION VARIABLES
+========================================== */
+
+:root {
+    --stackly-consult-why-primary: #ff4529;
+    --stackly-consult-why-primary-dark: #e9341a;
+    --stackly-consult-why-heading: #17191d;
+    --stackly-consult-why-text: #565d67;
+    --stackly-consult-why-white: #ffffff;
+    --stackly-consult-why-dark: #080909;
+    --stackly-consult-why-font: "DM Sans", sans-serif;
+    --stackly-consult-why-display: "Space Grotesk", sans-serif;
+}
+
+/* ==========================================
+   MAIN SECTION
+========================================== */
+
+.stackly-consult-why-section {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: var(--stackly-consult-why-white);
+    font-family: var(--stackly-consult-why-font);
+}
+
+/* ==========================================
+   STATISTICS BANNER
+========================================== */
+
+.stackly-consult-why-stats {
+    position: relative;
+    isolation: isolate;
+    padding: 50px 24px 35px;
+    overflow: hidden;
+    background:
+        linear-gradient(
+            rgba(4, 7, 8, 0.90),
+            rgba(4, 7, 8, 0.94)
+        ),
+        url("assets/consulting-stats-bg.webp") center / cover no-repeat,
+        #080909;
+}
+
+.stackly-consult-why-stats::before {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    content: "";
+    background:
+        radial-gradient(
+            circle at 15% 15%,
+            rgba(255, 69, 41, 0.10),
+            transparent 35%
+        ),
+        linear-gradient(
+            90deg,
+            transparent 49.8%,
+            rgba(255, 255, 255, 0.025) 50%,
+            transparent 50.2%
+        );
+    pointer-events: none;
+}
+
+.stackly-consult-why-stats-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-items: stretch;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/* ==========================================
+   INDIVIDUAL STATISTIC
+========================================== */
+
+.stackly-consult-why-stat {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    padding: 0 20px 8px;
+    text-align: center;
+    transition: transform 0.35s ease;
+}
+
+.stackly-consult-why-stat:not(:last-child)::after {
+    position: absolute;
+    top: 28%;
+    right: 0;
+    width: 1px;
+    height: 45px;
+    content: "";
+    background: repeating-linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.48) 0,
+        rgba(255, 255, 255, 0.48) 4px,
+        transparent 4px,
+        transparent 8px
+    );
+}
+
+.stackly-consult-why-stat:hover {
+    transform: translateY(-5px);
+}
+
+/* ==========================================
+   STAT ICON
+========================================== */
+
+.stackly-consult-why-stat-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+    margin-bottom: 12px;
+    color: var(--stackly-consult-why-primary);
+    border: 1px dashed var(--stackly-consult-why-primary);
+    border-radius: 50%;
+    background: rgba(255, 69, 41, 0.045);
+    transition:
+        color 0.35s ease,
+        background-color 0.35s ease,
+        border-style 0.35s ease,
+        transform 0.45s ease,
+        box-shadow 0.35s ease;
+}
+
+.stackly-consult-why-stat-icon i {
+    font-size: 25px;
+    transition: transform 0.4s ease;
+}
+
+.stackly-consult-why-stat:hover
+.stackly-consult-why-stat-icon {
+    color: #ffffff;
+    background: var(--stackly-consult-why-primary);
+    border-style: solid;
+    transform: rotate(-8deg);
+    box-shadow: 0 0 22px rgba(255, 69, 41, 0.22);
+}
+
+.stackly-consult-why-stat:hover
+.stackly-consult-why-stat-icon i {
+    transform: scale(1.1);
+}
+
+/* ==========================================
+   STAT NUMBER
+========================================== */
+
+.stackly-consult-why-stat h3 {
+    margin: 0 0 8px;
+    color: var(--stackly-consult-why-white);
+    font-family: var(--stackly-consult-why-display);
+    font-size: clamp(30px, 3vw, 39px);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.8px;
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.stackly-consult-why-stat:hover h3 {
+    color: var(--stackly-consult-why-primary);
+    transform: scale(1.05);
+}
+
+/* ==========================================
+   STAT LABEL
+========================================== */
+
+.stackly-consult-why-stat p {
+    margin: 0;
+    color: #f2f2f2;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+/* ==========================================
+   MAIN CONTENT AREA
+========================================== */
+
+.stackly-consult-why-main {
+    padding: 0 24px 75px;
+    background: var(--stackly-consult-why-white);
+}
+
+.stackly-consult-why-container {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: clamp(40px, 7vw, 90px);
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/* ==========================================
+   LEFT CONTENT
+========================================== */
+
+.stackly-consult-why-content {
+    min-width: 0;
+    padding: 70px 0 5px;
+}
+
+/* ==========================================
+   SECTION EYEBROW
+========================================== */
+
+.stackly-consult-why-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 17px;
+    color: var(--stackly-consult-why-primary);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    line-height: 1.5;
+}
+
+.stackly-consult-why-eyebrow span {
+    display: inline-block;
+    width: 22px;
+    height: 2px;
+    background: var(--stackly-consult-why-primary);
+    transition: width 0.35s ease;
+}
+
+.stackly-consult-why-content:hover
+.stackly-consult-why-eyebrow span {
+    width: 34px;
+}
+
+/* ==========================================
+   MAIN HEADING
+========================================== */
+
+.stackly-consult-why-content > h2 {
+    margin: 0 0 19px;
+    color: var(--stackly-consult-why-heading);
+    font-family: var(--stackly-consult-why-display);
+    font-size: clamp(34px, 3.5vw, 46px);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+.stackly-consult-why-content > h2 span {
+    display: block;
+    color: var(--stackly-consult-why-heading);
+    transition: color 0.35s ease;
+}
+
+.stackly-consult-why-content > h2:hover span {
+    color: var(--stackly-consult-why-primary);
+}
+
+/* ==========================================
+   INTRODUCTION PARAGRAPH
+========================================== */
+
+.stackly-consult-why-description {
+    max-width: 560px;
+    margin: 0 0 24px;
+    color: var(--stackly-consult-why-text);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.85;
+}
+
+/* ==========================================
+   BENEFIT ITEM
+========================================== */
+
+.stackly-consult-why-benefit {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+    margin-bottom: 20px;
+    padding: 2px 0;
+    transition: transform 0.35s ease;
+}
+
+.stackly-consult-why-benefit:last-child {
+    margin-bottom: 0;
+}
+
+.stackly-consult-why-benefit:hover {
+    transform: translateX(5px);
+}
+
+/* ==========================================
+   BENEFIT CHECK ICON
+========================================== */
+
+.stackly-consult-why-check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 18px;
+    width: 18px;
+    height: 18px;
+    margin-top: 5px;
+    color: #ffffff;
+    background: var(--stackly-consult-why-primary);
+    border-radius: 3px;
+    transition:
+        background-color 0.3s ease,
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.stackly-consult-why-check i {
+    font-size: 10px;
+    font-weight: 900;
+}
+
+.stackly-consult-why-benefit:hover
+.stackly-consult-why-check {
+    background: var(--stackly-consult-why-primary-dark);
+    transform: rotate(-8deg) scale(1.1);
+    box-shadow: 0 4px 12px rgba(255, 69, 41, 0.2);
+}
+
+/* ==========================================
+   BENEFIT TEXT
+========================================== */
+
+.stackly-consult-why-benefit-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.stackly-consult-why-benefit-text h3 {
+    margin: 0 0 6px;
+    color: var(--stackly-consult-why-heading);
+    font-family: var(--stackly-consult-why-display);
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 1.45;
+    transition: color 0.3s ease;
+}
+
+.stackly-consult-why-benefit:hover
+.stackly-consult-why-benefit-text h3 {
+    color: var(--stackly-consult-why-primary-dark);
+}
+
+.stackly-consult-why-benefit-text p {
+    max-width: 530px;
+    margin: 0;
+    color: var(--stackly-consult-why-text);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.8;
+}
+
+/* ==========================================
+   RIGHT IMAGE AREA
+========================================== */
+
+.stackly-consult-why-visual {
+    position: relative;
+    align-self: stretch;
+    display: flex;
+    align-items: stretch;
+    min-width: 0;
+    min-height: 500px;
+    margin-right: 0;
+    margin-bottom: 0;
+    isolation: isolate;
+}
+
+/* ==========================================
+   IMAGE FRAME
+========================================== */
+
+.stackly-consult-why-image-frame {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    background: #e8e3dd;
+    box-shadow: 10px 10px 0 var(--stackly-consult-why-primary);
+    transition:
+        box-shadow 0.45s ease,
+        transform 0.45s ease;
+}
+
+.stackly-consult-why-visual:hover
+.stackly-consult-why-image-frame {
+    box-shadow: 13px 13px 0 var(--stackly-consult-why-primary);
+    transform: translateY(-3px);
+}
+
+.stackly-consult-why-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+    object-fit: cover;
+    object-position: center;
+    transition:
+        transform 0.8s ease,
+        filter 0.6s ease;
+}
+
+.stackly-consult-why-visual:hover
+.stackly-consult-why-image {
+    transform: scale(1.055);
+    filter: saturate(1.06);
+}
+
+/* ==========================================
+   FLOATING CLIENT BADGE
+========================================== */
+
+.stackly-consult-why-client-badge {
+    position: absolute;
+    z-index: 3;
+    right: 4%;
+    bottom: 13%;
+    width: min(260px, 75%);
+    padding: 18px 17px;
+    color: #ffffff;
+    background: rgba(37, 47, 172, 0.96);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.24);
+    transition:
+        transform 0.4s ease,
+        background-color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.stackly-consult-why-visual:hover
+.stackly-consult-why-client-badge {
+    background: #202cbb;
+    transform: translateY(-6px);
+    box-shadow: 0 17px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* ==========================================
+   CLIENT AVATARS
+========================================== */
+
+.stackly-consult-why-client-avatars {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 13px;
+    padding-left: 4px;
+}
+
+.stackly-consult-why-client-avatars > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 36px;
+    width: 36px;
+    height: 36px;
+    margin-left: -5px;
+    overflow: hidden;
+    color: #ffffff;
+    background: #333b4a;
+    border: 2px solid var(--stackly-consult-why-primary);
+    border-radius: 50%;
+    transition:
+        transform 0.35s ease,
+        background-color 0.35s ease;
+}
+
+.stackly-consult-why-client-avatars > span:nth-child(2) {
+    background: #646f80;
+}
+
+.stackly-consult-why-client-avatars > span:nth-child(3) {
+    background: #a65d46;
+}
+
+.stackly-consult-why-client-avatars > span:nth-child(4) {
+    background: #747c90;
+}
+
+.stackly-consult-why-client-avatars > span i {
+    font-size: 15px;
+}
+
+.stackly-consult-why-client-more {
+    position: relative;
+    z-index: 2;
+    font-size: 21px;
+    font-weight: 600;
+    background: var(--stackly-consult-why-primary) !important;
+}
+
+.stackly-consult-why-visual:hover
+.stackly-consult-why-client-avatars > span:nth-child(odd) {
+    transform: translateY(-3px);
+}
+
+.stackly-consult-why-visual:hover
+.stackly-consult-why-client-avatars > span:nth-child(even) {
+    transform: translateY(3px);
+}
+
+/* ==========================================
+   CLIENT BADGE TEXT
+========================================== */
+
+.stackly-consult-why-client-badge > p {
+    margin: 0;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.stackly-consult-why-client-badge > p strong {
+    color: #ffffff;
+    font-weight: 800;
+}
+
+.stackly-consult-why-client-badge > p span {
+    display: block;
+    font-weight: 700;
+}
+
+/* ==========================================
+   TABLET RESPONSIVE
+========================================== */
+
+@media (max-width: 1024px) {
+    .stackly-consult-why-stats {
+        padding: 32px 20px;
+    }
+
+    .stackly-consult-why-stat {
+        padding-right: 12px;
+        padding-left: 12px;
+    }
+
+    .stackly-consult-why-stat h3 {
+        font-size: 32px;
+    }
+
+    .stackly-consult-why-stat p {
+        font-size: 13px;
+    }
+
+    .stackly-consult-why-main {
+        padding-right: 22px;
+        padding-bottom: 60px;
+        padding-left: 22px;
+    }
+
+    .stackly-consult-why-container {
+        gap: 38px;
+    }
+
+    .stackly-consult-why-content {
+        padding-top: 45px;
+    }
+
+    .stackly-consult-why-content > h2 {
+        font-size: clamp(32px, 4vw, 40px);
+    }
+
+    .stackly-consult-why-benefit-text h3 {
+        font-size: 18px;
+    }
+
+    .stackly-consult-why-benefit-text p {
+        font-size: 14px;
+    }
+
+    .stackly-consult-why-visual,
+    .stackly-consult-why-image {
+        min-height: 460px;
+    }
+
+    .stackly-consult-why-client-badge {
+        width: min(230px, 82%);
+        padding: 15px 12px;
+    }
+}
+
+/* ==========================================
+   TABLET / SMALL SCREEN LAYOUT
+========================================== */
+
+@media (max-width: 768px) {
+    .stackly-consult-why-stats {
+        padding: 30px 18px;
+    }
+
+    .stackly-consult-why-stats-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        row-gap: 30px;
+    }
+
+    .stackly-consult-why-stat {
+        padding: 0 12px;
+    }
+
+    .stackly-consult-why-stat:nth-child(2)::after {
+        display: none;
+    }
+
+    .stackly-consult-why-stat:nth-child(1)::after,
+    .stackly-consult-why-stat:nth-child(3)::after {
+        top: 20%;
+        height: 55px;
+    }
+
+    .stackly-consult-why-stat-icon {
+        width: 54px;
+        height: 54px;
+        margin-bottom: 10px;
+    }
+
+    .stackly-consult-why-stat-icon i {
+        font-size: 23px;
+    }
+
+    .stackly-consult-why-stat h3 {
+        font-size: 32px;
+    }
+
+    .stackly-consult-why-stat p {
+        font-size: 13px;
+    }
+
+    .stackly-consult-why-main {
+        padding: 0 22px 60px;
+    }
+
+    .stackly-consult-why-container {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 35px;
+        max-width: 620px;
+    }
+
+    .stackly-consult-why-content {
+        padding-top: 45px;
+    }
+
+    .stackly-consult-why-content > h2 {
+        font-size: clamp(34px, 6vw, 43px);
+    }
+
+    .stackly-consult-why-description {
+        max-width: 600px;
+        font-size: 16px;
+    }
+
+    .stackly-consult-why-benefit {
+        margin-bottom: 21px;
+    }
+
+    .stackly-consult-why-benefit-text h3 {
+        font-size: 19px;
+    }
+
+    .stackly-consult-why-benefit-text p {
+        max-width: 580px;
+        font-size: 15px;
+    }
+
+    .stackly-consult-why-visual {
+        width: 100%;
+        min-height: 0;
+        aspect-ratio: 0.95 / 1;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+
+    .stackly-consult-why-image {
+        min-height: 0;
+    }
+
+    .stackly-consult-why-client-badge {
+        right: 3%;
+        bottom: 10%;
+        width: min(255px, 72%);
+        padding: 17px 14px;
+    }
+}
+
+/* ==========================================
+   MOBILE PHONES
+========================================== */
+
+@media (max-width: 480px) {
+    .stackly-consult-why-stats {
+        padding: 27px 12px;
+    }
+
+    .stackly-consult-why-stats-container {
+        row-gap: 27px;
+    }
+
+    .stackly-consult-why-stat {
+        padding: 0 6px;
+    }
+
+    .stackly-consult-why-stat-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .stackly-consult-why-stat-icon i {
+        font-size: 21px;
+    }
+
+    .stackly-consult-why-stat h3 {
+        margin-bottom: 6px;
+        font-size: 29px;
+    }
+
+    .stackly-consult-why-stat p {
+        max-width: 140px;
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    .stackly-consult-why-stat:nth-child(1)::after,
+    .stackly-consult-why-stat:nth-child(3)::after {
+        right: -1px;
+        height: 42px;
+    }
+
+    .stackly-consult-why-main {
+        padding: 0 17px 48px;
+    }
+
+    .stackly-consult-why-container {
+        gap: 29px;
+    }
+
+    .stackly-consult-why-content {
+        padding-top: 38px;
+    }
+
+    .stackly-consult-why-eyebrow {
+        gap: 8px;
+        margin-bottom: 13px;
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    .stackly-consult-why-eyebrow span {
+        width: 17px;
+    }
+
+    .stackly-consult-why-content > h2 {
+        margin-bottom: 15px;
+        font-size: clamp(30px, 8vw, 37px);
+        line-height: 1.2;
+        letter-spacing: -0.65px;
+    }
+
+    .stackly-consult-why-description {
+        margin-bottom: 22px;
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .stackly-consult-why-benefit {
+        gap: 11px;
+        margin-bottom: 19px;
+    }
+
+    .stackly-consult-why-check {
+        flex-basis: 18px;
+        width: 18px;
+        height: 18px;
+    }
+
+    .stackly-consult-why-benefit-text h3 {
+        margin-bottom: 6px;
+        font-size: 17px;
+        line-height: 1.5;
+    }
+
+    .stackly-consult-why-benefit-text p {
+        font-size: 14px;
+        line-height: 1.75;
+    }
+
+    .stackly-consult-why-visual {
+        aspect-ratio: 0.88 / 1;
+        margin-right: 8px;
+        margin-bottom: 8px;
+    }
+
+    .stackly-consult-why-image-frame {
+        box-shadow: 7px 7px 0 var(--stackly-consult-why-primary);
+    }
+
+    .stackly-consult-why-client-badge {
+        right: 2%;
+        bottom: 8%;
+        width: min(225px, 79%);
+        padding: 14px 11px;
+    }
+
+    .stackly-consult-why-client-avatars {
+        margin-bottom: 10px;
+    }
+
+    .stackly-consult-why-client-avatars > span {
+        flex-basis: 31px;
+        width: 31px;
+        height: 31px;
+    }
+
+    .stackly-consult-why-client-avatars > span i {
+        font-size: 13px;
+    }
+
+    .stackly-consult-why-client-more {
+        font-size: 18px;
+    }
+
+    .stackly-consult-why-client-badge > p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+}
+
+/* ==========================================
+   EXTRA SMALL DEVICES
+========================================== */
+
+@media (max-width: 360px) {
+    .stackly-consult-why-stats {
+        padding-right: 8px;
+        padding-left: 8px;
+    }
+
+    .stackly-consult-why-stat h3 {
+        font-size: 26px;
+    }
+
+    .stackly-consult-why-stat p {
+        font-size: 11px;
+    }
+
+    .stackly-consult-why-main {
+        padding-right: 13px;
+        padding-left: 13px;
+    }
+
+    .stackly-consult-why-content > h2 {
+        font-size: 29px;
+    }
+
+    .stackly-consult-why-benefit-text h3 {
+        font-size: 16px;
+    }
+
+    .stackly-consult-why-benefit-text p {
+        font-size: 13px;
+    }
+
+    .stackly-consult-why-client-badge {
+        width: 82%;
+        padding: 12px 9px;
+    }
+}
+
+/* ==========================================
+   REDUCED MOTION ACCESSIBILITY
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .stackly-consult-why-section *,
+    .stackly-consult-why-section *::before,
+    .stackly-consult-why-section *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+
+/* ==========================================
+   STACKLY CORPORATE CONSULTANCY
+   PORTFOLIO GALLERY SECTION
+   Responsive + Hover Effects + Animations
+========================================== */
+
+/* ==========================================
+   SECTION VARIABLES
+========================================== */
+
+:root {
+    --stackly-consult-gallery-primary: #ff4529;
+    --stackly-consult-gallery-primary-dark: #e9341a;
+    --stackly-consult-gallery-heading: #17191d;
+    --stackly-consult-gallery-text: #606873;
+    --stackly-consult-gallery-white: #ffffff;
+    --stackly-consult-gallery-font: "DM Sans", sans-serif;
+    --stackly-consult-gallery-display: "Space Grotesk", sans-serif;
+}
+
+/* ==========================================
+   MAIN SECTION
+========================================== */
+
+.stackly-consult-gallery-section {
+    position: relative;
+    width: 100%;
+    padding: 70px 24px 70px;
+    overflow: hidden;
+    background: var(--stackly-consult-gallery-white);
+    font-family: var(--stackly-consult-gallery-font);
+}
+
+.stackly-consult-gallery-container {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+/* ==========================================
+   SECTION HEADING
+========================================== */
+
+.stackly-consult-gallery-heading {
+    max-width: 760px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+/* ==========================================
+   EYEBROW LABEL
+========================================== */
+
+.stackly-consult-gallery-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 16px;
+    color: var(--stackly-consult-gallery-primary);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1.3px;
+    line-height: 1.5;
+}
+
+.stackly-consult-gallery-eyebrow span {
+    display: inline-block;
+    width: 22px;
+    height: 2px;
+    background: var(--stackly-consult-gallery-primary);
+    transition:
+        width 0.35s ease,
+        background-color 0.35s ease;
+}
+
+.stackly-consult-gallery-heading:hover
+.stackly-consult-gallery-eyebrow span {
+    width: 35px;
+    background: var(--stackly-consult-gallery-primary-dark);
+}
+
+/* ==========================================
+   MAIN TITLE
+========================================== */
+
+.stackly-consult-gallery-heading h2 {
+    margin: 0 0 17px;
+    color: var(--stackly-consult-gallery-heading);
+    font-family: var(--stackly-consult-gallery-display);
+    font-size: clamp(34px, 4vw, 46px);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+.stackly-consult-gallery-heading h2 span {
+    display: block;
+    transition: color 0.35s ease;
+}
+
+.stackly-consult-gallery-heading h2:hover span {
+    color: var(--stackly-consult-gallery-primary);
+}
+
+/* ==========================================
+   HEADING DESCRIPTION
+========================================== */
+
+.stackly-consult-gallery-heading > p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: var(--stackly-consult-gallery-text);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.85;
+}
+
+/* ==========================================
+   GALLERY GRID
+========================================== */
+
+.stackly-consult-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 20px;
+    width: 100%;
+}
+
+/* ==========================================
+   GALLERY COLUMNS
+========================================== */
+
+.stackly-consult-gallery-column {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    min-width: 0;
+}
+
+/* ==========================================
+   GALLERY CARD
+========================================== */
+
+.stackly-consult-gallery-item {
+    position: relative;
+    display: block;
+    width: 100%;
+    min-width: 0;
+    aspect-ratio: 1.08 / 1;
+    overflow: hidden;
+    isolation: isolate;
+    background: #e8e8e8;
+    cursor: pointer;
+    transform: translateZ(0);
+}
+
+/* Taller third-column image */
+
+.stackly-consult-gallery-item-tall {
+    flex: 1;
+    min-height: 100%;
+    aspect-ratio: auto;
+}
+
+/* ==========================================
+   GALLERY IMAGE
+========================================== */
+
+.stackly-consult-gallery-image {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transform: scale(1);
+    transition:
+        transform 0.8s cubic-bezier(0.2, 0.65, 0.3, 1),
+        filter 0.65s ease;
+}
+
+/* Image zoom */
+
+.stackly-consult-gallery-item:hover
+.stackly-consult-gallery-image {
+    transform: scale(1.09);
+    filter: brightness(0.72) saturate(1.08);
+}
+
+/* ==========================================
+   IMAGE OVERLAY
+========================================== */
+
+.stackly-consult-gallery-overlay {
+    position: absolute;
+    z-index: 2;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 25px 22px;
+    color: var(--stackly-consult-gallery-white);
+    background: linear-gradient(
+        180deg,
+        rgba(9, 12, 17, 0.02) 10%,
+        rgba(9, 12, 17, 0.18) 40%,
+        rgba(9, 12, 17, 0.93) 100%
+    );
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(12px);
+    transition:
+        opacity 0.45s ease,
+        visibility 0.45s ease,
+        transform 0.45s ease;
+}
+
+.stackly-consult-gallery-item:hover
+.stackly-consult-gallery-overlay {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* ==========================================
+   GALLERY CATEGORY
+========================================== */
+
+.stackly-consult-gallery-category {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #ff765f;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.1px;
+    line-height: 1.5;
+    transform: translateY(12px);
+    transition: transform 0.4s ease 0.04s;
+}
+
+.stackly-consult-gallery-item:hover
+.stackly-consult-gallery-category {
+    transform: translateY(0);
+}
+
+/* ==========================================
+   GALLERY TITLE
+========================================== */
+
+.stackly-consult-gallery-overlay h3 {
+    width: 100%;
+    margin: 0 0 10px;
+    color: var(--stackly-consult-gallery-white);
+    font-family: var(--stackly-consult-gallery-display);
+    font-size: clamp(18px, 1.8vw, 23px);
+    font-weight: 700;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+    transform: translateY(14px);
+    transition:
+        transform 0.45s ease 0.07s,
+        color 0.3s ease;
+}
+
+.stackly-consult-gallery-item:hover
+.stackly-consult-gallery-overlay h3 {
+    transform: translateY(0);
+}
+
+/* ==========================================
+   GALLERY DESCRIPTION
+========================================== */
+
+.stackly-consult-gallery-overlay p {
+    width: 100%;
+    margin: 0 0 15px;
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.7;
+    transform: translateY(16px);
+    transition: transform 0.45s ease 0.1s;
+}
+
+.stackly-consult-gallery-item:hover
+.stackly-consult-gallery-overlay p {
+    transform: translateY(0);
+}
+
+/* ==========================================
+   GALLERY LINK
+========================================== */
+
+.stackly-consult-gallery-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    width: 40px;
+    height: 40px;
+    color: var(--stackly-consult-gallery-white);
+    background: var(--stackly-consult-gallery-primary);
+    border: 1px solid var(--stackly-consult-gallery-primary);
+    border-radius: 50%;
+    text-decoration: none;
+    transform: translateY(12px);
+    transition:
+        transform 0.4s ease 0.13s,
+        background-color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.stackly-consult-gallery-item:hover
+.stackly-consult-gallery-link {
+    transform: translateY(0);
+}
+
+.stackly-consult-gallery-link i {
+    font-size: 15px;
+    transition: transform 0.3s ease;
+}
+
+.stackly-consult-gallery-link:hover {
+    color: var(--stackly-consult-gallery-white);
+    background: var(--stackly-consult-gallery-primary-dark);
+    border-color: var(--stackly-consult-gallery-primary-dark);
+    box-shadow: 0 5px 18px rgba(255, 69, 41, 0.35);
+}
+
+.stackly-consult-gallery-link:hover i {
+    transform: translate(2px, -2px);
+}
+
+/* ==========================================
+   CARD HOVER ACCENT
+========================================== */
+
+.stackly-consult-gallery-item::after {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
+    content: "";
+    background: var(--stackly-consult-gallery-primary);
+    transition: width 0.45s ease;
+}
+
+.stackly-consult-gallery-item:hover::after {
+    width: 100%;
+}
+
+/* ==========================================
+   KEYBOARD ACCESSIBILITY
+========================================== */
+
+.stackly-consult-gallery-link:focus-visible {
+    outline: 3px solid var(--stackly-consult-gallery-primary);
+    outline-offset: 4px;
+}
+
+/* ==========================================
+   LARGE DESKTOP
+========================================== */
+
+@media (min-width: 1440px) {
+    .stackly-consult-gallery-section {
+        padding-top: 100px;
+        padding-bottom: 105px;
+    }
+
+    .stackly-consult-gallery-grid {
+        gap: 24px;
+    }
+
+    .stackly-consult-gallery-column {
+        gap: 20px;
+    }
+
+    .stackly-consult-gallery-overlay {
+        padding: 30px 26px;
+    }
+}
+
+/* ==========================================
+   LAPTOP / TABLET LANDSCAPE
+========================================== */
+
+@media (max-width: 1024px) {
+    .stackly-consult-gallery-section {
+        padding: 70px 22px 75px;
+    }
+
+    .stackly-consult-gallery-grid {
+        gap: 16px;
+    }
+
+    .stackly-consult-gallery-column {
+        gap: 14px;
+    }
+
+    .stackly-consult-gallery-overlay {
+        padding: 19px 16px;
+    }
+
+    .stackly-consult-gallery-overlay h3 {
+        font-size: 19px;
+    }
+
+    .stackly-consult-gallery-overlay p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .stackly-consult-gallery-link {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+/* ==========================================
+   TABLET PORTRAIT
+========================================== */
+
+@media (max-width: 768px) {
+    .stackly-consult-gallery-section {
+        padding: 60px 20px 65px;
+    }
+
+    .stackly-consult-gallery-heading {
+        max-width: 620px;
+        margin-bottom: 32px;
+    }
+
+    .stackly-consult-gallery-heading h2 {
+        font-size: clamp(32px, 5.5vw, 40px);
+    }
+
+    .stackly-consult-gallery-heading > p {
+        font-size: 15px;
+    }
+
+    .stackly-consult-gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .stackly-consult-gallery-column {
+        gap: 16px;
+    }
+
+    .stackly-consult-gallery-column:last-child {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .stackly-consult-gallery-item {
+        aspect-ratio: 1 / 1;
+    }
+
+    .stackly-consult-gallery-item-tall {
+        grid-column: 1 / -1;
+        min-height: 0;
+        aspect-ratio: 1.8 / 1;
+    }
+
+    /* Keep descriptions readable on touch devices */
+
+    .stackly-consult-gallery-overlay {
+        padding: 18px 15px;
+    }
+
+    .stackly-consult-gallery-category {
+        font-size: 10px;
+    }
+
+    .stackly-consult-gallery-overlay h3 {
+        font-size: 19px;
+    }
+
+    .stackly-consult-gallery-overlay p {
+        font-size: 13px;
+    }
+}
+
+/* ==========================================
+   MOBILE DEVICES
+========================================== */
+
+@media (max-width: 540px) {
+    .stackly-consult-gallery-section {
+        padding: 48px 16px 52px;
+    }
+
+    .stackly-consult-gallery-heading {
+        margin-bottom: 27px;
+    }
+
+    .stackly-consult-gallery-eyebrow {
+        gap: 8px;
+        margin-bottom: 12px;
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    .stackly-consult-gallery-eyebrow span {
+        width: 17px;
+    }
+
+    .stackly-consult-gallery-heading h2 {
+        margin-bottom: 13px;
+        font-size: clamp(29px, 7.5vw, 36px);
+        line-height: 1.23;
+        letter-spacing: -0.6px;
+    }
+
+    .stackly-consult-gallery-heading > p {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .stackly-consult-gallery-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 15px;
+    }
+
+    .stackly-consult-gallery-column {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .stackly-consult-gallery-column:last-child {
+        grid-column: auto;
+        display: flex;
+    }
+
+    .stackly-consult-gallery-item,
+    .stackly-consult-gallery-item-tall {
+        width: 100%;
+        min-height: 0;
+        aspect-ratio: 1.15 / 1;
+    }
+
+    .stackly-consult-gallery-overlay {
+        padding: 20px;
+    }
+
+    .stackly-consult-gallery-category {
+        margin-bottom: 8px;
+        font-size: 10px;
+        letter-spacing: 0.9px;
+    }
+
+    .stackly-consult-gallery-overlay h3 {
+        margin-bottom: 8px;
+        font-size: 21px;
+    }
+
+    .stackly-consult-gallery-overlay p {
+        margin-bottom: 12px;
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .stackly-consult-gallery-link {
+        width: 38px;
+        height: 38px;
+    }
+
+    /*
+       On touchscreens, reveal the content by default
+       because hover is not always available.
+    */
+
+    .stackly-consult-gallery-item
+    .stackly-consult-gallery-overlay {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        background: linear-gradient(
+            180deg,
+            rgba(9, 12, 17, 0.02) 5%,
+            rgba(9, 12, 17, 0.2) 30%,
+            rgba(9, 12, 17, 0.94) 100%
+        );
+    }
+
+    .stackly-consult-gallery-item
+    .stackly-consult-gallery-category,
+    .stackly-consult-gallery-item
+    .stackly-consult-gallery-overlay h3,
+    .stackly-consult-gallery-item
+    .stackly-consult-gallery-overlay p,
+    .stackly-consult-gallery-item
+    .stackly-consult-gallery-link {
+        transform: translateY(0);
+    }
+}
+
+/* ==========================================
+   SMALL MOBILE DEVICES
+========================================== */
+
+@media (max-width: 360px) {
+    .stackly-consult-gallery-section {
+        padding-right: 12px;
+        padding-left: 12px;
+    }
+
+    .stackly-consult-gallery-heading h2 {
+        font-size: 28px;
+    }
+
+    .stackly-consult-gallery-overlay {
+        padding: 16px;
+    }
+
+    .stackly-consult-gallery-overlay h3 {
+        font-size: 19px;
+    }
+
+    .stackly-consult-gallery-overlay p {
+        font-size: 13px;
+    }
+}
+
+/* ==========================================
+   REDUCED MOTION ACCESSIBILITY
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .stackly-consult-gallery-section *,
+    .stackly-consult-gallery-section *::before,
+    .stackly-consult-gallery-section *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+
+
+/* ============================================
+   CORPORATE CONSULTANCY - EXPERIENCE TEAM
+   Responsive Carousel + Hover Effects + AOS
+============================================ */
+
+.consult-team,
+.consult-team * {
+    box-sizing: border-box;
+}
+
+.consult-team {
+    --team-accent: #ff4b2b;
+    --team-accent-dark: #e93a20;
+    --team-text: #111111;
+    --team-muted: #777777;
+    --team-card-bg: #f5f5f5;
+    --team-accent-bg: #f8e5e2;
+
+    width: 100%;
+    padding: 50px 5%;
+    background: #ffffff;
+    overflow: hidden;
+    font-family: "DM Sans", Arial, sans-serif;
+}
+
+.consult-team-container {
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+/* HEADING */
+
+.consult-team-heading {
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.consult-team-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    color: var(--team-accent);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+}
+
+.team-heading-line {
+    width: 10px;
+    height: 2px;
+    background: var(--team-accent);
+    border-radius: 5px;
+}
+
+.consult-team-heading h2 {
+    margin: 10px 0 10px;
+    color: var(--team-text);
+    font-size: clamp(27px, 3vw, 38px);
+    line-height: 1.25;
+    font-weight: 800;
+    letter-spacing: -0.8px;
+}
+
+.consult-team-heading > p {
+    max-width: 570px;
+    margin: 0 auto;
+    color: var(--team-muted);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* CAROUSEL */
+
+.consult-team-carousel {
+    position: relative;
+    padding: 0 45px;
+}
+
+.consult-team-viewport {
+    width: 100%;
+    overflow: hidden;
+}
+
+.consult-team-track {
+    display: flex;
+    align-items: stretch;
+    gap: 24px;
+    transform: translateX(0);
+    will-change: transform;
+}
+
+/* THREE CARDS ON DESKTOP */
+
+.consult-team-card {
+    position: relative;
+    flex: 0 0 calc((100% - 48px) / 3);
+    min-width: 0;
+    padding: 0;
+}
+
+.consult-team-card-inner {
+    position: relative;
+    height: 100%;
+    padding: 15px;
+    background: var(--team-card-bg);
+    isolation: isolate;
+    transition:
+        background 0.35s ease,
+        transform 0.35s ease;
+}
+
+/* Decorative top-right corner */
+
+.consult-team-card-inner::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    width: 34%;
+    height: 65%;
+    background: var(--team-accent-bg);
+    transition:
+        width 0.35s ease,
+        height 0.35s ease;
+}
+
+.consult-team-card-inner:hover {
+    background: #ffffff;
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+}
+
+.consult-team-card-inner:hover::before {
+    width: 48%;
+    height: 72%;
+}
+
+/* TEAM IMAGE */
+
+.consult-team-photo {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: visible;
+    background: #e8e8e8;
+}
+
+.consult-team-photo > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 35%;
+    transition:
+        transform 0.55s ease,
+        filter 0.4s ease;
+}
+
+.consult-team-card-inner:hover .consult-team-photo > img {
+    transform: scale(1.045);
+    filter: brightness(0.94);
+}
+
+/* PLUS BUTTON */
+
+.consult-team-plus {
+    position: absolute;
+    left: 14px;
+    bottom: -13px;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: var(--team-accent);
+    color: #ffffff;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 3px 9px rgba(255, 75, 43, 0.2);
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.consult-team-plus:hover {
+    background: var(--team-accent-dark);
+    transform: rotate(90deg) scale(1.08);
+    box-shadow: 0 5px 14px rgba(255, 75, 43, 0.3);
+}
+
+.consult-team-plus:focus-visible,
+.consult-team-arrow:focus-visible,
+.consult-team-modal-close:focus-visible {
+    outline: 3px solid #111111;
+    outline-offset: 4px;
+}
+
+/* TEAM DETAILS */
+
+.consult-team-info {
+    padding: 21px 5px 2px;
+    text-align: center;
+}
+
+.consult-team-info h3 {
+    margin: 0 0 6px;
+    color: var(--team-text);
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight: 800;
+    transition: color 0.3s ease;
+}
+
+.consult-team-card-inner:hover .consult-team-info h3 {
+    color: var(--team-accent);
+}
+
+.consult-team-info p {
+    margin: 0;
+    color: var(--team-accent);
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+/* LEFT / RIGHT ARROWS */
+
+.consult-team-arrow {
+    position: absolute;
+    top: 45%;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 43px;
+    height: 43px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: var(--team-accent);
+    color: #ffffff;
+    font-size: 15px;
+    cursor: pointer;
+    transform: translateY(-50%);
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.consult-team-arrow:hover {
+    background: var(--team-accent-dark);
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 5px 15px rgba(255, 75, 43, 0.22);
+}
+
+.consult-team-arrow:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+.team-prev {
+    left: 0;
+}
+
+.team-next {
+    right: 0;
+}
+
+/* PROFILE POPUP */
+
+.consult-team-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.65);
+    opacity: 0;
+    visibility: hidden;
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+}
+
+.consult-team-modal.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.consult-team-modal-content {
+    position: relative;
+    width: 100%;
+    max-width: 440px;
+    padding: 45px 30px;
+    background: #ffffff;
+    text-align: center;
+    border-radius: 5px;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+.consult-team-modal.is-open .consult-team-modal-content {
+    transform: translateY(0);
+}
+
+.consult-team-modal-content h3 {
+    margin: 15px 0 8px;
+    color: var(--team-text);
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.consult-team-modal-content > p {
+    color: var(--team-muted);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.consult-team-modal-content > p#consultTeamModalRole {
+    color: var(--team-accent);
+    font-weight: 700;
+}
+
+.consult-team-modal-close {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border: none;
+    background: transparent;
+    color: var(--team-text);
+    font-size: 22px;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.consult-team-modal-close:hover {
+    color: var(--team-accent);
+    transform: rotate(90deg);
+}
+
+/* TABLET: TWO CARDS */
+
+@media (max-width: 991px) {
+    .consult-team {
+        padding: 55px 4%;
+    }
+
+    .consult-team-carousel {
+        padding: 0 38px;
+    }
+
+    .consult-team-track {
+        gap: 20px;
+    }
+
+    .consult-team-card {
+        flex-basis: calc((100% - 20px) / 2);
+    }
+
+    .consult-team-arrow {
+        width: 36px;
+        height: 36px;
+        font-size: 13px;
+    }
+
+    .consult-team-card-inner {
+        padding: 12px;
+    }
+
+    .consult-team-info h3 {
+        font-size: 14px;
+    }
+}
+
+/* MOBILE: ONE CARD */
+
+@media (max-width: 575px) {
+    .consult-team {
+        padding: 45px 4%;
+    }
+
+    .consult-team-heading {
+        margin-bottom: 25px;
+    }
+
+    .consult-team-heading h2 {
+        font-size: 27px;
+        letter-spacing: -0.5px;
+    }
+
+    .consult-team-heading > p {
+        font-size: 13px;
+    }
+
+    .consult-team-carousel {
+        padding: 0 30px;
+    }
+
+    .consult-team-track {
+        gap: 16px;
+    }
+
+    .consult-team-card {
+        flex-basis: 100%;
+    }
+
+    .consult-team-card-inner {
+        padding: 13px;
+    }
+
+    .consult-team-photo {
+        aspect-ratio: 1 / 0.9;
+    }
+
+    .consult-team-info {
+        padding-top: 22px;
+        padding-bottom: 5px;
+    }
+
+    .consult-team-info h3 {
+        font-size: 16px;
+    }
+
+    .consult-team-info p {
+        font-size: 12px;
+    }
+
+    .consult-team-arrow {
+        width: 32px;
+        height: 32px;
+        font-size: 12px;
+    }
+
+    .consult-team-modal-content {
+        padding: 40px 22px;
+    }
+}
+
+/* REDUCE MOTION FOR ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+    .consult-team *,
+    .consult-team-modal,
+    .consult-team-modal-content {
+        scroll-behavior: auto;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+
+
+/* =====================================================
+   CORPORATE CONSULTANCY - PRICING PACKAGES
+   BIGGER FONTS + RESPONSIVE + AOS + HOVER EFFECTS
+===================================================== */
+
+.consult-pricing,
+.consult-pricing * {
+    box-sizing: border-box;
+}
+
+.consult-pricing {
+    --pricing-accent: #ff4b2b;
+    --pricing-accent-dark: #e83b20;
+    --pricing-text: #111111;
+    --pricing-muted: #686868;
+    --pricing-border: #dedede;
+    --pricing-background: #ffffff;
+    --pricing-soft: #fff1ed;
+
+    width: 100%;
+    padding: 50px 4.5%;
+    background: var(--pricing-background);
+    color: var(--pricing-text);
+    font-family: "DM Sans", Arial, sans-serif;
+    overflow: hidden;
+}
+
+.consult-pricing *,
+.consult-pricing-modal,
+.consult-pricing-modal * {
+    box-sizing: border-box;
+}
+
+.consult-pricing-container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/* =====================================================
+   SECTION HEADING
+===================================================== */
+
+.consult-pricing-heading {
+    margin-bottom: 45px;
+    text-align: center;
+}
+
+.consult-pricing-label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    color: var(--pricing-accent);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    line-height: 1.5;
+}
+
+.consult-pricing-label span {
+    display: block;
+    width: 13px;
+    height: 2px;
+    background: var(--pricing-accent);
+    border-radius: 4px;
+}
+
+.consult-pricing-heading h2 {
+    margin: 14px 0 15px;
+    color: var(--pricing-text);
+    font-size: clamp(34px, 3.5vw, 46px);
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+.consult-pricing-heading > p {
+    max-width: 720px;
+    margin: 0 auto;
+    color: var(--pricing-muted);
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.8;
+}
+
+/* =====================================================
+   PRICING GRID
+===================================================== */
+
+.consult-pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 28px;
+}
+
+/* =====================================================
+   PRICING CARD
+===================================================== */
+
+.consult-price-card {
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 100%;
+    border: 1px solid var(--pricing-border);
+    background: #ffffff;
+    overflow: hidden;
+    transition:
+        border-color 0.35s ease,
+        box-shadow 0.35s ease,
+        transform 0.35s ease;
+}
+
+.consult-price-card:hover {
+    border-color: var(--pricing-accent);
+    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.08);
+    transform: translateY(-8px);
+}
+
+/* =====================================================
+   DECORATIVE BACKGROUND PATTERN
+===================================================== */
+
+.consult-price-decoration {
+    position: absolute;
+    z-index: -1;
+    top: 18px;
+    right: -20px;
+    left: -20px;
+    height: 75px;
+    border-top: 1px solid rgba(255, 75, 43, 0.18);
+    border-bottom: 1px solid rgba(255, 75, 43, 0.18);
+    border-radius: 50%;
+    background: repeating-linear-gradient(
+        -25deg,
+        transparent 0,
+        transparent 3px,
+        rgba(255, 75, 43, 0.045) 3px,
+        rgba(255, 75, 43, 0.045) 4px
+    );
+    pointer-events: none;
+    transition:
+        height 0.35s ease,
+        background 0.35s ease;
+}
+
+.consult-price-card:hover .consult-price-decoration {
+    height: 88px;
+    background: repeating-linear-gradient(
+        -25deg,
+        transparent 0,
+        transparent 3px,
+        rgba(255, 75, 43, 0.08) 3px,
+        rgba(255, 75, 43, 0.08) 4px
+    );
+}
+
+/* =====================================================
+   CARD CONTENT
+===================================================== */
+
+.consult-price-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-height: 100%;
+    padding: 28px 26px 27px;
+}
+
+/* =====================================================
+   PLAN TITLE AND DESCRIPTION
+===================================================== */
+
+.consult-price-header {
+    min-height: 88px;
+}
+
+.consult-price-header h3 {
+    margin: 0 0 11px;
+    color: var(--pricing-text);
+    font-size: 23px;
+    font-weight: 800;
+    line-height: 1.4;
+    transition: color 0.3s ease;
+}
+
+.consult-price-card:hover .consult-price-header h3 {
+    color: var(--pricing-accent);
+}
+
+.consult-price-header p {
+    margin: 0;
+    color: #555555;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.75;
+}
+
+/* =====================================================
+   PRICE AMOUNT
+===================================================== */
+
+.consult-price-amount {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 3px;
+    margin: 23px 0 24px;
+    white-space: nowrap;
+}
+
+.consult-currency {
+    color: var(--pricing-text);
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.consult-price-value {
+    color: var(--pricing-text);
+    font-size: clamp(39px, 3.4vw, 49px);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -1.2px;
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.consult-price-card:hover .consult-price-value {
+    color: var(--pricing-accent);
+    transform: translateY(-2px);
+}
+
+.consult-price-period {
+    margin-left: 6px;
+    color: var(--pricing-accent);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+}
+
+/* =====================================================
+   DIVIDER
+===================================================== */
+
+.consult-price-divider {
+    width: 100%;
+    height: 1px;
+    margin-bottom: 24px;
+    background: var(--pricing-border);
+}
+
+/* =====================================================
+   FEATURES LIST
+===================================================== */
+
+.consult-price-features {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    margin: 0 0 30px;
+    padding: 0;
+    list-style: none;
+}
+
+.consult-price-features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+    color: #333333;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.65;
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.consult-price-features li:hover {
+    color: var(--pricing-text);
+    transform: translateX(4px);
+}
+
+.consult-price-features li i {
+    flex: 0 0 auto;
+    margin-top: 5px;
+    color: var(--pricing-accent);
+    font-size: 15px;
+}
+
+.consult-price-features li span {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.consult-price-features .feature-limited i {
+    color: #777777;
+}
+
+/* =====================================================
+   CHOOSE YOUR PLAN BUTTON
+===================================================== */
+
+.consult-price-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    min-height: 54px;
+    margin-top: auto;
+    padding: 15px 14px;
+    border: 1px solid var(--pricing-accent);
+    background: var(--pricing-accent);
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+    line-height: 1.5;
+    cursor: pointer;
+    transition:
+        color 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.consult-price-button i {
+    font-size: 14px;
+    opacity: 0;
+    transform: translateX(-7px);
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+.consult-price-button:hover {
+    border-color: var(--pricing-accent);
+    background: #ffffff;
+    color: var(--pricing-accent);
+    box-shadow: 0 6px 18px rgba(255, 75, 43, 0.12);
+}
+
+.consult-price-button:hover i {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.consult-price-button:active {
+    transform: scale(0.98);
+}
+
+.consult-price-button:focus-visible,
+.consult-pricing-contact-link:focus-visible,
+.consult-pricing-modal-close:focus-visible {
+    outline: 3px solid #111111;
+    outline-offset: 4px;
+}
+
+/* =====================================================
+   PREMIUM PLAN
+===================================================== */
+
+.consult-price-featured {
+    border-color: rgba(255, 75, 43, 0.45);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.035);
+}
+
+.consult-price-featured .consult-price-header h3::after {
+    content: "POPULAR";
+    display: inline-block;
+    margin-left: 9px;
+    padding: 5px 8px;
+    background: var(--pricing-soft);
+    color: var(--pricing-accent);
+    font-size: 10px;
+    font-weight: 800;
+    line-height: 1.4;
+    letter-spacing: 0.3px;
+    vertical-align: middle;
+}
+
+/* =====================================================
+   PRICING CONFIRMATION MODAL
+===================================================== */
+
+.consult-pricing-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 22px;
+    background: rgba(0, 0, 0, 0.68);
+    opacity: 0;
+    visibility: hidden;
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+}
+
+.consult-pricing-modal.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.consult-pricing-modal-box {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    padding: 45px 35px;
+    background: #ffffff;
+    text-align: center;
+    box-shadow: 0 22px 65px rgba(0, 0, 0, 0.18);
+    transform: translateY(25px) scale(0.97);
+    transition: transform 0.3s ease;
+}
+
+.consult-pricing-modal.is-open .consult-pricing-modal-box {
+    transform: translateY(0) scale(1);
+}
+
+.consult-pricing-modal-close {
+    position: absolute;
+    top: 15px;
+    right: 16px;
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    border: 0;
+    background: transparent;
+    color: var(--pricing-text);
+    font-size: 25px;
+    cursor: pointer;
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.consult-pricing-modal-close:hover {
+    color: var(--pricing-accent);
+    transform: rotate(90deg);
+}
+
+.consult-pricing-modal-icon {
+    display: grid;
+    place-items: center;
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 22px;
+    border-radius: 50%;
+    background: var(--pricing-soft);
+    color: var(--pricing-accent);
+    font-size: 28px;
+}
+
+.consult-pricing-modal-box h3 {
+    margin: 0 0 18px;
+    color: var(--pricing-text);
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+.consult-pricing-modal-box p {
+    color: var(--pricing-muted);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.consult-pricing-selected strong,
+.consult-pricing-selected-price strong {
+    color: var(--pricing-text);
+    font-weight: 800;
+}
+
+.consult-pricing-modal-note {
+    margin: 22px 0 26px;
+}
+
+.consult-pricing-contact-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    min-height: 54px;
+    padding: 15px 18px;
+    background: var(--pricing-accent);
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.consult-pricing-contact-link:hover {
+    background: var(--pricing-accent-dark);
+    transform: translateY(-2px);
+}
+
+/* =====================================================
+   LARGE DESKTOP
+===================================================== */
+
+@media (min-width: 1400px) {
+    .consult-pricing {
+        padding: 90px 5%;
+    }
+
+    .consult-pricing-grid {
+        gap: 32px;
+    }
+
+    .consult-price-content {
+        padding: 32px;
+    }
+
+    .consult-price-header h3 {
+        font-size: 25px;
+    }
+
+    .consult-price-header p {
+        font-size: 16px;
+    }
+
+    .consult-price-value {
+        font-size: 52px;
+    }
+
+    .consult-price-features li {
+        font-size: 16px;
+    }
+}
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 991px) {
+    .consult-pricing {
+        padding: 60px 5%;
+    }
+
+    .consult-pricing-heading {
+        margin-bottom: 35px;
+    }
+
+    .consult-pricing-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+    }
+
+    .consult-price-content {
+        padding: 25px 22px;
+    }
+
+    .consult-price-header {
+        min-height: 90px;
+    }
+
+    .consult-price-header h3 {
+        font-size: 21px;
+    }
+
+    .consult-price-header p {
+        font-size: 14px;
+    }
+
+    .consult-price-value {
+        font-size: 42px;
+    }
+
+    .consult-price-period {
+        font-size: 10px;
+    }
+
+    .consult-price-features {
+        gap: 15px;
+    }
+
+    .consult-price-features li {
+        font-size: 14px;
+    }
+
+    .consult-price-button {
+        font-size: 12px;
+    }
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+    .consult-pricing {
+        padding: 48px 5%;
+    }
+
+    .consult-pricing-heading {
+        margin-bottom: 28px;
+    }
+
+    .consult-pricing-label {
+        font-size: 12px;
+    }
+
+    .consult-pricing-heading h2 {
+        margin: 12px 0;
+        font-size: 30px;
+        letter-spacing: -0.6px;
+    }
+
+    .consult-pricing-heading > p {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .consult-pricing-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+        max-width: 440px;
+        margin: 0 auto;
+    }
+
+    .consult-price-content {
+        padding: 26px 24px;
+    }
+
+    .consult-price-header {
+        min-height: auto;
+        margin-bottom: 8px;
+    }
+
+    .consult-price-header h3 {
+        margin-bottom: 9px;
+        font-size: 23px;
+    }
+
+    .consult-price-header p {
+        font-size: 15px;
+    }
+
+    .consult-price-amount {
+        margin: 22px 0;
+    }
+
+    .consult-currency {
+        font-size: 22px;
+    }
+
+    .consult-price-value {
+        font-size: 46px;
+    }
+
+    .consult-price-period {
+        font-size: 11px;
+    }
+
+    .consult-price-divider {
+        margin-bottom: 22px;
+    }
+
+    .consult-price-features {
+        gap: 16px;
+        margin-bottom: 27px;
+    }
+
+    .consult-price-features li {
+        gap: 10px;
+        font-size: 15px;
+        line-height: 1.65;
+    }
+
+    .consult-price-features li i {
+        font-size: 15px;
+    }
+
+    .consult-price-button {
+        min-height: 52px;
+        padding: 14px 12px;
+        font-size: 12px;
+    }
+
+    .consult-pricing-modal-box {
+        padding: 42px 24px 28px;
+    }
+
+    .consult-pricing-modal-box h3 {
+        font-size: 26px;
+    }
+
+    .consult-pricing-modal-box p {
+        font-size: 15px;
+    }
+}
+
+/* =====================================================
+   EXTRA SMALL MOBILE
+===================================================== */
+
+@media (max-width: 360px) {
+    .consult-pricing {
+        padding: 40px 4%;
+    }
+
+    .consult-pricing-heading h2 {
+        font-size: 27px;
+    }
+
+    .consult-price-content {
+        padding: 22px 18px;
+    }
+
+    .consult-price-header h3 {
+        font-size: 21px;
+    }
+
+    .consult-price-value {
+        font-size: 39px;
+    }
+
+    .consult-price-period {
+        font-size: 9px;
+    }
+
+    .consult-price-features li {
+        font-size: 14px;
+    }
+}
+
+/* =====================================================
+   REDUCED MOTION ACCESSIBILITY
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .consult-pricing *,
+    .consult-pricing-modal,
+    .consult-pricing-modal-box {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+
+/* PRICING MODAL CONTACT BUTTON */
+
+.consult-pricing-modal-box .consult-pricing-contact-link {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    width: 100%;
+    min-height: 54px;
+    margin-top: 24px;
+    padding: 15px 20px;
+
+    background-color: #ff4b2b;
+    color: #ffffff !important;
+
+    border: 1px solid #ff4b2b;
+    border-radius: 0;
+
+    font-family: "DM Sans", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    text-align: center;
+    text-decoration: none !important;
+
+    visibility: visible;
+    opacity: 1;
+    position: relative;
+    z-index: 2;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.consult-pricing-modal-box .consult-pricing-contact-link span {
+    display: inline-block;
+}
+
+.consult-pricing-modal-box .consult-pricing-contact-link i {
+    display: inline-block;
+    font-size: 14px;
+    opacity: 1;
+    transform: none;
+    transition: transform 0.3s ease;
+}
+
+.consult-pricing-modal-box .consult-pricing-contact-link:hover {
+    background-color: #e83b20;
+    border-color: #e83b20;
+    color: #ffffff !important;
+}
+
+.consult-pricing-modal-box .consult-pricing-contact-link:hover i {
+    transform: translateX(5px);
+}
+
+/* ===== Corporate Blog Section ===== */
+
+.blog-section {
+  --blog-accent: #ff492c;
+  --blog-text: #171717;
+  --blog-muted: #555;
+
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 50px 35px;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fff;
+}
+
+.blog-section *,
+.blog-section *::before,
+.blog-section *::after {
+  box-sizing: border-box;
+}
+
+/* ===== Section Heading ===== */
+
+.blog-heading {
+  text-align: center;
+  margin-bottom: 42px;
+}
+
+.section-label {
+  display: inline-block;
+  color: var(--blog-accent);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 14px;
+}
+
+.blog-heading h2 {
+  margin: 0;
+  color: #080808;
+  font-size: clamp(30px, 3.5vw, 42px);
+  font-weight: 750;
+  line-height: 1.3;
+}
+
+.blog-heading p {
+  color: var(--blog-muted);
+  font-size: 17px;
+  line-height: 1.7;
+  margin: 14px 0 0;
+}
+
+/* ===== Slider Layout ===== */
+
+.blog-slider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.blog-viewport {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.blog-track {
+  display: flex;
+  align-items: stretch;
+  gap: 18px;
+  transition: transform 0.55s cubic-bezier(.22, .61, .36, 1);
+  will-change: transform;
+}
+
+/* ===== Blog Cards ===== */
+
+.blog-card {
+  flex: 0 0 calc((100% - 36px) / 3);
+  min-width: 0;
+  border: 1px solid #e1e1e1;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition:
+    box-shadow 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.blog-card:hover {
+  border-color: #f4b1a6;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.09);
+  transform: translateY(-4px);
+}
+
+/* ===== Blog Images ===== */
+
+.blog-image {
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  background: #f2f2f2;
+}
+
+.blog-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.blog-card:hover .blog-image img {
+  transform: scale(1.06);
+}
+
+/* ===== Date and Comments ===== */
+
+.blog-meta {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 0 20px;
+  min-height: 46px;
+}
+
+.blog-date {
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--blog-accent);
+  color: #fff;
+  padding: 5px 9px;
+  min-width: 40px;
+  margin-top: -1px;
+}
+
+.blog-date span {
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: 700;
+}
+
+.blog-date strong {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+}
+
+.blog-year {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  border: 1px solid #d5d5d5;
+  color: #555;
+  font-size: 11px;
+  padding: 5px 4px;
+  line-height: 14px;
+}
+
+.blog-comments {
+  font-size: 13px;
+  color: #444;
+  padding-top: 12px;
+  white-space: nowrap;
+}
+
+/* ===== Blog Content ===== */
+
+.blog-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 8px 20px 24px;
+}
+
+.blog-content h3 {
+  font-size: 21px;
+  line-height: 1.5;
+  font-weight: 700;
+  color: var(--blog-text);
+  margin: 0 0 14px;
+}
+
+.blog-content p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--blog-muted);
+  margin: 0 0 22px;
+}
+
+.read-more {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  margin-top: auto;
+  color: #171717;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  transition: color 0.25s ease;
+}
+
+.read-more:first-letter {
+  color: var(--blog-accent);
+}
+
+.read-more:hover {
+  color: var(--blog-accent);
+}
+
+/* ===== Circular Navigation Arrows ===== */
+
+.blog-arrow {
+  flex: 0 0 46px;
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: var(--blog-accent);
+  color: #fff;
+  font-size: 25px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.blog-arrow:hover {
+  background: #d93219;
+  transform: scale(1.08);
+  box-shadow: 0 5px 14px rgba(255, 73, 44, 0.25);
+}
+
+.blog-arrow:focus-visible {
+  outline: 3px solid rgba(255, 73, 44, 0.35);
+  outline-offset: 3px;
+}
+
+.blog-arrow:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* ===== Tablet Responsive ===== */
+
+@media (max-width: 1024px) {
+  .blog-section {
+    padding: 55px 25px;
+  }
+
+  .blog-slider {
+    gap: 16px;
+  }
+
+  .blog-track {
+    gap: 14px;
+  }
+
+  .blog-card {
+    flex-basis: calc((100% - 14px) / 2);
+  }
+
+  .blog-image {
+    height: 220px;
+  }
+
+  .blog-content h3 {
+    font-size: 20px;
+  }
+
+  .blog-content p {
+    font-size: 15px;
+  }
+}
+
+/* ===== Mobile Responsive ===== */
+
+@media (max-width: 600px) {
+  .blog-section {
+    padding: 40px 16px;
+  }
+
+  .blog-heading {
+    margin-bottom: 28px;
+  }
+
+  .section-label {
+    font-size: 12px;
+  }
+
+  .blog-heading h2 {
+    font-size: 28px;
+    line-height: 1.35;
+  }
+
+  .blog-heading p {
+    font-size: 15px;
+    line-height: 1.7;
+    margin-top: 12px;
+  }
+
+  .blog-slider {
+    gap: 10px;
+  }
+
+  .blog-track {
+    gap: 12px;
+  }
+
+  .blog-card {
+    flex-basis: 100%;
+  }
+
+  .blog-image {
+    height: 230px;
+  }
+
+  .blog-meta {
+    padding: 0 15px;
+    gap: 8px;
+    min-height: 42px;
+  }
+
+  .blog-date {
+    padding: 5px 8px;
+  }
+
+  .blog-date span {
+    font-size: 16px;
+  }
+
+  .blog-date strong {
+    font-size: 11px;
+  }
+
+  .blog-year {
+    font-size: 10px;
+  }
+
+  .blog-comments {
+    font-size: 12px;
+    padding-top: 11px;
+  }
+
+  .blog-content {
+    padding: 7px 15px 22px;
+  }
+
+  .blog-content h3 {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  .blog-content p {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .read-more {
+    font-size: 12px;
+  }
+
+  .blog-arrow {
+    flex-basis: 34px;
+    width: 34px;
+    height: 34px;
+    font-size: 20px;
+  }
+}
+
+/* ===== Small Mobile Screens ===== */
+
+@media (max-width: 380px) {
+  .blog-section {
+    padding: 35px 12px;
+  }
+
+  .blog-heading h2 {
+    font-size: 25px;
+  }
+
+  .blog-slider {
+    gap: 7px;
+  }
+
+  .blog-arrow {
+    flex-basis: 30px;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+  }
+
+  .blog-image {
+    height: 200px;
+  }
+
+  .blog-content h3 {
+    font-size: 18px;
+  }
+
+  .blog-content p {
+    font-size: 14px;
+  }
+}
+
+/* ===== Accessibility: Reduced Motion ===== */
+
+@media (prefers-reduced-motion: reduce) {
+  .blog-track,
+  .blog-card,
+  .blog-image img,
+  .blog-arrow,
+  .read-more {
+    transition: none;
+  }
+}
+
+
+/* =========================================================
+   STACKLY CORPORATE CONSULTANCY
+   PROFESSIONAL FOOTER CSS
+   Responsive + Animations + Hover Effects
+========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+/* =========================================================
+   FOOTER VARIABLES
+========================================================= */
+
+:root {
+    --stackly-consult-footer-primary: #ff4529;
+    --stackly-consult-footer-primary-dark: #e9341a;
+    --stackly-consult-footer-dark: #11151c;
+    --stackly-consult-footer-dark-soft: #181e27;
+    --stackly-consult-footer-card: #202731;
+    --stackly-consult-footer-text: #b9c1cc;
+    --stackly-consult-footer-heading: #ffffff;
+    --stackly-consult-footer-border: rgba(255, 255, 255, 0.12);
+    --stackly-consult-footer-transition: 0.35s ease;
+}
+
+/* =========================================================
+   FOOTER BASE
+========================================================= */
+
+.stackly-consult-footer,
+.stackly-consult-footer * {
+    box-sizing: border-box;
+}
+
+.stackly-consult-footer {
+    position: relative;
+    isolation: isolate;
+    width: 100%;
+    overflow: hidden;
+    background: var(--stackly-consult-footer-dark);
+    color: var(--stackly-consult-footer-text);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+.stackly-consult-footer a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.stackly-consult-footer button,
+.stackly-consult-footer input {
+    font: inherit;
+}
+
+.stackly-consult-footer a:focus-visible,
+.stackly-consult-footer button:focus-visible,
+.stackly-consult-footer input:focus-visible {
+    outline: 3px solid var(--stackly-consult-footer-primary);
+    outline-offset: 4px;
+}
+
+/* =========================================================
+   FOOTER CTA BANNER
+========================================================= */
+
+.stackly-consult-footer-cta {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+    width: min(1220px, calc(100% - 60px));
+    margin: 0 auto;
+    padding: 48px 55px;
+    overflow: hidden;
+    border-radius: 18px;
+    background:
+        radial-gradient(
+            circle at 95% 10%,
+            rgba(255, 255, 255, 0.17),
+            transparent 30%
+        ),
+        linear-gradient(
+            120deg,
+            var(--stackly-consult-footer-primary-dark),
+            var(--stackly-consult-footer-primary)
+        );
+    transform: translateY(0);
+    transition:
+        box-shadow var(--stackly-consult-footer-transition),
+        transform var(--stackly-consult-footer-transition);
+}
+
+.stackly-consult-footer-cta::before {
+    position: absolute;
+    top: -100px;
+    right: 22%;
+    width: 240px;
+    height: 240px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 50%;
+    content: "";
+    pointer-events: none;
+}
+
+.stackly-consult-footer-cta::after {
+    position: absolute;
+    right: 12%;
+    bottom: -140px;
+    width: 280px;
+    height: 280px;
+    border: 1px solid rgba(255, 255, 255, 0.13);
+    border-radius: 50%;
+    content: "";
+    pointer-events: none;
+}
+
+.stackly-consult-footer-cta:hover {
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.22);
+}
+
+.stackly-consult-footer-cta-content {
+    position: relative;
+    z-index: 1;
+    max-width: 690px;
+}
+
+.stackly-consult-footer-cta-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 13px;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.stackly-consult-footer-cta-label::before {
+    width: 27px;
+    height: 2px;
+    background: #ffffff;
+    content: "";
+}
+
+.stackly-consult-footer-cta h2 {
+    margin: 0 0 15px;
+    color: #ffffff;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(30px, 3.2vw, 43px);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -1.2px;
+}
+
+.stackly-consult-footer-cta h2 span {
+    display: block;
+    color: #ffe3dc;
+}
+
+.stackly-consult-footer-cta p {
+    max-width: 600px;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.stackly-consult-footer-cta-button {
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    min-height: 58px;
+    padding: 16px 24px;
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+    background: #ffffff;
+    color: var(--stackly-consult-footer-primary-dark) !important;
+    font-size: 16px;
+    font-weight: 800;
+    transition:
+        background var(--stackly-consult-footer-transition),
+        color var(--stackly-consult-footer-transition),
+        border-color var(--stackly-consult-footer-transition),
+        transform var(--stackly-consult-footer-transition),
+        box-shadow var(--stackly-consult-footer-transition);
+}
+
+.stackly-consult-footer-cta-button i {
+    transition: transform var(--stackly-consult-footer-transition);
+}
+
+.stackly-consult-footer-cta-button:hover {
+    transform: translateY(-4px);
+    border-color: var(--stackly-consult-footer-dark);
+    background: var(--stackly-consult-footer-dark);
+    color: #ffffff !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+.stackly-consult-footer-cta-button:hover i {
+    transform: translate(3px, -3px);
+}
+
+/* =========================================================
+   MAIN FOOTER AREA
+========================================================= */
+
+.stackly-consult-footer-main {
+    position: relative;
+    padding: 100px 0 0;
+}
+
+.stackly-consult-footer-container {
+    display: grid;
+    grid-template-columns: 1.35fr 0.85fr 1fr 1.15fr;
+    gap: 45px;
+    width: min(1280px, calc(100% - 60px));
+    margin: 0 auto;
+}
+
+/* =========================================================
+   BRAND COLUMN
+========================================================= */
+
+.stackly-consult-footer-brand {
+    min-width: 0;
+}
+
+.stackly-consult-footer-logo {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.stackly-consult-footer-logo img {
+    display: block;
+    width: 175px;
+    max-width: 100%;
+    height: 65px;
+    object-fit: contain;
+    object-position: left center;
+    filter: brightness(0) invert(1);
+    transition:
+        transform var(--stackly-consult-footer-transition),
+        filter var(--stackly-consult-footer-transition);
+}
+
+.stackly-consult-footer-logo:hover img {
+    transform: translateY(-3px) scale(1.04);
+    filter:
+        brightness(0)
+        saturate(100%)
+        invert(41%)
+        sepia(89%)
+        saturate(2247%)
+        hue-rotate(337deg)
+        brightness(102%)
+        contrast(102%);
+}
+
+.stackly-consult-footer-description {
+    max-width: 340px;
+    margin: 0 0 25px;
+    color: var(--stackly-consult-footer-text);
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+/* =========================================================
+   SOCIAL ICONS
+========================================================= */
+
+.stackly-consult-footer-socials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 11px;
+    align-items: center;
+}
+
+.stackly-consult-footer-socials a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border: 1px solid var(--stackly-consult-footer-border);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.04);
+    color: #ffffff;
+    font-size: 17px;
+    transition:
+        transform var(--stackly-consult-footer-transition),
+        background var(--stackly-consult-footer-transition),
+        border-color var(--stackly-consult-footer-transition),
+        box-shadow var(--stackly-consult-footer-transition);
+}
+
+.stackly-consult-footer-socials a:hover {
+    transform: translateY(-5px) rotate(-3deg);
+    border-color: var(--stackly-consult-footer-primary);
+    background: var(--stackly-consult-footer-primary);
+    box-shadow: 0 9px 20px rgba(255, 69, 41, 0.23);
+}
+
+/* =========================================================
+   FOOTER COLUMNS AND HEADINGS
+========================================================= */
+
+.stackly-consult-footer-column {
+    min-width: 0;
+}
+
+.stackly-consult-footer-heading {
+    margin: 8px 0 13px;
+    color: var(--stackly-consult-footer-heading);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.stackly-consult-footer-heading-line {
+    position: relative;
+    display: block;
+    width: 53px;
+    height: 3px;
+    margin-bottom: 28px;
+    overflow: hidden;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.stackly-consult-footer-heading-line::after {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: var(--stackly-consult-footer-primary);
+    content: "";
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.45s ease;
+}
+
+.stackly-consult-footer-column:hover
+.stackly-consult-footer-heading-line::after {
+    transform: scaleX(1.5);
+}
+
+/* =========================================================
+   QUICK LINKS
+========================================================= */
+
+.stackly-consult-footer-links {
+    display: grid;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.stackly-consult-footer-links li {
+    margin: 0;
+    padding: 0;
+}
+
+.stackly-consult-footer-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--stackly-consult-footer-text);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.6;
+    transition:
+        color var(--stackly-consult-footer-transition),
+        transform var(--stackly-consult-footer-transition);
+}
+
+.stackly-consult-footer-links a i {
+    flex-shrink: 0;
+    color: var(--stackly-consult-footer-primary);
+    font-size: 12px;
+    transition: transform var(--stackly-consult-footer-transition);
+}
+
+.stackly-consult-footer-links a:hover {
+    transform: translateX(5px);
+    color: #ffffff;
+}
+
+.stackly-consult-footer-links a:hover i {
+    transform: translateX(3px);
+}
+
+/* =========================================================
+   CONTACT COLUMN
+========================================================= */
+
+.stackly-consult-footer-contact-intro {
+    margin: 0 0 23px;
+    color: var(--stackly-consult-footer-text);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.stackly-consult-footer-contact-list {
+    display: grid;
+    gap: 21px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.stackly-consult-footer-contact-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    min-width: 0;
+}
+
+.stackly-consult-footer-contact-icon {
+    display: inline-flex;
+    flex: 0 0 43px;
+    align-items: center;
+    justify-content: center;
+    width: 43px;
+    height: 43px;
+    border: 1px solid rgba(255, 69, 41, 0.35);
+    border-radius: 9px;
+    background: rgba(255, 69, 41, 0.1);
+    color: var(--stackly-consult-footer-primary);
+    font-size: 17px;
+    transition:
+        transform var(--stackly-consult-footer-transition),
+        background var(--stackly-consult-footer-transition),
+        color var(--stackly-consult-footer-transition);
+}
+
+.stackly-consult-footer-contact-list li:hover
+.stackly-consult-footer-contact-icon {
+    transform: translateY(-3px);
+    background: var(--stackly-consult-footer-primary);
+    color: #ffffff;
+}
+
+.stackly-consult-footer-contact-list li > div {
+    min-width: 0;
+}
+
+.stackly-consult-footer-contact-list strong {
+    display: block;
+    margin-bottom: 3px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.stackly-consult-footer-contact-list p,
+.stackly-consult-footer-contact-list a {
+    display: inline-block;
+    margin: 0;
+    color: var(--stackly-consult-footer-text);
+    font-size: 15px;
+    overflow-wrap: anywhere;
+    line-height: 1.7;
+    transition: color var(--stackly-consult-footer-transition);
+}
+
+.stackly-consult-footer-contact-list a:hover {
+    color: var(--stackly-consult-footer-primary);
+}
+
+/* =========================================================
+   NEWSLETTER
+========================================================= */
+
+.stackly-consult-footer-newsletter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+    width: min(1280px, calc(100% - 60px));
+    margin: 75px auto 0;
+    padding: 35px 0;
+    border-top: 1px solid var(--stackly-consult-footer-border);
+    border-bottom: 1px solid var(--stackly-consult-footer-border);
+}
+
+.stackly-consult-footer-newsletter-content {
+    display: flex;
+    align-items: center;
+    gap: 19px;
+    min-width: 0;
+}
+
+.stackly-consult-footer-newsletter-icon {
+    display: inline-flex;
+    flex: 0 0 58px;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+    border-radius: 13px;
+    background: rgba(255, 69, 41, 0.13);
+    color: var(--stackly-consult-footer-primary);
+    font-size: 24px;
+    transition:
+        transform var(--stackly-consult-footer-transition),
+        background var(--stackly-consult-footer-transition),
+        color var(--stackly-consult-footer-transition);
+}
+
+.stackly-consult-footer-newsletter:hover
+.stackly-consult-footer-newsletter-icon {
+    transform: rotate(-8deg) scale(1.06);
+    background: var(--stackly-consult-footer-primary);
+    color: #ffffff;
+}
+
+.stackly-consult-footer-newsletter-content h3 {
+    margin: 0 0 5px;
+    color: #ffffff;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.stackly-consult-footer-newsletter-content p {
+    max-width: 550px;
+    margin: 0;
+    color: var(--stackly-consult-footer-text);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.stackly-consult-footer-newsletter-form {
+    display: flex;
+    flex: 0 1 490px;
+    align-items: stretch;
+    gap: 8px;
+    min-width: 0;
+    padding: 7px;
+    border: 1px solid var(--stackly-consult-footer-border);
+    border-radius: 10px;
+    background: var(--stackly-consult-footer-dark-soft);
+    transition:
+        border-color var(--stackly-consult-footer-transition),
+        box-shadow var(--stackly-consult-footer-transition);
+}
+
+.stackly-consult-footer-newsletter-form:focus-within {
+    border-color: var(--stackly-consult-footer-primary);
+    box-shadow: 0 0 0 4px rgba(255, 69, 41, 0.1);
+}
+
+.stackly-consult-footer-newsletter-form input {
+    width: 100%;
+    min-width: 0;
+    min-height: 49px;
+    padding: 12px 15px;
+    border: 0;
+    outline: none;
+    background: transparent;
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.stackly-consult-footer-newsletter-form input::placeholder {
+    color: #a2aab5;
+    opacity: 1;
+}
+
+.stackly-consult-footer-newsletter-form button {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 49px;
+    padding: 12px 19px;
+    border: 0;
+    border-radius: 7px;
+    background: var(--stackly-consult-footer-primary);
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 800;
+    transition:
+        background var(--stackly-consult-footer-transition),
+        transform var(--stackly-consult-footer-transition);
+}
+
+.stackly-consult-footer-newsletter-form button i {
+    transition: transform var(--stackly-consult-footer-transition);
+}
+
+.stackly-consult-footer-newsletter-form button:hover {
+    transform: translateY(-2px);
+    background: var(--stackly-consult-footer-primary-dark);
+}
+
+.stackly-consult-footer-newsletter-form button:hover i {
+    transform: translateX(4px);
+}
+
+/* Screen-reader-only label */
+.stackly-consult-footer-sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* =========================================================
+   FOOTER BOTTOM BAR
+========================================================= */
+
+.stackly-consult-footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 22px;
+    width: min(1280px, calc(100% - 60px));
+    min-height: 95px;
+    margin: 0 auto;
+    padding: 23px 0;
+}
+
+.stackly-consult-footer-bottom > p {
+    margin: 0;
+    color: var(--stackly-consult-footer-text);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.stackly-consult-footer-bottom > p a {
+    color: #ffffff;
+    font-weight: 800;
+    transition: color var(--stackly-consult-footer-transition);
+}
+
+.stackly-consult-footer-bottom > p a:hover {
+    color: var(--stackly-consult-footer-primary);
+}
+
+.stackly-consult-footer-legal-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 13px;
+}
+
+.stackly-consult-footer-legal-links a {
+    color: var(--stackly-consult-footer-text);
+    font-size: 14px;
+    transition: color var(--stackly-consult-footer-transition);
+}
+
+.stackly-consult-footer-legal-links a:hover {
+    color: var(--stackly-consult-footer-primary);
+}
+
+.stackly-consult-footer-legal-links span {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--stackly-consult-footer-primary);
+}
+
+.stackly-consult-footer-back-top {
+    display: inline-flex;
+    flex: 0 0 45px;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border: 1px solid rgba(255, 69, 41, 0.45);
+    border-radius: 10px;
+    background: rgba(255, 69, 41, 0.1);
+    color: #ffffff !important;
+    font-size: 17px;
+    transition:
+        transform var(--stackly-consult-footer-transition),
+        background var(--stackly-consult-footer-transition),
+        border-color var(--stackly-consult-footer-transition);
+}
+
+.stackly-consult-footer-back-top:hover {
+    transform: translateY(-5px);
+    border-color: var(--stackly-consult-footer-primary);
+    background: var(--stackly-consult-footer-primary);
+}
+
+/* =========================================================
+   RESPONSIVE: LAPTOP
+========================================================= */
+
+@media (max-width: 1150px) {
+    .stackly-consult-footer-container {
+        grid-template-columns: 1.2fr 1fr 1fr;
+        column-gap: 35px;
+        row-gap: 50px;
+    }
+
+    .stackly-consult-footer-brand {
+        grid-column: 1 / -1;
+        max-width: 650px;
+    }
+
+    .stackly-consult-footer-description {
+        max-width: 580px;
+    }
+
+    .stackly-consult-footer-newsletter {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .stackly-consult-footer-newsletter-form {
+        flex: 0 1 auto;
+        width: min(600px, 100%);
+    }
+
+    .stackly-consult-footer-cta {
+        padding: 42px;
+    }
+}
+
+/* =========================================================
+   RESPONSIVE: TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+    .stackly-consult-footer {
+        font-size: 16px;
+    }
+
+    .stackly-consult-footer-cta {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 25px;
+        width: calc(100% - 36px);
+        padding: 34px 28px;
+        border-radius: 14px;
+    }
+
+    .stackly-consult-footer-cta h2 {
+        font-size: clamp(29px, 5.5vw, 38px);
+        letter-spacing: -0.7px;
+    }
+
+    .stackly-consult-footer-cta p {
+        font-size: 16px;
+    }
+
+    .stackly-consult-footer-cta-button {
+        width: 100%;
+        min-height: 56px;
+    }
+
+    .stackly-consult-footer-main {
+        padding-top: 70px;
+    }
+
+    .stackly-consult-footer-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 42px 28px;
+        width: calc(100% - 40px);
+    }
+
+    .stackly-consult-footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .stackly-consult-footer-heading {
+        font-size: 21px;
+    }
+
+    .stackly-consult-footer-links {
+        gap: 14px;
+    }
+
+    .stackly-consult-footer-links a {
+        font-size: 16px;
+    }
+
+    .stackly-consult-footer-contact-list {
+        gap: 19px;
+    }
+
+    .stackly-consult-footer-newsletter {
+        width: calc(100% - 40px);
+        margin-top: 55px;
+        padding: 32px 0;
+    }
+
+    .stackly-consult-footer-newsletter-content h3 {
+        font-size: 22px;
+    }
+
+    .stackly-consult-footer-newsletter-content p {
+        font-size: 15px;
+    }
+
+    .stackly-consult-footer-bottom {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: calc(100% - 40px);
+        gap: 20px;
+        padding: 27px 0;
+    }
+
+    .stackly-consult-footer-bottom > p {
+        flex: 1 1 calc(100% - 70px);
+        font-size: 14px;
+    }
+
+    .stackly-consult-footer-legal-links {
+        order: 3;
+        justify-content: flex-start;
+        width: 100%;
+    }
+}
+
+/* =========================================================
+   RESPONSIVE: MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+    .stackly-consult-footer-cta {
+        width: calc(100% - 28px);
+        padding: 29px 22px;
+    }
+
+    .stackly-consult-footer-cta-label {
+        font-size: 12px;
+        letter-spacing: 1.5px;
+    }
+
+    .stackly-consult-footer-cta h2 {
+        font-size: 29px;
+        line-height: 1.25;
+    }
+
+    .stackly-consult-footer-cta p {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .stackly-consult-footer-cta-button {
+        padding: 14px 16px;
+        font-size: 15px;
+    }
+
+    .stackly-consult-footer-main {
+        padding-top: 55px;
+    }
+
+    .stackly-consult-footer-container {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 38px;
+        width: calc(100% - 36px);
+    }
+
+    .stackly-consult-footer-brand {
+        grid-column: auto;
+    }
+
+    .stackly-consult-footer-logo img {
+        width: 160px;
+        height: 58px;
+    }
+
+    .stackly-consult-footer-description {
+        font-size: 16px;
+        line-height: 1.85;
+    }
+
+    .stackly-consult-footer-heading {
+        margin-top: 0;
+        font-size: 22px;
+    }
+
+    .stackly-consult-footer-links {
+        gap: 14px;
+    }
+
+    .stackly-consult-footer-links a {
+        font-size: 16px;
+    }
+
+    .stackly-consult-footer-contact-intro {
+        font-size: 16px;
+    }
+
+    .stackly-consult-footer-contact-list p,
+    .stackly-consult-footer-contact-list a {
+        font-size: 15px;
+    }
+
+    .stackly-consult-footer-newsletter {
+        width: calc(100% - 36px);
+        margin-top: 48px;
+        gap: 24px;
+        padding: 28px 0;
+    }
+
+    .stackly-consult-footer-newsletter-content {
+        align-items: flex-start;
+        gap: 14px;
+    }
+
+    .stackly-consult-footer-newsletter-icon {
+        flex-basis: 48px;
+        width: 48px;
+        height: 48px;
+        font-size: 20px;
+    }
+
+    .stackly-consult-footer-newsletter-content h3 {
+        font-size: 21px;
+    }
+
+    .stackly-consult-footer-newsletter-content p {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .stackly-consult-footer-newsletter-form {
+        flex-direction: column;
+        gap: 8px;
+        padding: 8px;
+    }
+
+    .stackly-consult-footer-newsletter-form input {
+        min-height: 49px;
+        padding: 12px;
+        font-size: 15px;
+    }
+
+    .stackly-consult-footer-newsletter-form button {
+        width: 100%;
+        min-height: 50px;
+        font-size: 16px;
+    }
+
+    .stackly-consult-footer-bottom {
+        flex-direction: row;
+        align-items: center;
+        width: calc(100% - 36px);
+        gap: 18px;
+        padding: 25px 0;
+    }
+
+    .stackly-consult-footer-bottom > p {
+        flex: 1 1 100%;
+        font-size: 14px;
+    }
+
+    .stackly-consult-footer-legal-links {
+        order: 0;
+        justify-content: flex-start;
+        gap: 10px;
+        width: calc(100% - 58px);
+    }
+
+    .stackly-consult-footer-legal-links a {
+        font-size: 12px;
+    }
+
+    .stackly-consult-footer-legal-links span {
+        width: 3px;
+        height: 3px;
+    }
+
+    .stackly-consult-footer-back-top {
+        flex-basis: 43px;
+        width: 43px;
+        height: 43px;
+    }
+}
+
+/* =========================================================
+   AOS / MOTION ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    .stackly-consult-footer *,
+    .stackly-consult-footer *::before,
+    .stackly-consult-footer *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* =========================================================
+   STACKLY CONSULTANCY - NEWSLETTER MESSAGE
+   Always positioned BELOW the complete form
+========================================================= */
+
+.stackly-consult-footer-newsletter {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 490px);
+    align-items: center;
+    column-gap: 35px;
+    row-gap: 0;
+}
+
+/* Newsletter description */
+.stackly-consult-footer-newsletter-content {
+    grid-column: 1;
+    grid-row: 1;
+    min-width: 0;
+}
+
+/* Newsletter form */
+.stackly-consult-footer-newsletter-form {
+    grid-column: 2;
+    grid-row: 1;
+    width: 100%;
+    min-width: 0;
+}
+
+/* Message appears on its own row below the form */
+.stackly-consult-newsletter-message {
+    display: block;
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: stretch;
+
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+
+    max-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(8px);
+
+    border: 0;
+    border-radius: 8px;
+
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease,
+        max-height 0.3s ease,
+        margin 0.3s ease,
+        padding 0.3s ease,
+        visibility 0.3s ease;
+}
+
+/* Show success or error feedback */
+.stackly-consult-newsletter-message.show {
+    max-height: 120px;
+    margin-top: 12px;
+    padding: 12px 15px;
+
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Success */
+.stackly-consult-newsletter-message.success {
+    color: #b9f6ca;
+    background: rgba(22, 128, 61, 0.18);
+    border: 1px solid rgba(74, 222, 128, 0.45);
+}
+
+/* Error */
+.stackly-consult-newsletter-message.error {
+    color: #ffc2c2;
+    background: rgba(198, 40, 40, 0.16);
+    border: 1px solid rgba(255, 100, 100, 0.45);
+}
+
+/* Tablet and mobile: form and message span the full width */
+@media (max-width: 1150px) {
+    .stackly-consult-footer-newsletter {
+        grid-template-columns: minmax(0, 1fr);
+        row-gap: 22px;
+    }
+
+    .stackly-consult-footer-newsletter-content {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .stackly-consult-footer-newsletter-form {
+        grid-column: 1;
+        grid-row: 2;
+        width: 100%;
+    }
+
+    .stackly-consult-newsletter-message {
+        grid-column: 1;
+        grid-row: 3;
+        width: 100%;
+    }
+
+    .stackly-consult-newsletter-message.show {
+        margin-top: -10px;
+    }
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .stackly-consult-newsletter-message {
+        transition: none;
+        transform: none;
+    }
+}
+
+
+/* ==========================================
+   STACKLY CORPORATE CONSULTANCY
+   PROFESSIONAL WEBSITE LOADER
+========================================== */
+
+.stackly-consult-loader {
+    position: fixed;
+    inset: 0;
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #080a0b;
+    opacity: 1;
+    visibility: visible;
+    transition:
+        opacity 0.9s ease,
+        visibility 0.9s ease;
+}
+
+.stackly-consult-loader.loader-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* BACKGROUND */
+
+.stackly-consult-loader-bg {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(255, 69, 41, 0.14),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #080a0b,
+            #111416,
+            #080a0b
+        );
+}
+
+/* BACKGROUND LIGHT EFFECT */
+
+.stackly-consult-loader::before {
+    content: "";
+    position: absolute;
+    width: 650px;
+    height: 650px;
+    border: 1px solid rgba(255, 69, 41, 0.12);
+    border-radius: 50%;
+    animation: stacklyLoaderRotate 18s linear infinite;
+}
+
+.stackly-consult-loader::after {
+    content: "";
+    position: absolute;
+    width: 480px;
+    height: 480px;
+    border: 1px dashed rgba(255, 255, 255, 0.09);
+    border-radius: 50%;
+    animation: stacklyLoaderRotateReverse 25s linear infinite;
+}
+
+/* MAIN CONTENT */
+
+.stackly-consult-loader-content {
+    position: relative;
+    z-index: 2;
+    width: min(90%, 440px);
+    text-align: center;
+    animation: stacklyLoaderContentIn 1s ease both;
+}
+
+/* LOGO */
+
+.stackly-consult-loader-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.stackly-consult-loader-logo img {
+    display: block;
+    width: 190px;
+    max-width: 70%;
+    height: auto;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    animation: stacklyLoaderLogo 2.5s ease-in-out infinite;
+}
+
+/* DECORATIVE LINE */
+
+.stackly-consult-loader-decoration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    margin-bottom: 25px;
+}
+
+.stackly-consult-loader-decoration span {
+    display: block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #ff4529;
+    animation: stacklyLoaderDots 1.2s ease-in-out infinite;
+}
+
+.stackly-consult-loader-decoration span:nth-child(2) {
+    animation-delay: 0.15s;
+}
+
+.stackly-consult-loader-decoration span:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+/* HEADING */
+
+.stackly-consult-loader-title {
+    margin: 0;
+    color: #ffffff;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: clamp(25px, 4vw, 35px);
+    font-weight: 700;
+    line-height: 1.35;
+    letter-spacing: -1px;
+}
+
+.stackly-consult-loader-title span {
+    display: block;
+    color: #ff4529;
+}
+
+/* DESCRIPTION */
+
+.stackly-consult-loader-description {
+    margin: 14px 0 35px;
+    color: #aeb3b8;
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+}
+
+/* PROGRESS */
+
+.stackly-consult-loader-progress {
+    width: 100%;
+    max-width: 340px;
+    margin: 0 auto;
+}
+
+.stackly-consult-loader-progress-track {
+    position: relative;
+    width: 100%;
+    height: 4px;
+    overflow: hidden;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.13);
+}
+
+.stackly-consult-loader-progress-track span {
+    display: block;
+    width: 0%;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(
+        90deg,
+        #e9341a,
+        #ff755e,
+        #ff4529
+    );
+    box-shadow: 0 0 15px rgba(255, 69, 41, 0.65);
+    transition: width 0.08s linear;
+}
+
+/* PROGRESS INFORMATION */
+
+.stackly-consult-loader-progress-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 13px;
+    font-family: "DM Sans", sans-serif;
+}
+
+.stackly-consult-loader-progress-info span {
+    color: #858b91;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.stackly-consult-loader-progress-info strong {
+    color: #ff634a;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* FOOTER LABEL */
+
+.stackly-consult-loader-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 45px;
+    color: #777e85;
+    font-family: "DM Sans", sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.stackly-consult-loader-footer i {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #ff4529;
+}
+
+/* CORNER DECORATIONS */
+
+.stackly-consult-loader-corner {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    border-color: rgba(255, 69, 41, 0.55);
+    border-style: solid;
+}
+
+.loader-corner-one {
+    top: 35px;
+    left: 35px;
+    border-width: 1px 0 0 1px;
+}
+
+.loader-corner-two {
+    right: 35px;
+    bottom: 35px;
+    border-width: 0 1px 1px 0;
+}
+
+/* ==========================================
+   LOADER ANIMATIONS
+========================================== */
+
+@keyframes stacklyLoaderRotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes stacklyLoaderRotateReverse {
+    from {
+        transform: rotate(360deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes stacklyLoaderLogo {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.85;
+    }
+
+    50% {
+        transform: scale(1.045);
+        opacity: 1;
+    }
+}
+
+@keyframes stacklyLoaderDots {
+    0%, 100% {
+        transform: translateY(0);
+        opacity: 0.4;
+    }
+
+    50% {
+        transform: translateY(-7px);
+        opacity: 1;
+    }
+}
+
+@keyframes stacklyLoaderContentIn {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==========================================
+   RESPONSIVE LOADER
+========================================== */
+
+@media (max-width: 600px) {
+
+    .stackly-consult-loader::before {
+        width: 400px;
+        height: 400px;
+    }
+
+    .stackly-consult-loader::after {
+        width: 300px;
+        height: 300px;
+    }
+
+    .stackly-consult-loader-logo img {
+        width: 155px;
+    }
+
+    .stackly-consult-loader-description {
+        font-size: 12px;
+        padding: 0 10px;
+    }
+
+    .stackly-consult-loader-footer {
+        gap: 8px;
+        font-size: 8px;
+        letter-spacing: 1.3px;
+    }
+
+    .stackly-consult-loader-corner {
+        width: 40px;
+        height: 40px;
+    }
+
+    .loader-corner-one {
+        top: 18px;
+        left: 18px;
+    }
+
+    .loader-corner-two {
+        right: 18px;
+        bottom: 18px;
+    }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .stackly-consult-loader *,
+    .stackly-consult-loader::before,
+    .stackly-consult-loader::after {
+        animation: none !important;
+    }
+
+}
