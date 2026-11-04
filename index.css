@@ -889,21 +889,42 @@ body.stackly-consult-menu-active .stackly-consult-mobile-menu {
     font-size: 17px;
 }
 
+/* ==========================================
+   HERO TRUST TEXT HOVER EFFECT
+========================================== */
+
 .stackly-consult-hero-trust p {
     display: flex;
     flex-direction: column;
     gap: 4px;
+    transition: transform 0.35s ease;
+    cursor: pointer;
+}
+
+.stackly-consult-hero-trust p:hover {
+    transform: translateY(-5px);
 }
 
 .stackly-consult-hero-trust strong {
     color: #ffffff;
     font-size: 12px;
     font-weight: 700;
+    transition: color 0.35s ease, letter-spacing 0.35s ease;
+}
+
+.stackly-consult-hero-trust p:hover strong {
+    color: #ff4529;
+    letter-spacing: 0.5px;
 }
 
 .stackly-consult-hero-trust small {
     color: #aeb1b5;
     font-size: 11px;
+    transition: color 0.35s ease;
+}
+
+.stackly-consult-hero-trust p:hover small {
+    color: #ffffff;
 }
 
 /* ==========================================
@@ -1782,6 +1803,10 @@ body.stackly-consult-menu-active .stackly-consult-mobile-menu {
     transform: rotate(-8deg);
 }
 
+/* ==========================================
+   ABOUT EXPERIENCE - HOVER EFFECTS
+========================================== */
+
 .stackly-consult-about-experience-content {
     position: relative;
     z-index: 1;
@@ -1791,6 +1816,12 @@ body.stackly-consult-menu-active .stackly-consult-mobile-menu {
     justify-content: center;
     width: 100%;
     text-align: center;
+    transition: transform 0.4s ease;
+    cursor: pointer;
+}
+
+.stackly-consult-about-experience-content:hover {
+    transform: translateY(-6px);
 }
 
 .stackly-consult-about-years {
@@ -1801,6 +1832,15 @@ body.stackly-consult-menu-active .stackly-consult-mobile-menu {
     font-weight: 700;
     line-height: 0.95;
     letter-spacing: -3px;
+    transition: color 0.4s ease, transform 0.4s ease,
+        text-shadow 0.4s ease;
+}
+
+.stackly-consult-about-experience-content:hover
+.stackly-consult-about-years {
+    color: rgb(241, 74, 74);
+    transform: scale(1.08);
+    text-shadow: 0 0 20px rgba(255, 69, 41, 0.45);
 }
 
 .stackly-consult-about-years-label {
@@ -1812,8 +1852,23 @@ body.stackly-consult-menu-active .stackly-consult-mobile-menu {
     line-height: 1.35;
     letter-spacing: 0.7px;
     text-transform: uppercase;
+    transition: color 0.4s ease, letter-spacing 0.4s ease;
 }
 
+.stackly-consult-about-experience-content:hover
+.stackly-consult-about-years-label {
+    color: var(--consult-about-primary);
+    letter-spacing: 1.2px;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .stackly-consult-about-experience-content,
+    .stackly-consult-about-years,
+    .stackly-consult-about-years-label {
+        transition: none;
+    }
+}
 
 /* ==========================================
    4. RIGHT CONTENT
@@ -7560,13 +7615,24 @@ body.stackly-consult-menu-active .stackly-consult-mobile-menu {
    CONTACT COLUMN
 ========================================================= */
 
+/* ==========================================
+   STACKLY CONSULT FOOTER CONTACT HOVER
+========================================== */
+
+/* Contact Intro */
 .stackly-consult-footer-contact-intro {
     margin: 0 0 23px;
     color: var(--stackly-consult-footer-text);
     font-size: 16px;
     line-height: 1.8;
+    transition: color 0.35s ease;
 }
 
+.stackly-consult-footer-contact-intro:hover {
+    color: #ffffff;
+}
+
+/* Contact List */
 .stackly-consult-footer-contact-list {
     display: grid;
     gap: 21px;
@@ -7575,13 +7641,20 @@ body.stackly-consult-menu-active .stackly-consult-mobile-menu {
     list-style: none;
 }
 
+/* Contact Item */
 .stackly-consult-footer-contact-list li {
     display: flex;
     align-items: flex-start;
     gap: 14px;
     min-width: 0;
+    transition: transform 0.35s ease;
 }
 
+.stackly-consult-footer-contact-list li:hover {
+    transform: translateX(6px);
+}
+
+/* Contact Icon */
 .stackly-consult-footer-contact-icon {
     display: inline-flex;
     flex: 0 0 43px;
@@ -7594,31 +7667,39 @@ body.stackly-consult-menu-active .stackly-consult-mobile-menu {
     background: rgba(255, 69, 41, 0.1);
     color: var(--stackly-consult-footer-primary);
     font-size: 17px;
-    transition:
-        transform var(--stackly-consult-footer-transition),
-        background var(--stackly-consult-footer-transition),
-        color var(--stackly-consult-footer-transition);
+    transition: all 0.4s ease;
 }
 
 .stackly-consult-footer-contact-list li:hover
 .stackly-consult-footer-contact-icon {
-    transform: translateY(-3px);
+    transform: translateY(-4px) rotate(-8deg) scale(1.08);
     background: var(--stackly-consult-footer-primary);
+    border-color: var(--stackly-consult-footer-primary);
     color: #ffffff;
+    box-shadow: 0 7px 20px rgba(255, 69, 41, 0.3);
 }
 
+/* Contact Content */
 .stackly-consult-footer-contact-list li > div {
     min-width: 0;
 }
 
+/* Contact Heading */
 .stackly-consult-footer-contact-list strong {
     display: block;
     margin-bottom: 3px;
     color: #ffffff;
     font-size: 16px;
     font-weight: 700;
+    transition: color 0.35s ease, letter-spacing 0.35s ease;
 }
 
+.stackly-consult-footer-contact-list li:hover strong {
+    color: var(--stackly-consult-footer-primary);
+    letter-spacing: 0.3px;
+}
+
+/* Contact Text and Links */
 .stackly-consult-footer-contact-list p,
 .stackly-consult-footer-contact-list a {
     display: inline-block;
@@ -7627,11 +7708,29 @@ body.stackly-consult-menu-active .stackly-consult-mobile-menu {
     font-size: 15px;
     overflow-wrap: anywhere;
     line-height: 1.7;
-    transition: color var(--stackly-consult-footer-transition);
+    transition: color 0.35s ease;
 }
 
+/* Link Hover */
 .stackly-consult-footer-contact-list a:hover {
     color: var(--stackly-consult-footer-primary);
+}
+
+/* Contact Description Hover */
+.stackly-consult-footer-contact-list li:hover p {
+    color: #ffffff;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .stackly-consult-footer-contact-intro,
+    .stackly-consult-footer-contact-list li,
+    .stackly-consult-footer-contact-icon,
+    .stackly-consult-footer-contact-list strong,
+    .stackly-consult-footer-contact-list p,
+    .stackly-consult-footer-contact-list a {
+        transition: none;
+    }
 }
 
 /* =========================================================
